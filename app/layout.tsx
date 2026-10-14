@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Daily Flow English",
-  description: "Luyện nói tiếng Anh tự nhiên theo nhịp sống hằng ngày.",
+  description: "Chương trình luyện nói tiếng Anh tự nhiên theo từng lesson và tình huống hằng ngày.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -116,17 +116,6 @@ export const verifiedNaturalPhrases = [
   { phrase: "wrap things up", dictionary: "https://dictionary.cambridge.org/dictionary/english/wrap-up", usage: "https://youglish.com/pronounce/wrap%20things%20up/english/us" },
 ] as const;
 
-export const timeline = [
-  ["05:40", "Morning reset", "Get up, boil water, wash, brush & shower"],
-  ["06:00", "Get my son ready", "Wake up, get dressed, grab school bag"],
-  ["06:20", "Head out", "Motorcycle · school · drop off"],
-  ["07:00", "Arrive at work", "Breakfast · B3 · elevator · clock in"],
-  ["07:45", "Work starts", "Business analysis · UI/UX · manage the team"],
-  ["12:00", "Lunch break", "Coworkers · local food · chat"],
-  ["13:00", "Back at my desk", "Afternoon work block"],
-  ["17:30", "Wrap things up", "Finish work and head home"]
-] as const;
-
 export const story = `I usually get up around 5:40 AM, boil some water, and do my morning routine — wash my face, brush my teeth, and take a quick shower.
 
 Around 6:00, I wake up my six-year-old son. He’s in first grade. Once he’s taken a shower and gotten dressed, we grab his school bag. I always pack his bag the night before. Then we head out on my motorcycle.

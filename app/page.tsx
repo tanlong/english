@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
   ArrowLeft,
   ArrowRight,
@@ -11,10 +12,10 @@ import {
   Clock3,
   Flame,
   Headphones,
-  House,
   Lightbulb,
   ListChecks,
   LoaderCircle,
+  LockKeyhole,
   Mic2,
   Pause,
   Play,
@@ -27,10 +28,94 @@ import {
   X,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { editorialSources, flashcards, patterns, qa, sentences, story, timeline, upgradeExamples, verifiedNaturalPhrases } from "./data";
+import flashcardBackAtDesk from "../img/flashcard-back-at-desk-16x9.png";
+import flashcardBreakfast from "../img/flashcard-breakfast-16x9.png";
+import flashcardBusinessAnalysis from "../img/flashcard-business-analysis-16x9.png";
+import flashcardClockIn from "../img/flashcard-clock-in-16x9.png";
+import flashcardHeadHome from "../img/flashcard-head-home-16x9.png";
+import flashcardHeadOut from "../img/flashcard-head-out-16x9.png";
+import flashcardOnWayToWork from "../img/flashcard-on-way-to-work-16x9.png";
+import flashcardRelax from "../img/flashcard-relax-16x9.png";
+import flashcardSchool from "../img/flashcard-school-drop-off-16x9.png";
+import flashcardWakeUp from "../img/flashcard-wake-up-16x9.png";
+import flashcardWorkAsBa from "../img/flashcard-work-as-ba-16x9.png";
+import flashcardWrapUp from "../img/flashcard-wrap-up-16x9.png";
+import { editorialSources, flashcards, patterns, qa, sentences, story, upgradeExamples, verifiedNaturalPhrases } from "./data";
+import { createMatrixFrame, naturalPhrasePattern, naturalPhraseTranslations } from "./natural-phrases";
 
 type View = "home" | "session" | "learn" | "practice" | "story";
 type PracticeMode = "cards" | "repeat" | "qa" | "dictation" | "shadowing" | "speaking";
+
+const lessons = [
+  { number: "01", title: "My Daily Routine", description: "Kể về một ngày điển hình", status: "current" },
+  { number: "02", title: "Family & Home", description: "Giới thiệu gia đình và ngôi nhà", status: "upcoming" },
+  { number: "03", title: "Getting Around", description: "Hỏi đường và nói về di chuyển", status: "upcoming" },
+  { number: "04", title: "Food & Coffee", description: "Gọi món và trò chuyện tự nhiên", status: "upcoming" },
+  { number: "05", title: "At Work", description: "Giao tiếp trong ngày làm việc", status: "upcoming" },
+  { number: "06", title: "Weekend Plans", description: "Rủ rê và lên kế hoạch cuối tuần", status: "upcoming" },
+] as const;
+
+const lessonProgressKey = "daily-flow-progress:lesson-01";
+
+function highlightNaturalPhrases(text: string) {
+  return text.split(naturalPhrasePattern).map((part, index) => index % 2
+    ? <NaturalPhrase english={part} key={`${text}-${index}`} />
+    : part);
+}
+
+function NaturalPhrase({ english }: { english: string }) {
+  const vietnamese = naturalPhraseTranslations[english.toLocaleLowerCase("en-US")];
+  const [isVietnamese, setIsVietnamese] = useState(false);
+  const [displayText, setDisplayText] = useState(english);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const timerRef = useRef<number | null>(null);
+
+  useEffect(() => () => {
+    if (timerRef.current !== null) window.clearInterval(timerRef.current);
+  }, []);
+
+  const toggleLanguage = () => {
+    const showVietnamese = !isVietnamese;
+    const target = showVietnamese ? vietnamese : english;
+    if (!target) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setDisplayText(target);
+      setIsVietnamese(showVietnamese);
+      return;
+    }
+
+    const frameCount = 7;
+    const characterCount = Array.from(target).length;
+    let frame = 0;
+    setIsAnimating(true);
+    setDisplayText(createMatrixFrame(target, 0));
+    timerRef.current = window.setInterval(() => {
+      frame += 1;
+      setDisplayText(createMatrixFrame(target, Math.ceil(characterCount * frame / frameCount)));
+      if (frame < frameCount) return;
+      if (timerRef.current !== null) window.clearInterval(timerRef.current);
+      timerRef.current = null;
+      setDisplayText(target);
+      setIsVietnamese(showVietnamese);
+      setIsAnimating(false);
+    }, 45);
+  };
+
+  return (
+    <button
+      type="button"
+      className={`natural-phrase${isVietnamese ? " is-translated" : ""}${isAnimating ? " is-matrix" : ""}`}
+      onClick={toggleLanguage}
+      disabled={isAnimating}
+      aria-label={`${isVietnamese ? vietnamese : english}. Bấm để ${isVietnamese ? "xem lại tiếng Anh" : "xem nghĩa tiếng Việt"}`}
+      aria-pressed={isVietnamese}
+      title={isVietnamese ? "Bấm để xem lại tiếng Anh" : "Bấm để xem nghĩa tiếng Việt"}
+    >
+      <span lang={isVietnamese ? "vi" : "en"}>{displayText}</span>
+    </button>
+  );
+}
 
 const repetition = [
   "I usually get up around 5:40.",
@@ -55,6 +140,25 @@ const practiceModes: { id: PracticeMode; label: string; detail: string }[] = [
   { id: "shadowing", label: "Shadowing", detail: "4 đoạn" },
   { id: "speaking", label: "Thử thách nói", detail: "30s → 2 phút" },
 ];
+
+const flashcardImages = [
+  flashcardWakeUp,
+  flashcardHeadOut,
+  flashcardSchool,
+  flashcardOnWayToWork,
+  flashcardBreakfast,
+  flashcardClockIn,
+  flashcardRelax,
+  flashcardWorkAsBa,
+  flashcardBusinessAnalysis,
+  flashcardBackAtDesk,
+  flashcardWrapUp,
+  flashcardHeadHome,
+] as const;
+
+if (flashcardImages.length !== flashcards.length) {
+  throw new Error("Mỗi flashcard phải có một minh họa.");
+}
 
 const sessionSteps = [
   { minutes: 2, label: "Khởi động tai", detail: "Nghe và đọc theo 2 câu mở đầu" },
@@ -370,13 +474,13 @@ export default function Home() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem("daily-flow-progress");
+    const saved = localStorage.getItem(lessonProgressKey) ?? localStorage.getItem("daily-flow-progress");
     if (saved) setCompleted(JSON.parse(saved));
     setReady(true);
   }, []);
 
   useEffect(() => {
-    if (ready) localStorage.setItem("daily-flow-progress", JSON.stringify(completed));
+    if (ready) localStorage.setItem(lessonProgressKey, JSON.stringify(completed));
   }, [completed, ready]);
 
   const progress = Math.round((completed.length / sentences.length) * 100);
@@ -390,12 +494,21 @@ export default function Home() {
       <a className="skip-link" href="#main">Bỏ qua điều hướng</a>
       <aside className="sidebar">
         <Logo />
-        <nav className="side-nav" aria-label="Điều hướng chính">
-          <NavButton active={view === "home"} icon={<House />} label="Tổng quan" onClick={() => navigate("home")} />
-          <NavButton active={view === "session"} icon={<Clock3 />} label="15 phút" onClick={() => navigate("session")} />
-          <NavButton active={view === "learn"} icon={<BookOpen />} label="Học bài" onClick={() => navigate("learn")} />
-          <NavButton active={view === "practice"} icon={<Brain />} label="Luyện tập" onClick={() => navigate("practice")} />
-          <NavButton active={view === "story"} icon={<ListChecks />} label="Full story" onClick={() => navigate("story")} />
+        <nav className="side-nav" aria-label="Danh sách bài học">
+          <span className="side-nav-title">6 LESSONS</span>
+          {lessons.map((lesson) => (
+            <button
+              className={lesson.status === "current" ? "lesson-nav-item active" : "lesson-nav-item"}
+              disabled={lesson.status === "upcoming"}
+              aria-current={lesson.status === "current" ? "true" : undefined}
+              onClick={() => navigate("home")}
+              key={lesson.number}
+            >
+              <span className="lesson-nav-number">{lesson.number}</span>
+              <span className="lesson-nav-copy"><strong>{lesson.title}</strong><small>{lesson.status === "current" ? "Đang học" : "Sắp mở"}</small></span>
+              {lesson.status === "upcoming" ? <LockKeyhole aria-hidden="true" /> : <ChevronRight aria-hidden="true" />}
+            </button>
+          ))}
         </nav>
         <div className="side-spacer" />
         <div className="mini-goal">
@@ -411,14 +524,18 @@ export default function Home() {
 
       <div className="page-wrap">
         <header className="mobile-header">
-          <Logo />
+          <button className="mobile-lesson-home" onClick={() => navigate("home")} aria-label="Về Lesson 01: My Daily Routine">
+            <span className="logo-mark"><Sparkles size={20} aria-hidden="true" /></span>
+            <span><small>LESSON 01</small><strong>My Daily Routine</strong></span>
+          </button>
           <div className="streak"><Flame size={17} aria-hidden="true" /> 7 ngày</div>
         </header>
         <main id="main" tabIndex={-1}>
           {view === "home" && <Dashboard progress={progress} completed={completed.length} onNavigate={navigate} onStart={() => { setSentenceIndex(Math.min(completed.length, 27)); navigate("learn"); }} />}
-          {view === "session" && <SessionView />}
+          {view === "session" && <SessionView onBack={() => navigate("home")} />}
           {view === "learn" && (
             <LearnView
+              onBack={() => navigate("home")}
               index={sentenceIndex}
               setIndex={setSentenceIndex}
               completed={completed}
@@ -427,38 +544,51 @@ export default function Home() {
               setTab={setLearnTab}
             />
           )}
-          {view === "practice" && <PracticeView mode={practiceMode} setMode={setPracticeMode} />}
-          {view === "story" && <StoryView />}
+          {view === "practice" && <PracticeView onBack={() => navigate("home")} mode={practiceMode} setMode={setPracticeMode} />}
+          {view === "story" && <StoryView onBack={() => navigate("home")} />}
         </main>
         <p className="ai-disclosure"><Sparkles size={14} aria-hidden="true" /> Giọng đọc AI do OpenAI tạo, không phải giọng người thật.</p>
       </div>
 
-      <nav className="bottom-nav" aria-label="Điều hướng di động">
-        <NavButton active={view === "home"} icon={<House />} label="Tổng quan" onClick={() => navigate("home")} />
-        <NavButton active={view === "session"} icon={<Clock3 />} label="15 phút" onClick={() => navigate("session")} />
-        <NavButton active={view === "learn"} icon={<BookOpen />} label="Học bài" onClick={() => navigate("learn")} />
-        <NavButton active={view === "practice"} icon={<Brain />} label="Luyện tập" onClick={() => navigate("practice")} />
-        <NavButton active={view === "story"} icon={<ListChecks />} label="Story" onClick={() => navigate("story")} />
-      </nav>
     </div>
   );
-}
-
-function NavButton({ active, icon, label, onClick }: { active: boolean; icon: React.ReactNode; label: string; onClick: () => void }) {
-  return <button className={active ? "nav-item active" : "nav-item"} aria-current={active ? "page" : undefined} onClick={onClick}>{icon}<span>{label}</span></button>;
 }
 
 function Dashboard({ progress, completed, onNavigate, onStart }: { progress: number; completed: number; onNavigate: (v: View) => void; onStart: () => void }) {
   return (
     <div className="page-content dashboard">
-      <div className="eyebrow-row">
-        <span className="eyebrow">LESSON 01</span>
+      <header className="course-header">
+        <div>
+          <span className="eyebrow">CHƯƠNG TRÌNH A2 · 6 LESSONS</span>
+          <h1>Everyday English</h1>
+          <p>Học nói theo từng tình huống quen thuộc, mỗi lesson là một chủ đề trọn vẹn.</p>
+        </div>
         <span className="streak desktop-streak"><Flame size={17} aria-hidden="true" /> 7 ngày liên tiếp</span>
-      </div>
-      <section className="hero-card">
+      </header>
+
+      <section className="lesson-catalog mobile-lesson-catalog" aria-labelledby="lesson-catalog-title">
+        <div className="section-heading">
+          <div><span className="kicker">LỘ TRÌNH HỌC</span><h2 id="lesson-catalog-title">Chọn lesson của bạn</h2></div>
+        </div>
+        <div className="lesson-grid">
+          {lessons.map((lesson) => (
+            <article className={lesson.status === "current" ? "lesson-card current" : "lesson-card upcoming"} key={lesson.number}>
+              <div className="lesson-card-top"><span>LESSON {lesson.number}</span>{lesson.status === "current" ? <b>ĐANG HỌC</b> : <LockKeyhole aria-hidden="true" />}</div>
+              <h3>{lesson.title}</h3>
+              <p>{lesson.description}</p>
+              {lesson.status === "current"
+                ? <><div className="lesson-card-progress" role="progressbar" aria-label="Tiến độ Lesson 01" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><span style={{ width: `${progress}%` }} /></div><button onClick={onStart}>{progress ? "Tiếp tục" : "Bắt đầu"}<ArrowRight aria-hidden="true" /></button></>
+                : <span className="lesson-coming-soon">Sắp mở</span>}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <div className="active-lesson-heading"><span>LESSON 01</span><strong>Bài học hiện tại</strong></div>
+      <section className="hero-card" aria-labelledby="current-lesson-title">
         <div className="hero-copy">
           <span className="level-pill"><Sparkles size={16} aria-hidden="true" /> Natural Everyday English</span>
-          <h1>My Daily<br /><em>Routine</em></h1>
+          <h2 id="current-lesson-title">My Daily<br /><em>Routine</em></h2>
           <p>Kể về một ngày điển hình bằng những cụm từ tự nhiên, dễ nhớ và dùng được ngay.</p>
           <button className="app-action primary-button" onClick={onStart}><Play size={19} fill="currentColor" aria-hidden="true" />{progress ? "Tiếp tục học" : "Bắt đầu bài học"}</button>
         </div>
@@ -477,7 +607,7 @@ function Dashboard({ progress, completed, onNavigate, onStart }: { progress: num
 
       <section className="progress-section" aria-labelledby="progress-title">
         <div className="section-heading">
-          <div><span className="kicker">LỘ TRÌNH CỦA BẠN</span><h2 id="progress-title">Học từng bước nhỏ</h2></div>
+          <div><span className="kicker">TIẾN ĐỘ LESSON 01</span><h2 id="progress-title">Học từng bước nhỏ</h2></div>
           <strong className="percent">{progress}%</strong>
         </div>
         <div className="progress-track"><span style={{ width: `${Math.max(progress, 4)}%` }} /></div>
@@ -485,18 +615,11 @@ function Dashboard({ progress, completed, onNavigate, onStart }: { progress: num
       </section>
 
       <section className="study-grid" aria-label="Các hoạt động học">
+        <ActivityCard icon={<Clock3 />} title="15 phút" detail="Nghe · hiểu · nhớ · phản xạ" meta="1 phiên trọn vẹn" color="amber" onClick={() => onNavigate("session")} />
         <ActivityCard icon={<BookOpen />} title="Học từng câu" detail="English · IPA · Tiếng Việt" meta={`${completed}/28 câu`} color="indigo" onClick={() => onNavigate("learn")} />
         <ActivityCard icon={<Brain />} title="Luyện phản xạ" detail="Flashcards · Q&A · Dictation" meta="6 chế độ" color="mint" onClick={() => onNavigate("practice")} />
-        <ActivityCard icon={<Mic2 />} title="Thử thách nói" detail="Nói liền mạch theo gợi ý" meta="30s → 2 phút" color="orange" onClick={() => onNavigate("practice")} />
+        <ActivityCard icon={<ListChecks />} title="Full story" detail="Đọc, nghe và kể trọn bài" meta="2–3 phút" color="orange" onClick={() => onNavigate("story")} />
       </section>
-
-      <section className="today-card">
-        <div className="today-title"><span><Clock3 size={20} aria-hidden="true" /></span><div><small>ÔN NHANH HÔM NAY</small><h2>Một ngày của bạn, bằng tiếng Anh</h2></div></div>
-        <div className="micro-stats"><div><strong>9</strong><span>cấu trúc cốt lõi</span></div><div><strong>12</strong><span>flashcards</span></div><div><strong>20</strong><span>câu phản xạ</span></div></div>
-        <button className="app-action session-cta" onClick={() => onNavigate("session")}><Play size={17} fill="currentColor" aria-hidden="true" /> Bắt đầu 15 phút</button>
-      </section>
-
-      <Timeline />
     </div>
   );
 }
@@ -511,29 +634,14 @@ function ActivityCard({ icon, title, detail, meta, color, onClick }: { icon: Rea
   );
 }
 
-function Timeline() {
-  return (
-    <section className="timeline-section" aria-labelledby="timeline-title">
-      <div className="section-heading"><div><span className="kicker">TIMELINE METHOD</span><h2 id="timeline-title">Nhìn một lần, kể cả ngày</h2></div></div>
-      <div className="timeline-list">
-        {timeline.map(([time, title, detail], index) => (
-          <div className="timeline-item" key={time}>
-            <time>{time}</time><span className="timeline-dot">{index + 1}</span><div><strong>{title}</strong><p>{detail}</p></div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function LearnView({ index, setIndex, completed, setCompleted, tab, setTab }: { index: number; setIndex: (i: number) => void; completed: number[]; setCompleted: React.Dispatch<React.SetStateAction<number[]>>; tab: "sentences" | "patterns"; setTab: (t: "sentences" | "patterns") => void }) {
+function LearnView({ onBack, index, setIndex, completed, setCompleted, tab, setTab }: { onBack: () => void; index: number; setIndex: (i: number) => void; completed: number[]; setCompleted: React.Dispatch<React.SetStateAction<number[]>>; tab: "sentences" | "patterns"; setTab: (t: "sentences" | "patterns") => void }) {
   const item = sentences[index];
   const isDone = completed.includes(index);
   const markDone = () => setCompleted((old) => isDone ? old.filter((n) => n !== index) : [...old, index]);
 
   return (
     <div className="page-content inner-page">
-      <PageTitle kicker="LESSON 01" title="Học bài" description="Nghe, đọc theo cụm và hiểu ý trước khi chuyển câu." />
+      <PageTitle onBack={onBack} kicker="LESSON 01" title="Học bài" description="Nghe, đọc theo cụm và hiểu ý trước khi chuyển câu." />
       <div className="segmented" role="tablist" aria-label="Nội dung học">
         <button role="tab" aria-selected={tab === "sentences"} onClick={() => setTab("sentences")}>28 câu mẫu</button>
         <button role="tab" aria-selected={tab === "patterns"} onClick={() => setTab("patterns")}>9 cấu trúc</button>
@@ -547,7 +655,7 @@ function LearnView({ index, setIndex, completed, setCompleted, tab, setTab }: { 
           <article className="sentence-card">
             <TTSButton className="app-icon-action sound-button" text={item.en} speed={0.9} ariaLabel="Nghe câu tiếng Anh bằng giọng đọc AI"><Volume2 aria-hidden="true" /></TTSButton>
             <span className="card-label">ENGLISH</span>
-            <h2>{item.en}</h2>
+            <h2>{highlightNaturalPhrases(item.en)}</h2>
             <p className="ipa">{item.ipa}</p>
             <div className="translation"><span>TIẾNG VIỆT</span><p>{item.vi}</p></div>
             <div className="coach-tip"><Lightbulb aria-hidden="true" /><p><strong>Mẹo luyện nói</strong> Nghe một lần, đọc theo cụm 3 lần, sau đó nói lại mà không nhìn.</p></div>
@@ -564,17 +672,17 @@ function LearnView({ index, setIndex, completed, setCompleted, tab, setTab }: { 
         </section>
       ) : (
         <section className="pattern-grid">
-          {patterns.map(([formula, example], i) => <article className="pattern-card" key={formula}><span>{String(i + 1).padStart(2, "0")}</span><h2>{formula}</h2><p>{example}</p><TTSButton className="app-icon-action" text={example} speed={0.9} ariaLabel={`Nghe ví dụ ${formula}`}><Volume2 aria-hidden="true" /></TTSButton></article>)}
+          {patterns.map(([formula, example], i) => <article className="pattern-card" key={formula}><span>{String(i + 1).padStart(2, "0")}</span><h2>{formula}</h2><p>{highlightNaturalPhrases(example)}</p><TTSButton className="app-icon-action" text={example} speed={0.9} ariaLabel={`Nghe ví dụ ${formula}`}><Volume2 aria-hidden="true" /></TTSButton></article>)}
         </section>
       )}
     </div>
   );
 }
 
-function PracticeView({ mode, setMode }: { mode: PracticeMode; setMode: (m: PracticeMode) => void }) {
+function PracticeView({ onBack, mode, setMode }: { onBack: () => void; mode: PracticeMode; setMode: (m: PracticeMode) => void }) {
   return (
     <div className="page-content inner-page">
-      <PageTitle kicker="LUYỆN TẬP" title="Biến kiến thức thành phản xạ" description="Chọn một hoạt động ngắn và luyện đến khi câu bật ra tự nhiên." />
+      <PageTitle onBack={onBack} kicker="LESSON 01 · LUYỆN TẬP" title="Biến kiến thức thành phản xạ" description="Chọn một hoạt động ngắn và luyện đến khi câu bật ra tự nhiên." />
       <div className="practice-layout">
         <nav className="practice-menu" aria-label="Chế độ luyện tập">
           {practiceModes.map((item, index) => <button key={item.id} className={mode === item.id ? "active" : ""} onClick={() => setMode(item.id)}><span>{index + 1}</span><div><strong>{item.label}</strong><small>{item.detail}</small></div><ChevronRight aria-hidden="true" /></button>)}
@@ -596,14 +704,16 @@ function FlashcardPractice() {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const next = (delta: number) => { setIndex((index + delta + flashcards.length) % flashcards.length); setFlipped(false); };
+  const cardImage = flashcardImages[index];
   return (
     <div className="practice-panel">
       <PracticeHeader label="FLASHCARDS" title="Nhớ theo cả câu" text="Đọc tiếng Việt, tự nói tiếng Anh rồi mới lật thẻ." count={`${index + 1}/${flashcards.length}`} />
-      <button className={flipped ? "flashcard flipped" : "flashcard"} onClick={() => setFlipped(!flipped)} aria-label={flipped ? "Ẩn đáp án" : "Lật thẻ xem đáp án"}>
-        <span>{flipped ? "ĐÁP ÁN" : "NÓI BẰNG TIẾNG ANH"}</span>
-        <strong>{flipped ? flashcards[index][1] : flashcards[index][0]}</strong>
-        <small>{flipped ? "Chạm để quay lại" : "Chạm để lật thẻ"}</small>
-      </button>
+      <article className={flipped ? "flashcard flipped" : "flashcard"}>
+        <span className="flashcard-photo" aria-hidden="true"><Image src={cardImage} alt="" fill sizes="(max-width: 768px) calc(100vw - 72px), 60vw" /></span>
+        <span className="flashcard-kicker">{flipped ? "ĐÁP ÁN" : "NÓI BẰNG TIẾNG ANH"}</span>
+        <strong>{flipped ? highlightNaturalPhrases(flashcards[index][1]) : flashcards[index][0]}</strong>
+        <button className="flashcard-flip-button" onClick={() => setFlipped(!flipped)}>{flipped ? "Quay lại tiếng Việt" : "Chạm để lật thẻ"}</button>
+      </article>
       {flipped && <TTSButton className="app-action listen-link" text={flashcards[index][1]} speed={0.9} ariaLabel="Nghe đáp án bằng giọng đọc AI"><Volume2 aria-hidden="true" /> Nghe đáp án</TTSButton>}
       <div className="practice-controls"><button className="app-icon-action" onClick={() => next(-1)} aria-label="Thẻ trước"><ArrowLeft /></button><button className="app-action primary-button small" onClick={() => next(1)}>Thẻ tiếp <ArrowRight /></button></div>
     </div>
@@ -617,7 +727,7 @@ function RepetitionPractice() {
     <div className="practice-panel">
       <PracticeHeader label="REPETITION DRILL" title="Nói 5 lần mỗi câu" text="Bấm vào vòng tròn sau mỗi lần đọc to." count={`${total}/25 lượt`} />
       <div className="repeat-list">
-        {repetition.map((text, i) => <article key={text}><TTSButton className="app-icon-action mini-sound" text={text} speed={0.9} ariaLabel={`Nghe câu ${i + 1} bằng giọng đọc AI`}><Volume2 /></TTSButton><p>{text}</p><button className="app-icon-action repeat-count" onClick={() => setCounts((old) => old.map((n, j) => j === i ? Math.min(5, n + 1) : n))}>{counts[i] === 5 ? <Check /> : `${counts[i]}/5`}</button></article>)}
+        {repetition.map((text, i) => <article key={text}><TTSButton className="app-icon-action mini-sound" text={text} speed={0.9} ariaLabel={`Nghe câu ${i + 1} bằng giọng đọc AI`}><Volume2 /></TTSButton><p>{highlightNaturalPhrases(text)}</p><button className="app-icon-action repeat-count" onClick={() => setCounts((old) => old.map((n, j) => j === i ? Math.min(5, n + 1) : n))}>{counts[i] === 5 ? <Check /> : `${counts[i]}/5`}</button></article>)}
       </div>
       <button className="app-action reset-link" onClick={() => setCounts(Array(5).fill(0))}><RotateCcw aria-hidden="true" /> Làm lại</button>
     </div>
@@ -630,7 +740,7 @@ function QA() {
   return (
     <div className="practice-panel">
       <PracticeHeader label="QUESTION & ANSWER" title="Trả lời ngay, đừng dịch" text="Nghe câu hỏi và trả lời thành tiếng trước khi xem gợi ý." count={`${index + 1}/${qa.length}`} />
-      <div className="qa-card"><TTSButton className="app-icon-action sound-button" text={qa[index][0]} speed={0.95} ariaLabel="Nghe câu hỏi bằng giọng đọc AI"><Volume2 aria-hidden="true" /></TTSButton><span>QUESTION</span><h2>{qa[index][0]}</h2>{show ? <div className="answer-reveal"><div><small>SUGGESTED ANSWER</small><p>{qa[index][1]}</p></div><TTSButton className="app-icon-action inline-sound" text={qa[index][1]} speed={0.9} ariaLabel="Nghe câu trả lời bằng giọng đọc AI"><Volume2 aria-hidden="true" /></TTSButton></div> : <button className="app-action reveal-button" onClick={() => setShow(true)}><Lightbulb aria-hidden="true" /> Xem câu trả lời</button>}</div>
+      <div className="qa-card"><TTSButton className="app-icon-action sound-button" text={qa[index][0]} speed={0.95} ariaLabel="Nghe câu hỏi bằng giọng đọc AI"><Volume2 aria-hidden="true" /></TTSButton><span>QUESTION</span><h2>{highlightNaturalPhrases(qa[index][0])}</h2>{show ? <div className="answer-reveal"><div><small>SUGGESTED ANSWER</small><p>{highlightNaturalPhrases(qa[index][1])}</p></div><TTSButton className="app-icon-action inline-sound" text={qa[index][1]} speed={0.9} ariaLabel="Nghe câu trả lời bằng giọng đọc AI"><Volume2 aria-hidden="true" /></TTSButton></div> : <button className="app-action reveal-button" onClick={() => setShow(true)}><Lightbulb aria-hidden="true" /> Xem câu trả lời</button>}</div>
       <div className="practice-controls"><button className="app-icon-action" disabled={index === 0} onClick={() => { setIndex(index - 1); setShow(false); }}><ArrowLeft /></button><button className="app-action primary-button small" disabled={index === qa.length - 1} onClick={() => { setIndex(index + 1); setShow(false); }}>Câu tiếp <ArrowRight /></button></div>
     </div>
   );
@@ -657,7 +767,7 @@ function Shadowing() {
   return (
     <div className="practice-panel">
       <PracticeHeader label="SHADOWING" title="Nói theo nhịp, không đọc từng từ" text="Dấu gạch chéo là điểm ngắt tự nhiên. Nghe rồi bám theo nhịp câu." count={`${index + 1}/${shadowing.length}`} />
-      <div className="shadow-card"><div className="wave" aria-hidden="true">{Array.from({ length: 24 }).map((_, i) => <i key={i} style={{ height: `${18 + ((i * 13) % 42)}px` }} />)}</div><p>{shadowing[index].split("/").map((chunk, i) => <span key={i}>{chunk.trim()}</span>)}</p><TTSButton className="app-action primary-button" text={shadowing[index]} speed={0.78} ariaLabel="Nghe đoạn shadowing bằng giọng đọc AI"><Play size={18} fill="currentColor" /> Nghe đoạn mẫu</TTSButton></div>
+      <div className="shadow-card"><div className="wave" aria-hidden="true">{Array.from({ length: 24 }).map((_, i) => <i key={i} style={{ height: `${18 + ((i * 13) % 42)}px` }} />)}</div><p>{shadowing[index].split("/").map((chunk, i) => <span key={i}>{highlightNaturalPhrases(chunk.trim())}</span>)}</p><TTSButton className="app-action primary-button" text={shadowing[index]} speed={0.78} ariaLabel="Nghe đoạn shadowing bằng giọng đọc AI"><Play size={18} fill="currentColor" /> Nghe đoạn mẫu</TTSButton></div>
       <div className="practice-controls"><button className="app-icon-action" disabled={index === 0} onClick={() => setIndex(index - 1)}><ArrowLeft /></button><button className="app-action primary-button small" disabled={index === shadowing.length - 1} onClick={() => setIndex(index + 1)}>Đoạn tiếp <ArrowRight /></button></div>
     </div>
   );
@@ -684,7 +794,7 @@ function PracticeHeader({ label, title, text, count }: { label: string; title: s
   return <header className="practice-header"><div><span>{label}</span><h2>{title}</h2><p>{text}</p></div><b>{count}</b></header>;
 }
 
-function SessionView() {
+function SessionView({ onBack }: { onBack: () => void }) {
   const [step, setStep] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(sessionSteps[0].minutes * 60);
   const [running, setRunning] = useState(false);
@@ -729,7 +839,7 @@ function SessionView() {
 
   return (
     <div className="page-content inner-page session-page">
-      <PageTitle kicker="DAILY FLOW" title="Một phiên học trọn vẹn trong 15 phút" description="Học ít nhưng đủ vòng: nghe → hiểu → nhớ → phản xạ → tự nói." />
+      <PageTitle onBack={onBack} kicker="LESSON 01 · DAILY FLOW" title="Một phiên học trọn vẹn trong 15 phút" description="Học ít nhưng đủ vòng: nghe → hiểu → nhớ → phản xạ → tự nói." />
       <div className="session-overview" aria-label="Tiến độ phiên học">
         <div><span>TIẾN ĐỘ TỔNG</span><strong>{progress}%</strong></div>
         <div className="session-progress"><span style={{ width: `${progress}%` }} /></div>
@@ -782,30 +892,30 @@ function SessionView() {
 function SessionTask({ step }: { step: number }) {
   if (step === 0 || step === 1) {
     const indexes = step === 0 ? [0, 1] : [10, 13, 24, 26];
-    return <div className="session-sentences">{indexes.map((index) => <article key={index}><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{sentences[index].en}</strong><small>{sentences[index].vi}</small></div><TTSButton className="app-icon-action" text={sentences[index].en} speed={0.88} ariaLabel={`Nghe câu ${index + 1} bằng giọng đọc AI`}><Volume2 /></TTSButton></article>)}</div>;
+    return <div className="session-sentences">{indexes.map((index) => <article key={index}><span>{String(index + 1).padStart(2, "0")}</span><div><strong>{highlightNaturalPhrases(sentences[index].en)}</strong><small>{sentences[index].vi}</small></div><TTSButton className="app-icon-action" text={sentences[index].en} speed={0.88} ariaLabel={`Nghe câu ${index + 1} bằng giọng đọc AI`}><Volume2 /></TTSButton></article>)}</div>;
   }
 
   if (step === 2) {
-    return <div className="session-reveals">{flashcards.slice(2, 6).map(([vi, en]) => <details key={en}><summary><span>{vi}</span><small>Chạm để xem Natural English</small></summary><div><strong>{en}</strong><TTSButton className="app-icon-action" text={en} speed={0.9} ariaLabel="Nghe câu trả lời bằng giọng đọc AI"><Volume2 /></TTSButton></div></details>)}</div>;
+    return <div className="session-reveals">{flashcards.slice(2, 6).map(([vi, en]) => <details key={en}><summary><span>{vi}</span><small>Chạm để xem Natural English</small></summary><div><strong>{highlightNaturalPhrases(en)}</strong><TTSButton className="app-icon-action" text={en} speed={0.9} ariaLabel="Nghe câu trả lời bằng giọng đọc AI"><Volume2 /></TTSButton></div></details>)}</div>;
   }
 
   if (step === 3) {
-    return <div className="session-reveals">{qa.slice(7, 11).map(([question, answer]) => <details key={question}><summary><span>{question}</span><small>Trả lời thành tiếng trước khi mở</small></summary><div><strong>{answer}</strong><TTSButton className="app-icon-action" text={`${question} ${answer}`} speed={0.92} ariaLabel="Nghe câu hỏi và trả lời bằng giọng đọc AI"><Volume2 /></TTSButton></div></details>)}</div>;
+    return <div className="session-reveals">{qa.slice(7, 11).map(([question, answer]) => <details key={question}><summary><span>{question}</span><small>Trả lời thành tiếng trước khi mở</small></summary><div><strong>{highlightNaturalPhrases(answer)}</strong><TTSButton className="app-icon-action" text={`${question} ${answer}`} speed={0.92} ariaLabel="Nghe câu hỏi và trả lời bằng giọng đọc AI"><Volume2 /></TTSButton></div></details>)}</div>;
   }
 
   if (step === 4) {
-    return <div className="session-shadow">{shadowing.slice(0, 2).map((text, index) => <article key={text}><span>ĐOẠN {index + 1}</span><p>{text.split("/").map((chunk, i) => <strong key={i}>{chunk.trim()}</strong>)}</p><TTSButton className="app-action primary-button small" text={text} speed={0.78} ariaLabel={`Nghe đoạn shadowing ${index + 1}`}><Headphones /> Nghe & nói theo</TTSButton></article>)}</div>;
+    return <div className="session-shadow">{shadowing.slice(0, 2).map((text, index) => <article key={text}><span>ĐOẠN {index + 1}</span><p>{text.split("/").map((chunk, i) => <strong key={i}>{highlightNaturalPhrases(chunk.trim())}</strong>)}</p><TTSButton className="app-action primary-button small" text={text} speed={0.78} ariaLabel={`Nghe đoạn shadowing ${index + 1}`}><Headphones /> Nghe & nói theo</TTSButton></article>)}</div>;
   }
 
   return <div className="session-speak"><Mic2 aria-hidden="true" /><span>KHÔNG NHÌN BÀI MẪU</span><h3>Kể lại ngày của bạn</h3><p>5:40 · son · school · breakfast · office · BA · lunch · 5:30 · home</p><small>Không cần đúng 100%. Hãy ưu tiên nói liên tục và tự nhiên.</small></div>;
 }
 
-function StoryView() {
+function StoryView({ onBack }: { onBack: () => void }) {
   return (
     <div className="page-content inner-page story-page">
-      <PageTitle kicker="FULL STORY" title="My Daily Routine" description="Đọc theo ý, theo cụm — không học thuộc từng chữ." />
+      <PageTitle onBack={onBack} kicker="LESSON 01 · FULL STORY" title="My Daily Routine" description="Đọc theo ý, theo cụm — không học thuộc từng chữ." />
       <div className="story-layout">
-        <article className="story-card"><div className="story-toolbar"><span>Natural Everyday English</span><TTSButton className="app-action" text={story} speed={0.84} ariaLabel="Nghe toàn bài bằng giọng đọc AI"><Volume2 aria-hidden="true" /> Nghe toàn bài</TTSButton></div>{story.split("\n\n").map((p, i) => <div className="story-paragraph" key={i}><p>{p}</p><TTSButton className="app-icon-action inline-sound" text={p} speed={0.86} ariaLabel={`Nghe đoạn ${i + 1} bằng giọng đọc AI`}><Volume2 aria-hidden="true" /></TTSButton></div>)}</article>
+        <article className="story-card"><div className="story-toolbar"><span>Natural Everyday English</span><TTSButton className="app-action" text={story} speed={0.84} ariaLabel="Nghe toàn bài bằng giọng đọc AI"><Volume2 aria-hidden="true" /> Nghe toàn bài</TTSButton></div>{story.split("\n\n").map((p, i) => <div className="story-paragraph" key={i}><p>{highlightNaturalPhrases(p)}</p><TTSButton className="app-icon-action inline-sound" text={p} speed={0.86} ariaLabel={`Nghe đoạn ${i + 1} bằng giọng đọc AI`}><Volume2 aria-hidden="true" /></TTSButton></div>)}</article>
         <aside className="story-aside"><span>ĐÍCH ĐẾN</span><h2>Nói 2–3 phút về một ngày của bạn</h2><ul><li><Check /> Dùng các cụm quen thuộc</li><li><Check /> Nói liên tục, không dịch</li><li><Check /> Không cần giống mẫu 100%</li></ul><blockquote>“Correct ideas. Smooth flow. Natural English.”</blockquote></aside>
       </div>
       <section className="upgrade-card">
@@ -813,11 +923,11 @@ function StoryView() {
         <div className="upgrade-list">
           {upgradeExamples.map(([basic, better, natural], index) => (
             <article className="upgrade-flow" key={natural} aria-label={`Nhóm nâng cấp câu ${index + 1}`}>
-              <div><span><small>Basic</small><p>{basic}</p></span><TTSButton className="app-icon-action inline-sound" text={basic} speed={0.9} ariaLabel={`Nghe câu Basic nhóm ${index + 1}`}><Volume2 aria-hidden="true" /></TTSButton></div>
+              <div><span><small>Basic</small><p>{highlightNaturalPhrases(basic)}</p></span><TTSButton className="app-icon-action inline-sound" text={basic} speed={0.9} ariaLabel={`Nghe câu Basic nhóm ${index + 1}`}><Volume2 aria-hidden="true" /></TTSButton></div>
               <ArrowRight aria-hidden="true" />
-              <div><span><small>Better</small><p>{better}</p></span><TTSButton className="app-icon-action inline-sound" text={better} speed={0.9} ariaLabel={`Nghe câu Better nhóm ${index + 1}`}><Volume2 aria-hidden="true" /></TTSButton></div>
+              <div><span><small>Better</small><p>{highlightNaturalPhrases(better)}</p></span><TTSButton className="app-icon-action inline-sound" text={better} speed={0.9} ariaLabel={`Nghe câu Better nhóm ${index + 1}`}><Volume2 aria-hidden="true" /></TTSButton></div>
               <ArrowRight aria-hidden="true" />
-              <div><span><small>Natural</small><p>{natural}</p></span><TTSButton className="app-icon-action inline-sound" text={natural} speed={0.88} ariaLabel={`Nghe câu Natural nhóm ${index + 1}`}><Volume2 aria-hidden="true" /></TTSButton></div>
+              <div><span><small>Natural</small><p>{highlightNaturalPhrases(natural)}</p></span><TTSButton className="app-icon-action inline-sound" text={natural} speed={0.88} ariaLabel={`Nghe câu Natural nhóm ${index + 1}`}><Volume2 aria-hidden="true" /></TTSButton></div>
             </article>
           ))}
         </div>
@@ -846,6 +956,6 @@ function StoryView() {
   );
 }
 
-function PageTitle({ kicker, title, description }: { kicker: string; title: string; description: string }) {
-  return <header className="page-title"><span className="kicker">{kicker}</span><h1>{title}</h1><p>{description}</p></header>;
+function PageTitle({ onBack, kicker, title, description }: { onBack: () => void; kicker: string; title: string; description: string }) {
+  return <header className="page-title"><button className="page-back" onClick={onBack} aria-label="Quay lại Lesson 01"><ArrowLeft aria-hidden="true" /></button><div><span className="kicker">{kicker}</span><h1>{title}</h1><p>{description}</p></div></header>;
 }

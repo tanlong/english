@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "test:natural-phrases": "node --experimental-strip-types --test scripts/natural-phrases.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
