@@ -1,6 +1,24 @@
 const SMALL_NUMBERS = [
-  "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-  "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+  "eleven",
+  "twelve",
+  "thirteen",
+  "fourteen",
+  "fifteen",
+  "sixteen",
+  "seventeen",
+  "eighteen",
+  "nineteen",
 ];
 const TENS = ["", "", "twenty", "thirty", "forty", "fifty"];
 
@@ -19,7 +37,10 @@ function normalize(text: string) {
       const minuteValue = Number(minutes);
       return `${numberToWords(Number(hours))}${minuteValue ? ` ${numberToWords(minuteValue)}` : ""}`;
     })
-    .replace(/([a-z])(\d+)/g, (_, letter: string, digits: string) => `${letter} ${numberToWords(Number(digits))}`)
+    .replace(
+      /([a-z])(\d+)/g,
+      (_, letter: string, digits: string) => `${letter} ${numberToWords(Number(digits))}`,
+    )
     .replace(/\b\d+\b/g, (digits) => {
       const value = Number(digits);
       return value < 60 ? numberToWords(value) : digits;
@@ -34,9 +55,10 @@ function editDistance(left: string[], right: string[]) {
   for (let row = 1; row <= left.length; row += 1) {
     const current = [row];
     for (let column = 1; column <= right.length; column += 1) {
-      current[column] = left[row - 1] === right[column - 1]
-        ? previous[column - 1]
-        : 1 + Math.min(previous[column - 1], previous[column], current[column - 1]);
+      current[column] =
+        left[row - 1] === right[column - 1]
+          ? previous[column - 1]
+          : 1 + Math.min(previous[column - 1], previous[column], current[column - 1]);
     }
     previous.splice(0, previous.length, ...current);
   }
@@ -60,12 +82,16 @@ export function scoreTranscript(target: string, transcript: string) {
   const targetWords = normalize(target).split(" ").filter(Boolean);
   const transcriptWords = normalize(transcript).split(" ").filter(Boolean);
   const denominator = Math.max(targetWords.length, transcriptWords.length, 1);
-  const score = Math.max(0, Math.round(100 * (1 - editDistance(targetWords, transcriptWords) / denominator)));
-  const feedback = score >= 90
-    ? "Rất sát câu mẫu! Thử nói lại với nhịp tự nhiên hơn."
-    : score >= 70
-      ? "Khá tốt. Nghe lại phần còn thiếu rồi thử thêm một lần."
-      : "Nghe mẫu, chia câu thành cụm ngắn rồi thử lại nhé.";
+  const score = Math.max(
+    0,
+    Math.round(100 * (1 - editDistance(targetWords, transcriptWords) / denominator)),
+  );
+  const feedback =
+    score >= 90
+      ? "Rất sát câu mẫu! Thử nói lại với nhịp tự nhiên hơn."
+      : score >= 70
+        ? "Khá tốt. Nghe lại phần còn thiếu rồi thử thêm một lần."
+        : "Nghe mẫu, chia câu thành cụm ngắn rồi thử lại nhé.";
 
   return { score, missingWords: missingWords(targetWords, transcriptWords), feedback };
 }

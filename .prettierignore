@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.cache/
+app/generated/
+artifacts/
+test-results/
+MD/
+img/
+prisma/
+package-lock.json
+next-env.d.ts

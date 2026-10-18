@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Speaking · Alex, English Coach</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#101e39;background:#f3f7fd}
+    *{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button{cursor:pointer}
+    .shell{max-width:1210px;margin:auto;padding:26px 22px 46px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:26px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:850;color:#0d4db4;font-size:18px}
+    .brand-icon{width:43px;height:43px;background:linear-gradient(145deg,#1168da,#68bcfb);border-radius:14px;color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 8px 22px #1d69c73a}
+    .pill{border:1px solid #bcd8f7;border-radius:100px;padding:8px 12px;font-size:12px;font-weight:700;color:#205aa2;background:#e6f2ff}
+    .header{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end;margin-bottom:25px}
+    h1{font-size:clamp(30px,4.8vw,48px);line-height:1.08;letter-spacing:-1.8px;margin:2px 0 10px}h1 span{color:#146ad4}
+    .sub{color:#586985;font-size:15px;line-height:1.6;margin:0;max-width:650px}
+    .layout{display:grid;grid-template-columns:310px 1fr;gap:20px;align-items:stretch}
+    .panel,.chat{background:white;border-radius:22px;border:1px solid #dfebf9;box-shadow:0 14px 40px #1442710d}
+    .panel{padding:23px}.panel h2{font-size:17px;margin:0 0 22px}label{display:block;color:#5c6d87;font-size:12px;font-weight:750;margin-bottom:8px}
+    select,.field{width:100%;padding:12px 13px;border-radius:12px;border:1px solid #d4dfed;background:#fbfdff;color:#172b4d;outline:0}
+    select:focus,.field:focus{border-color:#1870e6;box-shadow:0 0 0 3px #1976e91d}
+    .group{margin-bottom:20px}.seg{display:flex;gap:5px;padding:5px;border:1px solid #dbe6f4;background:#f2f6fb;border-radius:14px}
+    .seg button{min-width:0;flex:1;border:0;background:transparent;border-radius:10px;padding:10px 4px;font-size:12px;font-weight:700;color:#63758e}
+    .seg button.active{background:#fff;color:#0054bd;box-shadow:0 3px 12px #0d37751c}
+    .coach{display:flex;gap:13px;align-items:center;padding:16px;background:linear-gradient(135deg,#eaf5ff,#f4fbff);border-radius:15px;border:1px solid #dceefa;margin:20px 0}
+    .avatar{display:grid;place-items:center;width:53px;height:53px;flex:none;border-radius:18px;font-size:30px;background:#cce7ff}
+    .coach strong{display:block;font-size:14px;margin-bottom:3px}.coach small{display:block;color:#6181a2;line-height:1.5}
+    .start,.primary{background:#075ed2;color:white;border:0;border-radius:13px;font-weight:750;padding:13px 19px;box-shadow:0 7px 18px #1671db2b}
+    .start{width:100%;padding:15px}.start:hover,.primary:hover{background:#004cae}
+    button:disabled{cursor:not-allowed;opacity:.5}.hint{margin:12px 0 0;color:#7c8798;font-size:12px;line-height:1.55}
+    .chat{display:flex;flex-direction:column;min-height:610px;overflow:hidden}
+    .chat-head{padding:19px 23px;border-bottom:1px solid #e8edf5;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .chat-head strong{font-size:16px}.chat-head small{display:block;color:#8190a4;margin-top:5px;font-size:12px}
+    .tag{font-size:12px;color:#137f54;background:#e9faf1;border-radius:12px;padding:7px 11px;font-weight:700;white-space:nowrap}
+    .messages{height:395px;flex:1;min-height:320px;overflow-y:auto;background:linear-gradient(180deg,#fbfdff,#fff);padding:26px 24px}
+    .blank{text-align:center;max-width:380px;margin:68px auto 40px;color:#6d7a91}.blank .micro{font-size:49px;display:block;margin-bottom:15px}.blank strong{display:block;color:#142f58;font-size:18px;margin-bottom:8px}
+    .msg{display:flex;gap:10px;margin:0 0 18px;align-items:flex-end}.msg.user{justify-content:flex-end}.bubble{max-width:min(80%,560px);border:1px solid #e1eaf5;border-radius:17px 17px 17px 4px;background:#eef5fd;padding:12px 15px;font-size:14px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+    .msg.user .bubble{border-color:#0f65d7;background:#1268d8;color:white;border-radius:17px 17px 4px 17px}.msg-icon{width:32px;height:32px;flex:none;border-radius:10px;background:#e4efff;display:grid;place-items:center;font-size:18px}
+    .coach-msg-body{max-width:min(86%,590px);min-width:0}
+    .coach-msg-body .bubble{max-width:100%}
+    .vi-explanation{margin-top:8px;background:#fff8e8;border:1px solid #f3dea8;border-radius:12px;padding:10px 13px;line-height:1.65;color:#654b12;font-size:13px;white-space:pre-wrap}
+    .vi-explanation strong{display:block;margin-bottom:4px;color:#895a04;font-size:12px}
+    .tools{display:flex;gap:9px;flex-wrap:wrap;padding:12px 23px;background:white;border-top:1px solid #eaf0f8}
+    .lightbtn{border:1px solid #dce6f3;border-radius:10px;padding:9px 12px;color:#3f5779;background:#f8fafd;font-size:12px;font-weight:650}.lightbtn:hover{background:#e9f2fc}
+    .composer{display:flex;gap:10px;padding:16px 22px 20px;border-top:1px solid #eaf0f8}
+    .composer .field{flex:1}.mic{border:1px solid #bddefa;background:#edf7ff;border-radius:13px;width:45px;font-size:20px}.mic.listening{background:#fce4e4;border-color:#ee7b7b}
+    .under{margin-top:18px;color:#73849a;font-size:12px;line-height:1.6}
+    .toast{min-height:19px;font-size:12px;color:#687a91;padding:0 23px 13px}
+    @media(max-width:810px){.layout{grid-template-columns:1fr}.chat{min-height:520px}.messages{height:330px}.header{align-items:flex-start}.shell{padding:18px 13px}.panel{padding:20px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <div class="top"><div class="brand"><div class="brand-icon">Aa</div><span>Everyday English</span></div><div class="pill">PRACTICE · LESSON 01</div></div>
+  <div class="header"><div><h1>Daily <span>Speaking</span></h1><p class="sub">Luyện giao tiếp tự nhiên mỗi ngày với Alex. Hội thoại bằng tiếng Anh Mỹ, kèm giải thích tiếng Việt ngắn gọn khi cần để hiểu và sửa lỗi.</p></div><div class="pill" id="connection">DEMO · chưa kết nối AI</div></div>
+  <div class="layout">
+    <aside class="panel">
+      <h2>Thiết lập buổi luyện tập</h2>
+      <div class="coach"><div class="avatar">👨🏻‍🏫</div><div><strong>Alex · Speaking Coach</strong><small>American English<br>Ưu tiên TTS giọng nam</small></div></div>
+      <div class="group"><label>CHẾ ĐỘ</label><div class="seg" id="mode"><button type="button" class="active" data-value="free">Free Talk</button><button type="button" data-value="guided">Theo bài</button><button type="button" data-value="review">Ôn tập</button></div></div>
+      <div class="group"><label for="topic">CHỦ ĐỀ</label><select id="topic"><option value="Daily routine">Thói quen hằng ngày</option><option value="Work and coworkers">Công việc và đồng nghiệp</option><option value="Family">Gia đình</option><option value="Food and coffee">Ăn uống và cà phê</option><option value="Weekend plans">Kế hoạch cuối tuần</option><option value="Shopping">Mua sắm</option></select></div>
+      <div class="group"><label for="lesson">BÀI HỌC</label><select id="lesson"><option>Lesson 01 — My Daily Routine</option></select></div>
+      <div class="group"><label>THỜI GIAN</label><div class="seg" id="duration"><button type="button" data-value="5">5 phút</button><button type="button" class="active" data-value="10">10 phút</button><button type="button" data-value="15">15 phút</button></div></div>
+      <div class="group"><label>TỐC ĐỘ NÓI</label><div class="seg" id="pace"><button type="button" data-value="slow">Chậm</button><button type="button" class="active" data-value="normal">Tự nhiên</button></div></div>
+      <div class="group"><label for="explanationMode">GIẢI THÍCH TIẾNG VIỆT</label><select id="explanationMode"><option value="asNeeded">Khi cần (mặc định)</option><option value="always">Luôn hiển thị</option><option value="onRequest">Chỉ khi bấm hỏi</option></select><p class="hint">Khi sửa lỗi hoặc học cụm mới, Alex giải thích ngắn bằng tiếng Việt. Giọng nam Mỹ chỉ đọc phần tiếng Anh.</p></div>
+      <button type="button" class="start" id="start">▶ Bắt đầu luyện nói</button>
+      <p class="hint">Giọng nói: thử TTS giọng nam Mỹ qua API; nếu chưa kết nối, trình duyệt sẽ dùng giọng có sẵn và có thể không phải giọng nam.</p>
+    </aside>
+    <main class="chat">
+      <div class="chat-head"><div><strong>Conversation with Alex</strong><small id="sessionTime">Sẵn sàng luyện nói · English first</small></div><span class="tag" id="sessionStatus">● Ready</span></div>
+      <div class="messages" id="messages"><div class="blank" id="blank"><span class="micro">🎙️</span><strong>Let's start speaking!</strong>Bấm “Bắt đầu luyện nói”, rồi nói hoặc nhập câu trả lời. Alex sẽ hỏi từng câu ngắn.</div></div>
+      <div class="tools"><button class="lightbtn" id="repeat" disabled>🔊 Nghe lại</button><button class="lightbtn" id="hint" disabled>💡 Gợi ý</button><button class="lightbtn" id="translate" disabled>🌐 Giải thích tiếng Việt</button><button class="lightbtn" id="skip" disabled>↪ Bỏ qua</button><button class="lightbtn" id="end" disabled>✓ Kết thúc & ôn lại</button></div>
+      <form class="composer" id="form"><input class="field" id="userInput" aria-label="Speak or type in English" placeholder="Type your answer in English..." autocomplete="off" disabled><button class="mic" type="button" id="mic" aria-label="Nói bằng microphone" disabled>🎙</button><button class="primary" type="submit" id="send" disabled>Gửi</button></form>
+      <div class="toast" id="toast" role="status" aria-live="polite">Chế độ demo chỉ có hội thoại mẫu; cần kết nối API để hội thoại tự do thực sự.</div>
+    </main>
+  </div>
+  <div class="under">Source: Lesson 01 — My Daily Routine • Basic → Better → Natural • Học theo cụm • Ưu tiên Oxford 3000 khoảng 95% • Modern American English.</div>
+</div>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const state = { mode: "free", duration: 10, pace: "normal", explanationMode: "asNeeded", active: false, history: [], lastCoach: "", step: 0, startedAt: null, timer: null, audio: null, pending: false, demo: location.protocol === "file:", turns: 0 };
+  const demoLines = {
+    "Daily routine": ["What did you do after you got up?", "How did you get to work today?", "What do you usually have for breakfast?", "What time do you start work?", "What do you usually do after work?"],
+    "Work and coworkers": ["What do you do for work?", "What's one thing you worked on today?", "Do you usually have lunch with your coworkers?", "What time do you finish work?"],
+    Family: ["Who do you usually have breakfast with?", "What do you like doing with your family?", "What do you usually do together on weekends?"],
+    "Food and coffee": ["Do you usually have coffee in the morning?", "What's your favorite breakfast?", "Where do you like to eat lunch?"],
+    "Weekend plans": ["What do you usually do on weekends?", "Do you prefer staying home or going out?", "What are your plans for this weekend?"],
+    Shopping: ["Where do you usually go shopping?", "What did you buy last time?", "Do you prefer shopping online?"]
+  };
+  const startLine = "Hey! Good to see you. Let's practice everyday English. What did you do this morning?";
+  function note(s){ $("toast").textContent = s; }
+  function setControls(on){ for(const id of ["userInput","send","mic","repeat","hint","translate","skip","end"]) $(id).disabled = !on; }
+  function add(role, text, explanationVi=""){
+    const blank = $("blank"); if(blank) blank.remove();
+    const outer = document.createElement("div"); outer.className = "msg " + role;
+    const bubble = document.createElement("div"); bubble.className = "bubble"; bubble.textContent = text;
+    if(role === "assistant"){
+      const icon=document.createElement("div"); icon.className="msg-icon"; icon.textContent="👨🏻‍🏫"; outer.appendChild(icon);
+      const body=document.createElement("div"); body.className="coach-msg-body";
+      body.appendChild(bubble);outer.appendChild(body);
+      if(explanationVi) addVietnamese(body, explanationVi);
+      state.lastCoach=text;
+    } else outer.appendChild(bubble);
+    $("messages").appendChild(outer); $("messages").scrollTop=$("messages").scrollHeight;
+  }
+  function addVietnamese(body, explanationVi){
+    if(!explanationVi) return;
+    let div=body.querySelector(".vi-explanation");
+    if(!div){
+      div=document.createElement("div");div.className="vi-explanation";
+      const title=document.createElement("strong");title.textContent="🇻🇳 Giải thích tiếng Việt";
+      const detail=document.createElement("div");detail.className="vi-detail";
+      div.append(title,detail);body.appendChild(div);
+    }
+    div.querySelector(".vi-detail").textContent=explanationVi;
+    $("messages").scrollTop=$("messages").scrollHeight;
+  }
+  function explainLastOnScreen(explanationVi){
+    const body=$('messages').querySelector('.msg.assistant:last-of-type .coach-msg-body') ||
+      Array.from($('messages').querySelectorAll('.msg.assistant .coach-msg-body')).at(-1);
+    if(body) addVietnamese(body,explanationVi);
+  }
+  function browserSpeak(text){
+    if(!("speechSynthesis" in window)){ note("Trình duyệt không hỗ trợ phát âm thanh. Có thể đọc nội dung trong hội thoại."); return; }
+    speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = "en-US"; u.rate = state.pace === "slow" ? .82 : .96;
+    const voices = speechSynthesis.getVoices();
+    const us = voices.filter(v=>/^en[-_]US/i.test(v.lang));
+    const male = us.find(v => /david|guy|alex|matthew|aaron|daniel|male/i.test(v.name));
+    u.voice = male || us[0] || voices.find(v=>/^en/i.test(v.lang)) || null;
+    if(!male) note("Đang dùng giọng trình duyệt; chưa bảo đảm giọng nam. Kết nối TTS server để chọn giọng ổn định.");
+    speechSynthesis.speak(u);
+  }
+  async function say(text){
+    const clean=text.replace(/\*\*/g, "").slice(0,790);
+    if(state.demo){ browserSpeak(clean); return; }
+    try{
+      const r=await fetch("/api/daily-speaking/speech",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({input:clean,pace:state.pace})});
+      if(!r.ok) throw Error("No speech service");
+      const blob=await r.blob(), url=URL.createObjectURL(blob);
+      if(state.audio){ state.audio.pause(); }
+      const audio=new Audio(url);state.audio=audio;audio.onended=()=>URL.revokeObjectURL(url);
+      audio.onerror=()=>URL.revokeObjectURL(url);
+      await audio.play();
+    }catch{browserSpeak(clean);}
+  }
+  function setBusy(value){state.pending=value;$("send").disabled=value||!state.active;$("userInput").disabled=value||!state.active;$("mic").disabled=value||!state.active;}
+  const initialVi='Alex hỏi: “Sáng nay bạn đã làm gì?” Bạn có thể trả lời bằng “I got up...” (Tôi thức dậy...) hoặc “I had breakfast...” (Tôi ăn sáng...).';
+  function offlineExplanation(question){
+    if(question===startLine)return initialVi;
+    if(/What time/i.test(question))return 'Alex đang hỏi “Mấy giờ...?” Bạn có thể trả lời “Around seven” (Khoảng 7 giờ) hoặc “At seven” (Lúc 7 giờ).';
+    if(/What did you do after/i.test(question))return 'Alex hỏi: “Sau đó bạn đã làm gì?” Bạn có thể nói “After that, I...” (Sau đó tôi...).';
+    if(/How did you get to work/i.test(question))return 'Alex hỏi: “Hôm nay bạn đi làm bằng gì?” Ví dụ: “I went to work by motorbike.”';
+    if(/What do you usually/i.test(question))return 'Alex hỏi về thói quen thường ngày. Dùng “I usually...” (Tôi thường...) rồi thêm hành động.';
+    if(/Where did you/i.test(question))return 'Alex hỏi địa điểm của một hoạt động đã diễn ra. Bạn có thể trả lời bằng “I ... at ...”.';
+    return 'Đây là câu hỏi về hoạt động của bạn. Hãy trả lời ngắn bằng tiếng Anh; dùng “I usually...” cho thói quen hoặc “I ...” ở quá khứ cho việc đã xảy ra.';
+  }
+  function nextOffline(message){
+    if(message.toLowerCase()==="hint") return {reply:'You can start with: "This morning, I..." or "I usually...". Take your time.',explanationVi:'“This morning, I...” dùng để kể sáng nay bạn đã làm gì. “I usually...” dùng để kể thói quen thường ngày.'};
+    const lines=demoLines[$("topic").value]||demoLines["Daily routine"];
+    const question=lines[state.step++%lines.length];
+    if(/\bi (get up|wake up)\b/i.test(message) && /\btoday|this morning\b/i.test(message))
+      return {reply:`Good start! For this morning, you can say "I got up...". ${question}`,explanationVi:'Vì bạn đang kể chuyện sáng nay đã xảy ra, dùng quá khứ “got up” thay cho “get up”.'};
+    return {reply:["Thanks for sharing!", "That sounds good!", "Great, I see.", "Nice! Thanks for telling me."][state.step%4]+" "+question,explanationVi:state.explanationMode==="always"?offlineExplanation(question):""};
+  }
+  async function explain(){
+    if(!state.active||state.pending||!state.lastCoach)return;
+    const recent=Array.from($("messages").querySelectorAll(".msg.assistant .coach-msg-body")).at(-1);
+    if(recent?.querySelector(".vi-explanation")){note("Phần giải thích tiếng Việt đang hiển thị ngay dưới câu của Alex.");return;}
+    setBusy(true);
+    let explanationVi="";
+    if(!state.demo){
+      try{
+        const r=await fetch("/api/daily-speaking",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:"Explain the previous coach message in Vietnamese",action:"explain",lastCoach:state.lastCoach,history:state.history.slice(-16),mode:state.mode,pace:state.pace,topic:$("topic").value,explanationMode:state.explanationMode})});
+        if(!r.ok)throw Error("No API");
+        const data=await r.json();explanationVi=typeof data.explanationVi==="string"?data.explanationVi:"";
+        if(!explanationVi)throw Error("No Vietnamese explanation");
+      }catch{explanationVi=offlineExplanation(state.lastCoach);note("Đang hiển thị giải thích mẫu; cần kết nối API để giải thích linh hoạt.");}
+    }else explanationVi=offlineExplanation(state.lastCoach);
+    explainLastOnScreen(explanationVi);
+    setBusy(false);
+  }
+  async function ask(message,endSession=false,visibleUser=true){
+    if(!state.active || state.pending)return;
+    setBusy(true);
+    if(visibleUser&&!endSession){add("user",message);state.turns++;}
+    const hist=state.history.slice(-16);
+    if(visibleUser&&!endSession)state.history.push({role:"user",content:message});
+    let reply="",explanationVi="";
+    if(!state.demo){
+      try{
+        const r=await fetch("/api/daily-speaking",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message,history:hist,mode:state.mode,pace:state.pace,topic:$("topic").value,endSession,explanationMode:state.explanationMode})});
+        if(!r.ok)throw Error("No API"); const data=await r.json();reply=data.reply;
+        explanationVi=typeof data.explanationVi==="string"?data.explanationVi:"";
+        if(typeof reply!=="string"||!reply.trim())throw Error("Empty reply");
+        $("connection").textContent="AI CONNECTED";
+      }catch{state.demo=true;$("connection").textContent="DEMO · chưa kết nối AI";note("Chưa có API khả dụng. Đã chuyển sang hội thoại mẫu offline.");}
+    }
+    if(!reply){
+      const result=endSession ? {
+        reply:`Practice recap (demo): You made ${state.turns} speaking turn${state.turns===1?"":"s"}. Keep practicing: "I usually...", "After...", and "On the way to...". Your 30-second challenge: describe your morning without reading a script. This demo cannot score grammar or pronunciation.`,
+        explanationVi:'Tổng kết bản demo: hãy tập kể về buổi sáng trong 30 giây, sử dụng cụm “I usually...” và “After...”. Hệ thống chưa đánh giá chính xác lỗi phát âm/ngữ pháp nếu chưa kết nối AI.'
+      } : nextOffline(message);
+      reply=result.reply;explanationVi=result.explanationVi;
+    }
+    if(state.explanationMode==="onRequest" && !endSession && !/\b(hint|explain|vietnamese|translate)\b|giải thích|tiếng việt/i.test(message))explanationVi="";
+    state.history.push({role:"assistant",content:reply});add("assistant",reply,explanationVi);
+    setBusy(false);
+    if(endSession){finish();} else {say(reply);}
+  }
+  function start(){
+    clearInterval(state.timer);if(state.audio)state.audio.pause();if("speechSynthesis" in window)speechSynthesis.cancel();
+    state.active=true;state.pending=false;state.step=0;state.history=[];state.turns=0;state.startedAt=Date.now();
+    $("messages").replaceChildren();$("start").textContent="↻ Bắt đầu lại";setControls(true);
+    $("sessionStatus").textContent="● Practicing";
+    state.timer=setInterval(()=>{const elapsed=Math.floor((Date.now()-state.startedAt)/60000),seconds=Math.floor((Date.now()-state.startedAt)/1000)%60;$("sessionTime").textContent=`${String(elapsed).padStart(2,"0")}:${String(seconds).padStart(2,"0")} / ${state.duration}:00 · Speak freely`;},1000);
+    add("assistant",startLine,state.explanationMode==="always"?initialVi:"");state.history.push({role:"assistant",content:startLine});say(startLine);
+    note(state.demo?"DEMO: Hội thoại mẫu. Để hội thoại tự do thực sự, cần kết nối API ở máy chủ.":"Đang luyện nói. Bấm mic hoặc nhập câu trả lời.");$("userInput").focus();
+  }
+  function finish(){state.active=false;clearInterval(state.timer);setControls(false);$("sessionStatus").textContent="✓ Completed";note("Đã kết thúc buổi luyện tập. Bấm 'Bắt đầu lại' để luyện tiếp.");}
+  $("start").addEventListener("click",start);
+  $("explanationMode").addEventListener("change", e=>{state.explanationMode=e.target.value;note("Đã đổi cách giải thích tiếng Việt.");});
+  for(const name of ["mode","duration","pace"]){ $(name).addEventListener("click",e=>{
+    const btn=e.target.closest("button[data-value]");if(!btn)return;
+    for(const b of $(name).querySelectorAll("button"))b.classList.toggle("active",b===btn);
+    state[name]=name==="duration"?Number(btn.dataset.value):btn.dataset.value;
+  });}
+  $("form").addEventListener("submit",e=>{e.preventDefault();const msg=$("userInput").value.trim();if(!msg)return;$("userInput").value="";ask(msg);});
+  $("repeat").addEventListener("click",()=>{if(state.lastCoach)say(state.lastCoach);});
+  $("hint").addEventListener("click",()=>ask("hint",false,false));
+  $("translate").addEventListener("click",explain);
+  $("skip").addEventListener("click",()=>ask("Please skip this question and ask me another simple question.",false,false));
+  $("end").addEventListener("click",()=>ask("End the practice session and summarize my speaking using only what I actually said.",true,false));
+  const Recognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(Recognition){
+    const rec=new Recognition();rec.lang="en-US";rec.interimResults=false;rec.maxAlternatives=1;
+    rec.onresult=(event)=>{const spoken=event.results[0][0].transcript;$("userInput").value=spoken;note("Đã nhận giọng nói. Đang gửi câu trả lời...");ask(spoken);$("userInput").value="";};
+    rec.onend=()=>$("mic").classList.remove("listening");
+    rec.onerror=(event)=>note(`Microphone: ${event.error}. Bạn có thể nhập câu trả lời bằng bàn phím.`);
+    $("mic").addEventListener("click",()=>{try{rec.start();$("mic").classList.add("listening");note("Đang nghe... Hãy nói bằng tiếng Anh.");}catch{note("Microphone đang hoạt động hoặc chưa được cấp quyền.");}});
+  }else{$("mic").title="Trình duyệt không hỗ trợ Web Speech Recognition";$("mic").addEventListener("click",()=>note("Không hỗ trợ nhận giọng nói. Hãy nhập câu trả lời."));}
+  if(!state.demo){fetch("/api/daily-speaking",{method:"OPTIONS"}).then(r=>{
+    // The actual API route is checked by first conversation POST. Remain honest until then.
+    if(r.ok) note("Đã có đường dẫn API. Hãy bắt đầu; hệ thống sẽ kiểm tra khả năng hội thoại ở lượt đầu.");
+  }).catch(()=>{});}
+})();
+</script>
+</body>
+</html>

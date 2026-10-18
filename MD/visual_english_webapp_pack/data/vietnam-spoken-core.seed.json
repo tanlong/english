@@ -1,0 +1,5468 @@
+{
+  "lexicon_id": "vi_everyday_itbank_spoken_core",
+  "version": "seed-v0.1",
+  "status": "seed_only",
+  "empirically_validated": false,
+  "may_drive_publish_gate": false,
+  "locale": "en-US",
+  "context": "Vietnamese adults speaking English in daily-life and IT banking roles",
+  "note": "Editorial candidate tokens and useful chunks only. NOT a measured corpus frequency list, NOT published training content, NOT proof of 90% coverage. Validate usage/sources and license before approval.",
+  "entries": [
+    {
+      "lemma": "i",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "you",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "he",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "she",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "we",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "they",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "me",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "him",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "her",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "us",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "them",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "my",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "your",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "his",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "our",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "their",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "this",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "that",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "these",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "those",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "a",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "an",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "the",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "and",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "or",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "but",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "so",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "because",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "if",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "when",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "before",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "after",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "at",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "in",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "on",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "to",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "from",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "for",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "with",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "about",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "into",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "of",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "by",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "around",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "up",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "down",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "as",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "is",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "are",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "was",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "were",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "be",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "been",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "being",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "am",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "do",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "does",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "did",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "can",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "could",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "would",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "should",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "will",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "need",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "want",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "have",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "has",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "had",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "get",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "got",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "go",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "come",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "see",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "know",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "think",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "feel",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "ask",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "tell",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "say",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "speak",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "talk",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "hear",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "listen",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "read",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "write",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "learn",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "work",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "help",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "make",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "take",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "give",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bring",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "put",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "keep",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "try",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "start",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "finish",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "stop",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "wait",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "let",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "look",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "check",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "send",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "show",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "use",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "find",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "open",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "close",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "move",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "stay",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "call",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "meet",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "share",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace"
+      ]
+    },
+    {
+      "lemma": "agree",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "change",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "plan",
+      "category": "core_general",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "hope",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "like",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "love",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "enjoy",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "prefer",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sometimes",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "usually",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "always",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "never",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "often",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "today",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "tomorrow",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "yesterday",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "now",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "then",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "here",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "there",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "what",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "which",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "who",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "why",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "how",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "where",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "much",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "many",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "please",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "thanks",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "thank",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sorry",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sure",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "okay",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "right",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "daily_life"
+      ]
+    },
+    {
+      "lemma": "really",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "maybe",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "also",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "just",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "first",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "next",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "last",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "early",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "late",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "morning",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "afternoon",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "evening",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "night",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "day",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "week",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "month",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "year",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "time",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "minute",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace"
+      ]
+    },
+    {
+      "lemma": "hour",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "home",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "school",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "daily_life"
+      ]
+    },
+    {
+      "lemma": "family",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "daily_life"
+      ]
+    },
+    {
+      "lemma": "son",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "daughter",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "wife",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "husband",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "parent",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "friend",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "neighbor",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "child",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "children",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "people",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "person",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "food",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "rice",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "noodles",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "breakfast",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "lunch",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "dinner",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "coffee",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "water",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "tea",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "restaurant",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "café",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "cafe",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "street",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "traffic",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "daily_life"
+      ]
+    },
+    {
+      "lemma": "motorbike",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bike",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "car",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bus",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "taxi",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "ride",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "walk",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "drive",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "office",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "building",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "elevator",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "floor",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "parking",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "desk",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "computer",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "phone",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "laptop",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "message",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "meeting",
+      "category": "core_general",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "team",
+      "category": "core_general",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "coworker",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "colleague",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "boss",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "customer",
+      "category": "core_general",
+      "roles": [
+        "general",
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "itba"
+      ]
+    },
+    {
+      "lemma": "user",
+      "category": "core_general",
+      "roles": [
+        "general",
+        "po",
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ux",
+        "po"
+      ]
+    },
+    {
+      "lemma": "app",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "screen",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace"
+      ]
+    },
+    {
+      "lemma": "project",
+      "category": "core_general",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace",
+        "pm"
+      ]
+    },
+    {
+      "lemma": "task",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace"
+      ]
+    },
+    {
+      "lemma": "job",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "issue",
+      "category": "core_general",
+      "roles": [
+        "developer",
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace",
+        "developer"
+      ]
+    },
+    {
+      "lemma": "problem",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "idea",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "question",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "answer",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "solution",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "reason",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "update",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace"
+      ]
+    },
+    {
+      "lemma": "detail",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "note",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "list",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "group",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "good",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bad",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "easy",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "hard",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "busy",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "ready",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "free",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "important",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "different",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "same",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "new",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "old",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "small",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "big",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fast",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "slow",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "soon",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "later",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "quickly",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "little",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "more",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "less",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "great",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fine",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "possible",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "clear",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "simple",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "again",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "yes",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "no",
+      "category": "core_general",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "drop",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "wake",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sleep",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "wash",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "brush",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "shower",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "dressed",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "clothes",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bag",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "helmet",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "road",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "jam",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "turn",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "left",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "straight",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "pick",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "buy",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "pay",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "price",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "cash",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "card",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "receipt",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "supermarket",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "market",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "shop",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "store",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "seat",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "table",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "order",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "menu",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "takeout",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "delivery",
+      "category": "daily_life",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "apartment",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "rent",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "weather",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "hot",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "cold",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "rain",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sunny",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "cloudy",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "tired",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sick",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "better",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "health",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "appointment",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "doctor",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "medicine",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "weekend",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "holiday",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "rest",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "travel",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "hotel",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "ticket",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "workplace"
+      ]
+    },
+    {
+      "lemma": "station",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "airport",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "trip",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "grade",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "kids",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "meal",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "snack",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "milk",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bread",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "chicken",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fish",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "soup",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "pho",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "banhmi",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "commute",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "rush",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "deadline",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "schedule",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "manager",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "feedback",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ux"
+      ]
+    },
+    {
+      "lemma": "followup",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "follow-up",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "progress",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "request",
+      "category": "workplace",
+      "roles": [
+        "developer",
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "developer"
+      ]
+    },
+    {
+      "lemma": "requirement",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "itba",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "itba",
+        "po"
+      ]
+    },
+    {
+      "lemma": "review",
+      "category": "workplace",
+      "roles": [
+        "developer",
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "developer"
+      ]
+    },
+    {
+      "lemma": "discuss",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "discussion",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "explain",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "clarify",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "confirm",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "assign",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "decision",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "document",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "email",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "chat",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "online",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "remote",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "invite",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "join",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "cancel",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "delay",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "arrange",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "available",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "unavailable",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "standup",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "stand-up",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "priority",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "blocker",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "risk",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "milestone",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "stakeholder",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "client",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "owner",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "pm",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm",
+        "po"
+      ]
+    },
+    {
+      "lemma": "status",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "summary",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "minutes",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "action",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "pm"
+      ]
+    },
+    {
+      "lemma": "item",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "items",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "pending",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "complete",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "approved",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "approval",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "process",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "itba"
+      ]
+    },
+    {
+      "lemma": "workflow",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "report",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "data",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "test",
+      "category": "workplace",
+      "roles": [
+        "developer",
+        "general",
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ux",
+        "developer"
+      ]
+    },
+    {
+      "lemma": "testing",
+      "category": "workplace",
+      "roles": [
+        "developer",
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "developer"
+      ]
+    },
+    {
+      "lemma": "result",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "design",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ui"
+      ]
+    },
+    {
+      "lemma": "designer",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "developer",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "develop",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "development",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "product",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "release",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "version",
+      "category": "workplace",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "feature",
+      "category": "workplace",
+      "roles": [
+        "general",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "business",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "analyst",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "analysis",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "criteria",
+      "category": "itba",
+      "roles": [
+        "itba",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "acceptance",
+      "category": "itba",
+      "roles": [
+        "itba",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "validation",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "mapping",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "journey",
+      "category": "itba",
+      "roles": [
+        "itba",
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ux"
+      ]
+    },
+    {
+      "lemma": "flow",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "system",
+      "category": "itba",
+      "roles": [
+        "itba",
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ui"
+      ]
+    },
+    {
+      "lemma": "policy",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "rule",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "scenario",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "uat",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "banking",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "payment",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "transaction",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "account",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "form",
+      "category": "itba",
+      "roles": [
+        "itba",
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "ui"
+      ]
+    },
+    {
+      "lemma": "error",
+      "category": "itba",
+      "roles": [
+        "developer",
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "developer"
+      ]
+    },
+    {
+      "lemma": "successful",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "failed",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "success",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "branch",
+      "category": "itba",
+      "roles": [
+        "developer",
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "developer"
+      ]
+    },
+    {
+      "lemma": "digital",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "service",
+      "category": "itba",
+      "roles": [
+        "developer",
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "developer"
+      ]
+    },
+    {
+      "lemma": "deposit",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "loan",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "transfer",
+      "category": "itba",
+      "roles": [
+        "itba"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "interview",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "research",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "usability",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "navigation",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "prototype",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "wireframe",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "experience",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "step",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "pain",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "point",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "goal",
+      "category": "ux",
+      "roles": [
+        "po",
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "understand",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "discover",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "behavior",
+      "category": "ux",
+      "roles": [
+        "ux"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "interface",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "button",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "field",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "label",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "component",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "spacing",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "layout",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "color",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "contrast",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "font",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "icon",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "dialog",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "modal",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "loading",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "empty",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "state",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "mobile",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "desktop",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "tap",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "click",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "align",
+      "category": "ui",
+      "roles": [
+        "ui"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "timeline",
+      "category": "pm",
+      "roles": [
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "budget",
+      "category": "pm",
+      "roles": [
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "scope",
+      "category": "pm",
+      "roles": [
+        "pm",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "resource",
+      "category": "pm",
+      "roles": [
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "dependency",
+      "category": "pm",
+      "roles": [
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sprint",
+      "category": "pm",
+      "roles": [
+        "pm",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "roadmap",
+      "category": "pm",
+      "roles": [
+        "pm",
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": [],
+      "additional_categories": [
+        "po"
+      ]
+    },
+    {
+      "lemma": "agenda",
+      "category": "pm",
+      "roles": [
+        "pm"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "code",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "coding",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "bug",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fix",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fixed",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "tested",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "api",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "backend",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "frontend",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "database",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "build",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "deploy",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "deployment",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "staging",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "production",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "commit",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "merge",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "pull",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "environment",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "log",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "endpoint",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "integration",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "response",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "debugging",
+      "category": "developer",
+      "roles": [
+        "developer"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "backlog",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "story",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "stories",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "prioritize",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "value",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "impact",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "outcome",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "refine",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "refinement",
+      "category": "po",
+      "roles": [
+        "po"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "zero",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "one",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "two",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "three",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "four",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "five",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "six",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "seven",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "eight",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "nine",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "ten",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "eleven",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "twelve",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "thirteen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fourteen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fifteen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sixteen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "seventeen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "eighteen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "nineteen",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "twenty",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "thirty",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "forty",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "fifty",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "sixty",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "seventy",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "eighty",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "ninety",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "hundred",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    },
+    {
+      "lemma": "thousand",
+      "category": "daily_life",
+      "roles": [
+        "general"
+      ],
+      "review_status": "pending",
+      "source_evidence": []
+    }
+  ],
+  "chunks": [
+    {
+      "text": "how are you",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "what do you think",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "i think so",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "that makes sense",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "sounds good",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "not really",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "let me know",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "can you help me",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "could you say that again",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "what do you mean",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "tell me more about that",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "on my way",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "a little bit",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "for a while",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "in a minute",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "right now",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "no problem",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "take your time",
+      "category": "general",
+      "review_status": "pending"
+    },
+    {
+      "text": "get up",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "wake up",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "get ready",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "head out",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "drop off",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "pick up",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "on the way to work",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "grab some breakfast",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "take a lunch break",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "head home",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "have lunch",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "get stuck in traffic",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "go to the market",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "meet for coffee",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "take the elevator",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "clock in",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "see you later",
+      "category": "daily_life",
+      "review_status": "pending"
+    },
+    {
+      "text": "do you have a minute",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "could you give me an update",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "what is the status",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "are we still on track",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "can we move the meeting",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "let us go over it",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "could you explain that",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "can you check this",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "thank you for your help",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "i will follow up",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "we need more time",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "what is the next step",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "let us talk after lunch",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "how is it going",
+      "category": "coworker",
+      "review_status": "pending"
+    },
+    {
+      "text": "business requirement",
+      "category": "itba",
+      "review_status": "pending"
+    },
+    {
+      "text": "acceptance criteria",
+      "category": "itba",
+      "review_status": "pending"
+    },
+    {
+      "text": "user flow",
+      "category": "itba",
+      "review_status": "pending"
+    },
+    {
+      "text": "business rule",
+      "category": "itba",
+      "review_status": "pending"
+    },
+    {
+      "text": "user acceptance testing",
+      "category": "itba",
+      "review_status": "pending"
+    },
+    {
+      "text": "expected result",
+      "category": "itba",
+      "review_status": "pending"
+    },
+    {
+      "text": "user journey",
+      "category": "ux",
+      "review_status": "pending"
+    },
+    {
+      "text": "usability test",
+      "category": "ux",
+      "review_status": "pending"
+    },
+    {
+      "text": "research finding",
+      "category": "ux",
+      "review_status": "pending"
+    },
+    {
+      "text": "pain point",
+      "category": "ux",
+      "review_status": "pending"
+    },
+    {
+      "text": "user interview",
+      "category": "ux",
+      "review_status": "pending"
+    },
+    {
+      "text": "design system",
+      "category": "ui",
+      "review_status": "pending"
+    },
+    {
+      "text": "screen layout",
+      "category": "ui",
+      "review_status": "pending"
+    },
+    {
+      "text": "error message",
+      "category": "ui",
+      "review_status": "pending"
+    },
+    {
+      "text": "loading state",
+      "category": "ui",
+      "review_status": "pending"
+    },
+    {
+      "text": "user interface",
+      "category": "ui",
+      "review_status": "pending"
+    },
+    {
+      "text": "project timeline",
+      "category": "pm",
+      "review_status": "pending"
+    },
+    {
+      "text": "delivery plan",
+      "category": "pm",
+      "review_status": "pending"
+    },
+    {
+      "text": "next milestone",
+      "category": "pm",
+      "review_status": "pending"
+    },
+    {
+      "text": "project risk",
+      "category": "pm",
+      "review_status": "pending"
+    },
+    {
+      "text": "meeting agenda",
+      "category": "pm",
+      "review_status": "pending"
+    },
+    {
+      "text": "fix a bug",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "test the fix",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "code review",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "pull request",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "api response",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "deploy the update",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "latest version",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "technical issue",
+      "category": "developer",
+      "review_status": "pending"
+    },
+    {
+      "text": "product owner",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "product backlog",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "user story",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "feature priority",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "business value",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "next release",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "product goal",
+      "category": "po",
+      "review_status": "pending"
+    },
+    {
+      "text": "acceptance criteria",
+      "category": "po",
+      "review_status": "pending"
+    }
+  ]
+}

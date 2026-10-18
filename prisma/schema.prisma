@@ -1,0 +1,61 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../app/generated/prisma"
+  moduleFormat        = "esm"
+  importFileExtension = "ts"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model TtsAudio {
+  key         String   @id
+  requestJson String?
+  audio       Bytes
+  createdAt   DateTime @default(now())
+}
+
+model Transcription {
+  key       String   @id
+  model     String
+  language  String
+  text      String
+  createdAt DateTime @default(now())
+}
+
+model Learner {
+  id            String            @id
+  stateJson     String            @default("{}")
+  dismissedJson String            @default("[]")
+  topicOffset   Int               @default(0)
+  updatedAt     DateTime          @updatedAt
+  records       LearningRecord[]
+  examples      CoachingExample[]
+}
+
+model LearningRecord {
+  learnerId String
+  key       String
+  kind      String
+  topic     String
+  completed Boolean  @default(false)
+  dataJson  String
+  updatedAt DateTime @updatedAt
+  learner   Learner  @relation(fields: [learnerId], references: [id], onDelete: Cascade)
+
+  @@id([learnerId, key])
+  @@index([learnerId, updatedAt])
+}
+
+model CoachingExample {
+  id         String   @id @default(cuid())
+  learnerId  String
+  english    String
+  vietnamese String
+  usageVi    String
+  approvedAt DateTime @default(now())
+  learner    Learner  @relation(fields: [learnerId], references: [id], onDelete: Cascade)
+
+  @@unique([learnerId, english])
+}
