@@ -1,0 +1,48 @@
+{
+  "title": "Thói quen nhỏ và việc học mỗi ngày",
+  "level": "B1",
+  "difficulty": {
+    "vocabularyVi": "Từ vựng quen thuộc về thói quen và học tập.",
+    "grammarVi": "Câu đơn và câu ghép với because."
+  },
+  "summaryVi": "Video khuyên người học luyện tập đều đặn thay vì chờ động lực.",
+  "mainPoints": [
+    {
+      "textVi": "Luyện tập đều giúp xây dựng thói quen.",
+      "evidenceIds": ["E1"]
+    },
+    {
+      "textVi": "Bắt đầu nhỏ khiến việc học dễ tiếp tục hơn.",
+      "evidenceIds": ["E2"]
+    }
+  ],
+  "keySentences": [
+    {
+      "english": "Small habits make a big difference.",
+      "vietnamese": "Thói quen nhỏ tạo ra khác biệt lớn.",
+      "usageVi": "Dùng khi khuyến khích một thay đổi nhỏ.",
+      "evidenceId": "E1"
+    },
+    {
+      "english": "Start with five minutes every day.",
+      "vietnamese": "Bắt đầu với năm phút mỗi ngày.",
+      "usageVi": "Gợi ý một bước khởi đầu vừa sức.",
+      "evidenceId": "E2"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E1",
+      "text": "Small habits make a big difference. Practice every day to build a habit."
+    },
+    {
+      "id": "E2",
+      "text": "Start with five minutes every day. This makes it easier to keep going."
+    }
+  ],
+  "questions": [
+    "Do you agree that small habits make a big difference?",
+    "Is five minutes of practice enough?",
+    "How can you make practice a daily habit?"
+  ]
+}

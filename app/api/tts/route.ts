@@ -1,54 +1,72 @@
-const MAX_TEXT_LENGTH = 4096;
+import { curriculum, roles } from "../../content/curriculum.ts";
+import { ipaSounds } from "../../content/ipa.ts";
+import { getPracticeLesson } from "../../content/practice.ts";
+import { getSpeech } from "../../audio/server.ts";
+import { isSameOrigin } from "../same-origin.ts";
+
+export const runtime = "nodejs";
+
+const allowedText = new Set<string>([
+  ...ipaSounds.flatMap((sound) => [sound.word, sound.pair.word]),
+]);
+for (const module of curriculum) {
+  for (let day = 1; day <= 6; day++) {
+    for (const role of roles) {
+      const lesson = getPracticeLesson(module.week, day, role.id);
+      const lines = lesson.lines.map((line) => line.en);
+      allowedText.add(lines.join(" "));
+      for (const line of lines) allowedText.add(line);
+      allowedText.add(lesson.target);
+      allowedText.add(lesson.grammar.en);
+      allowedText.add(lines[0]);
+      allowedText.add(lesson.transfer);
+      allowedText.add(lesson.followup);
+      allowedText.add(
+        `${lesson.communication.opening} ${lesson.communication.reply} ${lesson.communication.followup}`,
+      );
+      allowedText.add(lesson.communication.opening);
+      allowedText.add(lesson.communication.reply);
+      allowedText.add(lesson.communication.short[0]);
+      allowedText.add(lesson.communication.followup);
+    }
+  }
+}
+allowedText.add("How could you show that you understand the other person?");
+allowedText.add("Could you give me one more detail or ask a follow-up question?");
 
 export async function POST(request: Request) {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return Response.json({ error: "Chưa cấu hình OPENAI_API_KEY." }, { status: 503 });
-  }
+  if (!isSameOrigin(request))
+    return Response.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
+  if (Number(request.headers.get("content-length")) > 8192)
+    return Response.json({ error: "Yêu cầu âm thanh quá lớn." }, { status: 413 });
 
-  let input: unknown;
+  let body: { spokenText?: unknown; voice?: unknown };
   try {
-    input = await request.json();
+    body = await request.json();
   } catch {
-    return Response.json({ error: "Dữ liệu gửi lên không hợp lệ." }, { status: 400 });
+    return Response.json({ error: "Yêu cầu âm thanh không hợp lệ." }, { status: 400 });
   }
-
-  const { text, speed = 1 } = (input ?? {}) as { text?: unknown; speed?: unknown };
-  if (typeof text !== "string" || !text.trim() || text.length > MAX_TEXT_LENGTH) {
-    return Response.json({ error: `Nội dung phải có từ 1 đến ${MAX_TEXT_LENGTH} ký tự.` }, { status: 400 });
-  }
-  if (typeof speed !== "number" || speed < 0.5 || speed > 1.5) {
-    return Response.json({ error: "Tốc độ đọc không hợp lệ." }, { status: 400 });
-  }
+  if (!body || typeof body !== "object")
+    return Response.json({ error: "Yêu cầu âm thanh không hợp lệ." }, { status: 400 });
+  const { spokenText, voice = "nova" } = body;
+  if (
+    typeof spokenText !== "string" ||
+    !allowedText.has(spokenText) ||
+    (voice !== "nova" && voice !== "alloy")
+  )
+    return Response.json({ error: "Câu thoại hoặc giọng đọc không hợp lệ." }, { status: 400 });
 
   try {
-    const response = await fetch("https://api.openai.com/v1/audio/speech", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini-tts",
-        voice: "cedar",
-        input: text.trim(),
-        instructions: "Speak in clear, natural American English for an adult language learner. Use careful pronunciation, friendly intonation, and brief natural pauses.",
-        response_format: "mp3",
-        speed,
-      }),
-    });
-
-    if (!response.ok || !response.body) {
-      return Response.json({ error: "OpenAI chưa thể tạo giọng đọc. Vui lòng thử lại." }, { status: 502 });
-    }
-
-    return new Response(response.body, {
-      headers: {
-        "Content-Type": "audio/mpeg",
-        "Cache-Control": "private, max-age=86400",
-      },
+    const audio = await getSpeech(spokenText, voice);
+    if (!audio)
+      return Response.json(
+        { error: "Giọng đọc hiện chưa sẵn sàng. Bạn hãy thử lại sau." },
+        { status: 503 },
+      );
+    return new Response(audio, {
+      headers: { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=3600" },
     });
   } catch {
-    return Response.json({ error: "Không thể kết nối đến OpenAI. Vui lòng thử lại." }, { status: 502 });
+    return Response.json({ error: "Chưa phát được âm thanh. Bạn hãy thử lại." }, { status: 502 });
   }
 }

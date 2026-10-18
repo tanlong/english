@@ -1,0 +1,294 @@
+{
+  "generator": "Built-in image_gen",
+  "reference": "img/roadmap-week-01.webp",
+  "images": [
+    {
+      "week": 5,
+      "title": "Food & Drinks",
+      "prompt": "Use case: illustration-story.\nAsset type: square English-learning roadmap illustration, week 5, Food & Drinks.\nCreate ONE finished square image, not a collage. Use the provided image solely as a visual style and recurring-character reference. Depict the same friendly Vietnamese adult man with tousled black hair, in a blue casual shirt, at a sunny lunch table enjoying a bowl of noodles, fresh vegetables and a clear glass of water. Food should be the focal context, with a natural expressive face and believable hands. Warm polished hand-drawn anime story illustration, clean ink lines, soft detailed painterly backgrounds, golden sunlight, vivid but natural colors. Square edge-to-edge composition with all key scene elements comfortably inside the frame. No typography, letters, numbers, captions, watermarks, logos, frames or UI. Distinct scene from the breakfast reference.",
+      "asset": "img/roadmap-week-05.webp"
+    },
+    {
+      "week": 6,
+      "title": "Café & Restaurants",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 6 topic: Café & Restaurants.\nScene: Inside a leafy neighborhood cafe, the recurring Vietnamese man politely orders an iced coffee from a friendly barista at the counter; cafe tables and a pastry display establish the setting.",
+      "asset": "img/roadmap-week-06.webp"
+    },
+    {
+      "week": 7,
+      "title": "Shopping & Prices",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 7 topic: Shopping & Prices.\nScene: At a small clothing shop, the recurring man holds a blue shirt against himself while a friendly shop assistant offers another size; neatly folded clothes and a fitting-room curtain.",
+      "asset": "img/roadmap-week-07.webp"
+    },
+    {
+      "week": 8,
+      "title": "Directions & Transport",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 8 topic: Directions & Transport.\nScene: At a leafy city street corner near a bus stop, the recurring man holds an unfolded street map while a helpful local points along the street toward a waiting city bus; no readable signage.",
+      "asset": "img/roadmap-week-08.webp"
+    },
+    {
+      "week": 9,
+      "title": "Time & Appointments",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 9 topic: Time & Appointments.\nScene: At a bright home desk, the recurring man checks a wall clock while arranging an appointment on his phone beside an open paper calendar, with simple blank calendar boxes and no text.",
+      "asset": "img/roadmap-week-09.webp"
+    },
+    {
+      "week": 10,
+      "title": "Weekends",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 10 topic: Weekends.\nScene: On a relaxed weekend afternoon, the recurring man and a friend enjoy a picnic in a green city park with a blanket, fruit and a bicycle nearby.",
+      "asset": "img/roadmap-week-10.webp"
+    },
+    {
+      "week": 11,
+      "title": "Weather",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 11 topic: Weather.\nScene: On a rainy city sidewalk, the recurring man opens a blue umbrella and glances at clearing golden clouds; wet pavement reflects the sky, a gentle breeze moves the trees.",
+      "asset": "img/roadmap-week-11.webp"
+    },
+    {
+      "week": 12,
+      "title": "Health & Feelings",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 12 topic: Health & Feelings.\nScene: In a peaceful living room, the recurring man rests on a sofa with a blanket and a warm mug while a caring friend checks how he feels; gentle supportive expressions.",
+      "asset": "img/roadmap-week-12.webp"
+    },
+    {
+      "week": 13,
+      "title": "Checkpoint A1–A2",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 13 topic: Checkpoint A1–A2.\nScene: At a sunny study desk, the recurring man confidently practices speaking into a small tabletop microphone while reviewing picture cards of family, meals and everyday activities; no scores, certificates or text.",
+      "asset": "img/roadmap-week-13.webp"
+    },
+    {
+      "week": 14,
+      "title": "Past Events",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 14 topic: Past Events.\nScene: In a cozy living room, the recurring man and a family member smile over a photo album containing small pictures of a previous family outing; the album and shared memories are the focal point.",
+      "asset": "img/roadmap-week-14.webp"
+    },
+    {
+      "week": 15,
+      "title": "Future Plans",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 15 topic: Future Plans.\nScene: At a kitchen table, the recurring man plans a coastal holiday with a map, a beach postcard and a small packed travel bag; an open window shows a bright inviting horizon.",
+      "asset": "img/roadmap-week-15.webp"
+    },
+    {
+      "week": 16,
+      "title": "Choices & Preferences",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 16 topic: Choices & Preferences.\nScene: At a casual restaurant counter, the recurring man thoughtfully chooses between a plate of noodles and a fresh sandwich as a friendly server waits; readable body language, no written menu.",
+      "asset": "img/roadmap-week-16.webp"
+    },
+    {
+      "week": 17,
+      "title": "Mistakes & Apologies",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 17 topic: Mistakes & Apologies.\nScene: At an office desk, the recurring man sincerely apologizes to a calm coworker while exchanging two document folders; open reassuring gestures, friendly reconciliation rather than shame.",
+      "asset": "img/roadmap-week-17.webp"
+    },
+    {
+      "week": 18,
+      "title": "My Job",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 18 topic: My Job.\nScene: The recurring man, wearing a blue collared shirt, explains his work to a colleague at a bright desk with a laptop and simple interface sketches on paper; modern welcoming office.",
+      "asset": "img/roadmap-week-18.webp"
+    },
+    {
+      "week": 19,
+      "title": "Teamwork",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 19 topic: Teamwork.\nScene: The recurring man and two coworkers collaborate around one desk, arranging colorful blank sticky notes and simple wireframe drawings; each contributes, warm cooperative atmosphere.",
+      "asset": "img/roadmap-week-19.webp"
+    },
+    {
+      "week": 20,
+      "title": "Task Updates",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 20 topic: Task Updates.\nScene: The recurring man gives a short progress update to a colleague beside a small project board with blank colored cards arranged in three columns; laptop and notebook on the desk.",
+      "asset": "img/roadmap-week-20.webp"
+    },
+    {
+      "week": 21,
+      "title": "Asking for Help",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 21 topic: Asking for Help.\nScene: A supportive coworker gently points to a laptop screen while the recurring man listens and takes notes at their shared office desk; learning together, approachable expressions.",
+      "asset": "img/roadmap-week-21.webp"
+    },
+    {
+      "week": 22,
+      "title": "Meetings",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 22 topic: Meetings.\nScene: In a small light-filled meeting room, the recurring man and three colleagues discuss around a round table with notebooks and a simple chart on a wall display; everyone engaged.",
+      "asset": "img/roadmap-week-22.webp"
+    },
+    {
+      "week": 23,
+      "title": "Explain Technology Simply",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 23 topic: Explain Technology Simply.\nScene: The recurring man explains a simple smartphone app to a curious colleague using an easy hand-drawn diagram of a phone, cloud and laptop on a whiteboard; only pictograms, no text.",
+      "asset": "img/roadmap-week-23.webp"
+    },
+    {
+      "week": 24,
+      "title": "Problem Solving",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 24 topic: Problem Solving.\nScene: The recurring man and a coworker trace a simple broken connection on a whiteboard diagram and fit the solution together with blank sticky notes; thoughtful office troubleshooting scene.",
+      "asset": "img/roadmap-week-24.webp"
+    },
+    {
+      "week": 25,
+      "title": "Small Talk at Work",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 25 topic: Small Talk at Work.\nScene: In a sunny office kitchenette, the recurring man and two coworkers share a relaxed coffee break beside a coffee machine and green plants; friendly everyday conversation.",
+      "asset": "img/roadmap-week-25.webp"
+    },
+    {
+      "week": 26,
+      "title": "Checkpoint A2",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 26 topic: Checkpoint A2.\nScene: At a bright quiet workspace, the recurring man records a short spoken work summary with a headset and laptop, supported by picture cards of teamwork and meetings; no scores, certificates or text.",
+      "asset": "img/roadmap-week-26.webp"
+    },
+    {
+      "week": 27,
+      "title": "Travel & Hotels",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 27 topic: Travel & Hotels.\nScene: The recurring man with a rolling suitcase checks into a welcoming hotel, speaking with a friendly receptionist across a wood counter; tropical greenery and travel atmosphere.",
+      "asset": "img/roadmap-week-27.webp"
+    },
+    {
+      "week": 28,
+      "title": "Customer Service",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 28 topic: Customer Service.\nScene: At a customer-service counter, the recurring man politely shows a small boxed purchase to a helpful staff member who offers a replacement; calm respectful expressions, no brand logos.",
+      "asset": "img/roadmap-week-28.webp"
+    },
+    {
+      "week": 29,
+      "title": "Everyday Problems",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 29 topic: Everyday Problems.\nScene: In a home kitchen, the recurring man and a friendly repair worker inspect a gently dripping faucet together, with a small toolkit nearby; practical everyday problem, no flooding.",
+      "asset": "img/roadmap-week-29.webp"
+    },
+    {
+      "week": 30,
+      "title": "Follow-up Questions",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 30 topic: Follow-up Questions.\nScene: At an outdoor cafe, the recurring man leans forward attentively as a friend shares a travel photo on a phone, inviting another question through curious eye contact and an open hand.",
+      "asset": "img/roadmap-week-30.webp"
+    },
+    {
+      "week": 31,
+      "title": "Storytelling",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 31 topic: Storytelling.\nScene: In a cozy evening living room, the recurring man animatedly tells a story to two interested friends, using expressive hands; a small photo of a mountain trip rests on the table.",
+      "asset": "img/roadmap-week-31.webp"
+    },
+    {
+      "week": 32,
+      "title": "Opinions & Reasons",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 32 topic: Opinions & Reasons.\nScene: At a neighborhood cafe table, the recurring man and a friend compare two travel photos, one of a beach and one of mountains, sharing their viewpoints with thoughtful friendly gestures.",
+      "asset": "img/roadmap-week-32.webp"
+    },
+    {
+      "week": 33,
+      "title": "Disagreements",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 33 topic: Disagreements.\nScene: At a shared planning table, the recurring man and a friend calmly discuss two different route maps, listening respectfully with relaxed open hands; no conflict or angry faces.",
+      "asset": "img/roadmap-week-33.webp"
+    },
+    {
+      "week": 34,
+      "title": "Group Discussion",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 34 topic: Group Discussion.\nScene: In a relaxed community study space, the recurring man and three adult friends discuss around a circular table with blank notes, each person engaged; broad balanced group composition.",
+      "asset": "img/roadmap-week-34.webp"
+    },
+    {
+      "week": 35,
+      "title": "Connected Speech",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 35 topic: Connected Speech.\nScene: The recurring man listens closely through over-ear headphones at a sunny study desk, following smooth abstract linked sound waves on a tablet; natural listening practice, no words or music notes.",
+      "asset": "img/roadmap-week-35.webp"
+    },
+    {
+      "week": 36,
+      "title": "Different Speakers",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 36 topic: Different Speakers.\nScene: At a community language exchange, the recurring man listens to a diverse small group of adults of different ages taking turns telling short stories; friendly distinct faces, no stereotyped costumes.",
+      "asset": "img/roadmap-week-36.webp"
+    },
+    {
+      "week": 37,
+      "title": "Multi-person Talk",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 37 topic: Multi-person Talk.\nScene: At a lively but comfortable dinner table, the recurring man follows a conversation among three friends, turning toward the current speaker; drinks and shared dishes, clear listening expressions.",
+      "asset": "img/roadmap-week-37.webp"
+    },
+    {
+      "week": 38,
+      "title": "Phone Calls",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 38 topic: Phone Calls.\nScene: The recurring man makes a friendly phone call by a large apartment window, holding the phone naturally to his ear with a notebook and pen ready on the table; sunlit city outside.",
+      "asset": "img/roadmap-week-38.webp"
+    },
+    {
+      "week": 39,
+      "title": "Checkpoint pre-B1",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 39 topic: Checkpoint pre-B1.\nScene: In a calm study nook, the recurring man practices a short spoken story with a headset and a picture sequence of travel and daily life beside his laptop; confident progress, no certificates or scores.",
+      "asset": "img/roadmap-week-39.webp"
+    },
+    {
+      "week": 40,
+      "title": "Spontaneous Questions",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 40 topic: Spontaneous Questions.\nScene: At a friendly language meetup, the recurring man responds thoughtfully to an unexpected question from a smiling conversation partner, pausing with a curious expression and an open gesture.",
+      "asset": "img/roadmap-week-40.webp"
+    },
+    {
+      "week": 41,
+      "title": "Negotiation",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 41 topic: Negotiation.\nScene: Across a small office table, the recurring man and a colleague work toward an agreement using a blank project timeline and a few movable colored blocks, both listening and smiling.",
+      "asset": "img/roadmap-week-41.webp"
+    },
+    {
+      "week": 42,
+      "title": "Group Communication",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 42 topic: Group Communication.\nScene: The recurring man coordinates a small community team around a shared planning board with blank colored cards, making sure a quieter participant has a turn to speak.",
+      "asset": "img/roadmap-week-42.webp"
+    },
+    {
+      "week": 43,
+      "title": "Solving Problems",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 43 topic: Solving Problems.\nScene: At a city bus shelter on a rainy afternoon, the recurring man and a friend work out an alternative route using a map and phone; reassuring cooperative gestures and a nearby taxi.",
+      "asset": "img/roadmap-week-43.webp"
+    },
+    {
+      "week": 44,
+      "title": "Social Conversations",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 44 topic: Social Conversations.\nScene: At a warm neighborhood garden gathering, the recurring man meets two new adult friends over simple refreshments, relaxed welcoming conversation beneath string lights and leafy branches.",
+      "asset": "img/roadmap-week-44.webp"
+    },
+    {
+      "week": 45,
+      "title": "Real-World Listening",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 45 topic: Real-World Listening.\nScene: At a busy railway station concourse, the recurring man listens attentively to an announcement while checking his ticket, with a train and a wall speaker visible; all signs abstract and unreadable.",
+      "asset": "img/roadmap-week-45.webp"
+    },
+    {
+      "week": 46,
+      "title": "Decisions & Discussions",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 46 topic: Decisions & Discussions.\nScene: At a home table, the recurring man and two friends decide on a shared weekend plan, comparing a beach picture and a hiking picture while arranging simple blank choice cards.",
+      "asset": "img/roadmap-week-46.webp"
+    },
+    {
+      "week": 47,
+      "title": "Experiences & Stories",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 47 topic: Experiences & Stories.\nScene: The recurring man shares a memorable hiking experience with a friend on a park bench, showing a scenic mountain photo and gesturing toward the distant hills with a thoughtful smile.",
+      "asset": "img/roadmap-week-47.webp"
+    },
+    {
+      "week": 48,
+      "title": "Daily Life Integration",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 48 topic: Daily Life Integration.\nScene: At an outdoor neighborhood market, the recurring man chats with a friendly produce seller while carrying a reusable shopping bag and a small cafe takeaway cup; natural everyday conversation.",
+      "asset": "img/roadmap-week-48.webp"
+    },
+    {
+      "week": 49,
+      "title": "Workplace Integration",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 49 topic: Workplace Integration.\nScene: In a bright office, the recurring man leads a practical collaborative work session with two colleagues, a laptop, simple interface sketches and a board of blank task cards; natural professional interaction.",
+      "asset": "img/roadmap-week-49.webp"
+    },
+    {
+      "week": 50,
+      "title": "Conversation Simulations",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 50 topic: Conversation Simulations.\nScene: In a welcoming adult language studio, the recurring man and a conversation partner practice a pretend hotel check-in at a small tabletop counter with a travel bag and simple picture prompts.",
+      "asset": "img/roadmap-week-50.webp"
+    },
+    {
+      "week": 51,
+      "title": "B1 Mock Test",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 51 topic: B1 Mock Test.\nScene: At a quiet study table, the recurring man calmly rehearses a speaking interview with a supportive adult partner, a small tabletop microphone and picture prompts; preparation scene, no pass badges or certificates.",
+      "asset": "img/roadmap-week-51.webp"
+    },
+    {
+      "week": 52,
+      "title": "Final B1 + 80% Test",
+      "prompt": "Use case: illustration-story. Asset type: square English-learning roadmap illustration. Create ONE finished square image, not a collage. The supplied image is a STYLE and recurring CHARACTER reference only: keep the same Vietnamese adult man with tousled black hair and blue casual or collared shirt, but create a clearly new setting, pose and camera composition for this topic. Warm polished hand-drawn anime story illustration, clean ink lines, detailed softly painted backgrounds, golden natural light, vivid harmonious colors. Natural expressive adult faces and believable hands. Edge-to-edge square artwork, medium-wide scene with all key elements inside the frame; still recognizable as a small thumbnail. No typography, letters, numbers, captions, logos, watermarks, border, UI or speech bubbles.\nWeek 52 topic: Final B1 + 80% Test.\nScene: At a bright study desk by an open window, the recurring man confidently completes a final speaking practice with headphones and a laptop, notebook and picture prompts nearby; hopeful late-afternoon light, no scores, certificates or claims of passing.",
+      "asset": "img/roadmap-week-52.webp"
+    }
+  ]
+}

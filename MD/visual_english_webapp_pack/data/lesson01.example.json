@@ -1,0 +1,162 @@
+{
+  "note": "ILLUSTRATIVE STRUCTURE ONLY. NOT an editorially approved production lesson. Do not bypass the source review workflow. Vocabulary list refers to Vietnam everyday and IT-banking spoken-English core; no production coverage verdict until a reviewed lexicon is published.",
+  "course_id": "natural-english-v1",
+  "week": 1,
+  "day": 1,
+  "lesson_id": "ne_w01_d01",
+  "title_en": "Waking Up",
+  "title_vi": "Thức dậy",
+  "cefr_target": "A1",
+  "style_id": "FRIENDLY_PROFESSIONAL_VISUAL_ENGLISH_V1",
+  "role_tags": [
+    "general",
+    "working_adult",
+    "everyday"
+  ],
+  "learning_objective_en": "Say when you usually get up and respond to a simple follow-up question.",
+  "learning_objective_vi": "Nói được giờ thường thức dậy và trả lời câu hỏi tiếp theo.",
+  "character_ids": [
+    "char_minh"
+  ],
+  "asset_refs": [
+    {
+      "id": "scene_wake_01",
+      "ratio": "4:5",
+      "source": "prototype/assets/flashcard01-en.png",
+      "usage": "visual prototype reference only; original contains text, do not reuse unchanged for scored listening",
+      "alt_vi": "Người đàn ông trưởng thành đang vươn vai trên giường lúc sáng sớm.",
+      "focal_x": 0.5,
+      "focal_y": 0.37,
+      "review_status": "prototype_only"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "chunk_get_up",
+      "text_en": "get up",
+      "meaning_vi": "thức dậy và ra khỏi giường",
+      "source_review_status": "pending"
+    },
+    {
+      "id": "chunk_around_time",
+      "text_en": "around five forty",
+      "meaning_vi": "khoảng năm giờ bốn mươi",
+      "source_review_status": "pending"
+    }
+  ],
+  "utterances": [
+    {
+      "id": "utterance_wake_01",
+      "text_en": "I usually get up around five forty.",
+      "text_vi": "Tôi thường thức dậy khoảng 5 giờ 40.",
+      "ipa_en_us": null,
+      "english_revision": 1,
+      "linguistic_approval": "pending",
+      "lexical_coverage_ratio": null,
+      "sources": {
+        "cambridge": [],
+        "coca": [],
+        "youglish": []
+      },
+      "audio_variants": [],
+      "basic_better_natural": {
+        "basic": "I get up at five forty.",
+        "better": "I usually get up at five forty.",
+        "natural": "I usually get up around five forty."
+      },
+      "lexicon_id": "vi_everyday_itbank_spoken_core",
+      "lexicon_version": null,
+      "coverage_review_status": "pending_approved_core",
+      "out_of_core_terms": []
+    }
+  ],
+  "activities": [
+    {
+      "order": 1,
+      "type": "active_recall",
+      "minutes": 8,
+      "skill": "listening_speaking",
+      "track": "everyday"
+    },
+    {
+      "order": 2,
+      "type": "visual_listening",
+      "minutes": 15,
+      "skill": "listening_speaking",
+      "track": "everyday"
+    },
+    {
+      "order": 3,
+      "type": "pronunciation_shadowing",
+      "minutes": 7,
+      "skill": "listening_speaking",
+      "track": "everyday"
+    },
+    {
+      "order": 4,
+      "type": "interactive_speaking",
+      "minutes": 8,
+      "skill": "listening_speaking",
+      "track": "everyday"
+    },
+    {
+      "order": 5,
+      "type": "reading_writing",
+      "minutes": 10,
+      "skill": "reading_writing",
+      "track": "everyday"
+    },
+    {
+      "order": 6,
+      "type": "carnegie_listening",
+      "minutes": 6,
+      "skill": "listening_speaking",
+      "track": "carnegie"
+    },
+    {
+      "order": 7,
+      "type": "carnegie_roleplay",
+      "minutes": 4,
+      "skill": "listening_speaking",
+      "track": "carnegie"
+    },
+    {
+      "order": 8,
+      "type": "carnegie_reflection",
+      "minutes": 2,
+      "skill": "reading_writing",
+      "track": "carnegie"
+    }
+  ],
+  "listening_quiz": {
+    "question_en": "How often does the speaker get up around this time?",
+    "choices_en": [
+      "Never",
+      "Usually",
+      "Sometimes"
+    ],
+    "correct_choice_index": 1,
+    "audio_variant_id": null,
+    "held_out": false,
+    "art_must_not_reveal_answer": true,
+    "status": "prototype_only"
+  },
+  "spontaneous_prompts": [
+    "Do you get up earlier on workdays?",
+    "What do you usually do after you get up?"
+  ],
+  "carnegie_scene": {
+    "principle": "Show sincere interest in another person",
+    "scenario": "A coworker asks about your morning",
+    "original_dialogue_required": true,
+    "time_minutes": 12,
+    "source_quote": null
+  },
+  "publication": {
+    "status": "draft",
+    "may_publish": false,
+    "editorial_approved_at": null,
+    "image_approved_at": null,
+    "audio_approved_at": null
+  }
+}

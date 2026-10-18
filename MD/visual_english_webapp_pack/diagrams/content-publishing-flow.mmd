@@ -1,0 +1,16 @@
+flowchart TD
+  A[Real-world intention: learner meaning] --> B[Draft Basic / Better / Natural EN]
+  B --> C[Cambridge US grammar and pronunciation review]
+  C --> D[COCA spoken usage and collocation]
+  D --> E[YouGlish US usage check]
+  E --> F[Wordlist coverage and exception log]
+  F --> G[English approved?]
+  G -->|No| B
+  G -->|Yes| H[Character/scene brief]
+  H --> I[Image generation: no text]
+  I --> J[Visual editorial review]
+  J -->|Fail| I
+  J -->|Pass| K[Approved TTS production]
+  K --> L[Audio QA and variant voices]
+  L --> M[Separate unseen assessment bank]
+  M --> N[Publication gate and versioning]
