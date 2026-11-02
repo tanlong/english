@@ -37,11 +37,11 @@ export function publicationIssues(record: EditorialRecord) {
   if (
     record.lexicon.ratio === null ||
     !Number.isFinite(record.lexicon.ratio) ||
-    record.lexicon.ratio < 0.9 ||
+    record.lexicon.ratio < 0.95 ||
     record.lexicon.ratio > 1 ||
     !record.lexicon.version
   )
-    issues.push("Chưa có độ phủ ≥90% từ lexicon đã duyệt");
+    issues.push("Chưa có độ phủ ≥95% từ lexicon đã duyệt");
   if (!record.rights) issues.push("Chưa xác nhận quyền sử dụng hình ảnh");
   if (!record.alt.trim()) issues.push("Thiếu mô tả hình ảnh");
   return issues;

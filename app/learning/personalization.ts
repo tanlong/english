@@ -73,6 +73,49 @@ export function mergeLearningState(saved: LearningState, incoming: LearningState
     ...incoming,
     profile: incoming.profile ?? saved.profile,
     sessions,
+    cardReviews: Object.fromEntries(
+      [
+        ...new Set([
+          ...Object.keys(saved.cardReviews ?? {}),
+          ...Object.keys(incoming.cardReviews ?? {}),
+        ]),
+      ].map((id) => {
+        const old = saved.cardReviews?.[id];
+        const next = incoming.cardReviews?.[id];
+        return [id, (!next || (old && old.reviewedAt > next.reviewedAt) ? old : next)!];
+      }),
+    ),
+    lessonVisits: Object.fromEntries(
+      [
+        ...new Set([
+          ...Object.keys(saved.lessonVisits ?? {}),
+          ...Object.keys(incoming.lessonVisits ?? {}),
+        ]),
+      ].map((id) => {
+        const old = saved.lessonVisits?.[id];
+        const next = incoming.lessonVisits?.[id];
+        const selected = (!next || (old && old.updatedAt > next.updatedAt) ? old : next)!;
+        return [
+          id,
+          {
+            ...selected,
+            ...(old?.activitySeconds || next?.activitySeconds
+              ? {
+                  activitySeconds: Object.fromEntries(
+                    (["listening", "speaking", "reading", "writing"] as const).map((skill) => [
+                      skill,
+                      Math.max(
+                        old?.activitySeconds?.[skill] ?? 0,
+                        next?.activitySeconds?.[skill] ?? 0,
+                      ),
+                    ]),
+                  ),
+                }
+              : {}),
+          },
+        ];
+      }),
+    ),
     dailySeconds: Object.fromEntries(
       [...new Set([...Object.keys(saved.dailySeconds), ...Object.keys(incoming.dailySeconds)])].map(
         (key) => [key, Math.max(saved.dailySeconds[key] ?? 0, incoming.dailySeconds[key] ?? 0)],

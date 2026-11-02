@@ -155,15 +155,15 @@ export function getPracticeLesson(
   role: Role,
   learnerName = "Bạn",
 ): PracticeLesson {
-  const module = curriculum[week - 1] ?? curriculum[0];
-  const communication = communicationScenes[module.month - 1];
-  const id = `w${module.week}-d${day}-${role}-v1`;
+  const courseModule = curriculum[week - 1] ?? curriculum[0];
+  const communication = communicationScenes[courseModule.month - 1];
+  const id = `w${courseModule.week}-d${day}-${role}-v1`;
   if (week === 1) {
     const m = mornings[day - 1] ?? mornings[0];
     return {
       id,
       title: m.title,
-      principle: module.principle,
+      principle: courseModule.principle,
       situation: m.situation,
       goal: m.goal,
       followup: m.followup,
@@ -186,9 +186,11 @@ export function getPracticeLesson(
     };
   }
   const scenario = roleScenarios[role];
-  const work = module.workplace && role !== "general";
-  const lines = work ? [scenario.opening, scenario.model] : [module.opening, module.reply];
-  const [target, targetVi] = work ? scenario.short : module.short;
+  const work = courseModule.workplace && role !== "general";
+  const lines = work
+    ? [scenario.opening, scenario.model]
+    : [courseModule.opening, courseModule.reply];
+  const [target, targetVi] = work ? scenario.short : courseModule.short;
   const choices = [
     lines[1],
     work
@@ -200,35 +202,35 @@ export function getPracticeLesson(
   const rotated = [...choices.slice(shift), ...choices.slice(0, shift)];
   return {
     id,
-    title: work ? scenario.title : module.title,
-    principle: module.principle,
+    title: work ? scenario.title : courseModule.title,
+    principle: courseModule.principle,
     situation: work
       ? `Tình huống luyện tập trong đội IT ngân hàng giả định. ${scenario.goal}`
-      : `Hội thoại luyện tập chủ đề ${module.vi.toLocaleLowerCase("vi")}.`,
+      : `Hội thoại luyện tập chủ đề ${courseModule.vi.toLocaleLowerCase("vi")}.`,
     goal: work
       ? scenario.goal
-      : `Trao đổi về ${module.vi.toLocaleLowerCase("vi")} bằng thông tin của bạn và hỏi tiếp một câu.`,
+      : `Trao đổi về ${courseModule.vi.toLocaleLowerCase("vi")} bằng thông tin của bạn và hỏi tiếp một câu.`,
     followup: work
       ? "What would you ask to agree on the next step?"
       : "What would you like to ask me about this?",
     lines: lines.map((en, i) => ({
       speaker: i === 0 ? "Bạn hội thoại" : learnerName,
       en,
-      vi: (work ? scenario.meanings : module.meanings)[i],
+      vi: (work ? scenario.meanings : courseModule.meanings)[i],
     })),
     question: "Người thứ hai đã phản hồi thế nào?",
     choices: rotated,
     correct: rotated.indexOf(lines[1]),
     target,
     targetVi,
-    grammar: { en: lines[1], vi: (work ? scenario.meanings : module.meanings)[1] },
-    transfer: work ? (day % 2 ? scenario.followup : scenario.alternative) : module.followup,
-    writing: `Viết 1–3 câu về ${module.vi.toLocaleLowerCase("vi")}. Thêm một chi tiết của riêng bạn.`,
+    grammar: { en: lines[1], vi: (work ? scenario.meanings : courseModule.meanings)[1] },
+    transfer: work ? (day % 2 ? scenario.followup : scenario.alternative) : courseModule.followup,
+    writing: `Viết 1–3 câu về ${courseModule.vi.toLocaleLowerCase("vi")}. Thêm một chi tiết của riêng bạn.`,
     chunks: work
       ? scenario.chunks
       : [
           target.replace(/[.!?]+$/, ""),
-          module.followup.split(" ").slice(0, 4).join(" "),
+          courseModule.followup.split(" ").slice(0, 4).join(" "),
           "Could you tell me more?",
         ],
     art: work ? "office" : week <= 4 ? "home" : week <= 8 ? "breakfast" : "office",

@@ -32,7 +32,7 @@ export function Dashboard({
   const lesson = (active
     ? { week: state.activeWeek, day: state.activeDay }
     : nextLesson(state)) ?? { week: state.activeWeek, day: state.activeDay };
-  const module = curriculum[lesson.week - 1];
+  const courseModule = curriculum[lesson.week - 1];
   const practice = getPracticeLesson(lesson.week, lesson.day, profile.role, profile.name);
   const capped = (state.dailySeconds[dateKey(now ?? new Date())] ?? 0) >= 3600;
   const completed = lessonAccess(state, lesson.week, lesson.day).status === "completed";
@@ -58,7 +58,7 @@ export function Dashboard({
             <p lang="en">{review.english}</p>
             <p className="helper">{review.labelVi} · Gợi ý từ kết quả học đã lưu.</p>
             <Link href="/daily-speaking" onClick={() => store.setReviewId(review.id)}>
-              Luyện lại cùng AI Lead
+              Luyện lại cùng Alex
             </Link>
           </aside>
         )}
@@ -110,7 +110,7 @@ export function Dashboard({
           </div>
           <div className="hero-art">
             <Artwork scene={practice.art} priority />
-            <span>{module.vi}</span>
+            <span>{courseModule.vi}</span>
           </div>
         </section>
         <section className="pipeline-section" aria-labelledby="pipeline-title">

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { POST } from "../app/api/speech-score/route.ts";
+import { GET } from "../app/api/learning/route.ts";
 import { createTestDatabase } from "./test-database.mjs";
 
 test("transcription uses SQLite first, separates recordings and never caches failures", async () => {
@@ -9,6 +10,8 @@ test("transcription uses SQLite first, separates recordings and never caches fai
   const originalEnabled = process.env.ENABLE_CLOUD_SPEECH;
   const database = await createTestDatabase();
   const { db } = database;
+  const identity = await GET(new Request("http://localhost:3000/api/learning"));
+  const cookie = identity.headers.get("Set-Cookie").split(";")[0];
   process.env.ENABLE_CLOUD_SPEECH = "true";
   process.env.OPENAI_API_KEY = "test-key";
   let calls = 0;
@@ -25,7 +28,7 @@ test("transcription uses SQLite first, separates recordings and never caches fai
     // Next dev can reconstruct request.url with localhost while the browser uses 127.0.0.1.
     return new Request("http://localhost:3000/api/speech-score", {
       method: "POST",
-      headers: { Origin: origin, Host: "127.0.0.1:3000" },
+      headers: { Origin: origin, Host: "127.0.0.1:3000", Cookie: cookie },
       body: form,
     });
   }

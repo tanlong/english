@@ -4,6 +4,8 @@ import { playTts, stopAudio } from "../audio/client";
 import { speakingScenarios } from "./scenarios";
 import { useSpeechInput } from "../audio/use-speech-input";
 import { isSpokenVersions, type SpokenVersions } from "./feedback";
+import { previewLessons } from "../content/baseline";
+import { useContentLibrary } from "../content/library";
 import { useLearningStore } from "../learning/provider";
 type Action = "start" | "conversation" | "retry" | "hint" | "skip" | "explain" | "end";
 type Reply = {
@@ -23,6 +25,28 @@ type Turn = {
 };
 export function useDailySpeaking() {
   const learning = useLearningStore();
+  const library = useContentLibrary();
+  const savedReview = learning.personalization?.memory.reviews.find(
+    (item) => item.id === learning.reviewId,
+  );
+  const practiced = [
+    ...previewLessons.map((lesson) => ({ lesson, prefix: "preview:" })),
+    ...library.lessons.map(({ lesson }) => ({ lesson, prefix: "" })),
+  ].flatMap(({ lesson, prefix }) =>
+    lesson.segments
+      .filter(
+        (segment) =>
+          learning.state.lessonVisits?.[`${prefix}${lesson.id}:r${lesson.revision}`]?.answers[
+            segment.id
+          ],
+      )
+      .map((segment) => ({
+        id: segment.id,
+        english: segment.basic.en,
+        vietnamese: segment.basic.vi,
+      })),
+  );
+  const review = savedReview ?? practiced[0];
   const sessionId = useRef("");
   const [memoryWarning, setMemoryWarning] = useState("");
   const [mode, setMode] = useState("free");
@@ -42,7 +66,7 @@ export function useDailySpeaking() {
   const [error, setError] = useState("");
   const [audioError, setAudioError] = useState("");
   const [playing, setPlaying] = useState(false);
-  const [autoSpeak, setAutoSpeak] = useState(true);
+  const [autoSpeak, setAutoSpeak] = useState(false);
   const [hints, setHints] = useState(0);
   const requestRef = useRef<AbortController | null>(null);
   const audioRun = useRef(0);
@@ -83,6 +107,7 @@ export function useDailySpeaking() {
   }
   useEffect(() => {
     mounted.current = true;
+    const audioGeneration = audioRun;
     const hide = () => {
       if (document.visibilityState !== "visible") {
         stopVoice();
@@ -92,7 +117,7 @@ export function useDailySpeaking() {
     return () => {
       mounted.current = false;
       requestRef.current?.abort();
-      audioRun.current++;
+      audioGeneration.current++;
       stopAudio();
       document.removeEventListener("visibilitychange", hide);
     };
@@ -160,6 +185,7 @@ export function useDailySpeaking() {
           message: action === "conversation" || action === "retry" ? draft.trim() : "",
           history,
           mode,
+          reviewText: mode === "review" ? (review?.english ?? "") : "",
           topic: mode === "free" ? topic : (scenario?.topic ?? "Daily routine"),
           ...(scenario && { scenarioId: scenario.id }),
           pace,
@@ -169,7 +195,7 @@ export function useDailySpeaking() {
         signal: controller.signal,
       });
       const data = await response.json();
-      if (!response.ok) throw new Error(data.error || "AI Lead chưa thể phản hồi. Hãy thử lại.");
+      if (!response.ok) throw new Error(data.error || "Alex chưa thể phản hồi. Hãy thử lại.");
       if (
         typeof data.reply !== "string" ||
         (data.translationVi !== undefined && typeof data.translationVi !== "string") ||
@@ -252,7 +278,7 @@ export function useDailySpeaking() {
   return {
     mode,
     memoryWarning,
-    review: learning.personalization?.memory.reviews.find((item) => item.id === learning.reviewId),
+    review,
     setMode,
     topic,
     setTopic,

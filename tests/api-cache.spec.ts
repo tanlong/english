@@ -2,7 +2,12 @@ import { createHash } from "node:crypto";
 import { expect, test } from "@playwright/test";
 import { getDb } from "../app/db/client";
 
-test("API serves SQLite audio and transcripts with OpenAI calls disabled", async ({ request }) => {
+test("API serves SQLite audio and private transcripts with OpenAI calls disabled", async ({
+  request,
+}) => {
+  const identity = await request.get("/api/learning");
+  const token = identity.headers()["set-cookie"].match(/english_learner=([a-f0-9]{64})/)![1];
+  const learnerId = createHash("sha256").update(token).digest("hex");
   const db = getDb();
   const spokenText = "What do you do before work?";
   const payload = JSON.stringify({
@@ -16,13 +21,14 @@ test("API serves SQLite audio and transcripts with OpenAI calls disabled", async
   });
   const ttsKey = createHash("sha256").update(payload).digest("hex");
   const recording = Buffer.from("cached recording fixture");
-  const transcriptionKey = createHash("sha256")
+  const transcriptionHash = createHash("sha256")
     .update(
       JSON.stringify({ model: "gpt-4o-mini-transcribe", language: "en", response_format: "json" }),
     )
     .update("\0")
     .update(recording)
     .digest("hex");
+  const transcriptionKey = `private:${learnerId}:${transcriptionHash}`;
   const headers = { Origin: "http://127.0.0.1:3001" };
   try {
     await db.ttsAudio.upsert({

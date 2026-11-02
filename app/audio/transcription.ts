@@ -33,19 +33,26 @@ export async function transcribeFile(
   return { text: body.text.trim() };
 }
 
-export async function getTranscription(audio: File): Promise<TranscriptionResult> {
-  const keyHash = createHash("sha256")
+export async function getTranscription(
+  audio: File,
+  cacheOwner: string | null = null,
+): Promise<TranscriptionResult> {
+  const hash = createHash("sha256")
     .update(JSON.stringify(options))
     .update("\0")
     .update(new Uint8Array(await audio.arrayBuffer()))
     .digest("hex");
+  const keyHash = cacheOwner ? `private:${cacheOwner}:${hash}` : hash;
   const pendingKey = `${process.env.DATABASE_URL ?? "default"}:${keyHash}`;
   const existing = pending.get(pendingKey);
   if (existing) return existing;
 
   const task = (async (): Promise<TranscriptionResult> => {
     const db = getDb();
-    const saved = await db.transcription.findUnique({ where: { key: keyHash } });
+    const canCache =
+      cacheOwner !== null &&
+      Boolean(await db.learner.findUnique({ where: { id: cacheOwner }, select: { id: true } }));
+    const saved = canCache ? await db.transcription.findUnique({ where: { key: keyHash } }) : null;
     if (saved) return { text: saved.text };
     if (process.env.ENABLE_CLOUD_SPEECH !== "true")
       return {
@@ -56,17 +63,22 @@ export async function getTranscription(audio: File): Promise<TranscriptionResult
     const body = await transcribeFile(audio);
     if ("error" in body) return body;
 
-    const stored = await db.transcription.upsert({
-      where: { key: keyHash },
-      create: {
-        key: keyHash,
-        model: options.model,
-        language: options.language,
-        text: body.text.trim(),
-      },
-      update: {},
+    if (!canCache) return body;
+    const stored = await db.$transaction(async (tx) => {
+      if (!(await tx.learner.findUnique({ where: { id: cacheOwner! }, select: { id: true } })))
+        return null;
+      return tx.transcription.upsert({
+        where: { key: keyHash },
+        create: {
+          key: keyHash,
+          model: options.model,
+          language: options.language,
+          text: body.text.trim(),
+        },
+        update: {},
+      });
     });
-    return { text: stored.text };
+    return stored ? { text: stored.text } : body;
   })();
   pending.set(pendingKey, task);
   try {

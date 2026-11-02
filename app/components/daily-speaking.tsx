@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { Checkbox } from "./ui/checkbox";
 import { FormField } from "@/app/components/form-field";
@@ -115,7 +116,7 @@ export function DailySpeaking() {
     <div className={`daily-speaking ${preparing ? "speaking-setup" : ""}`}>
       <PageHeading
         eyebrow="BẮT ĐẦU → TRÒ CHUYỆN → NHÌN LẠI"
-        title="Luyện giao tiếp hằng ngày"
+        title="Nói chuyện cùng Alex"
         text="Chọn một tình huống, nói theo cách của bạn và thử lại sau mỗi góp ý."
       />
       {memoryWarning && (
@@ -125,9 +126,27 @@ export function DailySpeaking() {
       )}
       {review && (
         <p className="helper">
-          Ôn theo bộ nhớ của bạn: <span lang="en">{review.english}</span>. AI Lead sẽ tạo cơ hội
-          dùng lại câu trong tình huống mới.
+          Ôn theo bộ nhớ của bạn: <span lang="en">{review.english}</span>. Alex sẽ tạo cơ hội dùng
+          lại câu trong tình huống mới.
         </p>
+      )}
+      {!active && (
+        <div className="natural-filters" role="group" aria-label="Chế độ Alex">
+          {[
+            ["guided", "Guided Talk"],
+            ["free", "Free Talk"],
+            ["review", "Review"],
+          ].map(([value, label]) => (
+            <button
+              key={value}
+              disabled={!!pending || (value === "review" && !review)}
+              aria-pressed={mode === value}
+              onClick={() => setMode(value)}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       )}
       <ol className="speaking-pipeline" aria-label="Các bước luyện nói">
         {["Chọn tình huống", "Nói & thử lại", "Nhìn lại buổi nói"].map((label, index) => (
@@ -217,7 +236,7 @@ export function DailySpeaking() {
                   <MessagesSquare aria-hidden="true" size={26} />
                 </span>
                 <div className="min-w-0 flex-1">
-                  <h2 id="speaking-settings-title">AI Lead</h2>
+                  <h2 id="speaking-settings-title">Alex</h2>
                   <p>Bạn luyện nói cùng AI</p>
                 </div>
               </>
@@ -254,6 +273,7 @@ export function DailySpeaking() {
                 options={[
                   { value: "free", label: "Free Talk · Trò chuyện tự do" },
                   { value: "guided", label: "Guided Lesson · Theo bài" },
+                  { value: "review", label: "Review · Dùng lại câu đã luyện" },
                   { value: "roleplay", label: "Roleplay · Đóng vai tình huống" },
                 ]}
               />
@@ -341,7 +361,7 @@ export function DailySpeaking() {
                   if (!checked) stopVoice();
                 }}
               />
-              Tự phát giọng AI Lead
+              Tự phát giọng Alex
             </label>
             <p className="helper">
               Hội thoại hiển thị trong buổi này. Các câu trả lời và kết quả được lưu vào database để
@@ -374,11 +394,11 @@ export function DailySpeaking() {
               </h2>
               <p aria-live="polite">
                 {pending
-                  ? "AI Lead đang chuẩn bị phản hồi…"
+                  ? "Alex đang chuẩn bị phản hồi…"
                   : listening
                     ? "Đang nghe bạn nói…"
                     : playing
-                      ? "AI Lead đang nói…"
+                      ? "Alex đang nói…"
                       : summary
                         ? "Đã kết thúc"
                         : active
@@ -401,7 +421,7 @@ export function DailySpeaking() {
               <MessagesSquare aria-hidden="true" size={22} />
             </span>
             <div>
-              <strong>AI Lead{scenario ? ` · ${scenario.alexRole}` : " · Bạn hội thoại"}</strong>
+              <strong>Alex{scenario ? ` · ${scenario.alexRole}` : " · Bạn hội thoại"}</strong>
               <p>
                 {scenario
                   ? `Bạn là ${scenario.learnerRole.toLocaleLowerCase("vi")}. ${scenario.goal}`
@@ -426,7 +446,7 @@ export function DailySpeaking() {
           <div
             className={`speaking-log overflow-y-auto overscroll-contain bg-background p-6 max-[480px]:p-4 ${preparing ? "min-h-[220px]" : "h-[440px] max-[480px]:h-[320px]"}`}
             role="log"
-            aria-label="Hội thoại với AI Lead"
+            aria-label="Hội thoại với Alex"
             aria-live="polite"
             aria-relevant="additions text"
             ref={logRef}
@@ -449,8 +469,8 @@ export function DailySpeaking() {
                   <strong>
                     {turn.role === "assistant"
                       ? turn.kind === "hint"
-                        ? "AI Lead · Gợi ý"
-                        : "AI Lead"
+                        ? "Alex · Gợi ý"
+                        : "Alex"
                       : turn.source === "speech"
                         ? "Bạn · Qua mic"
                         : "Bạn · Nhập chữ"}
@@ -460,7 +480,7 @@ export function DailySpeaking() {
                       type="button"
                       size="icon"
                       variant="ghost"
-                      aria-label="Nghe phản hồi của AI Lead"
+                      aria-label="Nghe phản hồi của Alex"
                       title="Nghe phản hồi này"
                       disabled={locked}
                       onClick={() => void speak(turn.content)}
@@ -506,10 +526,10 @@ export function DailySpeaking() {
               >
                 <LoaderCircle aria-hidden="true" size={18} className="spin" />
                 {pending === "end"
-                  ? "AI Lead đang tổng kết buổi luyện…"
+                  ? "Alex đang tổng kết buổi luyện…"
                   : pending === "explain"
-                    ? "AI Lead đang giải thích…"
-                    : "AI Lead đang chuẩn bị phản hồi…"}
+                    ? "Alex đang giải thích…"
+                    : "Alex đang chuẩn bị phản hồi…"}
               </p>
             )}
           </div>
@@ -558,6 +578,13 @@ export function DailySpeaking() {
               </p>
             )}
             {error && (
+              <p className="helper">
+                <Link href="/preview/my-daily-routine">
+                  Luyện với câu mẫu có sẵn trong khi chờ Alex kết nối.
+                </Link>
+              </p>
+            )}
+            {error && (
               <p className="field-error" role="alert">
                 {error}
               </p>
@@ -583,7 +610,7 @@ export function DailySpeaking() {
                 <div className="speaking-retry-note" role="status">
                   <span>
                     <RotateCcw aria-hidden="true" size={18} />
-                    Nói lại câu vừa được góp ý. AI Lead sẽ đối chiếu với lượt trước.
+                    Nói lại câu vừa được góp ý. Alex sẽ đối chiếu với lượt trước.
                   </span>
                   <Button type="button" variant="link" disabled={locked} onClick={cancelRetry}>
                     Hủy luyện lại
@@ -758,7 +785,7 @@ export function DailySpeaking() {
                   turns
                     .map(
                       (turn) =>
-                        `${turn.role === "assistant" ? "AI Lead" : "Bạn"}: ${turn.content}${turn.translationVi ? `\nNghĩa: ${turn.translationVi}` : ""}${turn.explanationVi ? `\n${turn.explanationVi}` : ""}${turn.speakingVersions ? `\nBản ngắn gọn: ${turn.speakingVersions.short.en}\n${turn.speakingVersions.short.vi}\nBản đầy đủ: ${turn.speakingVersions.full.en}\n${turn.speakingVersions.full.vi}` : ""}${turn.speakingVersions?.grammar ? `\nBản đúng ngữ pháp: ${turn.speakingVersions.grammar.en}\n${turn.speakingVersions.grammar.vi}` : ""}`,
+                        `${turn.role === "assistant" ? "Alex" : "Bạn"}: ${turn.content}${turn.translationVi ? `\nNghĩa: ${turn.translationVi}` : ""}${turn.explanationVi ? `\n${turn.explanationVi}` : ""}${turn.speakingVersions ? `\nBản ngắn gọn: ${turn.speakingVersions.short.en}\n${turn.speakingVersions.short.vi}\nBản đầy đủ: ${turn.speakingVersions.full.en}\n${turn.speakingVersions.full.vi}` : ""}${turn.speakingVersions?.grammar ? `\nBản đúng ngữ pháp: ${turn.speakingVersions.grammar.en}\n${turn.speakingVersions.grammar.vi}` : ""}`,
                     )
                     .join("\n\n") +
                     `\n\nTổng kết: ${summary.reply}\n${summary.translationVi ?? ""}\n${summary.explanationVi}`,

@@ -63,6 +63,7 @@ function DebateText({ text }: { text: string }) {
 
 export function VideoDebate() {
   const learning = useLearningStore();
+  const { refreshPersonalization } = learning;
   const [refreshingTopic, setRefreshingTopic] = useState(false);
   const [topicError, setTopicError] = useState("");
   const [finished, setFinished] = useState(false);
@@ -97,8 +98,7 @@ export function VideoDebate() {
   useEffect(() => () => controller.current?.abort(), []);
   useEffect(() => {
     const refresh = () => {
-      if (document.visibilityState === "visible")
-        void learning.refreshPersonalization().catch(() => {});
+      if (document.visibilityState === "visible") void refreshPersonalization().catch(() => {});
     };
     const timer = window.setInterval(refresh, 60_000);
     document.addEventListener("visibilitychange", refresh);
@@ -107,7 +107,7 @@ export function VideoDebate() {
       window.clearInterval(timer);
       document.removeEventListener("visibilitychange", refresh);
     };
-  }, [learning.refreshPersonalization]);
+  }, [refreshPersonalization]);
   useEffect(() => {
     if (session) resultsHeading.current?.focus({ preventScroll: true });
   }, [session]);

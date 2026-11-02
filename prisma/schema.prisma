@@ -59,3 +59,30 @@ model CoachingExample {
 
   @@unique([learnerId, english])
 }
+
+model ContentDocument {
+  id            String   @id
+  revision      Int      @default(1)
+  status        String   @default("draft")
+  draftJson     String
+  publishedJson String?
+  updatedAt     DateTime @updatedAt
+}
+
+model ContentAudit {
+  id         String   @id @default(cuid())
+  documentId String
+  revision   Int
+  actor      String
+  action     String
+  dataJson   String
+  createdAt  DateTime @default(now())
+
+  @@index([documentId, createdAt])
+}
+
+model CoreLexicon {
+  id        String   @id
+  dataJson  String
+  createdAt DateTime @default(now())
+}

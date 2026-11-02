@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Natural English — Tiếng Anh cho cuộc sống của bạn",
   description:
-    "Luyện giao tiếp tiếng Anh đời sống và công việc: nghe mẫu, tự phản hồi và dùng ngoài đời, khoảng 12 phút mỗi buổi.",
+    "Học tiếng Anh Mỹ từ tình huống đời sống và công việc. Nhìn, nghe, nói, nhận góp ý và ôn lại theo nhịp của bạn.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

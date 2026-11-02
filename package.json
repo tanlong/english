@@ -14,10 +14,13 @@
     "db:generate": "prisma generate",
     "db:migrate": "node --experimental-strip-types scripts/prepare-database.mjs && prisma migrate deploy",
     "db:setup": "npm run db:generate && npm run db:migrate && node --experimental-strip-types scripts/import-tts-cache.mjs",
-    "lint": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run format:check && npm test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "npm run test:natural-phrases && npm run test:content && npm run test:session-plan && npm run test:learning && npm run test:tts && npm run test:speech-score && npm run test:daily-speaking && npm run test:debate",
+    "test": "node --experimental-strip-types --test \"scripts/*.test.mjs\"",
+    "test:security": "node --experimental-strip-types --test scripts/security.test.mjs scripts/privacy.test.mjs",
     "test:natural-phrases": "node --experimental-strip-types --test scripts/natural-phrases.test.mjs",
     "test:content": "node --experimental-strip-types --test scripts/lesson-content.test.mjs",
     "test:session-plan": "node --experimental-strip-types --test scripts/session-plan.test.mjs",
@@ -26,18 +29,19 @@
     "test:speech-score": "node --experimental-strip-types --test scripts/speech-score.test.mjs",
     "test:daily-speaking": "node --experimental-strip-types --test scripts/daily-speaking.test.mjs",
     "test:debate": "node --experimental-strip-types --test scripts/debate.test.mjs scripts/debate-upload.test.mjs",
-    "test:e2e": "npm run build && playwright test"
+    "test:e2e": "npm run build && playwright test",
+    "test:baseline": "node --experimental-strip-types --test scripts/baseline.test.mjs scripts/content-admin.test.mjs"
   },
   "dependencies": {
-    "@base-ui/react": "^1.8.0",
+    "@base-ui/react": "^1.9.0",
     "@prisma/adapter-better-sqlite3": "7.10.1",
     "@prisma/client": "7.10.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.468.0",
-    "next": "^16.2.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "lucide-react": "^1.66.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
@@ -46,10 +50,12 @@
     "@types/node": "^22.10.5",
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
+    "eslint": "^10.14.0",
+    "eslint-config-next": "^16.4.3",
     "postcss": "^8.5.30",
     "prettier": "^3.9.10",
     "prisma": "7.10.1",
     "tailwindcss": "^4.3.3",
-    "typescript": "^5.7.2"
+    "typescript": "~6.0.3"
   }
 }

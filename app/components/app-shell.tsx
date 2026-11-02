@@ -15,7 +15,9 @@ export function AppShell({ children }: { children: ReactNode }) {
   const store = useLearningStore();
   const pathname = usePathname();
   const router = useRouter();
-  const inSession = pathname.startsWith("/session/");
+  const inSession = ["/session/", "/lessons/", "/preview/"].some((prefix) =>
+    pathname.startsWith(prefix),
+  );
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
     stopAudio();
@@ -31,7 +33,8 @@ export function AppShell({ children }: { children: ReactNode }) {
       const path =
         view === "session" && id
           ? `/session/${encodeURIComponent(id)}`
-          : navigation.some((item) => item.href === `/${view}`) || view === "settings"
+          : navigation.some((item) => item.href === `/${view}`) ||
+              ["settings", "ipa", "debate", "path", "progress"].includes(view)
             ? `/${view}`
             : "/";
       router.replace(path);
@@ -53,7 +56,15 @@ export function AppShell({ children }: { children: ReactNode }) {
   const activeSeconds = store.state.dailySeconds[dateKey(store.now ?? new Date())] ?? 0;
   const title = pathname.startsWith("/session/")
     ? "Buổi học"
-    : (navigation.find((item) => item.href === pathname)?.label ?? "Cài đặt");
+    : (navigation.find((item) => item.href === pathname)?.label ??
+      {
+        "/progress": "Tiến độ",
+        "/path": "Lộ trình",
+        "/ipa": "Luyện IPA",
+        "/debate": "Tranh luận",
+        "/wisdom": "Giao tiếp ứng xử",
+      }[pathname] ??
+      "Cài đặt");
   return (
     <div
       className={cn(
@@ -73,6 +84,9 @@ export function AppShell({ children }: { children: ReactNode }) {
           <span className="nav-label">KHÔNG GIAN HỌC</span>
           <AppNavigation />
           <div className="sidebar-bottom">
+            <Link className="nav-item" href="/progress">
+              Tiến độ của bạn
+            </Link>
             <Link
               className={cn("nav-item", pathname === "/settings" && "active")}
               href="/settings"

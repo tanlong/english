@@ -1,6 +1,7 @@
 import { roles, type Role } from "../content/curriculum.ts";
 import { ipaSounds } from "../content/ipa.ts";
 import { sessionStages, type SessionStageId } from "./session-plan.ts";
+import { parseReviews, parseVisits, type CardReview, type LessonVisit } from "./review.ts";
 export const STORAGE_KEY = "natural-english:v2";
 export type Profile = {
   name: string;
@@ -9,6 +10,9 @@ export type Profile = {
   confidence: "new" | "some" | "comfortable";
   largeText: boolean;
   mic: boolean;
+  goalMinutes?: 5 | 10 | 15 | 30 | 60;
+  vietnameseHelp?: boolean;
+  baseline?: { listeningCorrect: boolean; response: string; completedAt: string };
 };
 export type Attempt = {
   id: string;
@@ -41,6 +45,8 @@ export type LearningState = {
   sessions: Record<string, StudySession>;
   dailySeconds: Record<string, number>;
   ipaPracticed?: string[];
+  cardReviews?: Record<string, CardReview>;
+  lessonVisits?: Record<string, LessonVisit>;
 };
 export function emptyState(): LearningState {
   return {
@@ -51,6 +57,8 @@ export function emptyState(): LearningState {
     sessions: {},
     dailySeconds: {},
     ipaPracticed: [],
+    cardReviews: {},
+    lessonVisits: {},
   };
 }
 export function dateKey(now = new Date()) {
@@ -242,12 +250,32 @@ export function parseState(raw: string | null): LearningState {
           confidence: p.confidence as Profile["confidence"],
           largeText: p.largeText === true,
           mic: p.mic === true,
+          goalMinutes: [5, 10, 15, 30, 60].includes(Number(p.goalMinutes))
+            ? (p.goalMinutes as Profile["goalMinutes"])
+            : 15,
+          vietnameseHelp: p.vietnameseHelp !== false,
+          ...(object(p.baseline) &&
+          typeof p.baseline.listeningCorrect === "boolean" &&
+          typeof p.baseline.response === "string" &&
+          p.baseline.response.length <= 1500 &&
+          typeof p.baseline.completedAt === "string" &&
+          Number.isFinite(Date.parse(p.baseline.completedAt))
+            ? {
+                baseline: {
+                  listeningCorrect: p.baseline.listeningCorrect,
+                  response: p.baseline.response,
+                  completedAt: p.baseline.completedAt,
+                },
+              }
+            : {}),
         };
     }
     if (Number.isInteger(value.activeWeek) && validNumber(value.activeWeek, 1, 52))
       fallback.activeWeek = value.activeWeek;
     if (Number.isInteger(value.activeDay) && validNumber(value.activeDay, 1, 6))
       fallback.activeDay = value.activeDay;
+    fallback.cardReviews = parseReviews(value.cardReviews);
+    fallback.lessonVisits = parseVisits(value.lessonVisits);
     if (Array.isArray(value.ipaPracticed))
       fallback.ipaPracticed = [
         ...new Set(
@@ -259,7 +287,7 @@ export function parseState(raw: string | null): LearningState {
       ];
     if (object(value.dailySeconds))
       for (const [key, n] of Object.entries(value.dailySeconds))
-        if (/^\d{4}-\d{2}-\d{2}$/.test(key) && validNumber(n, 0, 3600))
+        if (/^\d{4}-\d{2}-\d{2}$/.test(key) && validNumber(n, 0, 86400))
           fallback.dailySeconds[key] = n;
     if (object(value.sessions))
       for (const [key, s] of Object.entries(value.sessions)) {

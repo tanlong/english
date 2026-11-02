@@ -16,6 +16,7 @@ import { Logo } from "./logo";
 import { PageHeading } from "./page-heading";
 import { ComboboxField } from "./select-combobox";
 import { PersonalizationPanel } from "./personalization-panel";
+import { AudioButton } from "./audio-button";
 const goalOptions = [
   { value: "both", label: "Đời sống & công việc" },
   { value: "everyday", label: "Ưu tiên đời sống" },
@@ -44,6 +45,8 @@ export function ProfileForm({
       confidence: "new",
       largeText: false,
       mic: false,
+      goalMinutes: 15,
+      vietnameseHelp: true,
     },
   );
   return (
@@ -90,6 +93,22 @@ export function ProfileForm({
       />
       <label className="check-field">
         <Checkbox
+          checked={profile.vietnameseHelp !== false}
+          onCheckedChange={(checked) => setProfile((p) => ({ ...p, vietnameseHelp: checked }))}
+        />
+        Hiển thị nghĩa và giải thích tiếng Việt
+      </label>
+      <ComboboxField
+        id="profile-minutes"
+        label="Thời gian bạn muốn dành mỗi ngày"
+        options={[5, 10, 15, 30, 60].map((n) => ({ value: String(n), label: `${n} phút` }))}
+        value={String(profile.goalMinutes ?? 15)}
+        onValueChange={(value) =>
+          setProfile((p) => ({ ...p, goalMinutes: Number(value) as Profile["goalMinutes"] }))
+        }
+      />
+      <label className="check-field">
+        <Checkbox
           checked={profile.mic}
           onCheckedChange={(checked) => setProfile((p) => ({ ...p, mic: checked }))}
         />
@@ -116,6 +135,83 @@ export function Onboarding({
   store: LearningStore;
   onComplete: () => void;
 }) {
+  const [pendingProfile, setPendingProfile] = useState<Profile | null>(null);
+  const [listeningChoice, setListeningChoice] = useState("");
+  const [response, setResponse] = useState("");
+  if (pendingProfile)
+    return (
+      <main className="natural-baseline-assessment">
+        <Logo />
+        <span className="eyebrow">BƯỚC 2/2 · LÀM QUEN VỚI NGHE VÀ NÓI</span>
+        <h1>Bắt đầu bằng một câu quen thuộc.</h1>
+        <p>
+          Đây là bài làm quen để gợi ý điểm bắt đầu, chưa phải bài đánh giá CEFR đã được kiểm định.
+        </p>
+        <AudioButton text="I get up at seven." label="Nghe câu ngắn" variant="outline" />
+        <details>
+          <summary>Không nghe được? Xem câu chữ</summary>
+          <p lang="en">I get up at seven.</p>
+        </details>
+        <fieldset>
+          <legend>Câu vừa nghe có nghĩa là gì?</legend>
+          {[
+            ["wake", "Tôi ra khỏi giường lúc bảy giờ."],
+            ["work", "Tôi đi làm lúc bảy giờ."],
+          ].map(([value, label]) => (
+            <label key={value}>
+              <input
+                type="radio"
+                name="baseline-listening"
+                value={value}
+                checked={listeningChoice === value}
+                onChange={() => setListeningChoice(value)}
+              />
+              {label}
+            </label>
+          ))}
+        </fieldset>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            store.saveProfile({
+              ...pendingProfile,
+              baseline: {
+                listeningCorrect: listeningChoice === "wake",
+                response: response.trim(),
+                completedAt: new Date().toISOString(),
+              },
+            });
+            onComplete();
+          }}
+        >
+          <label htmlFor="baseline-response">What time do you get up?</label>
+          <Input
+            id="baseline-response"
+            lang="en"
+            value={response}
+            maxLength={1500}
+            onChange={(e) => setResponse(e.target.value)}
+            placeholder="I get up at…"
+            required
+          />
+          <p className="helper">
+            Bạn có thể nói thành tiếng rồi nhập câu trả lời. Không cần cấp quyền micro.
+          </p>
+          <Button type="submit" disabled={!listeningChoice || !response.trim()}>
+            Bắt đầu từ Basic <ArrowRight size={18} aria-hidden="true" />
+          </Button>
+        </form>
+        <Button
+          variant="link"
+          onClick={() => {
+            store.saveProfile(pendingProfile);
+            onComplete();
+          }}
+        >
+          Bỏ qua bài làm quen
+        </Button>
+      </main>
+    );
   return (
     <main className="onboarding">
       <div className="onboarding-art">
@@ -133,7 +229,7 @@ export function Onboarding({
             <br />
             Nói bằng lời của mình.
           </p>
-          <span className="onboarding-facts">3 bước · khoảng 12 phút · đời sống & công việc</span>
+          <span className="onboarding-facts">5–60 phút · nghe và nói · đời sống & công việc</span>
         </div>
       </div>
       <div className="onboarding-content">
@@ -142,10 +238,9 @@ export function Onboarding({
           <h2>Sẵn sàng cho buổi học đầu tiên?</h2>
           <p>Chọn ngữ cảnh để bài luyện gần với những cuộc trò chuyện bạn cần.</p>
           <ProfileForm
-            buttonLabel="Vào không gian học"
+            buttonLabel="Tiếp tục · Làm quen nhanh"
             onSave={(p) => {
-              store.saveProfile(p);
-              onComplete();
+              setPendingProfile(p);
             }}
           />
           <Button
@@ -241,6 +336,16 @@ export function SettingsPanel({ store }: { store: LearningStore }) {
                 Tải bản sao dữ liệu chưa đọc được
               </Button>
             )}
+          </Card>
+          <Card className="settings-panel" render={<section />}>
+            <h2>Tiến độ và công cụ</h2>
+            <div className="natural-extra-links">
+              <a href="/progress">Tiến độ học tập</a>
+              <a href="/path">Lộ trình 52 tuần</a>
+              <a href="/ipa">Luyện IPA</a>
+              <a href="/debate">Luyện tranh luận (thử nghiệm)</a>
+              <a href="/admin">Quản trị nội dung</a>
+            </div>
           </Card>
           <Card className="settings-panel" render={<section />}>
             <h2>Bắt đầu lại trên thiết bị</h2>

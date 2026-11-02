@@ -3,6 +3,7 @@ import { test } from "node:test";
 import { POST } from "../app/api/daily-speaking/route.ts";
 import { POST as speech } from "../app/api/daily-speaking/speech/route.ts";
 import { playTts } from "../app/audio/client.ts";
+import { GET } from "../app/api/learning/route.ts";
 import { createTestDatabase } from "./test-database.mjs";
 
 function request(body, path = "", origin = "http://localhost") {
@@ -351,6 +352,13 @@ test("Daily Speaking validates requests, preserves evidence and separates explan
 
 test("AI Lead speech reuses SQLite, keeps the lesson allowlist and routes English-only playback", async () => {
   const database = await createTestDatabase();
+  const identity = await GET(new Request("http://localhost/api/learning"));
+  const cookie = identity.headers.get("Set-Cookie").split(";")[0];
+  function personalRequest(...args) {
+    const result = request(...args);
+    result.headers.set("Cookie", cookie);
+    return result;
+  }
   const originalFetch = globalThis.fetch;
   const originalAudio = globalThis.Audio;
   const env = Object.fromEntries(
@@ -369,14 +377,17 @@ test("AI Lead speech reuses SQLite, keeps the lesson allowlist and routes Englis
   };
   try {
     assert.equal(
-      (await speech(request({ input: "hello" }, "/speech", "http://evil.test"))).status,
+      (await speech(personalRequest({ input: "hello" }, "/speech", "http://evil.test"))).status,
       403,
     );
-    assert.equal((await speech(request({ input: "" }, "/speech"))).status, 400);
-    assert.equal((await speech(request({ input: "x".repeat(4001) }, "/speech"))).status, 400);
+    assert.equal((await speech(personalRequest({ input: "" }, "/speech"))).status, 400);
+    assert.equal(
+      (await speech(personalRequest({ input: "x".repeat(4001) }, "/speech"))).status,
+      400,
+    );
     const body = { input: "What did you have for breakfast?" };
     for (let attempt = 0; attempt < 2; attempt++) {
-      const response = await speech(request(body, "/speech"));
+      const response = await speech(personalRequest(body, "/speech"));
       assert.equal(response.status, 200);
       assert.equal(response.headers.get("Content-Type"), "audio/mpeg");
       assert.deepEqual(new Uint8Array(await response.arrayBuffer()), new Uint8Array([1, 2, 3]));
@@ -388,8 +399,11 @@ test("AI Lead speech reuses SQLite, keeps the lesson allowlist and routes Englis
     assert.match(calls[0].instructions, /connected speech/);
     assert.match(calls[0].instructions, /Read only the given English text/);
     delete process.env.OPENAI_API_KEY;
-    assert.equal((await speech(request(body, "/speech"))).status, 200);
-    assert.equal((await speech(request({ input: "Uncached reply." }, "/speech"))).status, 503);
+    assert.equal((await speech(personalRequest(body, "/speech"))).status, 200);
+    assert.equal(
+      (await speech(personalRequest({ input: "Uncached reply." }, "/speech"))).status,
+      503,
+    );
     const { POST: lessonSpeech } = await import("../app/api/tts/route.ts");
     assert.equal(
       (await lessonSpeech(request({ spokenText: body.input, voice: "cedar" }))).status,
@@ -397,7 +411,7 @@ test("AI Lead speech reuses SQLite, keeps the lesson allowlist and routes Englis
     );
     process.env.OPENAI_API_KEY = "test-key";
     process.env.OPENAI_TTS_VOICE = "onyx";
-    assert.equal((await speech(request(body, "/speech"))).status, 200);
+    assert.equal((await speech(personalRequest(body, "/speech"))).status, 200);
     assert.equal(calls.length, 2, "A voice override must not reuse Cedar audio");
     assert.equal(calls[1].voice, "onyx");
     assert.equal(calls[1].instructions, calls[0].instructions);

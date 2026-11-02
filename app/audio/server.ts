@@ -10,6 +10,7 @@ export async function getSpeech(
   voice: string,
   model = "gpt-4o-mini-tts",
   instructions = "Speak naturally in American English, with clear pronunciation and conversational intonation. Do not add words.",
+  cacheOwner?: string | null,
 ) {
   const payload = JSON.stringify({
     model,
@@ -19,14 +20,20 @@ export async function getSpeech(
     response_format: "mp3",
     speed: 1,
   });
-  const keyHash = createHash("sha256").update(payload).digest("hex");
-  const pendingKey = `${process.env.DATABASE_URL ?? "default"}:${keyHash}`;
+  const hash = createHash("sha256").update(payload).digest("hex");
+  // Undefined is reserved for allowlisted authored content; null disables personal persistence.
+  const keyHash = cacheOwner ? `private:${cacheOwner}:${hash}` : hash;
+  const pendingKey = `${process.env.DATABASE_URL ?? "default"}:${cacheOwner === null ? "ephemeral:" : ""}${keyHash}`;
   const existing = pending.get(pendingKey);
   if (existing) return existing;
 
   const task = (async () => {
     const db = getDb();
-    const saved = await db.ttsAudio.findUnique({ where: { key: keyHash } });
+    const canCache =
+      cacheOwner === undefined ||
+      (cacheOwner !== null &&
+        Boolean(await db.learner.findUnique({ where: { id: cacheOwner }, select: { id: true } })));
+    const saved = canCache ? await db.ttsAudio.findUnique({ where: { key: keyHash } }) : null;
     if (saved) return new Uint8Array(saved.audio).buffer;
     const key = process.env.OPENAI_API_KEY;
     if (!key) return null;
@@ -39,12 +46,21 @@ export async function getSpeech(
     if (!response.ok) throw new Error("TTS request failed");
     const audio = await response.arrayBuffer();
     if (!audio.byteLength || audio.byteLength > maxAudioBytes) throw new Error("Invalid TTS audio");
-    const stored = await db.ttsAudio.upsert({
-      where: { key: keyHash },
-      create: { key: keyHash, requestJson: payload, audio: new Uint8Array(audio) },
-      update: {},
+    if (!canCache) return audio;
+    const stored = await db.$transaction(async (tx) => {
+      // A deletion while the provider was running must not recreate private cache entries.
+      if (
+        cacheOwner &&
+        !(await tx.learner.findUnique({ where: { id: cacheOwner }, select: { id: true } }))
+      )
+        return null;
+      return tx.ttsAudio.upsert({
+        where: { key: keyHash },
+        create: { key: keyHash, requestJson: payload, audio: new Uint8Array(audio) },
+        update: {},
+      });
     });
-    return new Uint8Array(stored.audio).buffer;
+    return stored ? new Uint8Array(stored.audio).buffer : audio;
   })();
   pending.set(pendingKey, task);
   try {

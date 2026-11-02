@@ -40,6 +40,13 @@ export function SessionPlayer({
   const previousStage = useRef(session?.stage);
   const today = dateKey();
   const capped = (store.state.dailySeconds[today] ?? 0) >= 3600;
+  const finished = Boolean(session?.finishedAt);
+  const clockKey = `${session?.stage}:${capped}:${finished}`;
+  const [previousClockKey, setPreviousClockKey] = useState(clockKey);
+  if (previousClockKey !== clockKey) {
+    setPreviousClockKey(clockKey);
+    setRunning(false);
+  }
   const role =
     roles.find((r) => {
       const base = sessionKey(session?.week ?? 1, session?.day ?? 1, r.id);
@@ -68,7 +75,7 @@ export function SessionPlayer({
     return () => window.clearInterval(timer);
     // Session state changes every tick; keep the clock attached to the current stage only.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [running, sessionId, session?.stage, !!session?.finishedAt, capped]);
+  }, [running, sessionId, session?.stage, finished, capped]);
   useEffect(() => {
     const pause = () => {
       setRunning(false);
@@ -86,14 +93,13 @@ export function SessionPlayer({
     };
   }, []);
   useEffect(() => {
-    setRunning(false);
     stopAudio();
     if (previousStage.current !== session?.stage) {
       activityTitle.current?.focus({ preventScroll: true });
       activityTitle.current?.scrollIntoView({ block: "start" });
     }
     previousStage.current = session?.stage;
-  }, [session?.stage, capped, !!session?.finishedAt]);
+  }, [session?.stage, capped, finished]);
   if (!session)
     return (
       <div className="empty-state">
@@ -186,7 +192,7 @@ export function SessionPlayer({
         </div>
         <p className="recap-next">Lần sau, bài tiếp theo sẽ có sẵn ở Hôm nay.</p>
         <div className="button-row lesson-extras" aria-label="Luyện thêm tùy chọn">
-          <Link href="/daily-speaking">Trò chuyện tự do với AI Lead</Link>
+          <Link href="/daily-speaking">Trò chuyện tự do với Alex</Link>
           <Link href="/ipa">Luyện phát âm</Link>
         </div>
       </Card>

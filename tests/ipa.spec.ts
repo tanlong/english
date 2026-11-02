@@ -8,7 +8,8 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("IPA navigation, filtering, practice progress and source video", async ({ page }) => {
-  await page.locator(".side-nav").getByRole("link", { name: "Luyện IPA", exact: true }).click();
+  await page.goto("/review");
+  await page.getByRole("link", { name: "Luyện phát âm IPA" }).click();
   await expect(page).toHaveURL(/\/ipa$/);
   await expect(page.getByRole("heading", { name: "Luyện IPA", exact: true })).toBeVisible();
   await expect(page.getByRole("button", { name: /^Âm \// })).toHaveCount(44);
@@ -116,7 +117,7 @@ test("IPA playback, listening gate, retry and recording fallback", async ({ page
   );
 });
 
-test("IPA fits mobile, large text and landscape with five navigation items", async ({ page }) => {
+test("IPA fits mobile, large text and landscape with four navigation items", async ({ page }) => {
   await page.evaluate(() => {
     const state = JSON.parse(localStorage.getItem("natural-english:v2")!);
     state.profile.largeText = true;
@@ -137,12 +138,8 @@ test("IPA fits mobile, large text and landscape with five navigation items", asy
     );
     if (viewport.width < 768) {
       const nav = page.locator(".mobile-nav");
-      await expect(nav.getByRole("link")).toHaveCount(5);
-      await expect(nav.getByRole("link", { name: "IPA", exact: true })).toHaveAttribute(
-        "aria-current",
-        "page",
-      );
-      const bounds = await nav.getByRole("link", { name: "IPA", exact: true }).boundingBox();
+      await expect(nav.getByRole("link")).toHaveCount(4);
+      const bounds = await nav.getByRole("link", { name: "Ôn tập", exact: true }).boundingBox();
       expect(bounds!.width).toBeGreaterThanOrEqual(44);
       await page.getByRole("button", { name: "Âm /θ/ · thin", exact: true }).click();
       await expect(page.getByRole("heading", { name: "Âm /θ/", exact: true })).toBeFocused();

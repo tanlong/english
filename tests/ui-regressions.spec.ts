@@ -26,10 +26,10 @@ test.beforeEach(async ({ page }) => {
 test("search controls have one border around the icon and input", async ({ page }) => {
   for (const width of [375, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    const path = "/roadmap";
+    const path = "/ipa";
     await page.goto(path);
     const search = page.getByRole("textbox", {
-      name: "Tìm tuần học",
+      name: "Tìm âm IPA",
     });
     await expect(search).toBeVisible();
     const styles = await search.evaluate((element) => {
@@ -77,7 +77,7 @@ test("combobox popups have no blank band and stay inside small viewports", async
     { width: 375, height: 260 },
   ]) {
     await page.setViewportSize(viewport);
-    for (const path of ["/settings", "/roadmap", "/daily-speaking"]) {
+    for (const path of ["/settings", "/daily-speaking"]) {
       await page.goto(path);
       await page.locator(".main-content").waitFor();
       if (path === "/daily-speaking")

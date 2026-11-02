@@ -10,6 +10,8 @@ import {
 } from "../../../debate/files.ts";
 import { readSrtFile } from "../../../debate/srt.ts";
 import { isDebateStance } from "../../../debate/method.ts";
+import { isBodyTooLarge, limitedBody } from "../../request-body.ts";
+import { providerQuota } from "../../quota.ts";
 
 export const runtime = "nodejs";
 export const maxDuration = 120;
@@ -18,30 +20,13 @@ export async function POST(request: Request) {
   if (!isSameOrigin(request))
     return Response.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
   const maxBody = MAX_SOURCE_BYTES + 64_000;
-  if (Number(request.headers.get("content-length")) > maxBody)
-    return Response.json({ error: "Tệp vượt quá 1 MB. Hãy chọn tệp nhỏ hơn." }, { status: 413 });
   let form: FormData;
-  let tooLarge = false;
   try {
     if (!request.body || !request.headers.get("content-type")?.startsWith("multipart/form-data;"))
       throw new Error("Expected a text file upload");
-    let bytes = 0;
-    const limited = request.body.pipeThrough(
-      new TransformStream<Uint8Array, Uint8Array>({
-        transform(chunk, controller) {
-          bytes += chunk.byteLength;
-          if (bytes > maxBody) {
-            tooLarge = true;
-            throw new Error("Upload too large");
-          }
-          controller.enqueue(chunk);
-        },
-      }),
-    );
-    form = await new Response(limited, {
-      headers: { "Content-Type": request.headers.get("content-type")! },
-    }).formData();
-  } catch {
+    form = await limitedBody(request, maxBody).formData();
+  } catch (error) {
+    const tooLarge = isBodyTooLarge(error);
     return Response.json(
       {
         error: tooLarge
@@ -93,6 +78,8 @@ export async function POST(request: Request) {
         { status: 422 },
       );
     const source = subtitle ? ("srt" as const) : ("txt" as const);
+    const quotaError = providerQuota(request, "debate-analysis", 20);
+    if (quotaError) return quotaError;
     const analysis = await analyzeTranscript(content, source, stance);
     const context = {
       analysis,
