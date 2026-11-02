@@ -1,3 +1,4 @@
+import { mockMicrophone } from "./microphone-fixture";
 import { expect, test } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 
@@ -48,7 +49,7 @@ for (const [format, explanationVi] of [
     );
     await page.goto("/daily-speaking");
     await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-    await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+    await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
     await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
     await expect(page.getByRole("log")).toContainText("What did you do yesterday?");
     await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("i usslly get up 6AM");
@@ -71,7 +72,7 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 900 });
-  const calls: Record<string, any>[] = [];
+  const calls: (Record<string, unknown> & { history: { role: string; content: string }[] })[] = [];
   const alternative =
     "Cách nói khác: I enjoy this book.\n\nCâu của bạn đã đúng. Enjoy là một cách khác để diễn tả sự yêu thích.";
   await page.route("**/api/daily-speaking", (route) => {
@@ -102,7 +103,7 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
   });
   await page.goto("/daily-speaking");
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-  await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
   await page.getByRole("button", { name: "Thu gọn thiết lập", exact: true }).click();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   const answer = page.getByLabel("Câu trả lời của bạn", { exact: true });
@@ -155,7 +156,7 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
 });
 
 for (const width of [375, 1440]) {
-  test(`AI Lead translations toggle independently in small italic text at ${width}px`, async ({
+  test(`Alex translations toggle independently in small italic text at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 900 });
@@ -186,11 +187,14 @@ for (const width of [375, 1440]) {
     });
     await page.goto("/daily-speaking");
     await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-    await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+    await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
     await page
       .getByRole("combobox", { name: "Giải thích tiếng Việt", exact: true })
       .fill("Chỉ khi");
-    await page.getByRole("option", { name: "Chỉ khi bấm hỏi", exact: true }).click();
+    await page
+      .getByRole("combobox", { name: "Giải thích tiếng Việt", exact: true })
+      .press("ArrowDown");
+    await page.getByRole("combobox", { name: "Giải thích tiếng Việt", exact: true }).press("Enter");
     await page.getByRole("button", { name: "Thu gọn thiết lập", exact: true }).click();
     await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
     const first = page.locator(".speaking-turn.assistant").first();
@@ -245,7 +249,7 @@ for (const width of [375, 1440]) {
 test("roleplay provides roles, supports a real retry and exports the conversation recap", async ({
   page,
 }) => {
-  const calls: Record<string, any>[] = [];
+  const calls: (Record<string, unknown> & { history: { role: string; content: string }[] })[] = [];
   const speech: string[] = [];
   let retryFailed = false;
   await page.route("**/api/daily-speaking/speech", (route) => {
@@ -292,12 +296,12 @@ test("roleplay provides roles, supports a real retry and exports the conversatio
     .getByRole("group", { name: "Tình huống luyện nói" })
     .getByRole("button", { name: /Gọi món ở quán cà phê/ })
     .click();
-  await expect(page.getByLabel("Mục tiêu buổi nói")).toContainText("AI Lead · Nhân viên quán");
+  await expect(page.getByLabel("Mục tiêu buổi nói")).toContainText("Alex · Nhân viên quán");
   await expect(page.getByLabel("Mục tiêu buổi nói")).toContainText("Gọi một đồ uống");
   await page.getByText("Mẫu câu để bắt đầu", { exact: true }).click();
   await expect(page.getByText("How much is it?", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-  await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead" }).uncheck();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex" }).uncheck();
   await page.getByRole("button", { name: "Thu gọn thiết lập", exact: true }).click();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   await expect(page.getByRole("log")).toContainText("What would you like to drink?");
@@ -328,16 +332,13 @@ test("roleplay provides roles, supports a real retry and exports the conversatio
     mode: "roleplay",
     scenarioId: "coffee-order",
   });
-  expect(calls.at(-1)!.history.filter((turn: any) => turn.role === "user")).toEqual([
+  expect(calls.at(-1)!.history.filter((turn) => turn.role === "user")).toEqual([
     { role: "user", content: "I want coffee yesterday." },
   ]);
   await expect(page.getByTestId("speaking-counts")).toContainText(
     "0 lượt qua mic · 2 lượt nhập chữ · 0 gợi ý",
   );
-  await page
-    .getByRole("button", { name: "Nghe phản hồi của AI Lead", exact: true })
-    .first()
-    .click();
+  await page.getByRole("button", { name: "Nghe phản hồi của Alex", exact: true }).first().click();
   await expect.poll(() => speech.length).toBe(1);
   expect(speech[0]).toBe("Welcome! What would you like to drink?");
   await page.getByRole("button", { name: "Kết thúc & ôn lại", exact: true }).click();
@@ -368,14 +369,14 @@ test("conversation retries preserve the draft; hints and explanations do not bec
       failed = true;
       return route.fulfill({
         status: 502,
-        json: { error: "AI Lead chưa thể phản hồi. Hãy thử lại." },
+        json: { error: "Alex chưa thể phản hồi. Hãy thử lại." },
       });
     }
     const replies = {
       start: { reply: "What did you do this morning?", explanationVi: "" },
       conversation: { reply: "What did you have for breakfast?", explanationVi: "" },
       hint: { reply: 'You can start with: "I had..."', explanationVi: "" },
-      explain: { reply: "", explanationVi: "AI Lead hỏi bạn đã ăn gì vào bữa sáng." },
+      explain: { reply: "", explanationVi: "Alex hỏi bạn đã ăn gì vào bữa sáng." },
       skip: { reply: "What do you like to drink?", explanationVi: "" },
       end: {
         reply:
@@ -387,7 +388,7 @@ test("conversation retries preserve the draft; hints and explanations do not bec
   });
   await page.goto("/daily-speaking");
   await expect(
-    page.getByRole("heading", { name: "Luyện giao tiếp hằng ngày", exact: true }),
+    page.getByRole("heading", { name: "Nói chuyện cùng Alex", exact: true }),
   ).toBeVisible();
   await expect(page.locator("#speaking-mode")).toBeHidden();
   await expect(page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true })).toBeVisible();
@@ -404,14 +405,17 @@ test("conversation retries preserve the draft; hints and explanations do not bec
     collapsedConversation!.x,
   );
   await expect(page.getByRole("combobox", { name: "Chế độ", exact: true })).toBeVisible();
-  await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
   await page.getByRole("combobox", { name: "Chế độ", exact: true }).fill("Guided");
   await page.getByRole("option", { name: "Guided Lesson · Theo bài", exact: true }).click();
   await expect(page.getByRole("combobox", { name: "Chủ đề", exact: true })).toBeDisabled();
   await page.getByRole("combobox", { name: "Tốc độ", exact: true }).fill("Slow");
   await page.getByRole("option", { name: "Slow · Chậm, câu ngắn", exact: true }).click();
   await page.getByRole("combobox", { name: "Giải thích tiếng Việt", exact: true }).fill("Chỉ khi");
-  await page.getByRole("option", { name: "Chỉ khi bấm hỏi", exact: true }).click();
+  await page
+    .getByRole("combobox", { name: "Giải thích tiếng Việt", exact: true })
+    .press("ArrowDown");
+  await page.getByRole("combobox", { name: "Giải thích tiếng Việt", exact: true }).press("Enter");
   await settingsToggle.click();
   await expect(page.locator("#speaking-mode")).toBeHidden();
   await expect
@@ -442,7 +446,7 @@ test("conversation retries preserve the draft; hints and explanations do not bec
   await page.getByRole("button", { name: "Gợi ý", exact: true }).click();
   await expect(page.getByRole("log")).toContainText("You can start with:");
   await page.getByRole("button", { name: "Giải thích tiếng Việt", exact: true }).click();
-  await expect(page.getByRole("log")).toContainText("AI Lead hỏi bạn đã ăn gì vào bữa sáng.");
+  await expect(page.getByRole("log")).toContainText("Alex hỏi bạn đã ăn gì vào bữa sáng.");
   expect(calls.at(-1)?.lastCoach).toBe("What did you have for breakfast?");
   await expect(page.locator(".speaking-turn.assistant")).toHaveCount(3);
   await expect(page.getByTestId("speaking-counts")).toContainText(
@@ -501,7 +505,7 @@ test("mic requires consent, shows an editable transcript and keeps speech separa
   );
   await page.goto("/daily-speaking");
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-  await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   const mic = page.getByRole("button", { name: "Bấm để nói", exact: true });
   await expect(mic).toBeDisabled();
@@ -520,40 +524,21 @@ test("mic requires consent, shows an editable transcript and keeps speech separa
 });
 
 test("mic keeps listening across browser disconnects until the learner stops", async ({ page }) => {
-  await page.addInitScript(() => {
-    Object.defineProperty(window, "SpeechRecognition", {
-      value: class {
-        starts = 0;
-        onresult?: (event: unknown) => void;
-        onerror?: (event: unknown) => void;
-        onend?: () => void;
-        constructor() {
-          (window as any).__mic = this;
-        }
-        start() {
-          this.starts++;
-        }
-        stop() {
-          this.onend?.();
-        }
-        abort() {}
-      },
-    });
-  });
+  await mockMicrophone(page, "__mic");
   await page.route("**/api/daily-speaking", (route) =>
     route.fulfill({ json: { reply: "What did you do this morning?", explanationVi: "" } }),
   );
   await page.goto("/daily-speaking");
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-  await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   const answer = page.getByLabel("Câu trả lời của bạn", { exact: true });
   await answer.fill("This morning:");
   await page.getByRole("checkbox", { name: /Tôi đồng ý dùng tính năng chuyển giọng nói/ }).check();
   await page.getByRole("button", { name: "Bấm để nói", exact: true }).click();
-  expect(await page.evaluate(() => (window as any).__mic.continuous)).toBe(true);
+  expect(await page.evaluate(() => window.__mic.continuous)).toBe(true);
   await page.evaluate(() => {
-    const mic = (window as any).__mic;
+    const mic = window.__mic;
     mic.onresult({
       results: [
         { isFinal: true, 0: { transcript: "I had coffee." } },
@@ -563,28 +548,28 @@ test("mic keeps listening across browser disconnects until the learner stops", a
     mic.onend();
   });
   await expect(page.getByRole("button", { name: "Dừng mic", exact: true })).toBeVisible();
-  await expect.poll(() => page.evaluate(() => (window as any).__mic.starts)).toBe(2);
+  await expect.poll(() => page.evaluate(() => window.__mic.starts)).toBe(2);
   await expect(answer).toHaveValue("This morning: I had coffee. Then I went to work.");
   await page.evaluate(() => {
-    (window as any).__mic.onresult({
+    window.__mic.onresult({
       results: [{ isFinal: false, 0: { transcript: "I talked" } }],
     });
-    (window as any).__mic.onresult({
+    window.__mic.onresult({
       results: [{ isFinal: true, 0: { transcript: "I talked to my coworkers." } }],
     });
-    (window as any).__mic.onerror({ error: "no-speech" });
-    (window as any).__mic.onend();
+    window.__mic.onerror({ error: "no-speech" });
+    window.__mic.onend();
   });
-  await expect.poll(() => page.evaluate(() => (window as any).__mic.starts)).toBe(3);
+  await expect.poll(() => page.evaluate(() => window.__mic.starts)).toBe(3);
   await expect(answer).toHaveValue(
     "This morning: I had coffee. Then I went to work. I talked to my coworkers.",
   );
   await page.getByRole("button", { name: "Dừng mic", exact: true }).click();
   await expect(page.getByRole("button", { name: "Bấm để nói", exact: true })).toBeVisible();
   // A delayed end event must not reopen the microphone after an explicit stop.
-  await page.evaluate(() => (window as any).__mic.onend?.());
+  await page.evaluate(() => window.__mic.onend?.());
   await page.waitForTimeout(500);
-  expect(await page.evaluate(() => (window as any).__mic.starts)).toBe(3);
+  expect(await page.evaluate(() => window.__mic.starts)).toBe(3);
   await expect(answer).toBeEnabled();
   await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
   await expect(page.getByTestId("speaking-counts")).toContainText(
@@ -594,7 +579,7 @@ test("mic keeps listening across browser disconnects until the learner stops", a
   await expect(answer).toHaveValue("");
   await page.getByRole("button", { name: "Bấm để nói", exact: true }).click();
   await page.evaluate(() => {
-    (window as any).__mic.onend();
+    window.__mic.onend();
     // Stop during the reconnect delay, before the engine has started again.
     const stop = Array.from(document.querySelectorAll("button")).find(
       (button) => button.getAttribute("aria-label") === "Dừng mic",
@@ -602,25 +587,25 @@ test("mic keeps listening across browser disconnects until the learner stops", a
     stop!.click();
   });
   await page.waitForTimeout(500);
-  expect(await page.evaluate(() => (window as any).__mic.starts)).toBe(1);
+  expect(await page.evaluate(() => window.__mic.starts)).toBe(1);
   await expect(answer).toBeEnabled();
   await page.getByRole("button", { name: "Bấm để nói", exact: true }).click();
   await page.evaluate(() => {
-    (window as any).__mic.onresult({
+    window.__mic.onresult({
       results: [{ isFinal: false, 0: { transcript: "Keep these words." } }],
     });
-    (window as any).__mic.onerror({ error: "not-allowed" });
-    (window as any).__mic.onend?.();
+    window.__mic.onerror({ error: "not-allowed" });
+    window.__mic.onend?.();
   });
   await expect(page.locator(".speaking-controls").getByRole("alert")).toContainText(
     "Chưa được cấp quyền micro",
   );
   await expect(answer).toHaveValue("Keep these words.");
   await page.waitForTimeout(500);
-  expect(await page.evaluate(() => (window as any).__mic.starts)).toBe(1);
+  expect(await page.evaluate(() => window.__mic.starts)).toBe(1);
   await page.getByRole("button", { name: "Bấm để nói", exact: true }).click();
   await page.evaluate(() =>
-    (window as any).__mic.onresult({
+    window.__mic.onresult({
       results: [{ isFinal: true, 0: { transcript: "word ".repeat(400) } }],
     }),
   );
@@ -630,18 +615,18 @@ test("mic keeps listening across browser disconnects until the learner stops", a
   await answer.fill("One more thought.");
   await page.getByRole("button", { name: "Bấm để nói", exact: true }).click();
   await page.evaluate(() => {
-    (window as any).__mic.onend();
+    window.__mic.onend();
     // Simulate hiding the tab before the reconnect timeout fires.
     Object.defineProperty(document, "visibilityState", { configurable: true, value: "hidden" });
     document.dispatchEvent(new Event("visibilitychange"));
   });
   await page.waitForTimeout(500);
-  expect(await page.evaluate(() => (window as any).__mic.starts)).toBe(1);
+  expect(await page.evaluate(() => window.__mic.starts)).toBe(1);
   await expect(page.getByRole("button", { name: "Bấm để nói", exact: true })).toBeVisible();
   await expect(answer).toHaveValue("One more thought.");
 });
 
-test("AI Lead autoplays English only and Explain sends no speech request", async ({ page }) => {
+test("Alex autoplays English only and Explain sends no speech request", async ({ page }) => {
   await page.addInitScript(() => {
     HTMLMediaElement.prototype.play = function () {
       setTimeout(() => this.dispatchEvent(new Event("ended")), 10);
@@ -657,16 +642,18 @@ test("AI Lead autoplays English only and Explain sends no speech request", async
     route.fulfill({
       json:
         route.request().postDataJSON().action === "explain"
-          ? { reply: "", explanationVi: "AI Lead hỏi về buổi sáng của bạn." }
+          ? { reply: "", explanationVi: "Alex hỏi về buổi sáng của bạn." }
           : { reply: "What did you do this morning?", explanationVi: "Bạn đã làm gì sáng nay?" },
     }),
   );
   await page.goto("/daily-speaking");
+  await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).check();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   await expect.poll(() => spoken.length).toBe(1);
   expect(spoken).toEqual(["What did you do this morning?"]);
   await page.getByRole("button", { name: "Giải thích tiếng Việt", exact: true }).click();
-  await expect(page.getByRole("log")).toContainText("AI Lead hỏi về buổi sáng của bạn.");
+  await expect(page.getByRole("log")).toContainText("Alex hỏi về buổi sáng của bạn.");
   expect(spoken).toHaveLength(1);
 });
 
@@ -683,10 +670,10 @@ test("mobile navigation and large text fit small portrait and landscape screens"
   await page.goto("/");
   await page
     .getByRole("navigation", { name: "Điều hướng trên điện thoại" })
-    .getByRole("link", { name: "Giao tiếp", exact: true })
+    .getByRole("link", { name: "Nói chuyện", exact: true })
     .click();
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-  await page.getByRole("checkbox", { name: "Tự phát giọng AI Lead", exact: true }).uncheck();
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
   expect((await page.locator(".speaking-settings").boundingBox())?.width).toBeLessThanOrEqual(400);
   await page.getByRole("button", { name: "Thu gọn thiết lập", exact: true }).click();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
@@ -711,7 +698,7 @@ test("missing server configuration stays an error and does not start a scripted 
   await page.goto("/daily-speaking");
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   await expect(page.locator(".speaking-controls").getByRole("alert")).toContainText(
-    "AI Lead hiện chưa sẵn sàng trò chuyện",
+    "Alex hiện chưa sẵn sàng trò chuyện",
   );
   await expect(page.getByTestId("speaking-counts")).toContainText(
     "0 lượt qua mic · 0 lượt nhập chữ",

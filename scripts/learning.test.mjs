@@ -77,7 +77,8 @@ test("IPA practice preserves valid progress and reads older learning data", () =
   );
   const state = { ...emptyState(), ipaPracticed: ["i", "th", "uk-near", "i", "unknown", null, 12] };
   assert.deepEqual(parseState(JSON.stringify(state)).ipaPracticed, ["i", "th", "uk-near"]);
-  const { ipaPracticed, ...older } = emptyState();
+  const older = emptyState();
+  delete older.ipaPracticed;
   assert.deepEqual(parseState(JSON.stringify(older)).ipaPracticed, []);
 });
 function stateWithSession() {
@@ -104,12 +105,12 @@ function stageEvidence(stage) {
 }
 test("every month and role retains its Carnegie theme and a complete practice scene", () => {
   assert.equal(communicationScenes.length, months.length);
-  for (const module of curriculum)
+  for (const courseModule of curriculum)
     for (const role of roles)
       for (let day = 1; day <= 6; day++) {
-        const lesson = getPracticeLesson(module.week, day, role.id);
-        assert.equal(lesson.principle, months[module.month - 1].principle);
-        assert.equal(lesson.communication, communicationScenes[module.month - 1]);
+        const lesson = getPracticeLesson(courseModule.week, day, role.id);
+        assert.equal(lesson.principle, months[courseModule.month - 1].principle);
+        assert.equal(lesson.communication, communicationScenes[courseModule.month - 1]);
         const scene = lesson.communication;
         assert.ok(scene.opening && scene.reply && scene.followup && scene.reflection);
         assert.equal(scene.meanings.length, 3);

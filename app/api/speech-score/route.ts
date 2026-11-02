@@ -1,6 +1,9 @@
 import { scoreTranscript } from "./scoring.ts";
 import { isSameOrigin } from "../same-origin.ts";
 import { getTranscription } from "../../audio/transcription.ts";
+import { isBodyTooLarge, limitedBody } from "../request-body.ts";
+import { providerQuota } from "../quota.ts";
+import { learnerId } from "../../learning/personalization-server.ts";
 
 export const runtime = "nodejs";
 
@@ -19,14 +22,11 @@ const AUDIO_TYPES = new Set([
 export async function POST(request: Request) {
   if (!isSameOrigin(request))
     return Response.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
-  const length = Number(request.headers.get("content-length"));
-  if (length > MAX_AUDIO_BYTES + 65536)
-    return Response.json({ error: "Bản ghi quá lớn." }, { status: 413 });
-
   let form: FormData;
   try {
-    form = await request.formData();
-  } catch {
+    form = await limitedBody(request, MAX_AUDIO_BYTES + 65536).formData();
+  } catch (error) {
+    if (isBodyTooLarge(error)) return Response.json({ error: "Bản ghi quá lớn." }, { status: 413 });
     return Response.json({ error: "Bản ghi gửi lên không hợp lệ." }, { status: 400 });
   }
 
@@ -50,8 +50,10 @@ export async function POST(request: Request) {
     return Response.json({ error: "Định dạng ghi âm chưa được hỗ trợ." }, { status: 415 });
   }
 
+  const quotaError = providerQuota(request, "transcription", 60);
+  if (quotaError) return quotaError;
   try {
-    const body = await getTranscription(audio);
+    const body = await getTranscription(audio, learnerId(request));
     if ("error" in body) return Response.json({ error: body.error }, { status: body.status });
     const result = scoreTranscript(target.trim(), body.text);
     return Response.json(

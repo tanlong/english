@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 type Recognition = {
   lang: string;
@@ -25,17 +25,32 @@ type SpeechWindow = Window & {
   SpeechRecognition?: new () => Recognition;
   webkitSpeechRecognition?: new () => Recognition;
 };
+const subscribeToSpeechSupport = () => () => {};
+const speechSupported = () =>
+  Boolean(
+    (window as SpeechWindow).SpeechRecognition || (window as SpeechWindow).webkitSpeechRecognition,
+  );
+const serverSpeechSupported = () => false;
 export function useSpeechInput(options: {
   value: string;
   onChange: (text: string) => void;
   maxLength: number;
   disabled: boolean;
   onStart?: () => void;
+  consent?: { value: boolean; set: (value: boolean) => void };
 }) {
   const config = useRef(options);
-  config.current = options;
-  const [micSupported, setMicSupported] = useState(false);
-  const [micConsent, setMicConsent] = useState(false);
+  useEffect(() => {
+    config.current = options;
+  });
+  const micSupported = useSyncExternalStore(
+    subscribeToSpeechSupport,
+    speechSupported,
+    serverSpeechSupported,
+  );
+  const [localConsent, setLocalConsent] = useState(false);
+  const micConsent = options.consent?.value ?? localConsent;
+  const setMicConsent = options.consent?.set ?? setLocalConsent;
   const [listening, setListening] = useState(false);
   const [micError, setMicError] = useState("");
   const recognitionRef = useRef<Recognition | null>(null);
@@ -56,8 +71,6 @@ export function useSpeechInput(options: {
   }
   useEffect(() => {
     mounted.current = true;
-    const speechWindow = window as SpeechWindow;
-    setMicSupported(!!(speechWindow.SpeechRecognition || speechWindow.webkitSpeechRecognition));
     const hide = () => {
       if (document.visibilityState !== "visible") abortMic();
     };

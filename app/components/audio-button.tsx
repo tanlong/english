@@ -15,6 +15,7 @@ export function AudioButton({
   variant = "default",
   disabled = false,
   iconOnly = false,
+  onPlaybackChange,
 }: {
   text: string;
   speed?: number;
@@ -26,6 +27,7 @@ export function AudioButton({
   variant?: ButtonProps["variant"];
   disabled?: boolean;
   iconOnly?: boolean;
+  onPlaybackChange?: (playing: boolean) => void;
 }) {
   const [playing, setPlaying] = useState(false);
   const [error, setError] = useState("");
@@ -45,18 +47,22 @@ export function AudioButton({
           if (playing) {
             stopAudio();
             setPlaying(false);
+            onPlaybackChange?.(false);
             return;
           }
           setPlaying(true);
           setError("");
           try {
-            await playTts({ spokenText: text, speed, voice, locale });
+            await playTts({ spokenText: text, speed, voice, locale }, () =>
+              onPlaybackChange?.(true),
+            );
             onPlayed?.();
           } catch (e) {
             const message = e instanceof Error ? e.message : "Không thể phát âm thanh.";
             if (message !== "Đã dừng âm thanh.") setError(message);
           } finally {
             setPlaying(false);
+            onPlaybackChange?.(false);
           }
         }}
       >

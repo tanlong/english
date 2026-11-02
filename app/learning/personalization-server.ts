@@ -26,10 +26,13 @@ export function learnerCookie(token: string, request: Request, clear = false) {
 }
 export async function ensureLearner(request: Request) {
   const existing = learnerId(request);
-  const token = existing ? null : randomBytes(32).toString("hex");
-  const id = existing ?? createHash("sha256").update(token!).digest("hex");
-  await getDb().learner.upsert({ where: { id }, create: { id }, update: {} });
-  return { id, cookie: token ? learnerCookie(token, request) : undefined };
+  const db = getDb();
+  if (existing && (await db.learner.findUnique({ where: { id: existing }, select: { id: true } })))
+    return { id: existing, cookie: undefined };
+  const token = randomBytes(32).toString("hex");
+  const id = createHash("sha256").update(token).digest("hex");
+  await db.learner.create({ data: { id } });
+  return { id, cookie: learnerCookie(token, request) };
 }
 
 export async function readPersonalization(

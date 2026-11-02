@@ -1,3 +1,4 @@
+import { isBodyTooLarge, limitedBody } from "../request-body.ts";
 import { isSameOrigin } from "../same-origin.ts";
 import {
   ensureLearner,
@@ -37,11 +38,10 @@ export async function POST(request: Request) {
     return Response.json({ error: "Hãy tải lại trang để kết nối hồ sơ học tập." }, { status: 401 });
   let body;
   try {
-    const raw = await request.text();
-    if (new TextEncoder().encode(raw).length > 2_000_000)
+    body = await limitedBody(request, 2_000_000).json();
+  } catch (error) {
+    if (isBodyTooLarge(error))
       return Response.json({ error: "Dữ liệu học tập quá lớn." }, { status: 413 });
-    body = JSON.parse(raw);
-  } catch {
     return Response.json({ error: "Dữ liệu không hợp lệ." }, { status: 400 });
   }
   if (!body || typeof body !== "object" || Array.isArray(body))
@@ -125,7 +125,13 @@ export async function DELETE(request: Request) {
     return Response.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
   try {
     const id = learnerId(request);
-    if (id) await getDb().learner.deleteMany({ where: { id } });
+    if (id)
+      await getDb().$transaction(async (tx) => {
+        const privateCache = { key: { startsWith: `private:${id}:` } };
+        await tx.ttsAudio.deleteMany({ where: privateCache });
+        await tx.transcription.deleteMany({ where: privateCache });
+        await tx.learner.deleteMany({ where: { id } });
+      });
     return Response.json(
       { deleted: true },
       { headers: { ...headers, "Set-Cookie": learnerCookie("", request, true) } },

@@ -146,7 +146,7 @@ export function useLearning() {
   useEffect(() => {
     if (!ready || !connected) return;
     const content = JSON.stringify(state, (key, value) =>
-      key === "seconds" || key === "dailySeconds" ? undefined : value,
+      key === "seconds" || key === "dailySeconds" || key === "activitySeconds" ? undefined : value,
     );
     if (content === lastQueuedContent.current) return;
     const timer = window.setTimeout(() => {

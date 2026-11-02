@@ -1,11 +1,7 @@
 "use client";
 
-import { Roadmap } from "@/app/components/course-explorer";
-import { useLearningStore } from "@/app/learning/provider";
-import { useStartSession } from "@/app/learning/use-start-session";
+import { LessonsWorkspace } from "@/app/components/lessons-workspace";
 
 export default function RoadmapPage() {
-  const store = useLearningStore();
-  const start = useStartSession();
-  return <Roadmap store={store} onStart={start} />;
+  return <LessonsWorkspace />;
 }

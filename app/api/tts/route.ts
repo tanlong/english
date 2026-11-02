@@ -3,16 +3,23 @@ import { ipaSounds } from "../../content/ipa.ts";
 import { getPracticeLesson } from "../../content/practice.ts";
 import { getSpeech } from "../../audio/server.ts";
 import { isSameOrigin } from "../same-origin.ts";
+import { providerQuota } from "../quota.ts";
+import { isBodyTooLarge, limitedBody } from "../request-body.ts";
+import { previewLessons } from "../../content/baseline.ts";
 
 export const runtime = "nodejs";
 
 const allowedText = new Set<string>([
   ...ipaSounds.flatMap((sound) => [sound.word, sound.pair.word]),
+  "I get up at seven.",
+  ...previewLessons.flatMap((lesson) =>
+    lesson.segments.flatMap((segment) => [segment.basic.en, segment.better.en, segment.natural.en]),
+  ),
 ]);
-for (const module of curriculum) {
+for (const courseModule of curriculum) {
   for (let day = 1; day <= 6; day++) {
     for (const role of roles) {
-      const lesson = getPracticeLesson(module.week, day, role.id);
+      const lesson = getPracticeLesson(courseModule.week, day, role.id);
       const lines = lesson.lines.map((line) => line.en);
       allowedText.add(lines.join(" "));
       for (const line of lines) allowedText.add(line);
@@ -37,13 +44,12 @@ allowedText.add("Could you give me one more detail or ask a follow-up question?"
 export async function POST(request: Request) {
   if (!isSameOrigin(request))
     return Response.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
-  if (Number(request.headers.get("content-length")) > 8192)
-    return Response.json({ error: "Yêu cầu âm thanh quá lớn." }, { status: 413 });
-
   let body: { spokenText?: unknown; voice?: unknown };
   try {
-    body = await request.json();
-  } catch {
+    body = await limitedBody(request, 8192).json();
+  } catch (error) {
+    if (isBodyTooLarge(error))
+      return Response.json({ error: "Yêu cầu âm thanh quá lớn." }, { status: 413 });
     return Response.json({ error: "Yêu cầu âm thanh không hợp lệ." }, { status: 400 });
   }
   if (!body || typeof body !== "object")
@@ -56,6 +62,8 @@ export async function POST(request: Request) {
   )
     return Response.json({ error: "Câu thoại hoặc giọng đọc không hợp lệ." }, { status: 400 });
 
+  const quotaError = providerQuota(request, "lesson-speech", 120);
+  if (quotaError) return quotaError;
   try {
     const audio = await getSpeech(spokenText, voice);
     if (!audio)

@@ -90,8 +90,9 @@ test("text creates a grounded debate and rejects missing input, forged context a
       output = {
         ...analysis,
         evidence: ["E1", "E2"],
-        keySentences: analysis.keySentences.map(({ english, ...sentence }, index) => ({
-          ...sentence,
+        keySentences: analysis.keySentences.map((sentence, index) => ({
+          vietnamese: sentence.vietnamese,
+          usageVi: sentence.usageVi,
           evidenceId: index ? "E2" : "E1",
         })),
       };

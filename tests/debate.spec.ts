@@ -1,3 +1,4 @@
+import { mockMicrophone } from "./microphone-fixture";
 import { expect, test } from "@playwright/test";
 import analysis from "./fixtures/debate.json" with { type: "json" };
 
@@ -101,29 +102,7 @@ for (const width of [1440, 375]) {
     page,
   }) => {
     await page.setViewportSize({ width, height: 900 });
-    await page.addInitScript(() => {
-      Object.defineProperty(window, "SpeechRecognition", {
-        value: class {
-          onresult?: (event: unknown) => void;
-          onerror?: (event: unknown) => void;
-          onend?: () => void;
-          starts = 0;
-          aborted = false;
-          constructor() {
-            (window as any).__debateMic = this;
-          }
-          start() {
-            this.starts++;
-          }
-          stop() {
-            this.onend?.();
-          }
-          abort() {
-            this.aborted = true;
-          }
-        },
-      });
-    });
+    await mockMicrophone(page, "__debateMic");
     const sent: string[] = [];
     await page.route("**/api/debate", (route) => {
       const body = route.request().postDataJSON();
@@ -153,12 +132,12 @@ for (const width of [1440, 375]) {
     await answer.fill("I think:");
     await start.click();
     await expect(error).toContainText("Tích ô đồng ý");
-    expect(await page.evaluate(() => !!(window as any).__debateMic)).toBe(false);
+    expect(await page.evaluate(() => !!window.__debateMic)).toBe(false);
     await page
       .getByRole("checkbox", { name: /Tôi đồng ý dùng tính năng chuyển giọng nói/ })
       .check();
     await start.click();
-    expect(await page.evaluate(() => (window as any).__debateMic.lang)).toBe("en-US");
+    expect(await page.evaluate(() => window.__debateMic.lang)).toBe("en-US");
     await expect(answer).toBeDisabled();
     await expect(send).toBeDisabled();
     await expect(page.getByRole("button", { name: "Nghe câu này", exact: true })).toBeDisabled();
@@ -166,17 +145,17 @@ for (const width of [1440, 375]) {
       page.getByRole("button", { name: "Tạo cuộc hội thoại", exact: true }),
     ).toBeDisabled();
     await page.evaluate(() => {
-      const mic = (window as any).__debateMic;
+      const mic = window.__debateMic;
       mic.onresult({ results: [{ isFinal: false, 0: { transcript: "Small habits" } }] });
       mic.onresult({
         results: [{ isFinal: true, 0: { transcript: "Small habits help us learn." } }],
       });
       mic.onend();
     });
-    await expect.poll(() => page.evaluate(() => (window as any).__debateMic.starts)).toBe(2);
+    await expect.poll(() => page.evaluate(() => window.__debateMic.starts)).toBe(2);
     await expect(answer).toHaveValue("I think: Small habits help us learn.");
     await page.evaluate(() =>
-      (window as any).__debateMic.onresult({
+      window.__debateMic.onresult({
         results: [{ isFinal: true, 0: { transcript: "I agree." } }],
       }),
     );
@@ -190,7 +169,7 @@ for (const width of [1440, 375]) {
     expect(sent).toEqual(["I agree because daily practice helps me."]);
     await start.click();
     await page.evaluate(() => {
-      const mic = (window as any).__debateMic;
+      const mic = window.__debateMic;
       mic.onresult({ results: [{ isFinal: true, 0: { transcript: "Keep these words." } }] });
       mic.onerror({ error: "not-allowed" });
     });
@@ -198,7 +177,7 @@ for (const width of [1440, 375]) {
     await expect(answer).toHaveValue("Keep these words.");
     await start.click();
     await page.evaluate(() =>
-      (window as any).__debateMic.onresult({
+      window.__debateMic.onresult({
         results: [{ isFinal: true, 0: { transcript: "a".repeat(2100) } }],
       }),
     );
@@ -207,9 +186,10 @@ for (const width of [1440, 375]) {
     await answer.fill("");
     await start.click();
     await page.screenshot({ path: `artifacts/debate-voice-${width}.png`, fullPage: true });
-    await page.getByRole("link", { name: /^(Luyện )?IPA$/ }).click();
+    await page.getByRole("link", { name: "Ôn tập", exact: true }).click();
+    await page.getByRole("link", { name: "Luyện phát âm IPA" }).click();
     await expect(page).toHaveURL(/\/ipa$/);
-    await expect.poll(() => page.evaluate(() => (window as any).__debateMic.aborted)).toBe(true);
+    await expect.poll(() => page.evaluate(() => window.__debateMic.aborted)).toBe(true);
     expect(sent.length).toBe(1);
   });
 

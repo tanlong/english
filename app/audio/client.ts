@@ -29,12 +29,10 @@ export function stopAudio() {
   if (activeUrl) URL.revokeObjectURL(activeUrl);
   activeUrl = null;
 }
-export async function playTts({
-  spokenText,
-  speed = 1,
-  voice = "nova",
-  locale = "en-US",
-}: TtsRequest): Promise<void> {
+export async function playTts(
+  { spokenText, speed = 1, voice = "nova", locale = "en-US" }: TtsRequest,
+  onStarted?: () => void,
+): Promise<void> {
   stopAudio();
   const controller = new AbortController();
   activeController = controller;
@@ -97,7 +95,10 @@ export async function playTts({
       activeReject = reject;
       audio.onended = () => resolve();
       audio.onerror = () => reject(new Error("Không phát được âm thanh. Vui lòng thử lại."));
-      audio.play().catch(reject);
+      audio
+        .play()
+        .then(() => onStarted?.())
+        .catch(reject);
     });
   } catch (error) {
     if (controller.signal.aborted) throw new Error("Đã dừng âm thanh.");

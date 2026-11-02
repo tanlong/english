@@ -1,4 +1,6 @@
+import { isBodyTooLarge, limitedBody } from "../request-body.ts";
 import { isSameOrigin } from "../same-origin.ts";
+import { providerQuota } from "../quota.ts";
 import {
   debateInstructions,
   generateJson,
@@ -26,14 +28,13 @@ export async function POST(request: Request) {
     return Response.json({ error: "Yêu cầu không hợp lệ." }, { status: 403 });
   let body;
   try {
-    const raw = await request.text();
-    if (new TextEncoder().encode(raw).length > 256_000)
+    body = await limitedBody(request, 256_000).json();
+  } catch (error) {
+    if (isBodyTooLarge(error))
       return Response.json(
         { error: "Nội dung quá dài. Hãy dùng đoạn văn bản ngắn hơn." },
         { status: 413 },
       );
-    body = JSON.parse(raw);
-  } catch {
     return Response.json({ error: "Dữ liệu không hợp lệ." }, { status: 400 });
   }
   if (!body || typeof body !== "object" || Array.isArray(body))
@@ -58,6 +59,8 @@ export async function POST(request: Request) {
         { error: "AI phân tích chưa sẵn sàng. Hãy thử lại sau." },
         { status: 503 },
       );
+    const quotaError = providerQuota(request, "debate-analysis", 20);
+    if (quotaError) return quotaError;
     try {
       const analysis = await analyzeTranscript(content.trim(), "text", stance);
       const context = {
@@ -134,6 +137,8 @@ export async function POST(request: Request) {
       });
       return Response.json({ saved: true }, { headers: { "Cache-Control": "no-store" } });
     }
+    const quotaError = providerQuota(request, "debate-conversation");
+    if (quotaError) return quotaError;
     let personalContext = "";
     try {
       personalContext = await coachingContext(request);

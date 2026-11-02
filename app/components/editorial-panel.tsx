@@ -4,7 +4,6 @@ import { Card } from "@/app/components/ui/card";
 
 import { ShieldCheck } from "lucide-react";
 import { createSessionPlan } from "../learning/session-plan";
-import type { LearningStore } from "../learning/use-learning";
 import { PageHeading } from "./page-heading";
 import { draftEditorial, publicationIssues } from "../content/editorial";
 export function EditorialPanel() {
@@ -15,13 +14,13 @@ export function EditorialPanel() {
       <PageHeading
         eyebrow="CONTENT QUALITY"
         title="Rõ nguồn. Đúng trạng thái. Có kiểm chứng."
-        text="Bộ tài liệu v1.1 là nguồn yêu cầu. Các bài luyện được gắn nhãn nháp cho đến khi qua đầy đủ cổng biên tập."
+        text="ENG-BA-SRS-001 là nguồn yêu cầu. Các bài luyện được gắn nhãn nháp cho đến khi qua đầy đủ cổng biên tập."
       />
       <div className="notice warning">
         <ShieldCheck aria-hidden="true" size={22} />
         <p>
           Chưa xuất bản giáo trình chính thức. Vietnam Spoken Core là seed-only; chưa có xác nhận độ
-          phủ 90%, audio, bộ đề độc lập và quyền tái bản hình ảnh.
+          phủ 95%, audio, bộ đề độc lập và quyền tái bản hình ảnh.
         </p>
       </div>
       <div className="settings-grid">
