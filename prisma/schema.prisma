@@ -32,6 +32,92 @@ model Learner {
   updatedAt     DateTime          @updatedAt
   records       LearningRecord[]
   examples      CoachingExample[]
+  cafeConversations CafeConversation[]
+  cafeFlashcards CafeFlashcard[]
+}
+
+model CafeConversation {
+  id          String   @id @default(uuid())
+  tenantId    String
+  learnerId   String
+  activeKey   String?  @unique
+  npcId       String
+  topicId     String
+  level       String
+  useAi       Boolean  @default(false)
+  status      String   @default("active")
+  busyUntil   DateTime @default(now())
+  summaryJson String?
+  createdAt   DateTime @default(now())
+  endedAt     DateTime?
+  learner     Learner  @relation(fields: [learnerId], references: [id], onDelete: Cascade)
+  turns       CafeTurn[]
+  flashcards  CafeFlashcard[]
+  @@index([tenantId, learnerId, createdAt])
+}
+
+model CafeTurn {
+  id              String @id @default(uuid())
+  conversationId  String
+  clientMessageId String
+  userText        String
+  replyJson       String?
+  createdAt       DateTime @default(now())
+  conversation    CafeConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  @@unique([conversationId, clientMessageId])
+  @@index([conversationId, createdAt])
+}
+
+model CafeFlashcard {
+  id               String @id @default(uuid())
+  learnerId        String
+  conversationId   String
+  normalizedPhrase String
+  english          String
+  vietnamese       String
+  createdAt        DateTime @default(now())
+  learner          Learner @relation(fields: [learnerId], references: [id], onDelete: Cascade)
+  conversation     CafeConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  @@unique([learnerId, normalizedPhrase, conversationId])
+}
+
+model CafeConnection {
+  id              String @id
+  tenantId        String
+  provider        String
+  model           String
+  ciphertext      String
+  keyVersion      String
+  revision        Int @default(1)
+  status          String @default("draft")
+  enabled         Boolean @default(false)
+  dailyRequests   Int
+  userDailyRequests Int
+  timeoutMs       Int
+  maxOutputTokens Int
+  retryAt         DateTime?
+  testingUntil    DateTime?
+  updatedAt       DateTime @updatedAt
+  @@unique([tenantId, provider])
+}
+
+model CafeUsage {
+  tenantId String
+  provider String
+  day      String
+  subject  String
+  requests Int @default(0)
+  @@id([tenantId, provider, day, subject])
+}
+
+model CafeAudit {
+  id        String @id @default(uuid())
+  tenantId  String
+  provider  String
+  actor     String
+  action    String
+  createdAt DateTime @default(now())
+  @@index([tenantId, createdAt])
 }
 
 model LearningRecord {

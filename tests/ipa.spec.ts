@@ -117,7 +117,7 @@ test("IPA playback, listening gate, retry and recording fallback", async ({ page
   );
 });
 
-test("IPA fits mobile, large text and landscape with four navigation items", async ({ page }) => {
+test("IPA fits mobile, large text and landscape with compact navigation", async ({ page }) => {
   await page.evaluate(() => {
     const state = JSON.parse(localStorage.getItem("natural-english:v2")!);
     state.profile.largeText = true;
@@ -138,8 +138,8 @@ test("IPA fits mobile, large text and landscape with four navigation items", asy
     );
     if (viewport.width < 768) {
       const nav = page.locator(".mobile-nav");
-      await expect(nav.getByRole("link")).toHaveCount(4);
-      const bounds = await nav.getByRole("link", { name: "Ôn tập", exact: true }).boundingBox();
+      await expect(nav.getByRole("link")).toHaveCount(1);
+      const bounds = await nav.getByRole("link", { name: "Cà phê", exact: true }).boundingBox();
       expect(bounds!.width).toBeGreaterThanOrEqual(44);
       await page.getByRole("button", { name: "Âm /θ/ · thin", exact: true }).click();
       await expect(page.getByRole("heading", { name: "Âm /θ/", exact: true })).toBeFocused();

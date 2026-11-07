@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "cloud_daisy",
+  "approved": false,
+  "status": "DRAFT_REQUIRES_JOINT_AND_IDENTITY_REVIEW",
+  "renderer": "Canvas2D review renderer; existing app uses DOM/CSS, no PixiJS installed",
+  "sourceMaster": "source/master_rgba.png",
+  "sourceHash": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+  "coordinateSystem": {
+    "width": 1087,
+    "height": 1447,
+    "unit": "source-pixels"
+  },
+  "root": {
+    "anchor": {
+      "x": 470,
+      "y": 1427
+    },
+    "displayHeightPx": 220
+  },
+  "calibration": "Initial positions measured against supplied art; editable in review lab. Not approved joint coordinates.",
+  "layers": [
+    {
+      "id": "body",
+      "file": "draft/registered/body.png",
+      "sourceFile": "draft/parts/body.png",
+      "sourceHash": "e74f2dcfbed47b4481619b0659e57a3b1b3b635f38834778d6dfe46faad98bdb",
+      "sourceSize": {
+        "width": 1087,
+        "height": 1446
+      },
+      "trim": {
+        "left": 0,
+        "top": 0,
+        "width": 1087,
+        "height": 1446
+      },
+      "approved": false
+    },
+    {
+      "id": "arm_wave",
+      "file": "draft/registered/arm_wave.png",
+      "sourceFile": "draft/parts/arm_wave.png",
+      "sourceHash": "8e2c4730aba1a3cf609829f4af261dc21122357e93003f8e3f42bde3f50405e7",
+      "sourceSize": {
+        "width": 1146,
+        "height": 1373
+      },
+      "trim": {
+        "left": 114,
+        "top": 78,
+        "width": 923,
+        "height": 1238
+      },
+      "approved": false
+    },
+    {
+      "id": "arm_hold",
+      "file": "draft/registered/arm_hold.png",
+      "sourceFile": "draft/parts/arm_hold.png",
+      "sourceHash": "abef79287ac992752d71da84d55ab14d84595a60eee080a65b7488b5d075f6c7",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "trim": {
+        "left": 186,
+        "top": 75,
+        "width": 1254,
+        "height": 861
+      },
+      "approved": false
+    },
+    {
+      "id": "cup",
+      "file": "draft/registered/cup.png",
+      "sourceFile": "draft/props/cup.png",
+      "sourceHash": "7e333420e86dd4649ff7ab08afc6f533356c266724ad4d765bda2e6534b0e121",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "trim": {
+        "left": 364,
+        "top": 146,
+        "width": 881,
+        "height": 739
+      },
+      "approved": false
+    },
+    {
+      "id": "cloth",
+      "file": "draft/registered/cloth.png",
+      "sourceFile": "draft/props/cloth.png",
+      "sourceHash": "21f3131d8afd6c57364fcc91a0fe8c527724e1e93a6fceedde5d27ae3de59644",
+      "sourceSize": {
+        "width": 1269,
+        "height": 1240
+      },
+      "trim": {
+        "left": 124,
+        "top": 139,
+        "width": 980,
+        "height": 936
+      },
+      "approved": false
+    },
+    {
+      "id": "eye_l_closed",
+      "file": "draft/registered/eye_l_closed.png",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "a9c44984286ff8dbb8dc6d7889157510f9ccdc9b5019fda42e6ab5080f23f74d",
+      "trim": {
+        "left": 400,
+        "top": 200,
+        "width": 153,
+        "height": 120
+      },
+      "approved": false
+    },
+    {
+      "id": "eye_r_closed",
+      "file": "draft/registered/eye_r_closed.png",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "a9c44984286ff8dbb8dc6d7889157510f9ccdc9b5019fda42e6ab5080f23f74d",
+      "trim": {
+        "left": 606,
+        "top": 253,
+        "width": 100,
+        "height": 100
+      },
+      "approved": false
+    }
+  ],
+  "placement": {
+    "body": {
+      "x": 0,
+      "y": 0,
+      "width": 1087,
+      "height": 1447,
+      "order": 0
+    },
+    "arm_wave": {
+      "x": 365,
+      "y": 630,
+      "width": 235,
+      "height": 310,
+      "pivotX": 0.78,
+      "pivotY": 0.85,
+      "order": 20,
+      "pawX": 0.38,
+      "pawY": 0.22
+    },
+    "arm_hold": {
+      "x": 704,
+      "y": 625,
+      "width": 285,
+      "height": 198,
+      "pivotX": 0.89,
+      "pivotY": 0.16,
+      "order": 10,
+      "pawX": 0.15,
+      "pawY": 0.53
+    },
+    "cup": {
+      "x": 460,
+      "y": 650,
+      "width": 166,
+      "height": 140,
+      "order": 15,
+      "parent": "arm_hold"
+    },
+    "cloth": {
+      "width": 100,
+      "height": 100,
+      "order": 25,
+      "parent": "arm_wave"
+    }
+  },
+  "clips": {
+    "idle": {
+      "duration": 8,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "limitations": [
+    "Draft reconstructed cloak differs in regions originally hidden by paws; owner must review",
+    "Cup grip and cloth contact require visual approval",
+    "Cup remains attached to paw; counter set-down is not implemented without a calibrated scene attachment",
+    "No automatic art acceptance or runtime deployment"
+  ]
+}

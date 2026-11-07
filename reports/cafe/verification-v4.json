@@ -1,0 +1,97 @@
+{
+  "artRevision": "cafe-layered-v4",
+  "generatedAt": "2026-11-07T01:22:54.203Z",
+  "build": {
+    "command": "npm run build -- --webpack",
+    "pass": true,
+    "note": "Turbopack port binding is denied by this environment; Webpack build passed."
+  },
+  "nodeChecks": {
+    "passed": 15,
+    "command": "node --experimental-strip-types --test scripts/cafe-art.test.mjs scripts/cafe-motion.test.mjs scripts/npc-pipeline.test.mjs scripts/cafe.test.mjs scripts/cafe-connections.test.mjs"
+  },
+  "browserChecks": {
+    "report": "reports/cafe/playwright-v4.json",
+    "startTime": "2026-11-07T01:20:11.343Z",
+    "duration": 24326.201,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "responsiveChecks": {
+    "report": "reports/cafe/playwright-responsive-v4.json",
+    "startTime": "2026-11-07T01:21:33.050Z",
+    "duration": 7366.294,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "viewports": [
+    "1920x1080",
+    "768x1024",
+    "390x844"
+  ],
+  "sourceHashes": [
+    {
+      "file": "configs/scenes.json",
+      "sha256": "b2b6062f481307096422e233cd986073c90676c6e710ad4f9daf4e57a11f7e9d"
+    },
+    {
+      "file": "app/cafe/npc-assets.json",
+      "sha256": "378dcf86607fcaa004260481b91f513480058606686fc0324680202a6d747548"
+    },
+    {
+      "file": "app/cafe/npc-rig.tsx",
+      "sha256": "e87ce913d2ab1a54b1b166b7db820c399c1ebeb77929453967ca4d31df3518cb"
+    },
+    {
+      "file": "app/cafe/npc-puppet.ts",
+      "sha256": "b3f08e47eb0ab639e3aaa6b1c089167c8fcb7517f10c22c96ddd901fd98ee7e7"
+    },
+    {
+      "file": "app/cafe/npc-motion.ts",
+      "sha256": "5203db4686a73360dfa41b31b46d1a7d6c973879ada4655861e561fb87d066b9"
+    },
+    {
+      "file": "app/cafe/workspace.tsx",
+      "sha256": "6d2589a1ab9f66a093f6bdb9f79e5f85d9913913189d4fc18a35a8526cd3a305"
+    },
+    {
+      "file": "app/cafe/chat.tsx",
+      "sha256": "0f928011135e894ff418a49165b3cffdedb41f3d74afd71d4234fb6d661efa55"
+    },
+    {
+      "file": "app/cafe/content.ts",
+      "sha256": "90f9cede6783f943e168d66d68ba59146c6796ceb72ac1d67d706a766da43b36"
+    },
+    {
+      "file": "app/cafe/server.ts",
+      "sha256": "b2ca06aa065d96507df319c159244dd630de3fa3ec61a8a84f9b5d289bdd53f5"
+    },
+    {
+      "file": "app/styles/cafe.css",
+      "sha256": "5c9de301f2cc7d9626c76f9af4210e4435507008159e2cb64ab65d525b24b79e"
+    }
+  ],
+  "captures": [
+    {
+      "scene": "inside_cafe",
+      "screenshot": "reports/cafe/inside_cafe/runtime.png",
+      "sha256": "4c3585844a3c88bf1a23aa3d88079c81d87689c2228da4e28d2dde7f63fa3eeb"
+    },
+    {
+      "scene": "outdoor_terrace",
+      "screenshot": "reports/cafe/outdoor_terrace/runtime.png",
+      "sha256": "9dbc583fcb1f24e5f84888c3f3cf9ade020b2bfd57b87f7ce6cbe02f72d8ea9f"
+    },
+    {
+      "scene": "mountain_view",
+      "screenshot": "reports/cafe/mountain_view/runtime.png",
+      "sha256": "603209536a92ff2a8b8a0702eaf2799ab10da82f37d9371a1d7d08f6b58495aa"
+    }
+  ],
+  "finalVisualOwnerReview": "pending",
+  "externalDeployment": false
+}

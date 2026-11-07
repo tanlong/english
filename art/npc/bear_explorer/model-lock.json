@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "bear_explorer",
+  "displayName": "Bear Explorer",
+  "aliases": [
+    "deo_explorer"
+  ],
+  "approved": true,
+  "masterPath": "art/npc/bear_explorer/source/master_rgba.png",
+  "masterSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+  "sourcePath": "MD/Bear Explorer.png",
+  "angle": "three-quarter-front",
+  "light": "upper-right",
+  "camera": "fixed",
+  "designConstraints": {
+    "species": "bear",
+    "outfit": "exactly as supplied reference; do not infer from legacy prompts",
+    "preserve": [
+      "palette",
+      "silhouette",
+      "face",
+      "costume",
+      "markings"
+    ]
+  },
+  "approval": {
+    "accepted": true,
+    "sha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+    "normalizedSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+    "owner": "product owner",
+    "date": "2026-11-06",
+    "evidence": "Explicit user reply: Chọn cả 5 ảnh làm master",
+    "override": "Preserve exact supplied character design and anatomy over older bible descriptions"
+  },
+  "assetStatus": "APPROVED_MASTER"
+}

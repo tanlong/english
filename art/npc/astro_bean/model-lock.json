@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "astro_bean",
+  "displayName": "Astro Bean",
+  "aliases": [],
+  "approved": true,
+  "masterPath": "art/npc/astro_bean/source/master_rgba.png",
+  "masterSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+  "sourcePath": "MD/Astro Bean.png",
+  "angle": "three-quarter-front",
+  "light": "upper-right",
+  "camera": "fixed",
+  "designConstraints": {
+    "species": "orange bean astronaut exactly as owner-approved source; no bird wings or beak",
+    "outfit": "exactly as supplied reference; do not infer from legacy prompts",
+    "preserve": [
+      "palette",
+      "silhouette",
+      "face",
+      "costume",
+      "markings"
+    ]
+  },
+  "approval": {
+    "accepted": true,
+    "sha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+    "normalizedSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+    "owner": "product owner",
+    "date": "2026-11-06",
+    "evidence": "Explicit user reply: Chọn cả 5 ảnh làm master",
+    "override": "Preserve exact supplied character design and anatomy over older bible descriptions"
+  },
+  "assetStatus": "APPROVED_MASTER"
+}

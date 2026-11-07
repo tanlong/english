@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "bear_explorer",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "approved": false,
+  "sourceSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+  "rigSha256": "5f7005aad67703ca9eb41d0700f7ee584f0fe871786d411c294f09959d01552d",
+  "mode": "single-arm",
+  "clips": {
+    "idle": {
+      "duration": 9,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2.5,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": -1,
+    "restAngle": 0
+  }
+}

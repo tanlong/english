@@ -1,0 +1,35 @@
+{
+  "status": "TECHNICAL_PASS_VISUAL_REVIEW_REQUIRED",
+  "technicalPass": true,
+  "sha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+  "bytes": 1550599,
+  "width": 1087,
+  "height": 1447,
+  "channels": 4,
+  "hasAlpha": true,
+  "transparentPixels": 767599,
+  "semiTransparentPixels": 804427,
+  "bbox": {
+    "left": 32,
+    "top": 11,
+    "width": 957,
+    "height": 1416
+  },
+  "margins": {
+    "left": 32,
+    "top": 11,
+    "right": 98,
+    "bottom": 20
+  },
+  "errors": [],
+  "warnings": [
+    "PADDING_BELOW_6_PERCENT"
+  ],
+  "visualReview": [
+    "identity",
+    "no ground shadow",
+    "no text",
+    "full silhouette",
+    "halo on light/dark/cafe backgrounds"
+  ]
+}

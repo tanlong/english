@@ -1,0 +1,703 @@
+{
+  "generatedAt": "2026-11-07T02:48:20.976Z",
+  "reportPath": "reports/npc/index.html",
+  "npcCount": 6,
+  "approvedMasterCount": 6,
+  "acceptedPilotCount": 1,
+  "existingGifCount": 12,
+  "targetGifCount": 12,
+  "exportPassCount": 6,
+  "runtimeDraftPassCount": 6,
+  "runtimeDraftPackCount": 6,
+  "runtimeDraftTextureCount": 27,
+  "productionAcceptedCount": 0,
+  "localIntegration": {
+    "renderer": "DOM depth planes + PixiJS 8 NPC puppets / GSAP",
+    "sceneLayerCount": 12,
+    "npcCount": 6,
+    "report": "reports/dalat/fullhd-manifest-v5.json",
+    "review": "reports/dalat/review.html"
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "successfulToolCalls": 61,
+    "failedToolCalls": 1,
+    "totalLoggedToolCalls": 62,
+    "applicationPaidApiCalls": 0,
+    "model": null,
+    "usage": null,
+    "toolCostUSD": null,
+    "recordsPath": "reports/npc/generated-costs.jsonl",
+    "note": "Built-in image tool did not report model, usage or USD cost. Unknown values are null, not zero. Original per-job records are preserved in sourceJob."
+  },
+  "toolchain": {
+    "path": "reports/npc/toolchain.json",
+    "nodeVersion": "v25.3.0",
+    "packages": [
+      {
+        "name": "pixi.js",
+        "installed": true,
+        "version": "8.22.0",
+        "resolved": "/Volumes/Data/ENGLISH/node_modules/pixi.js/lib/index.mjs"
+      },
+      {
+        "name": "gsap",
+        "installed": true,
+        "version": "3.15.1",
+        "resolved": "/Volumes/Data/ENGLISH/node_modules/gsap/index.js"
+      },
+      {
+        "name": "sharp",
+        "installed": true,
+        "version": "0.35.5",
+        "resolved": "/Volumes/Data/ENGLISH/node_modules/sharp/dist/index.mjs"
+      },
+      {
+        "name": "@playwright/test",
+        "installed": true,
+        "version": "1.64.1",
+        "resolved": "/Volumes/Data/ENGLISH/node_modules/@playwright/test/index.mjs"
+      }
+    ],
+    "binaries": [
+      {
+        "name": "ffmpeg",
+        "installed": true,
+        "version": "9.0.2",
+        "command": [
+          "ffmpeg",
+          "-version"
+        ],
+        "firstLine": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers"
+      },
+      {
+        "name": "ffprobe",
+        "installed": true,
+        "version": "9.0.2",
+        "command": [
+          "ffprobe",
+          "-version"
+        ],
+        "firstLine": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers"
+      }
+    ],
+    "chromium": {
+      "name": "chromium",
+      "installed": true,
+      "executable": "/Users/duongtanlong/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+      "check": "executable exists and is executable; browser not launched"
+    },
+    "pass": true
+  },
+  "npcs": [
+    {
+      "npcId": "cloud_daisy",
+      "displayName": "Cloud Daisy",
+      "masterAccepted": true,
+      "masterHashMatches": true,
+      "masterTechnicalPass": true,
+      "pilotAccepted": true,
+      "productionAccepted": false,
+      "rigApproved": false,
+      "draftLayerCount": 7,
+      "exportStatus": "pass",
+      "exportPass": true,
+      "runtimeDraft": {
+        "exists": true,
+        "pass": true,
+        "status": "DRAFT_NOT_FOR_PRODUCTION",
+        "textureCount": 7,
+        "fileHashChecks": [
+          {
+            "name": "atlas.webp",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "atlas.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "rig.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "animations.json",
+            "exists": true,
+            "matches": true
+          }
+        ],
+        "sourceFrameChecks": [
+          {
+            "id": "cloud_daisy/body.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "cloud_daisy/arm_wave.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "cloud_daisy/arm_hold.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "cloud_daisy/cup.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "cloud_daisy/cloth.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "cloud_daisy/eye_l_closed.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "cloud_daisy/eye_r_closed.png",
+            "sourceMatches": true
+          }
+        ]
+      },
+      "clips": [
+        {
+          "state": "idle",
+          "path": "reports/npc/cloud_daisy/preview/cloud_daisy_idle.gif",
+          "exists": true,
+          "sha256": "60f2f666cb30c542f5129646f1a8cf4ba80b1acacca9961198682df5f150487e",
+          "validationPass": true,
+          "frames": 96,
+          "durationMs": 8000,
+          "loop": 0
+        },
+        {
+          "state": "interaction",
+          "path": "reports/npc/cloud_daisy/preview/cloud_daisy_interaction.gif",
+          "exists": true,
+          "sha256": "8ee1ef52ab6b46915088b6a2255d93f13e5c2333e1a6d7e3d935e34282336953",
+          "validationPass": true,
+          "frames": 48,
+          "durationMs": 2000,
+          "loop": 1
+        }
+      ],
+      "motionStatus": "DRAFT_REQUIRES_JOINT_AND_IDENTITY_REVIEW",
+      "limitations": [
+        "Draft reconstructed cloak differs in regions originally hidden by paws; owner must review",
+        "Cup grip and cloth contact require visual approval",
+        "Cup remains attached to paw; counter set-down is not implemented without a calibrated scene attachment",
+        "No automatic art acceptance or runtime deployment"
+      ],
+      "missingArtCount": 0,
+      "paths": {
+        "review": "reports/npc/cloud_daisy/review.html",
+        "thumbnail": "reports/npc/cloud_daisy/alpha-light.png",
+        "masterValidation": "art/npc/cloud_daisy/master-validation.json",
+        "exportValidation": "reports/npc/cloud_daisy/export-validation.json",
+        "missingArt": "art/npc/cloud_daisy/missing-art.json",
+        "generationLog": "art/npc/cloud_daisy/jobs/generation-log.json",
+        "approval": "art/npc/cloud_daisy/approval.json",
+        "rig": "art/npc/cloud_daisy/rig.json",
+        "packValidation": "art/npc/cloud_daisy/draft/runtime/pack-validation.json",
+        "atlasJson": "art/npc/cloud_daisy/draft/runtime/atlas.json"
+      }
+    },
+    {
+      "npcId": "ollie_owl",
+      "displayName": "Ollie Owl",
+      "masterAccepted": true,
+      "masterHashMatches": true,
+      "masterTechnicalPass": true,
+      "pilotAccepted": false,
+      "productionAccepted": false,
+      "rigApproved": false,
+      "draftLayerCount": 4,
+      "exportStatus": "pass",
+      "exportPass": true,
+      "runtimeDraft": {
+        "exists": true,
+        "pass": true,
+        "status": "DRAFT_NOT_FOR_PRODUCTION",
+        "textureCount": 4,
+        "fileHashChecks": [
+          {
+            "name": "atlas.webp",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "atlas.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "rig.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "animations.json",
+            "exists": true,
+            "matches": true
+          }
+        ],
+        "sourceFrameChecks": [
+          {
+            "id": "ollie_owl/body.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "ollie_owl/arm_wave.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "ollie_owl/eye_l_closed.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "ollie_owl/eye_r_closed.png",
+            "sourceMatches": true
+          }
+        ]
+      },
+      "clips": [
+        {
+          "state": "idle",
+          "path": "reports/npc/ollie_owl/preview/ollie_owl_idle.gif",
+          "exists": true,
+          "sha256": "d42b0a4073d3e4321567834a03d74044e7aa707aa2b126a625a22430ea7df166",
+          "validationPass": true,
+          "frames": 96,
+          "durationMs": 8000,
+          "loop": 0
+        },
+        {
+          "state": "interaction",
+          "path": "reports/npc/ollie_owl/preview/ollie_owl_interaction.gif",
+          "exists": true,
+          "sha256": "487b0869461874335578989fb85cfbb33c636254bbf8fe1c21efbce6616ec86f",
+          "validationPass": true,
+          "frames": 48,
+          "durationMs": 2000,
+          "loop": 1
+        }
+      ],
+      "motionStatus": "signature_partial",
+      "limitations": [
+        "Reading book and adjusting glasses; laptop and coffee action await separate approved props",
+        "Book and supporting wing remain a single base layer"
+      ],
+      "missingArtCount": 9,
+      "paths": {
+        "review": "reports/npc/ollie_owl/review.html",
+        "thumbnail": "reports/npc/ollie_owl/alpha-light.png",
+        "masterValidation": "art/npc/ollie_owl/master-validation.json",
+        "exportValidation": "reports/npc/ollie_owl/export-validation.json",
+        "missingArt": "art/npc/ollie_owl/missing-art.json",
+        "generationLog": "art/npc/ollie_owl/jobs/generation-log.json",
+        "approval": "art/npc/ollie_owl/approval.json",
+        "rig": "art/npc/ollie_owl/rig.json",
+        "packValidation": "art/npc/ollie_owl/draft/runtime/pack-validation.json",
+        "atlasJson": "art/npc/ollie_owl/draft/runtime/atlas.json"
+      }
+    },
+    {
+      "npcId": "mimi_bunny",
+      "displayName": "Mimi Bunny",
+      "masterAccepted": true,
+      "masterHashMatches": true,
+      "masterTechnicalPass": true,
+      "pilotAccepted": false,
+      "productionAccepted": false,
+      "rigApproved": false,
+      "draftLayerCount": 4,
+      "exportStatus": "pass",
+      "exportPass": true,
+      "runtimeDraft": {
+        "exists": true,
+        "pass": true,
+        "status": "DRAFT_NOT_FOR_PRODUCTION",
+        "textureCount": 4,
+        "fileHashChecks": [
+          {
+            "name": "atlas.webp",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "atlas.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "rig.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "animations.json",
+            "exists": true,
+            "matches": true
+          }
+        ],
+        "sourceFrameChecks": [
+          {
+            "id": "mimi_bunny/body.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "mimi_bunny/arm_wave.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "mimi_bunny/eye_l_closed.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "mimi_bunny/eye_r_closed.png",
+            "sourceMatches": true
+          }
+        ]
+      },
+      "clips": [
+        {
+          "state": "idle",
+          "path": "reports/npc/mimi_bunny/preview/mimi_bunny_idle.gif",
+          "exists": true,
+          "sha256": "d619bfb2606c02644c4a0e3d38db730536b7a2cc149d8ceef956cb4459984940",
+          "validationPass": true,
+          "frames": 84,
+          "durationMs": 7000,
+          "loop": 0
+        },
+        {
+          "state": "interaction",
+          "path": "reports/npc/mimi_bunny/preview/mimi_bunny_interaction.gif",
+          "exists": true,
+          "sha256": "4776b1dea2ad21659ad919066c49824e30faf65bc800c7d2c65399e36b8693a8",
+          "validationPass": true,
+          "frames": 48,
+          "durationMs": 2000,
+          "loop": 1
+        }
+      ],
+      "motionStatus": "signature_partial",
+      "limitations": [
+        "Peace-sign greeting and blink; book/page-turn art not available",
+        "Raised-leg master pose is preserved; planted foot stays fixed"
+      ],
+      "missingArtCount": 11,
+      "paths": {
+        "review": "reports/npc/mimi_bunny/review.html",
+        "thumbnail": "reports/npc/mimi_bunny/alpha-light.png",
+        "masterValidation": "art/npc/mimi_bunny/master-validation.json",
+        "exportValidation": "reports/npc/mimi_bunny/export-validation.json",
+        "missingArt": "art/npc/mimi_bunny/missing-art.json",
+        "generationLog": "art/npc/mimi_bunny/jobs/generation-log.json",
+        "approval": "art/npc/mimi_bunny/approval.json",
+        "rig": "art/npc/mimi_bunny/rig.json",
+        "packValidation": "art/npc/mimi_bunny/draft/runtime/pack-validation.json",
+        "atlasJson": "art/npc/mimi_bunny/draft/runtime/atlas.json"
+      }
+    },
+    {
+      "npcId": "astro_bean",
+      "displayName": "Astro Bean",
+      "masterAccepted": true,
+      "masterHashMatches": true,
+      "masterTechnicalPass": true,
+      "pilotAccepted": false,
+      "productionAccepted": false,
+      "rigApproved": false,
+      "draftLayerCount": 4,
+      "exportStatus": "pass",
+      "exportPass": true,
+      "runtimeDraft": {
+        "exists": true,
+        "pass": true,
+        "status": "DRAFT_NOT_FOR_PRODUCTION",
+        "textureCount": 4,
+        "fileHashChecks": [
+          {
+            "name": "atlas.webp",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "atlas.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "rig.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "animations.json",
+            "exists": true,
+            "matches": true
+          }
+        ],
+        "sourceFrameChecks": [
+          {
+            "id": "astro_bean/body.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "astro_bean/arm_wave.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "astro_bean/eye_l_closed.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "astro_bean/eye_r_closed.png",
+            "sourceMatches": true
+          }
+        ]
+      },
+      "clips": [
+        {
+          "state": "idle",
+          "path": "reports/npc/astro_bean/preview/astro_bean_idle.gif",
+          "exists": true,
+          "sha256": "2393801922510b70e7cc8565be417fea5c011a82542c0a82b95de1b2b16b0397",
+          "validationPass": true,
+          "frames": 96,
+          "durationMs": 8000,
+          "loop": 0
+        },
+        {
+          "state": "interaction",
+          "path": "reports/npc/astro_bean/preview/astro_bean_interaction.gif",
+          "exists": true,
+          "sha256": "acabff36fda563ac530f937ef3d1b79c416cb7cb85c2eff22dcb7c5ae865df94",
+          "validationPass": true,
+          "frames": 48,
+          "durationMs": 2000,
+          "loop": 1
+        }
+      ],
+      "motionStatus": "signature_partial",
+      "limitations": [
+        "Orange bean astronaut anatomy preserved; no wings or beak",
+        "Scanner remains held in the stationary base; independent badge/scanner action awaits art"
+      ],
+      "missingArtCount": 8,
+      "paths": {
+        "review": "reports/npc/astro_bean/review.html",
+        "thumbnail": "reports/npc/astro_bean/alpha-light.png",
+        "masterValidation": "art/npc/astro_bean/master-validation.json",
+        "exportValidation": "reports/npc/astro_bean/export-validation.json",
+        "missingArt": "art/npc/astro_bean/missing-art.json",
+        "generationLog": "art/npc/astro_bean/jobs/generation-log.json",
+        "approval": "art/npc/astro_bean/approval.json",
+        "rig": "art/npc/astro_bean/rig.json",
+        "packValidation": "art/npc/astro_bean/draft/runtime/pack-validation.json",
+        "atlasJson": "art/npc/astro_bean/draft/runtime/atlas.json"
+      }
+    },
+    {
+      "npcId": "bear_explorer",
+      "displayName": "Bear Explorer",
+      "masterAccepted": true,
+      "masterHashMatches": true,
+      "masterTechnicalPass": true,
+      "pilotAccepted": false,
+      "productionAccepted": false,
+      "rigApproved": false,
+      "draftLayerCount": 4,
+      "exportStatus": "pass",
+      "exportPass": true,
+      "runtimeDraft": {
+        "exists": true,
+        "pass": true,
+        "status": "DRAFT_NOT_FOR_PRODUCTION",
+        "textureCount": 4,
+        "fileHashChecks": [
+          {
+            "name": "atlas.webp",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "atlas.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "rig.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "animations.json",
+            "exists": true,
+            "matches": true
+          }
+        ],
+        "sourceFrameChecks": [
+          {
+            "id": "bear_explorer/body.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "bear_explorer/arm_wave.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "bear_explorer/eye_l_closed.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "bear_explorer/eye_r_closed.png",
+            "sourceMatches": true
+          }
+        ]
+      },
+      "clips": [
+        {
+          "state": "idle",
+          "path": "reports/npc/bear_explorer/preview/bear_explorer_idle.gif",
+          "exists": true,
+          "sha256": "e97f86c79fc35b0eb2e77a1d59125d40910391faef3d014dbf4796228b3f1be0",
+          "validationPass": true,
+          "frames": 108,
+          "durationMs": 9000,
+          "loop": 0
+        },
+        {
+          "state": "interaction",
+          "path": "reports/npc/bear_explorer/preview/bear_explorer_interaction.gif",
+          "exists": true,
+          "sha256": "0bcbdc0d73023ae874171b98c0b37b641462356483b2d89c47ec0de21e85a1b3",
+          "validationPass": true,
+          "frames": 60,
+          "durationMs": 2500,
+          "loop": 1
+        }
+      ],
+      "motionStatus": "signature_partial",
+      "limitations": [
+        "Hat-tip greeting and blink while holding the approved map",
+        "Map opening and camera lift await isolated map/camera art",
+        "Train gesture not exported in these two clips"
+      ],
+      "missingArtCount": 12,
+      "paths": {
+        "review": "reports/npc/bear_explorer/review.html",
+        "thumbnail": "reports/npc/bear_explorer/alpha-light.png",
+        "masterValidation": "art/npc/bear_explorer/master-validation.json",
+        "exportValidation": "reports/npc/bear_explorer/export-validation.json",
+        "missingArt": "art/npc/bear_explorer/missing-art.json",
+        "generationLog": "art/npc/bear_explorer/jobs/generation-log.json",
+        "approval": "art/npc/bear_explorer/approval.json",
+        "rig": "art/npc/bear_explorer/rig.json",
+        "packValidation": "art/npc/bear_explorer/draft/runtime/pack-validation.json",
+        "atlasJson": "art/npc/bear_explorer/draft/runtime/atlas.json"
+      }
+    },
+    {
+      "npcId": "gray_boo",
+      "displayName": "Gray Boo",
+      "masterAccepted": true,
+      "masterHashMatches": true,
+      "masterTechnicalPass": true,
+      "pilotAccepted": false,
+      "productionAccepted": false,
+      "rigApproved": false,
+      "draftLayerCount": 4,
+      "exportStatus": "pass",
+      "exportPass": true,
+      "runtimeDraft": {
+        "exists": true,
+        "pass": true,
+        "status": "DRAFT_NOT_FOR_PRODUCTION",
+        "textureCount": 4,
+        "fileHashChecks": [
+          {
+            "name": "atlas.webp",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "atlas.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "rig.json",
+            "exists": true,
+            "matches": true
+          },
+          {
+            "name": "animations.json",
+            "exists": true,
+            "matches": true
+          }
+        ],
+        "sourceFrameChecks": [
+          {
+            "id": "gray_boo/body.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "gray_boo/arm_wave.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "gray_boo/eye_l_closed.png",
+            "sourceMatches": true
+          },
+          {
+            "id": "gray_boo/eye_r_closed.png",
+            "sourceMatches": true
+          }
+        ]
+      },
+      "clips": [
+        {
+          "state": "idle",
+          "path": "reports/npc/gray_boo/preview/gray_boo_idle.gif",
+          "exists": true,
+          "sha256": "c3eaa51d20c65be73a9d0ac9634c568d047ad27a900b7809a14d17f483aaf29a",
+          "validationPass": true,
+          "frames": 108,
+          "durationMs": 9000,
+          "loop": 0
+        },
+        {
+          "state": "interaction",
+          "path": "reports/npc/gray_boo/preview/gray_boo_interaction.gif",
+          "exists": true,
+          "sha256": "510f68c52313cf3b6eb5879957b043ac10a61db5e7cf697b7beefa7f4085082f",
+          "validationPass": true,
+          "frames": 60,
+          "durationMs": 2500,
+          "loop": 1
+        }
+      ],
+      "motionStatus": "signature_partial",
+      "limitations": [
+        "Alien greeting and blink, original glowing guide tablet retained",
+        "Guide and supporting arm remain embedded in base; cup and independent head tilt await art"
+      ],
+      "missingArtCount": 8,
+      "paths": {
+        "review": "reports/npc/gray_boo/review.html",
+        "thumbnail": "reports/npc/gray_boo/alpha-light.png",
+        "masterValidation": "art/npc/gray_boo/master-validation.json",
+        "exportValidation": "reports/npc/gray_boo/export-validation.json",
+        "missingArt": "art/npc/gray_boo/missing-art.json",
+        "generationLog": "art/npc/gray_boo/jobs/generation-log.json",
+        "approval": "art/npc/gray_boo/approval.json",
+        "rig": "art/npc/gray_boo/rig.json",
+        "packValidation": "art/npc/gray_boo/draft/runtime/pack-validation.json",
+        "atlasJson": "art/npc/gray_boo/draft/runtime/atlas.json"
+      }
+    }
+  ]
+}

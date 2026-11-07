@@ -1,0 +1,70 @@
+{
+  "npcId": "cloud_daisy",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "sourceSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+  "rigSha256": "72f52580f11224ae56002bf2fa6a48a43b636cbc6b161e835116c72cec0b0355",
+  "pass": true,
+  "hasAlpha": true,
+  "atlasSize": {
+    "width": 1536,
+    "height": 2683
+  },
+  "fileHashes": {
+    "atlas.webp": "a7d2bede6849a142919bcffe497c0cc2a6a9d69ab7c965891b42d071ebf30b94",
+    "atlas.json": "a79fadec9095d8fdd82fdeb007c596e989f81cd0fdbcad4bafbb6632856098f1",
+    "rig.json": "015db218020fa32ad9ef95abf5ff199af1dedc3fe803e25171e03fadca82b9f2",
+    "animations.json": "b56f5d988b7002d7eddd092e4c55d37035ac7bd6ff5b862ab45b178897d818c7"
+  },
+  "frames": [
+    {
+      "id": "body",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "cd272cf633429ac0a92fd94d6cd5002232aa9e88fc3d3a7cdb54bfd4b65f3941",
+      "extractedRgbaSha256": "cd272cf633429ac0a92fd94d6cd5002232aa9e88fc3d3a7cdb54bfd4b65f3941"
+    },
+    {
+      "id": "arm_wave",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "4fcb008df95c5e4a0cffc16fb0b75abd7892c76bc7b3a3fc74948c80db4abc7a",
+      "extractedRgbaSha256": "4fcb008df95c5e4a0cffc16fb0b75abd7892c76bc7b3a3fc74948c80db4abc7a"
+    },
+    {
+      "id": "arm_hold",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "e42297c55601d0cb2990bdfc3f456a95503064f25ca11bc8e4f47098060c8039",
+      "extractedRgbaSha256": "e42297c55601d0cb2990bdfc3f456a95503064f25ca11bc8e4f47098060c8039"
+    },
+    {
+      "id": "cup",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "5ce81c817ac9ea65071bd1a077c45357ad24c4c88268738b4a0a05fb6daee8e9",
+      "extractedRgbaSha256": "5ce81c817ac9ea65071bd1a077c45357ad24c4c88268738b4a0a05fb6daee8e9"
+    },
+    {
+      "id": "cloth",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "d2e2181fe7113deb4ba7d5355b4c723d8a2951edcf316bacfe4426e60de05e11",
+      "extractedRgbaSha256": "d2e2181fe7113deb4ba7d5355b4c723d8a2951edcf316bacfe4426e60de05e11"
+    },
+    {
+      "id": "eye_l_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "539f844de96491ab88427657bf18a2e2aedcf70fea8f2503c22f6e48c7fefc80",
+      "extractedRgbaSha256": "539f844de96491ab88427657bf18a2e2aedcf70fea8f2503c22f6e48c7fefc80"
+    },
+    {
+      "id": "eye_r_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "5073bf7420d6524daf72a16ee92344881c32db4b5b4bf03443bde7813346c372",
+      "extractedRgbaSha256": "5073bf7420d6524daf72a16ee92344881c32db4b5b4bf03443bde7813346c372"
+    }
+  ],
+  "notes": "RGBA byte equality includes RGB under alpha=0; no enlargement; source logical rig placement retained."
+}

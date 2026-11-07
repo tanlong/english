@@ -1,0 +1,10 @@
+{
+  "npcId": "cloud_daisy",
+  "tool": "built-in image_gen",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied approved cloud_daisy transparent master. Make exactly ONE localized change: close the open cat mouth into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose/beak, eyes, outfit, hands/paws, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+  "reference": "art/npc/cloud_daisy/source/master_rgba.png",
+  "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-645b0e8d-d776-45bb-ab27-95a53a55687b.png",
+  "model": null,
+  "usage": null,
+  "costUsd": null
+}

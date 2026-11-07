@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="vi">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gray Boo & Pine Lake · Animation v1.1</title>
+  <style>
+    body {
+      margin: 32px auto;
+      padding: 0 20px;
+      max-width: 1100px;
+      background: #f5f4ef;
+      color: #283b38;
+      font:
+        16px/1.6 system-ui,
+        sans-serif;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    a {
+      color: #205e64;
+    }
+    button {
+      min-height: 44px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .scene {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+    }
+    .detail-scene {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 2 / 1;
+      border-radius: 16px;
+    }
+    .previews {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    figure {
+      flex: 1 1 280px;
+      margin: 0;
+      padding: 16px;
+      border-radius: 16px;
+      background: #e9e7df;
+      text-align: center;
+    }
+    figure.dark {
+      background: #142438;
+      color: #fff;
+    }
+    figure img {
+      width: min(100%, 300px);
+      height: auto;
+    }
+    .contact {
+      width: min(100%, 768px);
+    }
+    :focus-visible {
+      outline: 3px solid #247e92;
+      outline-offset: 4px;
+    }
+  </style>
+  <h1>Gray Boo & Pine Lake</h1>
+  <p>Cảnh hồ thông và thuyền · <a href="README.md">Hướng dẫn và phạm vi kiểm chứng</a></p>
+  <video
+    class="scene"
+    src="scene-motion.mp4"
+    poster="desktop.png"
+    width="1100"
+    height="619"
+    aria-label="Cảnh hồ thông chuyển động cùng Gray Boo"
+    autoplay
+    loop
+    muted
+    playsinline
+    controls
+  ></video>
+  <p>
+    Bản ghi cảnh đang chạy ở tốc độ thường.
+    <a href="http://localhost:3000/english/cafe">Mở Café</a> → Đến đồi chè → Đến hồ thông để tương
+    tác.
+  </p>
+  <h2>Cận cảnh người chèo thuyền — lượt đi và về</h2>
+  <video
+    class="detail-scene"
+    src="rower-across-lake.mp4"
+    width="1280"
+    height="640"
+    aria-label="Cận cảnh nhân vật chèo qua hồ, quay đầu rồi chèo về"
+    autoplay
+    loop
+    muted
+    playsinline
+    controls
+  ></video>
+  <p>Bản phóng to từ cùng video, giữ nguyên tốc độ phát.</p>
+  <h2>Gray Boo idle</h2>
+  <p>
+    Rê chuột hoặc focus hình bên trái để xem pose chào. <button id="pause">Dừng preview</button>
+  </p>
+  <div class="previews">
+    <figure>
+      <img
+        id="preview"
+        tabindex="0"
+        src="../../public/cafe/assets/npc/gray_boo/gray_boo_idle.webp"
+        width="384"
+        height="480"
+        alt="Gray Boo chớp mắt, cử động tay và vạt áo"
+      />
+      <figcaption>
+        <a href="../../public/cafe/assets/npc/gray_boo/gray_boo_idle.webp">Animated WebP</a>
+      </figcaption>
+    </figure>
+    <figure class="dark">
+      <img
+        id="fallback"
+        src="../../public/cafe/assets/npc/gray_boo/gray_boo_idle.gif"
+        width="384"
+        height="480"
+        alt="Gray Boo trên nền tối để xem viền alpha GIF"
+      />
+      <figcaption>
+        <a href="../../public/cafe/assets/npc/gray_boo/gray_boo_idle.gif">GIF fallback</a>
+      </figcaption>
+    </figure>
+  </div>
+  <h2>Các frame tiêu biểu</h2>
+  <img
+    class="contact"
+    src="idle-contact-sheet.png"
+    width="768"
+    height="480"
+    alt="Tám frame idle, gồm một frame chớp mắt"
+  />
+  <script>
+    const base = "../../public/cafe/assets/npc/gray_boo/";
+    const preview = document.getElementById("preview");
+    const fallback = document.getElementById("fallback");
+    const button = document.getElementById("pause");
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    const scenes = [...document.querySelectorAll("video")];
+    let stopped = reduced.matches;
+    function show(name = "idle") {
+      preview.src = base + (stopped ? "gray_boo_poster.webp" : `gray_boo_${name}.webp`);
+      fallback.src = base + (stopped ? "gray_boo_poster.webp" : "gray_boo_idle.gif");
+      button.textContent = stopped ? "Phát preview" : "Dừng preview";
+      scenes.forEach((scene) => {
+        if (stopped || document.hidden) scene.pause();
+        else scene.play().catch(() => {});
+      });
+    }
+    preview.addEventListener("pointerenter", (e) => {
+      if (e.pointerType !== "touch") show("notice");
+    });
+    preview.addEventListener("pointerleave", () => show());
+    preview.addEventListener("focus", () => show("notice"));
+    preview.addEventListener("blur", () => show());
+    button.addEventListener("click", () => {
+      stopped = !stopped;
+      show();
+    });
+    reduced.addEventListener("change", () => {
+      stopped = reduced.matches;
+      show();
+    });
+    document.addEventListener("visibilitychange", () => {
+      scenes.forEach((scene) => {
+        if (document.hidden) scene.pause();
+        else if (!stopped) scene.play().catch(() => {});
+      });
+    });
+    show();
+  </script>
+</html>

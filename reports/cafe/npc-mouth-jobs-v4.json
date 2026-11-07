@@ -1,0 +1,62 @@
+[
+  {
+    "npcId": "cloud_daisy",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Edit target: the supplied approved cloud_daisy transparent master. Make exactly ONE localized change: close the open cat mouth into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose/beak, eyes, outfit, hands/paws, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+    "reference": "art/npc/cloud_daisy/source/master_rgba.png",
+    "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-645b0e8d-d776-45bb-ab27-95a53a55687b.png",
+    "model": null,
+    "usage": null,
+    "costUsd": null
+  },
+  {
+    "npcId": "ollie_owl",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Edit target: the supplied approved ollie_owl transparent master. Make exactly ONE localized change: close the open owl beak into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose/beak, eyes, outfit, hands/paws, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+    "reference": "art/npc/ollie_owl/source/master_rgba.png",
+    "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-fce38829-4cfa-45eb-b1cc-a9ea56c100e4.png",
+    "model": null,
+    "usage": null,
+    "costUsd": null
+  },
+  {
+    "npcId": "mimi_bunny",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Edit target: the supplied approved mimi_bunny transparent master. Make exactly ONE localized change: close the open bunny mouth (retain its little front teeth in a closed smile) into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose, eyes, outfit, hands/paws, helmet reflections, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+    "reference": "art/npc/mimi_bunny/source/master_rgba.png",
+    "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-8df94536-41cc-4e4a-93a2-81199f43e9d6.png",
+    "model": null,
+    "usage": null,
+    "costUsd": null
+  },
+  {
+    "npcId": "astro_bean",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Edit target: the supplied approved astro_bean transparent master. Make exactly ONE localized change: close the open orange bean mouth inside the glass helmet into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose, eyes, outfit, hands/paws, helmet reflections, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+    "reference": "art/npc/astro_bean/source/master_rgba.png",
+    "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-20bcc706-884a-48f8-bc4c-b984da80d08a.png",
+    "model": null,
+    "usage": null,
+    "costUsd": null
+  },
+  {
+    "npcId": "bear_explorer",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Edit target: the supplied approved bear_explorer transparent master. Make exactly ONE localized change: close the open mouth into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose, eyes, outfit, hands/paws, props, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+    "reference": "art/npc/bear_explorer/source/master_rgba.png",
+    "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-c6c1f2ab-b080-4f1d-b3bd-0c29d10887a2.png",
+    "model": null,
+    "usage": null,
+    "costUsd": null
+  },
+  {
+    "npcId": "gray_boo",
+    "tool": "built-in image_gen",
+    "prompt": "Use case: precise-object-edit. Edit target: the supplied approved gray_boo transparent master. Make exactly ONE localized change: close the open mouth into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose, eyes, outfit, hands/paws, props, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+    "reference": "art/npc/gray_boo/source/master_rgba.png",
+    "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-b5f4c85c-cb2d-4f11-aa06-de3926b56f5a.png",
+    "model": null,
+    "usage": null,
+    "costUsd": null
+  }
+]

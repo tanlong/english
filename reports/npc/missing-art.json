@@ -1,0 +1,645 @@
+{
+  "npcs": [
+    {
+      "npcId": "cloud_daisy",
+      "ready": false,
+      "jobs": [
+        {
+          "id": "body",
+          "kind": "parts",
+          "path": "parts/body.png",
+          "sha256": null,
+          "draftPath": "draft/parts/body.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY body as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_wave",
+          "kind": "parts",
+          "path": "parts/arm_wave.png",
+          "sha256": null,
+          "draftPath": "draft/parts/arm_wave.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY arm wave as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_hold",
+          "kind": "parts",
+          "path": "parts/arm_hold.png",
+          "sha256": null,
+          "draftPath": "draft/parts/arm_hold.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY arm hold as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "eyes_closed",
+          "kind": "parts",
+          "path": "parts/eyes_closed.png",
+          "sha256": null,
+          "draftPath": "draft/parts/eyes_closed.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY eyes closed as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "cup",
+          "kind": "props",
+          "path": "props/cup.png",
+          "sha256": null,
+          "draftPath": "draft/props/cup.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY cup as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "cloth",
+          "kind": "props",
+          "path": "props/cloth.png",
+          "sha256": null,
+          "draftPath": "draft/props/cloth.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY cloth as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        }
+      ]
+    },
+    {
+      "npcId": "ollie_owl",
+      "ready": false,
+      "jobs": [
+        {
+          "id": "torso",
+          "kind": "parts",
+          "path": "parts/torso.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY torso as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "head",
+          "kind": "parts",
+          "path": "parts/head.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "wing_l",
+          "kind": "parts",
+          "path": "parts/wing_l.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY wing l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "wing_r",
+          "kind": "parts",
+          "path": "parts/wing_r.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY wing r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "glasses",
+          "kind": "parts",
+          "path": "parts/glasses.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY glasses as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "eyelid",
+          "kind": "parts",
+          "path": "parts/eyelid.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY eyelid as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "beak_open",
+          "kind": "parts",
+          "path": "parts/beak_open.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY beak open as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "laptop",
+          "kind": "props",
+          "path": "props/laptop.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY laptop as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "coffee_cup",
+          "kind": "props",
+          "path": "props/coffee_cup.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY coffee cup as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        }
+      ]
+    },
+    {
+      "npcId": "mimi_bunny",
+      "ready": false,
+      "jobs": [
+        {
+          "id": "torso",
+          "kind": "parts",
+          "path": "parts/torso.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY torso as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "head",
+          "kind": "parts",
+          "path": "parts/head.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "ear_l",
+          "kind": "parts",
+          "path": "parts/ear_l.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY ear l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "ear_r",
+          "kind": "parts",
+          "path": "parts/ear_r.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY ear r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_l",
+          "kind": "parts",
+          "path": "parts/arm_l.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY arm l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_r",
+          "kind": "parts",
+          "path": "parts/arm_r.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY arm r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "blink",
+          "kind": "parts",
+          "path": "parts/blink.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY blink as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "smiling_mouth",
+          "kind": "parts",
+          "path": "parts/smiling_mouth.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY smiling mouth as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "book_closed",
+          "kind": "props",
+          "path": "props/book_closed.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY book closed as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "book_open",
+          "kind": "props",
+          "path": "props/book_open.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY book open as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "page_turn",
+          "kind": "props",
+          "path": "props/page_turn.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY page turn as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        }
+      ]
+    },
+    {
+      "npcId": "astro_bean",
+      "ready": false,
+      "jobs": [
+        {
+          "id": "suit",
+          "kind": "parts",
+          "path": "parts/suit.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY suit as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "head",
+          "kind": "parts",
+          "path": "parts/head.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_l",
+          "kind": "parts",
+          "path": "parts/arm_l.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY arm l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_r",
+          "kind": "parts",
+          "path": "parts/arm_r.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY arm r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "boots",
+          "kind": "parts",
+          "path": "parts/boots.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY boots as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "visor",
+          "kind": "parts",
+          "path": "parts/visor.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY visor as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "blink",
+          "kind": "parts",
+          "path": "parts/blink.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY blink as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "handheld_viewer",
+          "kind": "props",
+          "path": "props/handheld_viewer.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY handheld viewer as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        }
+      ]
+    },
+    {
+      "npcId": "bear_explorer",
+      "ready": false,
+      "jobs": [
+        {
+          "id": "torso",
+          "kind": "parts",
+          "path": "parts/torso.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY torso as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "bear_head",
+          "kind": "parts",
+          "path": "parts/bear_head.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY bear head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "ears",
+          "kind": "parts",
+          "path": "parts/ears.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY ears as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_l",
+          "kind": "parts",
+          "path": "parts/arm_l.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY arm l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_r",
+          "kind": "parts",
+          "path": "parts/arm_r.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY arm r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "legs",
+          "kind": "parts",
+          "path": "parts/legs.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY legs as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "backpack",
+          "kind": "parts",
+          "path": "parts/backpack.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY backpack as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "blink",
+          "kind": "parts",
+          "path": "parts/blink.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY blink as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "mouth_open",
+          "kind": "parts",
+          "path": "parts/mouth_open.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY mouth open as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "map_closed",
+          "kind": "props",
+          "path": "props/map_closed.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY map closed as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "map_open",
+          "kind": "props",
+          "path": "props/map_open.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY map open as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "camera",
+          "kind": "props",
+          "path": "props/camera.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Bear Explorer master as the sole identity reference. Create ONLY camera as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        }
+      ]
+    },
+    {
+      "npcId": "gray_boo",
+      "ready": false,
+      "jobs": [
+        {
+          "id": "hoodie",
+          "kind": "parts",
+          "path": "parts/hoodie.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY hoodie as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "head",
+          "kind": "parts",
+          "path": "parts/head.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_l",
+          "kind": "parts",
+          "path": "parts/arm_l.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY arm l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "arm_r",
+          "kind": "parts",
+          "path": "parts/arm_r.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY arm r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "legs",
+          "kind": "parts",
+          "path": "parts/legs.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY legs as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "eyes_closed",
+          "kind": "parts",
+          "path": "parts/eyes_closed.png",
+          "sha256": null,
+          "draftPath": "draft/parts/eyes_closed.png",
+          "status": "AWAITING_PART_APPROVAL",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY eyes closed as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "mouth_open",
+          "kind": "parts",
+          "path": "parts/mouth_open.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "ISOLATE_OR_RECONSTRUCT_PART",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY mouth open as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "earth_guide",
+          "kind": "props",
+          "path": "props/earth_guide.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY earth guide as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        },
+        {
+          "id": "cup",
+          "kind": "props",
+          "path": "props/cup.png",
+          "sha256": null,
+          "draftPath": null,
+          "status": "MISSING_ART",
+          "approved": false,
+          "action": "GENERATE_PROP",
+          "prompt": "Use the approved Gray Boo master as the sole identity reference. Create ONLY cup as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+        }
+      ]
+    }
+  ]
+}

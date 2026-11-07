@@ -1,0 +1,80 @@
+{
+  "provider": "built-in image_gen",
+  "status": "DRAFT_AWAITING_OWNER_REVIEW",
+  "billingNote": "Tool did not report model, usage or monetary cost. No application API key used.",
+  "failedAttempts": [],
+  "jobs": [
+    {
+      "jobId": "astro_bean_body",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "input": "MD/Astro Bean.png",
+      "prompt": "Use case: identity-preserve. Asset type: one body layer for Astro Bean 2D puppet rig. The attached APPROVED MASTER is sole identity reference: an orange bean-shaped astronaut with expressive dark eyes inside glass bubble helmet, cream retro spacesuit with orange straps and teal/gold planet emblems, orange gloves and boots, backpack, and teal handheld scanner in viewer-right hand. Perform ONE change ONLY: remove ONLY the extended greeting arm on VIEWER'S LEFT, including its orange glove and cream sleeve. Reconstruct the small hidden cream suit/shoulder/backpack region underneath it. Keep the viewer-right scanner-holding arm and scanner EXACTLY unchanged. Preserve every other part, helmet/visor highlights, head shape, face, mouth, badge, hoses, belt, boots, colors, soft detailed cel shading, exact pose, scale, framing and registration. Do not turn this orange bean into a human, bird or winged animal. Full original canvas with genuine transparent PNG background, front three-quarter camera and original upper-right light. No added limbs, props, text, floor shadows or scenery. Draft pending review.",
+      "output": "art/npc/astro_bean/draft/parts/body.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b120-e38e-74f0-acdc-72165b04abc6/exec-c069edc0-4313-4d40-9d10-627dff78dd87.png",
+      "sha256": "7a1de2481e4f303b3edc71b061ebc6958a10606dda987b9f67d46e166ebaeea7",
+      "usage": null,
+      "costUSD": null,
+      "approved": false,
+      "metadata": {
+        "width": 1122,
+        "height": 1402,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 150,
+          "top": 3,
+          "width": 941,
+          "height": 1398
+        }
+      }
+    },
+    {
+      "jobId": "astro_bean_arm_wave",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "input": "MD/Astro Bean.png",
+      "prompt": "Use case: identity-preserve. Asset type: ONE isolated arm for Astro Bean 2D puppet rig. Use the attached APPROVED MASTER, an orange bean astronaut. Extract ONLY the extended greeting arm on VIEWER'S LEFT: cream retro spacesuit sleeve with its original folds and cream cuff/trim, orange wrist ring, orange rounded glove with four short rounded fingers spread in the original friendly open greeting pose. Entire arm from a complete rounded shoulder cap at viewer-right to fingertips at viewer-left; reconstruct just the hidden attachment end. Preserve exact glove anatomy, cream/orange colors, material, warm dark outline, highlights, lavender shadows, front three-quarter angle and soft detailed cel shading. No helmet, bean face, torso, backpack, hose, strap, boots, scanner or other limbs. Do NOT create wings, feathers, human bare fingers or a bird. One full-resolution component alone, not a sheet. True transparent PNG, generous padding, no glow, background, floor shadow, lettering or labels. Draft pending joint/identity review.",
+      "output": "art/npc/astro_bean/draft/parts/arm_wave.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b120-e38e-74f0-acdc-72165b04abc6/exec-cdfa28b3-6ef8-4668-8108-90c8a6db755f.png",
+      "sha256": "a45f58c8438908e0d91343f7f629a5bd26635d28dd7d65b340fd5bd830af2b68",
+      "usage": null,
+      "costUSD": null,
+      "approved": false,
+      "metadata": {
+        "width": 1634,
+        "height": 963,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 78,
+          "top": 41,
+          "width": 1480,
+          "height": 869
+        }
+      }
+    },
+    {
+      "jobId": "astro_bean_eyes_closed",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "input": "MD/Astro Bean.png",
+      "prompt": "Use case: identity-preserve. Asset type: aligned full-canvas blink edit for Astro Bean 2D puppet rig. The attached APPROVED MASTER is sole canonical identity: orange bean astronaut in glass bubble helmet with cream/orange suit. Perform ONE tiny change ONLY: close BOTH dark eyes gently into relaxed curved eyelids for a blink. Preserve orange face contour, cheek blush, eyebrows, open happy mouth, exact eyelid/eye positions, helmet glass reflections crossing face, framing, pose, scanner, extended orange-gloved greeting arm, spacesuit emblems and hoses, straps, belt, boots and backpack EXACTLY unchanged. No head movement, perspective change, zoom, redesign or new character features. Keep original full canvas/registration (1122 by 1402 if supported), full body and genuine transparent PNG. Do not turn the bean into human or bird. No scenery, text, labels or floor shadow. This will supply only registered eyelid patches; not a new master. Draft for owner review.",
+      "output": "art/npc/astro_bean/draft/parts/eyes_closed.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b120-e38e-74f0-acdc-72165b04abc6/exec-d7dcd9aa-7b40-479a-b45c-5f7e58d99d03.png",
+      "sha256": "bbad1a2d9f6e4756490c120c00810f95fba24851c1ae59798b2c95b909941891",
+      "usage": null,
+      "costUSD": null,
+      "approved": false,
+      "metadata": {
+        "width": 1122,
+        "height": 1402,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 10,
+          "top": 3,
+          "width": 1091,
+          "height": 1399
+        }
+      }
+    }
+  ]
+}

@@ -90,6 +90,16 @@ test("completed lesson feeds flashcards, reveals answers on demand and persists 
   }
   await expect(page.getByRole("heading", { name: "Mang một câu vào ngày hôm nay." })).toBeVisible();
   await page.getByRole("link", { name: "Ôn lại câu vừa học" }).click();
+  const deck = page.getByRole("list", { name: "Các thẻ đến hạn" });
+  await expect(deck.getByRole("button")).toHaveCount(6);
+  await page.screenshot({ path: "artifacts/review-cards-desktop.png", fullPage: true });
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.screenshot({ path: "artifacts/review-cards-mobile.png", fullPage: true });
+  await deck.getByRole("button", { name: /Chúng tôi rời nhà/ }).click();
+  await expect(page.getByRole("heading", { name: "Chúng tôi rời nhà." })).toBeVisible();
+  await page.getByRole("button", { name: "Lật thẻ", exact: true }).click();
+  await expect(page.getByRole("group", { name: "Bạn nhớ câu này thế nào?" })).toBeVisible();
+  await deck.getByRole("button", { name: /Tôi thức dậy lúc 5 giờ 40/ }).click();
   await expect(page.getByRole("button", { name: "Lật thẻ", exact: true })).toBeVisible();
   await expect(page.getByText("I wake up at 5:40.", { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "Lật thẻ", exact: true }).click();

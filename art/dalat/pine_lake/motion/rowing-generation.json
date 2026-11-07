@@ -1,0 +1,42 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-07",
+  "model": null,
+  "costUsd": null,
+  "jobs": [
+    {
+      "asset": "rower",
+      "output": "rower-seated.png",
+      "generatedFile": "exec-4efdc8e7-73f1-4783-8177-a52cdb59908c.png",
+      "prompt": "Use case: stylized-concept, transparent game character part. Input image is STYLE REFERENCE ONLY, an existing illustrated wooden boat; do NOT include or redraw the boat. Generate ONE friendly adult traveler in premium stylized 2.5D anime/cel-shaded illustration, seated in a rowing/paddling posture, facing screen RIGHT in side/three-quarter view. Warm tan straw sun hat with a small teal band, teal long-sleeved shirt, simple brown trousers and boots. Full seated figure visible including bent legs, no chair. The back is upright with a slight forward lean; BOTH HANDS are close together at ONE grip point just in front of the waist/lap, posed to hold a paddle that will be added as a separate animated layer. Keep the hands adjacent, not far apart. Include the complete arms and hands, but NO paddle, oar, pole or other object in the hands. Clear rounded friendly silhouette, readable at small sprite size, clean outlines, same daylight and painted shading as reference. Genuine transparent background; no boat, water, ground, scenery, shadow, text, labels, extra people or props. Keep the full character centered with small transparent margins.",
+      "references": ["art/dalat/pine_lake/motion/boat-cutout.png"],
+      "transparentBackground": true
+    },
+    {
+      "asset": "oar",
+      "output": "rowing-oar.png",
+      "generatedFile": "exec-88cc03fb-d537-4308-9ea1-380f555679f0.png",
+      "prompt": "Use case: stylized-concept, transparent game prop. Use the reference boat ONLY to match its warm wood and premium stylized cel-shaded painted illustration style. Generate ONE simple wooden rowing paddle for the seated boat traveler: a long straight slender golden-brown shaft with a small rounded grip at the TOP and a flat elongated oval blade at the BOTTOM. Paddle stands VERTICALLY, completely visible tip to tip, centered on genuine transparent background. Straight frontal view with slight painted thickness; clean readable contour. The blade is modestly wider than the thin shaft, not oversized. No person, hands, boat, scenery, water, ground shadow, text, labels, extra paddles or other objects. Do not depict the paddle as horizontal or diagonal. Tight transparent margin around the entire vertical paddle.",
+      "references": ["art/dalat/pine_lake/motion/boat-cutout.png"],
+      "transparentBackground": true
+    },
+    {
+      "asset": "rower-redhair-strawhat",
+      "output": "rower-redhair-strawhat.png",
+      "generatedFile": "exec-15bfb1dd-1aa9-4ec1-8a92-971255b725c3.png",
+      "prompt": "Use case: precise-object-edit. Asset type: transparent seated rower sprite for an existing animated illustrated pine lake. Input image is the EDIT TARGET and exact pose/registration reference. Replace the tourist's appearance with a friendly adult red-haired pirate traveler inspired by Red-Haired Shanks wearing his straw hat from One Piece. Medium-length vivid deep crimson red hair visible below the straw hat, red hat band instead of teal, mature confident friendly face with light stubble, an open-neck ivory white shirt with sleeves rolled to the forearms, a short dark charcoal cape draped behind shoulders and back, dark cropped trousers and simple brown sandals. Same polished illustrated cel-shaded painted style and warm daylight as the input. CRITICAL INVARIANTS: preserve EXACTLY the reference seated silhouette, proportions, camera view, facing screen RIGHT, torso angle, both bent legs, seat height, arm pose and both adjacent hands at the SAME grip position just above the knees. Hands remain close together ready for a separate animated rowing paddle. Keep both arms/hands for this rowing adaptation. The cape must stay close to the back and must not cover the forearms/hands or spread out. Strong readable red hair and straw hat at tiny sprite scale. Same full-body framing, genuine transparent alpha background, full straw hat and feet visible, no cast ground shadow. Do not draw the boat, paddle, oar, chair, water, scenery, text, logos, extra characters or extra props. Change appearance only, preserve seated rowing pose.",
+      "references": ["art/dalat/pine_lake/motion/rower-seated.png"],
+      "transparentBackground": true,
+      "date": "2026-11-07"
+    }
+  ],
+  "registration": {
+    "bodyGrip": [0.55, 0.6],
+    "paddleGripY": 0.12,
+    "bodyDisplayWidth": 42,
+    "bodyOrigin": [0.35, 0.75]
+  },
+  "localIntegrationRequested": true,
+  "artReviewStatus": "pending owner visual review",
+  "activeBody": "rower-redhair-strawhat.png"
+}

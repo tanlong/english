@@ -1,5 +1,6 @@
 "use client";
 
+import type { RefObject } from "react";
 import { FormField } from "./form-field";
 
 import {
@@ -21,6 +22,9 @@ type SelectComboboxProps = {
   onValueChange: (value: string) => void;
   disabled?: boolean;
   descriptionId?: string;
+  name?: string;
+  container?: HTMLElement | ShadowRoot | RefObject<HTMLElement | ShadowRoot | null> | null;
+  positionMethod?: "absolute" | "fixed";
 };
 
 export function SelectCombobox({
@@ -31,9 +35,13 @@ export function SelectCombobox({
   onValueChange,
   disabled = false,
   descriptionId,
+  name,
+  container,
+  positionMethod,
 }: SelectComboboxProps) {
   return (
     <Combobox
+      name={name}
       disabled={disabled}
       items={options}
       value={options.find((option) => option.value === value) ?? null}
@@ -51,7 +59,7 @@ export function SelectCombobox({
         triggerLabel={`Mở danh sách ${label}`}
         placeholder={`Tìm ${label.toLocaleLowerCase("vi")}…`}
       />
-      <ComboboxContent>
+      <ComboboxContent container={container} positionMethod={positionMethod}>
         <ComboboxEmpty>Không tìm thấy lựa chọn.</ComboboxEmpty>
         <ComboboxList>
           {(option: ComboboxOption) => (

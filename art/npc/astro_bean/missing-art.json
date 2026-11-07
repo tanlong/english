@@ -1,0 +1,94 @@
+{
+  "npcId": "astro_bean",
+  "ready": false,
+  "jobs": [
+    {
+      "id": "suit",
+      "kind": "parts",
+      "path": "parts/suit.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY suit as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "head",
+      "kind": "parts",
+      "path": "parts/head.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "arm_l",
+      "kind": "parts",
+      "path": "parts/arm_l.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY arm l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "arm_r",
+      "kind": "parts",
+      "path": "parts/arm_r.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY arm r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "boots",
+      "kind": "parts",
+      "path": "parts/boots.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY boots as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "visor",
+      "kind": "parts",
+      "path": "parts/visor.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY visor as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "blink",
+      "kind": "parts",
+      "path": "parts/blink.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY blink as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "handheld_viewer",
+      "kind": "props",
+      "path": "props/handheld_viewer.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Astro Bean master as the sole identity reference. Create ONLY handheld viewer as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    }
+  ]
+}

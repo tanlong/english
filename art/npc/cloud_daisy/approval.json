@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "3.0",
+  "master": {
+    "accepted": true,
+    "sha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+    "normalizedSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+    "owner": "product owner",
+    "date": "2026-11-05",
+    "evidence": "Explicit user reply: Dùng ảnh hiện tại, giữ tay mèo",
+    "override": "Keep cat paws; supersedes human-arm requirement for Cloud Daisy only"
+  },
+  "parts": {},
+  "pilot": {
+    "accepted": true,
+    "date": "2026-11-06",
+    "owner": "product owner",
+    "evidence": "Explicit user reply: Duyệt mẫu chuyển động, làm tiếp",
+    "acceptedLimitation": "Cup stays in paw; no counter set-down",
+    "reviewedRigHash": "72f52580f11224ae56002bf2fa6a48a43b636cbc6b161e835116c72cec0b0355",
+    "rigHash": "72f52580f11224ae56002bf2fa6a48a43b636cbc6b161e835116c72cec0b0355",
+    "previewHash": "1582b78e5434956de88ae3248ad95b71708367055dcf05925cff8e57efa0efa6",
+    "reviewedGifHashes": {
+      "idle": "60f2f666cb30c542f5129646f1a8cf4ba80b1acacca9961198682df5f150487e",
+      "interaction": "8ee1ef52ab6b46915088b6a2255d93f13e5c2333e1a6d7e3d935e34282336953"
+    },
+    "bindingNote": "Reviewed rig and GIF bytes are unchanged after verification report refresh"
+  },
+  "production": {
+    "accepted": false
+  }
+}

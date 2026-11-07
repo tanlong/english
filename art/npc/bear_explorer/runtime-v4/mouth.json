@@ -1,0 +1,18 @@
+{
+  "id": "mouth_closed",
+  "trim": {
+    "left": 592,
+    "top": 300,
+    "width": 132,
+    "height": 132
+  },
+  "registration": {
+    "score": 4.376680107526882,
+    "dx": -4,
+    "dy": 1
+  },
+  "sourceMasterSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+  "editSourceSha256": "21bf8e7171aad4bef8177ca2bd758772a98ecc5de0903ca114b808651ffe929f",
+  "overlaySha256": "bb09ca6d2972b94750ca66fb77ea11f6f8342732f0e1819ecc1b6a1935752df1",
+  "method": "generated localized edit; border registration and five-pixel alpha feather"
+}

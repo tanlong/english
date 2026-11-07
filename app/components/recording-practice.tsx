@@ -24,9 +24,10 @@ export function RecordingPractice({
   target,
   onRecorded,
 }: {
-  target: string;
+  target?: string;
   onRecorded?: () => void;
 }) {
+  const canScore = Boolean(target?.trim());
   const [consent, setConsent] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const [recording, setRecording] = useState(false);
@@ -179,7 +180,7 @@ export function RecordingPractice({
     }
   };
   const scoreRecording = async () => {
-    if (!audioBlob || !consent) return;
+    if (!audioBlob || !consent || !target?.trim()) return;
     setScoring(true);
     setError("");
     setResult(null);
@@ -309,25 +310,32 @@ export function RecordingPractice({
                 >
                   <RotateCcw size={18} aria-hidden="true" /> Thu lại
                 </Button>
-                <label className="consent">
-                  <Checkbox checked={consent} onCheckedChange={(checked) => setConsent(checked)} />{" "}
-                  Tôi đồng ý gửi bản ghi đến OpenAI để nhận diện lời nói.
-                </label>
-                <Button
-                  className="app-action score-button"
-                  onClick={scoreRecording}
-                  disabled={scoring || !consent}
-                  aria-busy={scoring}
-                  aria-label={scoring ? "Đang nhận diện bản ghi" : undefined}
-                >
-                  {scoring ? (
-                    <LoaderCircle className="tts-loader" aria-hidden="true" />
-                  ) : (
-                    <>
-                      <Sparkles size={18} aria-hidden="true" /> Kiểm tra nội dung
-                    </>
-                  )}
-                </Button>
+                {canScore && (
+                  <>
+                    <label className="consent">
+                      <Checkbox
+                        checked={consent}
+                        onCheckedChange={(checked) => setConsent(checked)}
+                      />{" "}
+                      Tôi đồng ý gửi bản ghi đến OpenAI để nhận diện lời nói.
+                    </label>
+                    <Button
+                      className="app-action score-button"
+                      onClick={scoreRecording}
+                      disabled={scoring || !consent}
+                      aria-busy={scoring}
+                      aria-label={scoring ? "Đang nhận diện bản ghi" : undefined}
+                    >
+                      {scoring ? (
+                        <LoaderCircle className="tts-loader" aria-hidden="true" />
+                      ) : (
+                        <>
+                          <Sparkles size={18} aria-hidden="true" /> Kiểm tra nội dung
+                        </>
+                      )}
+                    </Button>
+                  </>
+                )}
               </div>
               <audio
                 ref={playbackRef}
@@ -369,8 +377,9 @@ export function RecordingPractice({
           )}
 
           <p className="recording-note">
-            Bấm “Kiểm tra nội dung” để xem lời bạn vừa nói có khớp câu mẫu không. Bản thu chỉ giữ
-            trong lần luyện này.
+            {canScore
+              ? "Bấm “Kiểm tra nội dung” để xem lời bạn vừa nói có khớp câu mẫu không. Bản thu chỉ giữ trong lần luyện này."
+              : "Bản thu chỉ giữ trong lần luyện này. Nghe lại để tự đối chiếu với câu mẫu."}
           </p>
         </div>
       )}

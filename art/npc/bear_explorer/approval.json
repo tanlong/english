@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "3.0",
+  "master": {
+    "accepted": true,
+    "sha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+    "normalizedSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+    "owner": "product owner",
+    "date": "2026-11-06",
+    "evidence": "Explicit user reply: Chọn cả 5 ảnh làm master",
+    "override": "Preserve exact supplied character design and anatomy over older bible descriptions"
+  },
+  "parts": {},
+  "pilot": {
+    "accepted": false
+  },
+  "production": {
+    "accepted": false
+  }
+}

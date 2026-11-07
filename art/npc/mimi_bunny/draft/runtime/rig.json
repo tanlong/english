@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "mimi_bunny",
+  "approved": false,
+  "mode": "single-arm",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "renderer": "Canvas2D deterministic review; runtime integration requires art acceptance",
+  "sourceMaster": "source/master_rgba.png",
+  "sourceHash": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+  "coordinateSystem": {
+    "width": 1087,
+    "height": 1446,
+    "unit": "source-pixels"
+  },
+  "root": {
+    "anchor": {
+      "x": 531,
+      "y": 1439
+    },
+    "displayHeightPx": 220
+  },
+  "calibration": "Measured draft joints, requires neutral overlay/owner visual review; no inherited Cloud Daisy pivots",
+  "layers": [
+    {
+      "id": "body",
+      "sourceFile": "draft/parts/body.png",
+      "sourceHash": "c3c0f55c112288a1b77a7ab3e0dec5d15002bdd9821cf46613766fd8019f5d42",
+      "sourceSize": {
+        "width": 1088,
+        "height": 1446
+      },
+      "trim": {
+        "left": 0,
+        "top": 0,
+        "width": 1088,
+        "height": 1446
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/body.png",
+      "atlas": "atlas.json",
+      "texture": "mimi_bunny/body.png",
+      "texturePixelSize": {
+        "width": 578,
+        "height": 768
+      }
+    },
+    {
+      "id": "arm_wave",
+      "sourceFile": "draft/parts/arm_wave.png",
+      "sourceHash": "b05b18bf26aa7816cb2d7bf52c92a0d9056edbefd0ad77e9c5faf7461a717940",
+      "sourceSize": {
+        "width": 1312,
+        "height": 1199
+      },
+      "trim": {
+        "left": 87,
+        "top": 32,
+        "width": 1112,
+        "height": 1141
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/arm_wave.png",
+      "atlas": "atlas.json",
+      "texture": "mimi_bunny/arm_wave.png",
+      "texturePixelSize": {
+        "width": 748,
+        "height": 768
+      }
+    },
+    {
+      "id": "eye_l_closed",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "fc1beac13ca9b58fc7c06a3e48cea4a128625370a06c35e117cbcec85944fe9c",
+      "trim": {
+        "left": 435,
+        "top": 253,
+        "width": 170,
+        "height": 126
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/eye_l_closed.png",
+      "atlas": "atlas.json",
+      "texture": "mimi_bunny/eye_l_closed.png",
+      "texturePixelSize": {
+        "width": 170,
+        "height": 126
+      }
+    },
+    {
+      "id": "eye_r_closed",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "fc1beac13ca9b58fc7c06a3e48cea4a128625370a06c35e117cbcec85944fe9c",
+      "trim": {
+        "left": 684,
+        "top": 302,
+        "width": 112,
+        "height": 78
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/eye_r_closed.png",
+      "atlas": "atlas.json",
+      "texture": "mimi_bunny/eye_r_closed.png",
+      "texturePixelSize": {
+        "width": 112,
+        "height": 78
+      }
+    }
+  ],
+  "placement": {
+    "body": {
+      "x": 0,
+      "y": 0,
+      "width": 1087,
+      "height": 1446,
+      "order": 0
+    },
+    "arm_wave": {
+      "x": 519,
+      "y": 620,
+      "width": 350,
+      "height": 359,
+      "pivotX": 0.89,
+      "pivotY": 0.86,
+      "pawX": 0.32,
+      "pawY": 0.39,
+      "order": 20
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": -1,
+    "restAngle": 0
+  },
+  "clips": {
+    "idle": {
+      "duration": 7,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "limitations": [
+    "Peace-sign greeting and blink; book/page-turn art not available",
+    "Raised-leg master pose is preserved; planted foot stays fixed"
+  ],
+  "sourceSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+  "rigSha256": "e913c32b545fa1fa6b77c2404be626c108184862e802c2b54bc2339455814f5e",
+  "atlas": "atlas.json"
+}

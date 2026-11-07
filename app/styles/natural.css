@@ -440,7 +440,7 @@
   margin: 0;
 }
 .natural-review {
-  max-width: 820px;
+  max-width: 1200px;
 }
 .natural-review-toolbar {
   display: flex;
@@ -456,6 +456,73 @@
   background: var(--card);
   border-radius: 22px;
   overflow: hidden;
+}
+.natural-review-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  align-items: start;
+  gap: 24px;
+}
+.natural-review-current,
+.natural-review-deck {
+  min-width: 0;
+}
+.natural-review-deck-heading h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.natural-review-deck-heading p {
+  margin: 4px 0 16px;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+.natural-review-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.natural-review-cards button {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  text-align: left;
+  cursor: pointer;
+}
+.natural-review-cards button:hover,
+.natural-review-cards button[aria-pressed="true"] {
+  border-color: var(--blue);
+}
+.natural-review-cards button[aria-pressed="true"] {
+  box-shadow: 0 0 0 2px var(--blue);
+}
+.natural-review-cards button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+.natural-review-cards .artwork {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.natural-review-cards button > span {
+  display: block;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .natural-review-body {
+    grid-template-columns: 1fr;
+  }
 }
 .natural-flashcard > .artwork {
   width: 100%;
@@ -528,7 +595,7 @@
   font-size: 14px;
 }
 .natural-progress-detail {
-  margin-top: 32px;
+  margin-top: 24px;
   padding: 28px;
   background: var(--card);
   border-radius: 18px;
@@ -633,7 +700,7 @@
   display: block;
   font-weight: 600;
 }
-.natural-admin input {
+.natural-admin input:not([data-slot="combobox-input"]) {
   display: block;
   width: min(100%, 500px);
   padding: 12px;
@@ -641,15 +708,6 @@
   border-radius: 10px;
   margin-block: 12px;
   background: var(--card);
-}
-.natural-admin select {
-  width: 100%;
-  min-height: 44px;
-  margin-block: 18px;
-  background: var(--card);
-  border: 1px solid var(--input);
-  border-radius: 10px;
-  padding: 10px;
 }
 .natural-admin-grid {
   display: grid;
@@ -708,9 +766,6 @@
   margin-bottom: 16px;
 }
 @media (max-width: 767px) {
-  .mobile-nav {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
   .natural-welcome {
     margin-top: 6px;
     margin-bottom: 24px;

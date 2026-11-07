@@ -1,0 +1,29 @@
+{
+  "scene": "tea_hills",
+  "outputSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "method": "two overlapping image_gen regional detail edits; native tile detail downsampled and feathered over 256 pixels",
+  "conceptIsLayoutReferenceOnly": true,
+  "overlap": 256,
+  "tiles": [
+    {
+      "file": "art/dalat/tea_hills/tiles/left-detail.png",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sha256": "295f54dce2589873a7d935341493a2560094ce964af42b6facfb8c2dd5a0eb24"
+    },
+    {
+      "file": "art/dalat/tea_hills/tiles/right-detail.png",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sha256": "cd08da90511042b1891ad5061a959b332910dc01a78e5ef1c9b5302ae6f488b1"
+    }
+  ],
+  "sha256": "31678a3460700ba4a032a45bedf6b26a5e983f44d9972be40f1544d3995aa413"
+}

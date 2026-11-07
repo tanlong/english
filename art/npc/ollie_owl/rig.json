@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "ollie_owl",
+  "approved": false,
+  "mode": "single-arm",
+  "status": "DRAFT_SIGNATURE_PARTIAL",
+  "renderer": "Canvas2D deterministic review; runtime integration requires art acceptance",
+  "sourceMaster": "source/master_rgba.png",
+  "sourceHash": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+  "coordinateSystem": {
+    "width": 1205,
+    "height": 1305,
+    "unit": "source-pixels"
+  },
+  "root": {
+    "anchor": {
+      "x": 602,
+      "y": 1304
+    },
+    "displayHeightPx": 220
+  },
+  "calibration": "Measured draft joints, requires neutral overlay/owner visual review; no inherited Cloud Daisy pivots",
+  "layers": [
+    {
+      "id": "body",
+      "file": "draft/registered/body.png",
+      "sourceFile": "draft/parts/body.png",
+      "sourceHash": "9a7bb8f6a86ce0987be219337f3a7ce28c119e10cfc76e28b7d29329f9fe92bf",
+      "sourceSize": {
+        "width": 1205,
+        "height": 1306
+      },
+      "trim": {
+        "left": 0,
+        "top": 0,
+        "width": 1205,
+        "height": 1306
+      },
+      "approved": false
+    },
+    {
+      "id": "arm_wave",
+      "file": "draft/registered/arm_wave.png",
+      "sourceFile": "draft/parts/arm_wave.png",
+      "sourceHash": "33ec08b4aa6fd0760e755c179f6d5414fc8cb96e5af08d3eab0008972a55b4b9",
+      "sourceSize": {
+        "width": 1181,
+        "height": 1331
+      },
+      "trim": {
+        "left": 89,
+        "top": 81,
+        "width": 1013,
+        "height": 1179
+      },
+      "approved": false
+    },
+    {
+      "id": "eye_l_closed",
+      "file": "draft/registered/eye_l_closed.png",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "4c5ec7f1c97ba501310178cf28b3a24078297f475547b3ba3e776c8bb3485d5b",
+      "trim": {
+        "left": 465,
+        "top": 320,
+        "width": 213,
+        "height": 151
+      },
+      "approved": false
+    },
+    {
+      "id": "eye_r_closed",
+      "file": "draft/registered/eye_r_closed.png",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "4c5ec7f1c97ba501310178cf28b3a24078297f475547b3ba3e776c8bb3485d5b",
+      "trim": {
+        "left": 686,
+        "top": 300,
+        "width": 157,
+        "height": 145
+      },
+      "approved": false
+    }
+  ],
+  "placement": {
+    "body": {
+      "x": 0,
+      "y": 0,
+      "width": 1205,
+      "height": 1305,
+      "order": 0
+    },
+    "arm_wave": {
+      "x": 1000,
+      "y": 700,
+      "width": 300,
+      "height": 430,
+      "pivotX": 0.86,
+      "pivotY": 0.89,
+      "pawX": 0.13,
+      "pawY": 0.07,
+      "order": 20
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": 1,
+    "restAngle": 0
+  },
+  "clips": {
+    "idle": {
+      "duration": 8,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "limitations": [
+    "Reading book and adjusting glasses; laptop and coffee action await separate approved props",
+    "Book and supporting wing remain a single base layer"
+  ]
+}

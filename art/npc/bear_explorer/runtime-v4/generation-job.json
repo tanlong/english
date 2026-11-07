@@ -1,0 +1,10 @@
+{
+  "npcId": "bear_explorer",
+  "tool": "built-in image_gen",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied approved bear_explorer transparent master. Make exactly ONE localized change: close the open mouth into a relaxed friendly CLOSED smile for a registered talking animation overlay. Preserve the entire original canvas, scale, every feature position, face shape, nose, eyes, outfit, hands/paws, props, lighting and all other pixels as closely as possible. The mouth must be visibly fully closed, with no open cavity or tongue. Do not change eyes or expression outside the mouth. Do not zoom, shift or crop the character. Preserve true RGBA transparency, no backdrop, no ground shadow, no text. Return one full-body aligned image.",
+  "reference": "art/npc/bear_explorer/source/master_rgba.png",
+  "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-c6c1f2ab-b080-4f1d-b3bd-0c29d10887a2.png",
+  "model": null,
+  "usage": null,
+  "costUsd": null
+}

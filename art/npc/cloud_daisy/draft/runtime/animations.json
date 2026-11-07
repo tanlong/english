@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "cloud_daisy",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "approved": false,
+  "sourceSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+  "rigSha256": "72f52580f11224ae56002bf2fa6a48a43b636cbc6b161e835116c72cec0b0355",
+  "mode": null,
+  "clips": {
+    "idle": {
+      "duration": 8,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "motion": null
+}

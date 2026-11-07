@@ -1,0 +1,276 @@
+{
+  "version": "4.0",
+  "jobs": [
+    {
+      "jobId": "inside_cafe_master_v4",
+      "sceneId": "inside_cafe",
+      "type": "master",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: stylized-concept. Asset type: MASTER clean environment for a layered 2.5D English-learning cafe scene, NOT a flattened final app screenshot. Create a NEW exceptionally crisp premium cozy fantasy RPG coffeehouse interior in Da Lat, Vietnam. A spacious 15m-wide honey-wood and warm-stone mountain cafe seen in wide three-quarter establishing perspective, camera eye-height 2m, 28mm equivalent, no fisheye. Exact 16:9 landscape composition, maximum available native resolution, target 3840x2160 if supported. Crisp clean contour drawing, richly resolved wood grain, carvings, ceramic and plants, polished soft cel shading with restrained bloom, no soft-focus painterly blur. Warm late-morning sunlight from UPPER RIGHT, cream #FFF3D9, honey wood #74452F, warm gold #FFC65C, plum accents #523A72, blue sky #70B8E8. Tall broad panoramic timber-framed windows reveal layered blue-green pine hills and thin valley mist. LEFT25% long espresso counter with coffee machine, grinder, empty barista space, cups, beans; CENTER and RIGHT 8-10 properly scaled small round table/chair groups spread in depth, two broad clear aisles, right hobbies corner with books and ukulele. Far RIGHT one wide glass-and-wood door to the outdoor terrace of this same cafe. Strong depth cues with near timber floorboards, midground furniture, background window view, but broad clean lower floor for separately composited 2-3-head chibi NPCs at x19%, x50%, x77% and floor baseline around y80%. Hanging ivy in upper corners only, modest blue/pink hydrangeas near extreme lower corners, never blocking these NPC anchor areas. All furniture geometrically coherent and grounded, enough negative space, not a cramped kiosk. Environment strictly EMPTY: NO people, animals, characters, silhouettes, baked character shadows, text, letters, numbers, logos, writing on books or signs, UI, arrows, hotspots, borders or watermark. Any menu/signage must be blank. This master will subsequently be separated into static architecture, furniture and transparent foliage with reconstructed hidden regions; do not create a collage or labeled layer sheet.",
+      "output": "art/scenes/inside_cafe/source/master-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-a54b251e-41f7-43d8-82b8-6df2b298de4d.png",
+      "referencePaths": [],
+      "sha256": "97723dbc50f31af72a25e95b9a8f4b872a2cb28f5d36198f743b85f0ef4c3ab5",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false
+    },
+    {
+      "jobId": "inside_cafe_architecture_v4",
+      "sceneId": "inside_cafe",
+      "type": "architecture",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: registered architecture-only RGBA depth plate for layered cafe scene. The attached cafe master is the EXACT edit target, preserve its exact camera, framing, canvas size, room perspective, timber trusses, window mullions, stone walls, permanent shelves, door, pendant lights and timber FLOOR geometry. Separate ONLY the fixed building shell: REMOVE all freestanding cafe furniture (espresso counter and stools, table/chair groups, armchair, small tables, freestanding bookcase, guitar), all potted or hanging vegetation/flowers, AND all scenery/sky/pine branches seen through windows and the open right doorway. Reconstruct the timber floor/wall pixels previously hidden by removed furniture so there are NO holes in the interior floor. Window-glass and door openings must be GENUINELY TRANSPARENT clear alpha holes so a separate landscape can be rendered behind them; keep the wooden/metal window frames intact. Keep ceiling/floor/walls fully painted and opaque. Fixed decorative light fixtures stay on architecture layer, with restrained illumination, no glow in empty alpha. No furniture, plants, people, animals, text, labels, checkered fake transparency or background scenery. Full-size aligned PNG RGBA, same16:9canvas and unshifted room layout. Do NOT output a new differently composed cafe, a cropped object, a contact sheet, a white matte or opaque sky. This is one depth plane extracted from the master for real multi-layer parallax.",
+      "output": "art/scenes/inside_cafe/layers/architecture-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-b0128ae2-161e-462e-8b0f-78fe4cbe6843.png",
+      "referencePaths": [
+        "art/scenes/inside_cafe/source/master-v4.png"
+      ],
+      "sha256": "1135e1d537f12ef3896a22c00a52a65667d489a1c4f095ec3f0b30284d9844e3",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "inside_cafe_furniture_v4",
+      "sceneId": "inside_cafe",
+      "type": "furniture",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: REGISTERED furniture-only alpha depth layer for a 2.5D cafe. Attached master cafe is sole exact layout reference. Extract ONLY the freestanding furnishings in their EXACT original positions: left espresso counter with its machine/grinder/cups plus counter stools, central and rear round tables and all matching chairs, right foreground table/chairs, right reading armchair with small table, bookshelf and guitar. Keep details, exact source camera, scale, angles, and coordinates, reconstruct unseen parts of furniture only where needed. Retain small table flower vases attached to tables, but REMOVE unrelated potted floor flowers and hanging vines. Remove ALL ceiling, walls, window frames, distant views, doors, floorboards and room background. No broad floor plane or rectangular opaque image. Furniture feet end cleanly against TRUE transparent alpha; only minimal contact shadows immediately at feet, no floor tile/board chunks. Full original 16:9 canvas, not cropped/resized/zoomed or rearranged. Warm upper-right light, crisp detailed contours and honey-wood/plum palette identical to master. NO characters, UI, lettering, icons, checkerboard pattern or fakewhite background. This layer will align over the architecture and later be split into behind/front occlusion regions by code. Return ONE full-resolution PNG RGBA, not a collage.",
+      "output": "art/scenes/inside_cafe/layers/furniture-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-9c86a88e-705c-4b6c-b433-e1ff265e6298.png",
+      "referencePaths": [
+        "art/scenes/inside_cafe/source/master-v4.png"
+      ],
+      "sha256": "36490186678cc71139c43fc645f4988885c5e7eb0f751b8ddb3d4bff54043a18",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "inside_cafe_foliage_v4",
+      "sceneId": "inside_cafe",
+      "type": "foliage",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: registered botanical foreground/upper-foliage RGBA layer for the attached cafe MASTER. Isolate ONLY (a) the trailing ivy/vines hanging down from the very top left and right corners and (b) the large blue hydrangea/leaves cluster at extreme lower left and pink hydrangea/leaves at extreme lower right. Preserve their EXACT positions, native scale, full16:9canvas registration, crisp line/shading, upper-right sunlight and colors from master. Reconstruct hidden leaf/flower edges where furniture overlapped. Remove ALL architecture, ceiling, floor, windows/scenery, tables, furniture, lamps, cups, small table flower vases, humans and animals. The broad center and all areas between isolated corner vegetation must be truly transparent alpha, not white/matte/checkerboard or a colored rectangle. Do not create extra central plants or move existing clusters. One aligned full-resolution transparent PNG, not individual tiles or a contact sheet; this will split into top ivy and bottom flowers layers for gentle independent sway.",
+      "output": "art/scenes/inside_cafe/layers/foliage-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-16f01a49-3761-4ea4-957a-714b52df297c.png",
+      "referencePaths": [
+        "art/scenes/inside_cafe/source/master-v4.png"
+      ],
+      "sha256": "d8b32676c6824a8f6fb7d94a573ff153e8940d746d28fd7698dd360393f20b70",
+      "nativeSize": {
+        "width": 1671,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "outdoor_terrace_master_v4",
+      "sceneId": "outdoor_terrace",
+      "type": "master",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: stylized-concept. Asset type: NEW master of OUTDOOR TERRACE, Scene2 of the EXACT SAME Da Lat cafe as the attached interior reference. Preserve this cafe's honey timber beams/carved trim, warm stone, plum cushions, blue/pink hydrangeas, crisp detailed premium storybook fantasy2.5D rendering and upper-right late-morning sunlight. Fixed wide3/4 camera, eyeheight2m, 28mm equivalent, exact16:9, highestavailable native resolution target3840x2160 ifsupported, NO softfocus/painterlyblurring. Show a spacious20m-wide timber-and-stone terrace: LEFT EDGE same big open glass/timber doorway and small roof/wall section leading inside Scene1; 8-12 wellspaced small cafe table/chair groups receding into depth, modest cream umbrellas and warm stringlights; two broad clear aisles. Lower40% broad detailed wooden/stone decking with generous EMPTY staging space for separately composited Astro atx35% and Bear atx72%, floorbaseliney80-86%. Cafe tables in midground, no giant foregroundtables blocking these positions. Across middle-distance a safe honeywoodrail with hydrangea planters; beyond bluegreen layered pinevalley, tiny hillsidehouses and distantS-curvedpassroad in thinmist, same worldview asinterior. FAR RIGHT clear continuous path leads onwards to viewpoint Scene3. Large pinebranches frame topcorners, hydrangeas cluster only atlower extremeedges; no overlybusy vegetation acrosscentralinteractivefloor. All buildings/furniture geometricallybelievable andgrounded. STRICT emptyenvironment: NO characters, humans, animals, silhouettes, text/lettering/numbers/logos/menuwriting, signswithtext, UI/arrows/buttons/watermarks. No espresso/barcounter outdoors. This is a designmaster that will be separated into actual alpha depthplates; not a screenshot or contact sheet.",
+      "output": "art/scenes/outdoor_terrace/source/master-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-8ab2a76e-0c73-412a-8c98-10adfa9ce3cc.png",
+      "referencePaths": [
+        "art/scenes/inside_cafe/source/master-v4.png"
+      ],
+      "sha256": "edd603ac1ab28abb175fddddfa3ad34f7d027f06e0ff84c151c894feb2a3f9ad",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false
+    },
+    {
+      "jobId": "outdoor_terrace_architecture_v4",
+      "sceneId": "outdoor_terrace",
+      "type": "architecture",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: STATIC architecture/deck/railing RGBA depth plate extracted from attached outdoor terrace MASTER. Keep EXACT camera, framing,16:9canvas, perspective and placement of left cafe wall/roof/glassdoor with interior glimpses, entire wooden/stone deck floor, right return path, safe honeywood railing and fixed stringlights. Remove outdoor table/chair groups, umbrellas and any freestanding furniture. Remove near pinebranches, cornerivy and foregroundcornerflowers; keep small railing flowerplanter boxes as stationary rail decoration. Remove ALL distant landscape, hills, sky and trees outside railing: those regions must be TRUE transparent alpha, notwhite, blue or checkerboard. Reconstruct ALL floor areas hidden under removed furniture so the deck is continuous and opaque with matching board/paving geometry. Preserve doorway interior contents as part of distantbuildingcontext, do not remove physical building walls/glass frames. No characters, humans, animals, text/UI or newobjects. Highestnative resolution matchingmaster, one aligned fullcanvas PNG RGBA, no rearranging, zoom or crop. Centraldeck must remain broadly empty and static toanchor NPC feet andaccessiblehotspots. World landscape will sit BEHIND this plate; furniture and foliage will sit in FRONT asother real layers.",
+      "output": "art/scenes/outdoor_terrace/layers/architecture-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-acdeba7e-58e6-4ab4-93ff-c0bb63353801.png",
+      "referencePaths": [
+        "art/scenes/outdoor_terrace/source/master-v4.png"
+      ],
+      "sha256": "df1f2903769eaf7e74cff2638fb51f432c005161676fc19da696f2a0cdf5a136",
+      "nativeSize": {
+        "width": 1671,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "outdoor_terrace_furniture_v4",
+      "sceneId": "outdoor_terrace",
+      "type": "furniture",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: REGISTERED furniture-only RGBA layer for attached terrace master. Isolate ONLY the OUTDOOR freestanding cafe table/chair groups and cream umbrellas, including tiny tabletop vases/cups. Preserve EXACT sourcepositions, scale, fixedcamera and full16:9canvas. Reconstruct hidden furniture legs cleanly, crisp honeywood/plumcushion/creamumbrella palette with upper-right sunlight. Remove ALL cafe building/interior, floor/deck/tiles, railings, stringlights, mountains/sky, distanttrees, ALL railingplanters, foregroundflowers, ivy and pinebranches. Empty space must be genuine fullytransparent alpha without floorboard fragments, matte or checkerboard. Objects remain grounded at original source floorline but floor itself absent. No people/creatures, labels, writing, UI or new furniture. Don't move to a grid/sheet or crop/zoom individual groups. One fullcanvas aligned PNG RGBA plate for static furniture depth layer in a real parallax scene.",
+      "output": "art/scenes/outdoor_terrace/layers/furniture-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-e8dd5556-4d27-4b81-b3b5-b0c214ee0c8e.png",
+      "referencePaths": [
+        "art/scenes/outdoor_terrace/source/master-v4.png"
+      ],
+      "sha256": "49c9873707d1c3b0ea7b8e88e6b4e74de51f0f493d5756e532f3dfaf3fd7bbe9",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "outdoor_terrace_foliage_v4",
+      "sceneId": "outdoor_terrace",
+      "type": "foliage",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: aligned NEAR FOLIAGE RGBA depth plate for attached outdoor terrace master. Isolate ONLY the framing large pinebranches across upperleft/upperright and rightedge, small ivy atupperleft, and large foreground bluehydrangea/leaves cluster at verylowerleft plus pinkhydrangea/leaves verylowerright. Exact original positions, scale, crispdetail, upper-right sunlight, fixed16:9canvas. Remove ALLbuilding/glassdoor/roof, entiredeckfloor, railings including railingflowerplanters, tables/chairs/umbrellas, allstringlights, distantmountains/sky/hills/trees. Broad middle and lowercenter must be truly transparent alpha; no opaque background/white/black/checkerboardmatte. Pine needles/leafedges fullyvisible, no floating chopped branch ends except atcanvasborders. No characters/animals/text/UI, no extra vegetation across NPC floor space. Fullnative-resolution onePNG RGBA, not sheet/collage, do not recompose; upperbranches and lowerflowers will be masked into separate independently swayingdepth layers.",
+      "output": "art/scenes/outdoor_terrace/layers/foliage-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-32ec4e5e-6cee-4181-ba8f-b63286c23f0e.png",
+      "referencePaths": [
+        "art/scenes/outdoor_terrace/source/master-v4.png"
+      ],
+      "sha256": "6a00c629b1ae6649caec90ae92d9967a356a2c547eb12452606df7b750346f1a",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "mountain_view_master_v4",
+      "sceneId": "mountain_view",
+      "type": "master",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: stylized-concept. Asset type: NEW Scene3 MOUNTAIN VIEWPOINT master continuing from EXACT SAME Da Lat cafe terrace in attachedreference. Match crisp richlyresolved premium storybookfantasy2.5D look, honey timber/carvedwarmstone, plum upholsterydetails, blue/pinkhydrangeas, late-morning UPPER-RIGHT sunshine, consistent pinevalley/hills/tinytown/pass-road beyond. Fixed wide3/4 camera eyeheight2m, 28mm notfisheye, exact16:9, highestnative resolution target3840x2160 ifsupported, NO blur. Spacious22m-wide scenic observationdeck, lower45-50% generous warm timber/stonefloor. Safe honeywoodrailing acrossmiddle, modest leftpergola withclothshade and comfortable emptybenches, a small CLOSED telescope prop near center-right, scattered wellspaced flowerplanters, open centralfloor for separate chibiNPC. FAR LEFT visible openwalkingpath back along the SAME terrace/cafe building fromreference, no newdifferentbuilding. Center-left bench reservedaroundx29% y72%, clear NPCflooranchor aroundx68% y82%. Topcorners framed withnear pinebranches/ivy, foregroundblue/pinkhydrangea clusters only at extremebottomcorners. Beyondrail spectacular deep layeredpinevalley and thinblue mist, tiny distantS-curved road safely FAR BELOW. No train inthisscene. All benches/railing/telescope grounded withcorrectgeometry and perspective; no excessive propsfillingfloor. STRICT EMPTY environment NO people/animals/NPCs/silhouettes/bakedcharacter shadows, text/lettering/numbers/logos/UI/arrows/icons/watermarks. This artmasterwillbeseparated intodepthplanes, notafinalUIposter.",
+      "output": "art/scenes/mountain_view/source/master-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-9ead2303-9aa5-4b1b-8b96-cb56623513d0.png",
+      "referencePaths": [
+        "art/scenes/outdoor_terrace/source/master-v4.png"
+      ],
+      "sha256": "f7824ce8e5abe1353856d8b369c80b3f315ecaccce7bbb9de2b1125e6c98feb8",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false
+    },
+    {
+      "jobId": "mountain_view_architecture_v4",
+      "sceneId": "mountain_view",
+      "type": "architecture",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: STATIC architecture/deck/railing RGBA depth layer extracted from attached Scene3 viewpoint master. Preserve EXACT full16:9canvas positions,camera,perspective,scale,sourcecolors: honeywood/stone floor acrosslowerhalf, leftcafewall/door, pergola columns/beams/clothroof, safe woodrail and right/leftreturnpaths, stringlights. Remove freestanding benches,cushions,telescope and tripod/base plus nearfloorpots; reconstruct FLOOR beneath removed furniture, noholes inwalkway. Remove upperpinebranches/cornerivy and extremelowercornerhydrangeas; keep fixed railing flowerplanterboxes and pergola's structuralivy asstaticarchitecture details. Remove entire DISTANT WORLD behindrail/pergola: sky,hills,trees,town,road become GENUINELY transparent alpha openings; keep posts/railslats and canopy intact, background visible throughrailgaps. NO opaquewhite/black/checkerboard sky, roomrecomposition,newobjects,text/UI/people/animals. One fullnative-resolution registered PNG RGBA, floor/building must be opaque while outsideview isclearalpha. Standalone furniture and nearfoliage will be overlaid separately for true multilayerdepth.",
+      "output": "art/scenes/mountain_view/layers/architecture-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-f5fd19d0-542f-4ab0-88aa-a3b4652e850a.png",
+      "referencePaths": [
+        "art/scenes/mountain_view/source/master-v4.png"
+      ],
+      "sha256": "930e6c09801bc6d4894baf9fa6db0cf000babc3d4f0fc7311313c6c302ab64fb",
+      "nativeSize": {
+        "width": 1671,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "mountain_view_furniture_v4",
+      "sceneId": "mountain_view",
+      "type": "furniture",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: registered FURNITURE-only RGBA depth plate for attached mountainview master. Extract ONLY the two wooden benches with plum cushions, the goldclosedtelescope with stand/base, and the nearfloor ceramicflowerpots immediatelynexttobenches/leftwall. Keep exact sourcepositions, scale, threequartercamera, nativefull16:9canvas alignment and upperrightlight, crisp wood/cushion/metal details. Remove ALL architecture, pergola/clothroof/columns/ivy, floorboards/paving, railings/fixedrailplanters, sky/mountains/trees, upperbranches and extremebottomcornerhydrangeas. Reconstruct hidden benchlegsin coherent originalperspective. All space between separateobjects and all the broadfloorarea must be TRUE transparent alpha; no residualfloorrectangles/coloredmatte/checkerboard. Keep original contactfeet only with restrainedlocalshadow, not a large floorpatch. NO people/creatures, newobjects,writing/UI/logos. Return one fullcanvas PNG RGBA depthplate, not croppedprops, montage or sheet.",
+      "output": "art/scenes/mountain_view/layers/furniture-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-c228a5b7-3ef0-448c-870b-42bbb1d0dc9c.png",
+      "referencePaths": [
+        "art/scenes/mountain_view/source/master-v4.png"
+      ],
+      "sha256": "565d04d752c21af2fb944894d4454130754586b06f1f6c73c901d3d1f954f94b",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "mountain_view_foliage_v4",
+      "sceneId": "mountain_view",
+      "type": "foliage",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: background-extraction. Asset type: NEAR FOLIAGE RGBA plane for attached viewpoint master. Extract ONLY topframing pinebranches including rightedgepine trunk/needles, small ivy atveryupperleft, and extremebottomleftbluehydrangeas/leaves plus bottomrightpinkhydrangeas/leaves. Exact originalpositions,scale,16:9fullcanvas, crispstorybookrender, warm upperright sunlight. EXCLUDE pergolaanditsvine/ivydecoration, ALL structuralposts/beams, entireleftcafebuilding, stringlights, benches/telescope/floorpots, railings/fixedrailplanters, timberfloor/paving, sky/mountains/valley/distanttrees. Keep broadcenter and floorregion fully transparent; no opaque matte/fakecheckerboard. No extra centralplants, characters,animals,textorUI. Fullnative-resolution onePNG RGBA, notcroppedatlas/contactsheet. Topbranches andbottomflowerclusters must remain cleanlyseparated intransparentcanvas so codecanmake independentforeground layers.",
+      "output": "art/scenes/mountain_view/layers/foliage-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-f0668f6f-c56e-40c8-af72-6c793617a471.png",
+      "referencePaths": [
+        "art/scenes/mountain_view/source/master-v4.png"
+      ],
+      "sha256": "6f775449e59f9c878754be602171b040ec69abd3457d08625fd18bf027c48aba",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    },
+    {
+      "jobId": "shared_landscape_v4",
+      "sceneId": "shared",
+      "type": "landscape",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: stylized-concept. Asset type: shared DISTANT LANDSCAPE RGBA depth plate behind windows/terraces in the attached Da Lat cafe art direction. Re-create only the broad blue-green layered pine mountains, tiny distant pastel hillside town roofs, thin valley mist and tiny distant S-shaped pass road visible from this same cafe. NO cafe, architecture, windows, furniture, deck, floor, fence, foregroundflowers, largeforegroundtrees, people,animals,text orUI. Match master crisp premium storybook 2.5D cel-shaded detailed landscape, gentle soft atmospheric depth, honey late-morning sunlight UPPER RIGHT, lush green nearer hills and desaturated blue farther ridgelines. Same fixed wide3/4 scenic horizon. Exact16:9 fullwidth composition, highestavailable native resolution. Mountains start around y30%-40% with a clearly irregular ridgeline; lower60% filled by deep rolling pinevalley. The ENTIRE sky above the ridgeline must be TRUE transparent alpha, so a separately colored sky/cloud layer can show behind; do not paint blue/white/checkerboard sky. Include several layered distant ridges and modest thin mist BETWEEN ridges as part of terrainart, but no broad atmospheric glow outside silhouette. Preserve full left/rightcontinuity, no frame/border. One full-canvas registered alpha plate, not a postcard/collage.",
+      "output": "art/scenes/shared/layers/landscape-v4.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-c9b4f831-5719-4364-a277-731a99f47589.png",
+      "referencePaths": [
+        "art/scenes/inside_cafe/source/master-v4.png"
+      ],
+      "sha256": "21c638842311e16472e29529a16b38f45828ce85fd2f30018d455943859c7869",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true
+    }
+  ]
+}

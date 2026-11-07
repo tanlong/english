@@ -2,7 +2,7 @@
 
 Ứng dụng luyện tiếng Anh Mỹ cho người Việt đi làm. Nguồn yêu cầu hiện tại là [ENG-BA-SRS-001 v1.0](MD/English_App_ITBA_Documents/English_App_ITBA.md), ngày 02/11/2026.
 
-Luồng chính: **nhìn tình huống → nghe → nói hoặc nhập chữ → nhận góp ý → ôn lại**. Bốn mục điều hướng: Hôm nay, Bài học, Nói chuyện, Ôn tập. Tiến độ, cài đặt, lộ trình và công cụ nâng cao nằm trong trang liên quan.
+Luồng chính: **nhìn tình huống → nghe → nói hoặc nhập chữ → nhận góp ý → ôn lại**. Các mục điều hướng: Hôm nay, Bài học, Nói chuyện, Ôn tập, Cà phê vỉa hè. Tiến độ, cài đặt, lộ trình và công cụ nâng cao nằm trong trang liên quan.
 
 ## Chạy tại máy
 
@@ -26,7 +26,7 @@ Sao chép các cấu hình cần dùng trong `.env.example` vào `.env.local`. K
 - `/preview/listen-before-you-answer`: Applied Wisdom minh họa từ đặc tả; ý ngắn, tình huống, hội thoại bốn lượt và thử nói. Chưa xác định nguồn chương, không mạo nhận trích dịch.
 - `/lessons/[slug]` và `/api/v1/lessons/[slug]`: chỉ phục vụ snapshot đã được xuất bản; bản nháp trả 404.
 - `/review`: thẻ ảnh từ câu đã thực hành. Chỉ hiện lời giải/audio sau khi lật; đổi mặt Việt/Anh; bốn mức tự đánh giá.
-- `/daily-speaking`: Alex với Guided Talk, Free Talk, Review và roleplay. Review dùng câu đã thực hành, không khẳng định đó là lỗi. Tự phát âm thanh mặc định tắt.
+- `/daily-speaking`: Alex với Guided Talk, Free Talk, Review và roleplay. Review dùng câu đã thực hành, không khẳng định đó là lỗi. Alex tự đọc phản hồi; có thể tắt trong thiết lập.
 - `/progress`: bài chính thức và học thử được đếm riêng; số câu trả lời, lượt ôn và thời gian theo hoạt động. Không chứng nhận B1.
 - `/path`: định hướng 52 tuần, chỉ có liên kết mở bài khi bài đã xuất bản. Tên chủ đề không được xem là bài hoàn chỉnh.
 - `/settings`: mục tiêu 5/10/15/30/60 phút, vai trò, hỗ trợ tiếng Việt, cỡ chữ, xuất/xóa dữ liệu.
@@ -48,6 +48,14 @@ Audio học thử dùng TTS theo allowlist; audio bài chính thức dùng manif
 API dùng AI có quota 15 phút theo cookie trong mỗi tiến trình: 60 lượt cho mỗi nhóm hội thoại hoặc nhận diện, 20 lượt phân tích tranh luận và 120 lượt cho mỗi nhóm TTS. Ngoài ra, `PROVIDER_GLOBAL_LIMIT` giới hạn tổng lượt của mọi nhóm trong tiến trình, mặc định 600. Cookie có thể bị thay đổi, nên giới hạn tổng chỉ là trần chi phí cục bộ, không thay thế đăng nhập, giới hạn theo danh tính đáng tin cậy hoặc quota dùng chung tại gateway khi triển khai nhiều instance.
 
 Cache cá nhân từ phiên bản trước không có thông tin chủ sở hữu. Phiên bản này không đọc lại các bản nhận diện hoặc giọng Alex cũ, nhưng không tự xóa chúng khỏi SQLite vì không thể xác định chủ sở hữu. Cần xử lý tồn lưu theo chính sách dữ liệu và bản sao lưu trước khi sử dụng chức năng xóa cho dữ liệu cũ.
+
+## Cà phê vỉa hè
+
+`/english/cafe` có ba cảnh nối tiếp, sáu người bạn, nhân vật chibi chuyển động bằng spritesheet dựa trên ảnh gốc trong `MD` và hội thoại A1/A2/B1. Không có API key vẫn luyện được theo kịch bản, xem Basic/Better/Natural, tổng kết từ câu đã gửi và lưu thẻ riêng tại café. Có thể xem lại hoặc xóa hội thoại/thẻ; xóa hồ sơ trong Cài đặt cũng xóa dữ liệu café qua quan hệ cascade. Giọng đọc dùng browser TTS sau khi bấm nghe. Voice input là P1.
+
+Nút **Nâng cấp / Upgrade** ở cuối sidebar hoặc menu điện thoại mở `/settings/upgrade/connections`. Trang mặc định chỉ xem khả năng; quản trị viên mở quyền bằng token server. Gemini/Groq hỗ trợ lưu khóa mã hóa, kiểm tra thực, bật/tắt/xóa, giới hạn lượt theo tenant/người/ngày UTC, timeout và token đầu ra. Phải có model allowlist, keyring mã hóa và cấu hình quyền trong `.env.example` mới cấu hình được. AI chỉ gọi khi đã bật ở server, kết nối healthy, còn quota và người học chủ động chọn dùng; không tự dùng `OPENAI_API_KEY` của Alex.
+
+Triển khai hiện dùng hồ sơ cookie và quyền quản trị của pilot riêng; chưa có đăng nhập tài khoản/SSO hay billing. Art và nội dung mới được ghi rõ chờ duyệt. Chi tiết vận hành, hợp đồng API và giới hạn phát hành: [bàn giao café](docs/CAFE_IMPLEMENTATION.md).
 
 ## Content Studio
 

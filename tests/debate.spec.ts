@@ -186,7 +186,8 @@ for (const width of [1440, 375]) {
     await answer.fill("");
     await start.click();
     await page.screenshot({ path: `artifacts/debate-voice-${width}.png`, fullPage: true });
-    await page.getByRole("link", { name: "Ôn tập", exact: true }).click();
+    await page.getByRole("link", { name: "Natural English · Trang hôm nay", exact: true }).click();
+    await page.locator(".natural-review-link").click();
     await page.getByRole("link", { name: "Luyện phát âm IPA" }).click();
     await expect(page).toHaveURL(/\/ipa$/);
     await expect.poll(() => page.evaluate(() => window.__debateMic.aborted)).toBe(true);

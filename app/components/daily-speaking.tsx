@@ -17,19 +17,17 @@ import {
   EyeOff,
   Download,
   Hotel,
-  Languages,
   Lightbulb,
   LoaderCircle,
   MessagesSquare,
+  MessageSquareText,
   Mic2,
   RotateCcw,
   Send,
   Settings2,
-  SkipForward,
   Square,
   Volume2,
 } from "lucide-react";
-import { PageHeading } from "./page-heading";
 import { ComboboxField } from "./select-combobox";
 import { useDailySpeaking } from "@/app/speaking/use-daily-speaking";
 import { formatTime } from "@/lib/format";
@@ -114,11 +112,7 @@ export function DailySpeaking() {
   const preparing = !active && !turns.length && !summary;
   return (
     <div className={`daily-speaking ${preparing ? "speaking-setup" : ""}`}>
-      <PageHeading
-        eyebrow="BẮT ĐẦU → TRÒ CHUYỆN → NHÌN LẠI"
-        title="Nói chuyện cùng Alex"
-        text="Chọn một tình huống, nói theo cách của bạn và thử lại sau mỗi góp ý."
-      />
+      <h1 className="sr-only">Nói chuyện cùng Alex</h1>
       {memoryWarning && (
         <p className="field-error" role="alert">
           {memoryWarning}
@@ -148,17 +142,6 @@ export function DailySpeaking() {
           ))}
         </div>
       )}
-      <ol className="speaking-pipeline" aria-label="Các bước luyện nói">
-        {["Chọn tình huống", "Nói & thử lại", "Nhìn lại buổi nói"].map((label, index) => (
-          <li
-            key={label}
-            aria-current={(summary ? 2 : active ? 1 : 0) === index ? "step" : undefined}
-          >
-            <span>{index + 1}</span>
-            {label}
-          </li>
-        ))}
-      </ol>
       {!active && (
         <section className="speaking-scenarios" aria-labelledby="speaking-scenarios-title">
           <div className="section-heading">
@@ -370,345 +353,296 @@ export function DailySpeaking() {
           </div>
         </Card>
 
-        <Card
-          aria-labelledby="conversation-title"
-          className="speaking-conversation overflow-hidden"
-          render={<section />}
-        >
-          <header className="speaking-conversation-header flex flex-wrap items-center justify-between gap-4 border-b p-6 max-[480px]:p-5 [&_h2]:m-0 [&_h2]:text-lg [&_p]:mt-1 [&_p]:mb-0 [&_p]:text-[14px] [&_p]:text-muted-foreground">
-            <Button
-              ref={mobileSettingsToggleRef}
-              className="min-[1051px]:hidden"
-              size="icon"
-              variant="outline"
-              aria-label="Mở thiết lập"
-              aria-expanded={settingsOpen}
-              aria-controls="speaking-settings-content"
-              onClick={() => setSettingsOpen(true)}
+        <div className="speaking-conversation-shell">
+          <div className="speaking-session">
+            <Card
+              aria-labelledby="conversation-title"
+              className="speaking-conversation overflow-hidden"
+              render={<section />}
             >
-              <Settings2 aria-hidden="true" size={18} />
-            </Button>
-            <div className="min-w-0 flex-1 basis-[180px]">
-              <h2 id="conversation-title">
-                {scenario?.title ?? "Một cuộc trò chuyện nhỏ, mỗi ngày"}
-              </h2>
-              <p aria-live="polite">
-                {pending
-                  ? "Alex đang chuẩn bị phản hồi…"
-                  : listening
-                    ? "Đang nghe bạn nói…"
-                    : playing
-                      ? "Alex đang nói…"
-                      : summary
-                        ? "Đã kết thúc"
-                        : active
-                          ? retrying
-                            ? "Thử nói lại theo cách của bạn"
-                            : "Đến lượt bạn"
-                          : "Sẵn sàng khi bạn muốn nói"}
-              </p>
-            </div>
-            <span
-              className="speaking-clock inline-flex items-center gap-2 rounded-lg bg-teal-soft px-3 py-2 text-sm text-teal tabular-nums"
-              aria-label={`Đã luyện ${Math.floor(seconds / 60)} phút ${Math.floor(seconds % 60)} giây`}
-            >
-              <Clock3 aria-hidden="true" size={18} />
-              {formatTime(seconds)} / {duration}′
-            </span>
-          </header>
-          <div className="speaking-mission" aria-label="Mục tiêu buổi nói">
-            <span className="speaking-coach-icon">
-              <MessagesSquare aria-hidden="true" size={22} />
-            </span>
-            <div>
-              <strong>Alex{scenario ? ` · ${scenario.alexRole}` : " · Bạn hội thoại"}</strong>
-              <p>
-                {scenario
-                  ? `Bạn là ${scenario.learnerRole.toLocaleLowerCase("vi")}. ${scenario.goal}`
-                  : mode === "guided"
-                    ? "Nghe câu hỏi, kể về một ngày của bạn và thử hỏi lại."
-                    : "Kể một điều về bạn, nghe phản hồi và hỏi lại khi sẵn sàng."}
-              </p>
-              {scenario && (
-                <details className="speaking-phrase-help">
-                  <summary>Mẫu câu để bắt đầu</summary>
-                  <div>
-                    {scenario.phrases.map((phrase) => (
-                      <span key={phrase} lang="en">
-                        {phrase}
-                      </span>
-                    ))}
-                  </div>
-                </details>
-              )}
-            </div>
-          </div>
-          <div
-            className={`speaking-log overflow-y-auto overscroll-contain bg-background p-6 max-[480px]:p-4 ${preparing ? "min-h-[220px]" : "h-[440px] max-[480px]:h-[320px]"}`}
-            role="log"
-            aria-label="Hội thoại với Alex"
-            aria-live="polite"
-            aria-relevant="additions text"
-            ref={logRef}
-          >
-            {!turns.length && (
-              <div className="speaking-empty mx-auto grid min-h-full max-w-[420px] place-content-center justify-items-center text-center [&>svg]:text-teal [&_h3]:mb-0 [&_p]:text-muted-foreground">
-                <MessagesSquare aria-hidden="true" size={40} />
-                <h3>Không cần nói hoàn hảo.</h3>
-                <p className="helper">
-                  Nội dung trò chuyện được gửi đến OpenAI khi bạn bắt đầu hoặc gửi câu trả lời.
-                </p>
-              </div>
-            )}
-            {turns.map((turn, index) => (
-              <article
-                className={`speaking-turn mb-4 max-w-[92%] rounded-2xl border bg-card px-[18px] py-4 wrap-anywhere max-[480px]:max-w-full [&.user]:ml-auto [&.user]:bg-accent [&>strong]:text-xs [&>strong]:text-muted-foreground [&>p]:mt-2 [&>p]:mb-0 [&>p]:leading-[1.8] [&>p]:whitespace-pre-wrap ${turn.role}`}
-                key={index}
-              >
-                <div className="speaking-turn-heading">
-                  <strong>
-                    {turn.role === "assistant"
-                      ? turn.kind === "hint"
-                        ? "Alex · Gợi ý"
-                        : "Alex"
-                      : turn.source === "speech"
-                        ? "Bạn · Qua mic"
-                        : "Bạn · Nhập chữ"}
-                  </strong>
-                  {turn.role === "assistant" && (
-                    <Button
-                      type="button"
-                      size="icon"
-                      variant="ghost"
-                      aria-label="Nghe phản hồi của Alex"
-                      title="Nghe phản hồi này"
-                      disabled={locked}
-                      onClick={() => void speak(turn.content)}
-                    >
-                      <Volume2 aria-hidden="true" size={17} />
-                    </Button>
+              <header className="speaking-conversation-header flex flex-wrap items-center justify-between gap-4 border-b p-6 max-[480px]:p-5 [&_h2]:m-0 [&_h2]:text-lg [&_p]:mt-1 [&_p]:mb-0 [&_p]:text-[14px] [&_p]:text-muted-foreground">
+                <Button
+                  ref={mobileSettingsToggleRef}
+                  className="min-[1051px]:hidden"
+                  size="icon"
+                  variant="outline"
+                  aria-label="Mở thiết lập"
+                  aria-expanded={settingsOpen}
+                  aria-controls="speaking-settings-content"
+                  onClick={() => setSettingsOpen(true)}
+                >
+                  <Settings2 aria-hidden="true" size={18} />
+                </Button>
+                <div className="min-w-0 flex-1 basis-[180px]">
+                  <h2 id="conversation-title">
+                    {scenario?.title ?? "Một cuộc trò chuyện nhỏ, mỗi ngày"}
+                  </h2>
+                  <p aria-live="polite">
+                    {pending
+                      ? "Alex đang chuẩn bị phản hồi…"
+                      : listening
+                        ? "Đang nghe bạn nói…"
+                        : playing
+                          ? "Alex đang nói…"
+                          : summary
+                            ? "Đã kết thúc"
+                            : active
+                              ? retrying
+                                ? "Thử nói lại theo cách của bạn"
+                                : "Đến lượt bạn"
+                              : "Sẵn sàng khi bạn muốn nói"}
+                  </p>
+                </div>
+                <span
+                  className="speaking-clock inline-flex items-center gap-2 rounded-lg bg-teal-soft px-3 py-2 text-sm text-teal tabular-nums"
+                  aria-label={`Đã luyện ${Math.floor(seconds / 60)} phút ${Math.floor(seconds % 60)} giây`}
+                >
+                  <Clock3 aria-hidden="true" size={18} />
+                  {formatTime(seconds)} / {duration}′
+                </span>
+              </header>
+              <div className="speaking-mission" aria-label="Mục tiêu buổi nói">
+                <span className="speaking-coach-icon">
+                  <MessagesSquare aria-hidden="true" size={22} />
+                </span>
+                <div>
+                  <strong>Alex{scenario ? ` · ${scenario.alexRole}` : " · Bạn hội thoại"}</strong>
+                  <p>
+                    {scenario
+                      ? `Bạn là ${scenario.learnerRole.toLocaleLowerCase("vi")}. ${scenario.goal}`
+                      : mode === "guided"
+                        ? "Nghe câu hỏi, kể về một ngày của bạn và thử hỏi lại."
+                        : "Kể một điều về bạn, nghe phản hồi và hỏi lại khi sẵn sàng."}
+                  </p>
+                  {scenario && (
+                    <details className="speaking-phrase-help">
+                      <summary>Mẫu câu để bắt đầu</summary>
+                      <div>
+                        {scenario.phrases.map((phrase) => (
+                          <span key={phrase} lang="en">
+                            {phrase}
+                          </span>
+                        ))}
+                      </div>
+                    </details>
                   )}
                 </div>
-                <p lang="en">{turn.content}</p>
-                {turn.role === "assistant" && turn.translationVi && (
-                  <SpeakingTranslation text={turn.translationVi} />
+              </div>
+              <div
+                className={`speaking-log overflow-y-auto overscroll-contain bg-background p-6 max-[480px]:p-4 ${preparing ? "min-h-[220px]" : "h-[440px] max-[480px]:h-[320px]"}`}
+                role="log"
+                aria-label="Hội thoại với Alex"
+                aria-live="polite"
+                aria-relevant="additions text"
+                ref={logRef}
+              >
+                {!turns.length && (
+                  <div className="speaking-empty mx-auto grid min-h-full max-w-[420px] place-content-center justify-items-center text-center [&>svg]:text-teal [&_h3]:mb-0 [&_p]:text-muted-foreground">
+                    <MessagesSquare aria-hidden="true" size={40} />
+                    <h3>Không cần nói hoàn hảo.</h3>
+                    <p className="helper">
+                      Nội dung trò chuyện được gửi đến OpenAI khi bạn bắt đầu hoặc gửi câu trả lời.
+                    </p>
+                  </div>
                 )}
-                {turn.explanationVi && (
-                  <SpeakingExplanation text={turn.explanationVi} title="Giải thích tiếng Việt" />
-                )}
-                {turn.speakingVersions && (
-                  <SpokenVersions
-                    versions={turn.speakingVersions}
+                {turns.map((turn, index) => (
+                  <SpeakingTurn
+                    key={`${summary ? "summary" : "active"}:${index}:${turn.content}`}
+                    turn={turn}
+                    canRetry={
+                      canRetry &&
+                      turn ===
+                        turns.findLast((item) => item.role === "assistant" && item.kind !== "hint")
+                    }
+                    locked={locked}
+                    atLimit={atLimit}
+                    onRetry={beginRetry}
                     onSpeak={(text) => void speak(text)}
-                    disabled={locked}
                   />
+                ))}
+                {pending && (
+                  <p
+                    className="speaking-pending flex items-center gap-2 text-sm text-muted-foreground"
+                    role="status"
+                  >
+                    <LoaderCircle aria-hidden="true" size={18} className="spin" />
+                    {pending === "end"
+                      ? "Alex đang tổng kết buổi luyện…"
+                      : pending === "explain"
+                        ? "Alex đang giải thích…"
+                        : "Alex đang chuẩn bị phản hồi…"}
+                  </p>
                 )}
-                {canRetry &&
-                  turn ===
-                    turns.findLast((item) => item.role === "assistant" && item.kind !== "hint") && (
-                    <Button
-                      className="speaking-retry-button"
-                      type="button"
-                      variant="link"
-                      disabled={locked || atLimit}
-                      onClick={beginRetry}
-                    >
-                      <RotateCcw aria-hidden="true" size={16} />
-                      Thử nói lại
-                    </Button>
-                  )}
-              </article>
-            ))}
-            {pending && (
-              <p
-                className="speaking-pending flex items-center gap-2 text-sm text-muted-foreground"
-                role="status"
-              >
-                <LoaderCircle aria-hidden="true" size={18} className="spin" />
-                {pending === "end"
-                  ? "Alex đang tổng kết buổi luyện…"
-                  : pending === "explain"
-                    ? "Alex đang giải thích…"
-                    : "Alex đang chuẩn bị phản hồi…"}
-              </p>
-            )}
-          </div>
-          <div className="speaking-controls border-t p-6 max-[480px]:p-5 [&>.button-row]:mb-6 [&>.button-row]:gap-2">
-            <div className="button-row" hidden={preparing}>
-              <Button
-                disabled={!!pending || listening || !(summary?.reply || lastCoach)}
-                onClick={() => (playing ? stopVoice() : void speak(summary?.reply || lastCoach))}
-                variant="outline"
-              >
-                {playing ? (
-                  <Square aria-hidden="true" size={16} />
-                ) : (
-                  <Volume2 aria-hidden="true" size={18} />
-                )}
-                {playing ? "Dừng âm thanh" : "Nghe lại"}
-              </Button>
-              <Button
-                disabled={!active || locked || atLimit}
-                onClick={() => void ask("hint")}
-                variant="outline"
-              >
-                <Lightbulb aria-hidden="true" size={18} />
-                Gợi ý
-              </Button>
-              <Button
-                disabled={!active || locked || !lastCoach}
-                onClick={() => void ask("explain")}
-                variant="outline"
-              >
-                <Languages aria-hidden="true" size={18} />
-                Giải thích tiếng Việt
-              </Button>
-              <Button
-                disabled={!active || locked || atLimit}
-                onClick={() => void ask("skip")}
-                variant="outline"
-              >
-                <SkipForward aria-hidden="true" size={18} />
-                Bỏ qua câu hỏi
-              </Button>
-            </div>
-            {audioError && (
-              <p className="field-error" role="alert">
-                {audioError}
-              </p>
-            )}
-            {error && (
-              <p className="helper">
-                <Link href="/preview/my-daily-routine">
-                  Luyện với câu mẫu có sẵn trong khi chờ Alex kết nối.
-                </Link>
-              </p>
-            )}
-            {error && (
-              <p className="field-error" role="alert">
-                {error}
-              </p>
-            )}
-            {active && seconds >= duration * 60 && (
-              <p className="helper" role="status">
-                Đã đến thời lượng mục tiêu. Bạn có thể tiếp tục nói hoặc kết thúc để xem tổng kết.
-              </p>
-            )}
-            {active && atLimit && (
-              <p className="helper" role="status">
-                Buổi này đã có nhiều lượt luyện. Hãy kết thúc để xem tổng kết rồi mở buổi mới.
-              </p>
-            )}
-            <form
-              hidden={preparing}
-              onSubmit={(event) => {
-                event.preventDefault();
-                sendDraft();
-              }}
+              </div>
+            </Card>
+            <Card
+              aria-label="Trả lời và hỗ trợ"
+              className="speaking-controls p-5 [&>.button-row]:gap-2"
+              render={<aside />}
             >
-              {retrying && (
-                <div className="speaking-retry-note" role="status">
-                  <span>
-                    <RotateCcw aria-hidden="true" size={18} />
-                    Nói lại câu vừa được góp ý. Alex sẽ đối chiếu với lượt trước.
-                  </span>
-                  <Button type="button" variant="link" disabled={locked} onClick={cancelRetry}>
-                    Hủy luyện lại
+              <h2 className="speaking-controls-title" hidden={preparing}>
+                Trả lời & hỗ trợ
+              </h2>
+              <div className="button-row" hidden={preparing}>
+                <Button
+                  disabled={!!pending || listening || !(summary?.reply || lastCoach)}
+                  onClick={() => (playing ? stopVoice() : void speak(summary?.reply || lastCoach))}
+                  variant="outline"
+                >
+                  {playing ? (
+                    <Square aria-hidden="true" size={16} />
+                  ) : (
+                    <Volume2 aria-hidden="true" size={18} />
+                  )}
+                  {playing ? "Dừng âm thanh" : "Nghe lại"}
+                </Button>
+                <Button
+                  disabled={!active || locked || atLimit}
+                  onClick={() => void ask("hint")}
+                  variant="outline"
+                >
+                  <Lightbulb aria-hidden="true" size={18} />
+                  Gợi ý
+                </Button>
+              </div>
+              {audioError && (
+                <p className="field-error" role="alert">
+                  {audioError}
+                </p>
+              )}
+              {error && (
+                <p className="helper">
+                  <Link href="/preview/my-daily-routine">
+                    Luyện với câu mẫu có sẵn trong khi chờ Alex kết nối.
+                  </Link>
+                </p>
+              )}
+              {error && (
+                <p className="field-error" role="alert">
+                  {error}
+                </p>
+              )}
+              {active && seconds >= duration * 60 && (
+                <p className="helper" role="status">
+                  Đã đến thời lượng mục tiêu. Bạn có thể tiếp tục nói hoặc kết thúc để xem tổng kết.
+                </p>
+              )}
+              {active && atLimit && (
+                <p className="helper" role="status">
+                  Buổi này đã có nhiều lượt luyện. Hãy kết thúc để xem tổng kết rồi mở buổi mới.
+                </p>
+              )}
+              <form
+                hidden={preparing}
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  sendDraft();
+                }}
+              >
+                {retrying && (
+                  <div className="speaking-retry-note" role="status">
+                    <span>
+                      <RotateCcw aria-hidden="true" size={18} />
+                      Nói lại câu vừa được góp ý. Alex sẽ đối chiếu với lượt trước.
+                    </span>
+                    <Button type="button" variant="link" disabled={locked} onClick={cancelRetry}>
+                      Hủy luyện lại
+                    </Button>
+                  </div>
+                )}
+                <FormField className="mb-0" id="speaking-answer" label="Câu trả lời của bạn">
+                  <Textarea
+                    className="min-h-[100px] text-sm md:text-sm"
+                    id="speaking-answer"
+                    ref={inputRef}
+                    lang="en"
+                    value={draft}
+                    onChange={(event) => updateDraft(event.target.value)}
+                    disabled={!active || locked || atLimit}
+                    maxLength={1500}
+                    rows={3}
+                    placeholder={
+                      retrying
+                        ? "Thử diễn đạt lại câu của bạn…"
+                        : scenario
+                          ? "I'd like…"
+                          : "This morning, I…"
+                    }
+                    aria-describedby="speaking-input-help"
+                  />
+                </FormField>
+                <p className="helper" id="speaking-input-help">
+                  {listening
+                    ? "Đang nghe liên tục… Bấm Dừng mic khi nói xong, rồi kiểm tra chữ trước khi gửi."
+                    : micSupported
+                      ? "Dừng mic, kiểm tra chữ rồi gửi. Tối đa 1.500 ký tự mỗi lượt."
+                      : "Nhập câu trả lời và kiểm tra trước khi bấm Gửi."}
+                </p>
+                {micSupported ? (
+                  <label className="speaking-check flex min-h-11 items-start gap-2.5 py-2 text-[14px] text-muted-foreground [&_input]:mt-0.5 [&_input]:size-[18px] [&_input]:shrink-0 [&_input]:accent-primary">
+                    <Checkbox
+                      checked={micConsent}
+                      disabled={listening}
+                      onCheckedChange={(checked) => setMicConsent(checked)}
+                    />
+                    Tôi đồng ý dùng tính năng chuyển giọng nói thành chữ.
+                  </label>
+                ) : (
+                  <p className="helper">
+                    Trình duyệt chưa hỗ trợ nhận diện giọng nói. Bạn vẫn có thể nhập câu trả lời.
+                  </p>
+                )}
+                {micError && (
+                  <p className="field-error" role="alert">
+                    {micError}
+                  </p>
+                )}
+                <div className="speaking-send-row mt-4 flex items-center justify-end gap-3">
+                  <Button
+                    type="button"
+                    size="icon"
+                    className="size-12 rounded-full"
+                    variant={listening ? "destructive" : "outline"}
+                    disabled={!active || !!pending || !micSupported || !micConsent || atLimit}
+                    aria-pressed={listening}
+                    aria-label={listening ? "Dừng mic" : "Bấm để nói"}
+                    title={listening ? "Dừng mic" : "Bấm để nói"}
+                    onClick={toggleMic}
+                  >
+                    {listening ? (
+                      <Square aria-hidden="true" size={18} />
+                    ) : (
+                      <Mic2 aria-hidden="true" size={18} />
+                    )}
+                  </Button>
+                  <Button
+                    type="submit"
+                    className="min-h-12 rounded-full px-5"
+                    aria-label="Gửi câu trả lời"
+                    title="Gửi câu trả lời"
+                    disabled={!active || locked || !draft.trim() || atLimit}
+                    variant="default"
+                  >
+                    <Send aria-hidden="true" size={18} />
+                    Gửi
                   </Button>
                 </div>
-              )}
-              <FormField className="mb-0" id="speaking-answer" label="Câu trả lời của bạn">
-                <Textarea
-                  className="min-h-[100px] text-sm md:text-sm"
-                  id="speaking-answer"
-                  ref={inputRef}
-                  lang="en"
-                  value={draft}
-                  onChange={(event) => updateDraft(event.target.value)}
-                  disabled={!active || locked || atLimit}
-                  maxLength={1500}
-                  rows={3}
-                  placeholder={
-                    retrying
-                      ? "Thử diễn đạt lại câu của bạn…"
-                      : scenario
-                        ? "I'd like…"
-                        : "This morning, I…"
-                  }
-                  aria-describedby="speaking-input-help"
-                />
-              </FormField>
-              <p className="helper" id="speaking-input-help">
-                {listening
-                  ? "Đang nghe liên tục… Bấm Dừng mic khi nói xong, rồi kiểm tra chữ trước khi gửi."
-                  : micSupported
-                    ? "Mic không đặt giới hạn giây; tối đa 1.500 ký tự/lượt. Bấm Dừng mic khi nói xong, rồi kiểm tra và gửi."
-                    : "Nhập câu trả lời và kiểm tra trước khi bấm Gửi."}
-              </p>
-              {micSupported ? (
-                <label className="speaking-check flex min-h-11 items-start gap-2.5 py-2 text-[14px] text-muted-foreground [&_input]:mt-0.5 [&_input]:size-[18px] [&_input]:shrink-0 [&_input]:accent-primary">
-                  <Checkbox
-                    checked={micConsent}
-                    disabled={listening}
-                    onCheckedChange={(checked) => setMicConsent(checked)}
-                  />
-                  Tôi đồng ý dùng tính năng chuyển giọng nói thành chữ.
-                </label>
-              ) : (
-                <p className="helper">
-                  Trình duyệt chưa hỗ trợ nhận diện giọng nói. Bạn vẫn có thể nhập câu trả lời.
+              </form>
+              <div
+                className="speaking-session-footer mt-5 flex flex-wrap items-center justify-between gap-3 border-t pt-3"
+                hidden={preparing}
+              >
+                <p className="helper" data-testid="speaking-counts">
+                  {spoken} lượt qua mic · {typed} lượt nhập chữ · {hints} gợi ý
                 </p>
-              )}
-              {micError && (
-                <p className="field-error" role="alert">
-                  {micError}
-                </p>
-              )}
-              <div className="speaking-send-row mt-4 flex items-center justify-center gap-4">
-                <Button
-                  type="button"
-                  size="icon"
-                  className="size-12 rounded-full"
-                  variant={listening ? "destructive" : "outline"}
-                  disabled={!active || !!pending || !micSupported || !micConsent || atLimit}
-                  aria-pressed={listening}
-                  aria-label={listening ? "Dừng mic" : "Bấm để nói"}
-                  title={listening ? "Dừng mic" : "Bấm để nói"}
-                  onClick={toggleMic}
-                >
-                  {listening ? (
-                    <Square aria-hidden="true" size={18} />
-                  ) : (
-                    <Mic2 aria-hidden="true" size={18} />
-                  )}
-                </Button>
-                <Button
-                  type="submit"
-                  size="icon"
-                  className="size-12 rounded-full"
-                  aria-label="Gửi câu trả lời"
-                  title="Gửi câu trả lời"
-                  disabled={!active || locked || !draft.trim() || atLimit}
-                  variant="default"
-                >
-                  <Send aria-hidden="true" size={18} />
+                <Button disabled={!active || locked} onClick={() => void ask("end")} variant="link">
+                  <Check aria-hidden="true" size={18} />
+                  Kết thúc & ôn lại
                 </Button>
               </div>
-            </form>
-            <div
-              className="speaking-session-footer mt-5 flex flex-wrap items-center justify-between gap-3 border-t pt-3"
-              hidden={preparing}
-            >
-              <p className="helper" data-testid="speaking-counts">
-                {spoken} lượt qua mic · {typed} lượt nhập chữ · {hints} gợi ý
-              </p>
-              <Button disabled={!active || locked} onClick={() => void ask("end")} variant="link">
-                <Check aria-hidden="true" size={18} />
-                Kết thúc & ôn lại
-              </Button>
-            </div>
+            </Card>
           </div>
-        </Card>
+        </div>
       </div>
       {summary && (
         <Card
@@ -800,10 +734,131 @@ export function DailySpeaking() {
           </div>
         </Card>
       )}
-      <p className="helper">
-        Nói thành tiếng để luyện phản xạ. Khi cần, bạn có thể nhập câu trả lời hoặc bấm Gợi ý.
-      </p>
     </div>
+  );
+}
+
+function SpeakingTurn({
+  turn,
+  canRetry,
+  locked,
+  atLimit,
+  onRetry,
+  onSpeak,
+}: {
+  turn: ReturnType<typeof useDailySpeaking>["turns"][number];
+  canRetry: boolean;
+  locked: boolean;
+  atLimit: boolean;
+  onRetry: () => void;
+  onSpeak: (text: string) => void;
+}) {
+  const [translationVisible, setTranslationVisible] = useState(false);
+  const [feedbackVisible, setFeedbackVisible] = useState(false);
+  const translationId = useId();
+  const feedbackId = useId();
+  const translationLabel = translationVisible ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt";
+  const feedbackLabel = `${feedbackVisible ? "Ẩn" : "Xem"} góp ý${turn.speakingVersions ? " và cách nói" : ""}`;
+
+  return (
+    <article
+      className={`speaking-turn mb-4 max-w-[92%] rounded-2xl border bg-card px-[18px] py-4 wrap-anywhere max-[480px]:max-w-full [&.user]:ml-auto [&.user]:bg-accent [&>strong]:text-xs [&>strong]:text-muted-foreground [&>p]:mt-2 [&>p]:mb-0 [&>p]:leading-[1.8] [&>p]:whitespace-pre-wrap ${turn.role}`}
+    >
+      <div className="speaking-turn-heading">
+        <strong>
+          {turn.role === "assistant"
+            ? turn.kind === "hint"
+              ? "Alex · Gợi ý"
+              : "Alex"
+            : turn.source === "speech"
+              ? "Bạn · Qua mic"
+              : "Bạn · Nhập chữ"}
+        </strong>
+        {turn.role === "assistant" && (
+          <div className="speaking-turn-actions">
+            {turn.translationVi && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                aria-label={translationLabel}
+                title={translationLabel}
+                aria-expanded={translationVisible}
+                aria-controls={translationId}
+                onClick={() => setTranslationVisible((value) => !value)}
+              >
+                {translationVisible ? (
+                  <EyeOff aria-hidden="true" size={18} />
+                ) : (
+                  <Eye aria-hidden="true" size={18} />
+                )}
+              </Button>
+            )}
+            {(turn.explanationVi || turn.speakingVersions) && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                aria-label={feedbackLabel}
+                title={feedbackLabel}
+                aria-expanded={feedbackVisible}
+                aria-controls={feedbackId}
+                onClick={() => setFeedbackVisible((value) => !value)}
+              >
+                <MessageSquareText aria-hidden="true" size={18} />
+              </Button>
+            )}
+            {canRetry && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="icon"
+                aria-label="Thử nói lại"
+                title="Thử nói lại"
+                disabled={locked || atLimit}
+                onClick={onRetry}
+              >
+                <RotateCcw aria-hidden="true" size={18} />
+              </Button>
+            )}
+            <Button
+              type="button"
+              size="icon"
+              variant="ghost"
+              aria-label="Nghe phản hồi của Alex"
+              title="Nghe phản hồi này"
+              disabled={locked}
+              onClick={() => onSpeak(turn.content)}
+            >
+              <Volume2 aria-hidden="true" size={17} />
+            </Button>
+          </div>
+        )}
+      </div>
+      <p lang="en">{turn.content}</p>
+      {turn.role === "assistant" && turn.translationVi && (
+        <div className="speaking-translation mt-2">
+          <p
+            id={translationId}
+            hidden={!translationVisible}
+            lang="vi"
+            className="my-2.5 min-w-0 text-xs leading-relaxed text-muted-foreground italic large-text:text-base whitespace-pre-wrap"
+          >
+            {turn.translationVi}
+          </p>
+        </div>
+      )}
+      {(turn.explanationVi || turn.speakingVersions) && (
+        <div id={feedbackId} hidden={!feedbackVisible}>
+          {turn.explanationVi && (
+            <SpeakingExplanation text={turn.explanationVi} title="Giải thích tiếng Việt" />
+          )}
+          {turn.speakingVersions && (
+            <SpokenVersions versions={turn.speakingVersions} onSpeak={onSpeak} disabled={locked} />
+          )}
+        </div>
+      )}
+    </article>
   );
 }
 

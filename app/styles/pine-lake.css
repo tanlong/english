@@ -1,0 +1,126 @@
+.cafe-scene-frame[data-setting="pine_lake"] .cafe-scene-layer {
+  transform: none;
+  transition: none;
+  scale: 1;
+}
+.cafe-pine-lake {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.pine-lake-static-poster {
+  z-index: 5;
+  object-fit: contain;
+  pointer-events: none;
+}
+.cafe-scene-frame[data-setting="pine_lake"][data-asset-fallback="true"] .cafe-scene-layer,
+.cafe-scene-frame[data-setting="pine_lake"][data-asset-fallback="true"] .cafe-pine-lake {
+  visibility: hidden;
+}
+.pine-lake-water-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+.pine-lake-shimmer {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pine-lake-water-source {
+  display: none;
+}
+.pine-lake-sway,
+.pine-lake-hologram,
+.pine-lake-sparkle,
+.pine-lake-boat {
+  position: absolute;
+}
+.pine-lake-boat-hull,
+.pine-lake-boat-front {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.pine-lake-boat-front {
+  z-index: 3;
+  clip-path: inset(28% 0 0);
+}
+.pine-lake-rower,
+.pine-lake-oar-pose,
+.pine-lake-oar,
+.pine-lake-rower-reflection,
+.pine-lake-wake {
+  position: absolute;
+}
+.pine-lake-rower {
+  z-index: 2;
+}
+.pine-lake-oar-pose {
+  z-index: 4;
+}
+.pine-lake-rowing-pose {
+  transform-origin: 35% 75%;
+}
+.pine-lake-rower-reflection {
+  transform: scaleY(-1);
+  opacity: 0.17;
+  mask-image: linear-gradient(transparent, #000);
+  filter: blur(0.6px);
+}
+.pine-lake-wake {
+  left: -100%;
+  top: 100%;
+  width: 170%;
+  height: 75%;
+  border-bottom: 1px solid #d3f7f3;
+  border-radius: 50%;
+}
+.pine-lake-sway img,
+.pine-lake-hologram img,
+.pine-lake-sparkle img,
+.pine-lake-boat img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.pine-lake-boat {
+  z-index: 12;
+  transform-origin: center bottom;
+}
+.pine-lake-boat-reflection {
+  position: absolute;
+  top: 100%;
+  transform-origin: center top;
+  transform: scaleY(-0.55) translateY(-100%);
+  mask-image: linear-gradient(transparent, #000);
+  filter: blur(0.6px);
+  opacity: 0.3;
+}
+.cafe-pine-lake[data-reduced="true"] .pine-lake-boat {
+  transform: none !important;
+}
+.cafe-pine-lake[data-reduced="true"] .pine-lake-rowing-pose,
+.cafe-pine-lake[data-reduced="true"] .pine-lake-oar {
+  transform: none !important;
+}
+.cafe-pine-lake[data-reduced="true"] .pine-lake-wake {
+  visibility: hidden;
+}
+.pine-lake-hologram {
+  z-index: 32;
+  mix-blend-mode: screen;
+}
+.pine-lake-sparkle {
+  z-index: 33;
+  width: 0.4%;
+  aspect-ratio: 1;
+}
+.cafe-pine-lake[data-reduced="true"] .pine-lake-sway {
+  transform: none !important;
+}
+.cafe-pine-lake[data-reduced="true"] .pine-lake-water-mask,
+.cafe-pine-lake[data-reduced="true"] .pine-lake-hologram,
+.cafe-pine-lake[data-reduced="true"] .pine-lake-sparkle {
+  visibility: hidden;
+}

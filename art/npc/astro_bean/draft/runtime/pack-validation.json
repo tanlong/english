@@ -1,0 +1,49 @@
+{
+  "npcId": "astro_bean",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "sourceSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+  "rigSha256": "61e8f77ebce10fa7cdeed4215ee4fa4bf0085118839f1491e5878c4ce92606c5",
+  "pass": true,
+  "hasAlpha": true,
+  "atlasSize": {
+    "width": 1536,
+    "height": 896
+  },
+  "fileHashes": {
+    "atlas.webp": "b0c142f898178faf77fd5094f6afe19580b9183c188c752129eef8a518af0aca",
+    "atlas.json": "db8e76b477e588bdebd3a35ae5d8da8b858e0a3549f08ac5e3ba89a51237a9bf",
+    "rig.json": "43008194942856de64717c4aec2fb6313cbc78b62b860eebb15d9d43b8e0c488",
+    "animations.json": "8b788871f52d3b6310272229de777472a000bdd0875b5afe2232057c5cf8d298"
+  },
+  "frames": [
+    {
+      "id": "body",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "596897b8991d7efc75ff5cf1f4ae857ddb406d81039fda1f4aa62ed386c596c5",
+      "extractedRgbaSha256": "596897b8991d7efc75ff5cf1f4ae857ddb406d81039fda1f4aa62ed386c596c5"
+    },
+    {
+      "id": "arm_wave",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "7bd260ed6dfcb23ea301551f814faddd4d9e06a580b864f3c1c6b7eed791fbbf",
+      "extractedRgbaSha256": "7bd260ed6dfcb23ea301551f814faddd4d9e06a580b864f3c1c6b7eed791fbbf"
+    },
+    {
+      "id": "eye_l_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "59c4b82c799c46633a0e3bad47c9b27c095f34ac3d5d90d49d476365c8ec0d6b",
+      "extractedRgbaSha256": "59c4b82c799c46633a0e3bad47c9b27c095f34ac3d5d90d49d476365c8ec0d6b"
+    },
+    {
+      "id": "eye_r_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "c8721530358308c7b4809fdfca8287103a63c72e762db281596aa14356b23ee8",
+      "extractedRgbaSha256": "c8721530358308c7b4809fdfca8287103a63c72e762db281596aa14356b23ee8"
+    }
+  ],
+  "notes": "RGBA byte equality includes RGB under alpha=0; no enlargement; source logical rig placement retained."
+}

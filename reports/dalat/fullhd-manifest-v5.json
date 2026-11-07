@@ -1,0 +1,569 @@
+{
+  "version": "5.0",
+  "renderer": "DOM depth planes + PixiJS 8 NPC puppets / GSAP",
+  "artworkTool": "built-in image_gen",
+  "logicalSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fullhdSources": [
+    {
+      "settingId": "flower_garden",
+      "source": "art/dalat/flower_garden/source/master-fullhd.png",
+      "scene": "flower_garden",
+      "outputSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "method": "two overlapping image_gen regional detail edits; native tile detail downsampled and feathered over 256 pixels",
+      "conceptIsLayoutReferenceOnly": true,
+      "overlap": 256,
+      "tiles": [
+        {
+          "file": "art/dalat/flower_garden/tiles/left-detail.png",
+          "nativeSize": {
+            "width": 1254,
+            "height": 1254
+          },
+          "sha256": "d6cf8933cd764477ba22482b6c931dc65597bf62d797fb9cac0877c6a1486d1a"
+        },
+        {
+          "file": "art/dalat/flower_garden/tiles/right-detail.png",
+          "nativeSize": {
+            "width": 1254,
+            "height": 1254
+          },
+          "sha256": "dd6c0e213d946812afa88cb56cc3f370477c5d61e4c56246c4b1f71fa31b7faf"
+        }
+      ],
+      "sha256": "d349affb0adf12304929c00f97c4dc4dca6cb1547dc420be46159d96fdb0d2b2"
+    },
+    {
+      "settingId": "tea_hills",
+      "source": "art/dalat/tea_hills/source/master-fullhd.png",
+      "scene": "tea_hills",
+      "outputSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "method": "two overlapping image_gen regional detail edits; native tile detail downsampled and feathered over 256 pixels",
+      "conceptIsLayoutReferenceOnly": true,
+      "overlap": 256,
+      "tiles": [
+        {
+          "file": "art/dalat/tea_hills/tiles/left-detail.png",
+          "nativeSize": {
+            "width": 1254,
+            "height": 1254
+          },
+          "sha256": "295f54dce2589873a7d935341493a2560094ce964af42b6facfb8c2dd5a0eb24"
+        },
+        {
+          "file": "art/dalat/tea_hills/tiles/right-detail.png",
+          "nativeSize": {
+            "width": 1254,
+            "height": 1254
+          },
+          "sha256": "cd08da90511042b1891ad5061a959b332910dc01a78e5ef1c9b5302ae6f488b1"
+        }
+      ],
+      "sha256": "31678a3460700ba4a032a45bedf6b26a5e983f44d9972be40f1544d3995aa413"
+    },
+    {
+      "settingId": "pine_lake",
+      "source": "art/dalat/pine_lake/source/master-fullhd.png",
+      "scene": "pine_lake",
+      "outputSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "method": "two overlapping image_gen regional detail edits; native tile detail downsampled and feathered over 256 pixels",
+      "conceptIsLayoutReferenceOnly": true,
+      "overlap": 256,
+      "tiles": [
+        {
+          "file": "art/dalat/pine_lake/tiles/left-detail.png",
+          "nativeSize": {
+            "width": 1254,
+            "height": 1254
+          },
+          "sha256": "df4fd3d9c0a37f74e03ff3b1fa54383201d07b4ccc57556c08c268468cb98cc4"
+        },
+        {
+          "file": "art/dalat/pine_lake/tiles/right-detail.png",
+          "nativeSize": {
+            "width": 1254,
+            "height": 1254
+          },
+          "sha256": "20c7b5291f06df6eec07b13366e6ba62406f47c6cc518ac0a93e6069b38691ed"
+        }
+      ],
+      "sha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd"
+    }
+  ],
+  "inspiration": "https://vinwonders.com/vi/wonderpedia/news/canh-dep-da-lat/",
+  "sourceQuality": "1920x1080 assembled from overlapping native 1254x1254 image_gen detail tiles; registered extraction masks reuse visible Full HD master pixels",
+  "localIntegrationRequested": true,
+  "artReviewStatus": "pending final owner visual review",
+  "sceneLayers": [
+    {
+      "scene": "inside_cafe",
+      "settingId": "flower_garden",
+      "type": "landscape",
+      "region": "all",
+      "source": "art/dalat/flower_garden/layers/distant.png",
+      "sourceSha256": "4ccf4509a0d7fb7430c1e39ef5ba56bc9b5d9878489ba32d17a25f5fc66e7a13",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/flower_garden/source/master-fullhd.png",
+      "masterSha256": "d349affb0adf12304929c00f97c4dc4dca6cb1547dc420be46159d96fdb0d2b2",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": false,
+      "src": "/cafe/dalat/flower_garden/layers/landscape-f2934bdcec.webp",
+      "sha256": "f2934bdcec205df54d4c8aa005e11eb0cc08df23b715d3e2347b22b8d4204a15",
+      "bytes": 1250432
+    },
+    {
+      "scene": "inside_cafe",
+      "settingId": "flower_garden",
+      "type": "ground",
+      "region": "all",
+      "source": "art/dalat/flower_garden/layers/ground.png",
+      "sourceSha256": "cd347493a1ab85df79c38f96c16e0a4cc005e501140c1b57b3bcb96fb72ac791",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/flower_garden/source/master-fullhd.png",
+      "masterSha256": "d349affb0adf12304929c00f97c4dc4dca6cb1547dc420be46159d96fdb0d2b2",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/flower_garden/layers/ground-65a03cb91e.webp",
+      "sha256": "65a03cb91e3d23ce1c99e31ab4aa3728e1da870740eb1cdfadf9022359988b2e",
+      "bytes": 963018
+    },
+    {
+      "scene": "inside_cafe",
+      "settingId": "flower_garden",
+      "type": "foliage-mid",
+      "region": "top",
+      "source": "art/dalat/flower_garden/layers/foliage.png",
+      "sourceSha256": "d42eb6f6fc50b907e2f37e47d647dd147d0cddf5469e464d6c1d9269363d323a",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/flower_garden/source/master-fullhd.png",
+      "masterSha256": "d349affb0adf12304929c00f97c4dc4dca6cb1547dc420be46159d96fdb0d2b2",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/flower_garden/layers/foliage-mid-037ef61647.webp",
+      "sha256": "037ef61647ecc00e75e25deacf7659a1c7b46fae6999c2ab33ae5c5f6fdaed6d",
+      "bytes": 210762
+    },
+    {
+      "scene": "inside_cafe",
+      "settingId": "flower_garden",
+      "type": "foreground",
+      "region": "bottom",
+      "source": "art/dalat/flower_garden/layers/foliage.png",
+      "sourceSha256": "d42eb6f6fc50b907e2f37e47d647dd147d0cddf5469e464d6c1d9269363d323a",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/flower_garden/source/master-fullhd.png",
+      "masterSha256": "d349affb0adf12304929c00f97c4dc4dca6cb1547dc420be46159d96fdb0d2b2",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/flower_garden/layers/foreground-fb92df122a.webp",
+      "sha256": "fb92df122a724550f0bd647a5427e0fa8a7a87ef154d93f89a801dfb7d319f42",
+      "bytes": 172816
+    },
+    {
+      "scene": "outdoor_terrace",
+      "settingId": "tea_hills",
+      "type": "landscape",
+      "region": "all",
+      "source": "art/dalat/tea_hills/layers/distant.png",
+      "sourceSha256": "1e363ed58f934fa15d88ab47e0a8f061d1719b35efaaf5eed799559e074b16d1",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/tea_hills/source/master-fullhd.png",
+      "masterSha256": "31678a3460700ba4a032a45bedf6b26a5e983f44d9972be40f1544d3995aa413",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": false,
+      "src": "/cafe/dalat/tea_hills/layers/landscape-27f91929f7.webp",
+      "sha256": "27f91929f7845d78d32f7b6d7c46c3ae4bbeb678f71e8ef71471e4e2749fb39f",
+      "bytes": 1229142
+    },
+    {
+      "scene": "outdoor_terrace",
+      "settingId": "tea_hills",
+      "type": "ground",
+      "region": "all",
+      "source": "art/dalat/tea_hills/layers/ground.png",
+      "sourceSha256": "5f8d8315ec0f8c046a52d0d13653605df31e3c627da06601b4da74493eb9e2ee",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/tea_hills/source/master-fullhd.png",
+      "masterSha256": "31678a3460700ba4a032a45bedf6b26a5e983f44d9972be40f1544d3995aa413",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/tea_hills/layers/ground-11e560e4df.webp",
+      "sha256": "11e560e4df48c3715edb9f35255b5975eac39018fa467873f126178175bfe647",
+      "bytes": 790156
+    },
+    {
+      "scene": "outdoor_terrace",
+      "settingId": "tea_hills",
+      "type": "foliage-mid",
+      "region": "top",
+      "source": "art/dalat/tea_hills/layers/foliage.png",
+      "sourceSha256": "a5b3bf04902e42b1f043e6e6122a2719cda8ec6996e4c26142b14df9d23ef1fc",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/tea_hills/source/master-fullhd.png",
+      "masterSha256": "31678a3460700ba4a032a45bedf6b26a5e983f44d9972be40f1544d3995aa413",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/tea_hills/layers/foliage-mid-7974bbd547.webp",
+      "sha256": "7974bbd5472f57a2d4ca0c3984e2798e835121f6a7d10f0d67e33b9bb3a2f15c",
+      "bytes": 195728
+    },
+    {
+      "scene": "outdoor_terrace",
+      "settingId": "tea_hills",
+      "type": "foreground",
+      "region": "bottom",
+      "source": "art/dalat/tea_hills/layers/foliage.png",
+      "sourceSha256": "a5b3bf04902e42b1f043e6e6122a2719cda8ec6996e4c26142b14df9d23ef1fc",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/tea_hills/source/master-fullhd.png",
+      "masterSha256": "31678a3460700ba4a032a45bedf6b26a5e983f44d9972be40f1544d3995aa413",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/tea_hills/layers/foreground-5f3ef559be.webp",
+      "sha256": "5f3ef559be9c8e0d668be3f72f99748b164d804018ca298b9f60daba68999b43",
+      "bytes": 277954
+    },
+    {
+      "scene": "mountain_view",
+      "settingId": "pine_lake",
+      "type": "landscape",
+      "region": "all",
+      "source": "art/dalat/pine_lake/layers/distant.png",
+      "sourceSha256": "553ededdb7cd7409a099f0228fa366ec3d535fcf0b1271896769e7f128c4b2d6",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/pine_lake/source/master-fullhd.png",
+      "masterSha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": false,
+      "src": "/cafe/dalat/pine_lake/layers/landscape-c71dbab46e.webp",
+      "sha256": "c71dbab46e377a5a5081e9521386b1f6aec34c60f1ba2e654c8dde5a4a448fda",
+      "bytes": 994138
+    },
+    {
+      "scene": "mountain_view",
+      "settingId": "pine_lake",
+      "type": "ground",
+      "region": "all",
+      "source": "art/dalat/pine_lake/layers/ground.png",
+      "sourceSha256": "b4934721b080dd99b0a47557b32c9347b0457bc7834ace6ee2d3128e4e258634",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/pine_lake/source/master-fullhd.png",
+      "masterSha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/pine_lake/layers/ground-90d7674cf1.webp",
+      "sha256": "90d7674cf1463e2ad596b1a7e4376c4508569b48e8f473e6996347e1229f9e1b",
+      "bytes": 536598
+    },
+    {
+      "scene": "mountain_view",
+      "settingId": "pine_lake",
+      "type": "foliage-mid",
+      "region": "top",
+      "source": "art/dalat/pine_lake/layers/foliage.png",
+      "sourceSha256": "78006f794743d1e538df2afe7cabdde97e23c3394bee4d3df520d58e73997e98",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/pine_lake/source/master-fullhd.png",
+      "masterSha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/pine_lake/layers/foliage-mid-3d97189782.webp",
+      "sha256": "3d97189782a37c66c97f3ba1a3f575f6bfdfe667530e3776e67f24724f86d5d2",
+      "bytes": 220240
+    },
+    {
+      "scene": "mountain_view",
+      "settingId": "pine_lake",
+      "type": "foreground",
+      "region": "bottom",
+      "source": "art/dalat/pine_lake/layers/foliage.png",
+      "sourceSha256": "78006f794743d1e538df2afe7cabdde97e23c3394bee4d3df520d58e73997e98",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "runtimeSize": {
+        "width": 1920,
+        "height": 1080
+      },
+      "fullhdMaster": "art/dalat/pine_lake/source/master-fullhd.png",
+      "masterSha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd",
+      "usesFullhdMasterPixels": true,
+      "hasAlpha": true,
+      "src": "/cafe/dalat/pine_lake/layers/foreground-62e355a346.webp",
+      "sha256": "62e355a3463582deea07a9e309d15da8b2b3a4c3501a8e5063b7e25213a36917",
+      "bytes": 225860
+    }
+  ],
+  "npcAssets": [
+    {
+      "npcId": "cloud_daisy",
+      "masterSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+      "packValidation": "art/npc/cloud_daisy/draft/runtime/pack-validation.json",
+      "rig": {
+        "src": "/cafe/npc/cloud_daisy/runtime/rig-b828d3b666.json",
+        "sha256": "b828d3b66644ca0af6c3614d6ddbffbe6a4926f23f3d399cc779997ad932ad66",
+        "bytes": 1925
+      },
+      "atlas": {
+        "src": "/cafe/npc/cloud_daisy/runtime/atlas-442c4ec47a.json",
+        "sha256": "442c4ec47a9da387e844bd1dfacc060b7e6f25fe09d592b23e7151eb3ec90348",
+        "bytes": 3569
+      },
+      "texture": {
+        "src": "/cafe/npc/cloud_daisy/runtime/atlas-a7d2bede68.webp",
+        "sha256": "a7d2bede6849a142919bcffe497c0cc2a6a9d69ab7c965891b42d071ebf30b94",
+        "bytes": 1587918
+      },
+      "poster": {
+        "src": "/cafe/npc/cloud_daisy/runtime/master-d7643382d2.webp",
+        "sha256": "d7643382d2cb69f7d66bdd1359765d7c9daa11147fc50b338c0b30b2a9dac196",
+        "bytes": 139148
+      },
+      "mouth": {
+        "src": "/cafe/npc/cloud_daisy/runtime/mouth-closed-1028227369.webp",
+        "sha256": "10282273698e297ff694fc4c84179685daeff1d8f7a1a2fadfa33014cf3a76ba",
+        "bytes": 15098
+      }
+    },
+    {
+      "npcId": "ollie_owl",
+      "masterSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+      "packValidation": "art/npc/ollie_owl/draft/runtime/pack-validation.json",
+      "rig": {
+        "src": "/cafe/npc/ollie_owl/runtime/rig-35d7c26a31.json",
+        "sha256": "35d7c26a318946621408598ece612d72a71893f652160a98e749991788bcc2e5",
+        "bytes": 1400
+      },
+      "atlas": {
+        "src": "/cafe/npc/ollie_owl/runtime/atlas-5cd6021ef9.json",
+        "sha256": "5cd6021ef9a1e5d8c285ab8788d9a480eeea18889528664e516a7d4a58e79f83",
+        "bytes": 2241
+      },
+      "texture": {
+        "src": "/cafe/npc/ollie_owl/runtime/atlas-9bd82946bb.webp",
+        "sha256": "9bd82946bba468c80da5175d0d115af87c8f9e29ccc5560baca542dbdb63453d",
+        "bytes": 1042618
+      },
+      "poster": {
+        "src": "/cafe/npc/ollie_owl/runtime/master-91fd415fec.webp",
+        "sha256": "91fd415fecca59b5051a05f3b5244238e2ed1d465b177c8538625050677354a3",
+        "bytes": 239490
+      },
+      "mouth": {
+        "src": "/cafe/npc/ollie_owl/runtime/mouth-closed-ff1e11472c.webp",
+        "sha256": "ff1e11472cbd3fb9f8c87a1eaa1e1b58c80aedc794efb8b4bf6f832f4540493c",
+        "bytes": 31326
+      }
+    },
+    {
+      "npcId": "mimi_bunny",
+      "masterSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+      "packValidation": "art/npc/mimi_bunny/draft/runtime/pack-validation.json",
+      "rig": {
+        "src": "/cafe/npc/mimi_bunny/runtime/rig-4e4e0fd8b2.json",
+        "sha256": "4e4e0fd8b204ce16c74f0b6d3d858f30c1853029c46748e93ef0b3d73e34ab41",
+        "bytes": 1406
+      },
+      "atlas": {
+        "src": "/cafe/npc/mimi_bunny/runtime/atlas-99ccbdd43b.json",
+        "sha256": "99ccbdd43b6c4ac36f2ebe15e524508879bc287a9a00bd551d76526471c92d25",
+        "bytes": 2240
+      },
+      "texture": {
+        "src": "/cafe/npc/mimi_bunny/runtime/atlas-8727e79505.webp",
+        "sha256": "8727e79505b265d9b4db98120fda684525f48c2115e80885ac3c3e7595e72f3e",
+        "bytes": 682902
+      },
+      "poster": {
+        "src": "/cafe/npc/mimi_bunny/runtime/master-698db483d7.webp",
+        "sha256": "698db483d766b256b2875dab3330e7415ca26de01d90e05d49dd0bc3edc1ad9d",
+        "bytes": 144116
+      },
+      "mouth": {
+        "src": "/cafe/npc/mimi_bunny/runtime/mouth-closed-6919f50702.webp",
+        "sha256": "6919f50702dae10aa11c47af7e345d28042c4f9801287b71b3edc73da24771be",
+        "bytes": 10686
+      }
+    },
+    {
+      "npcId": "astro_bean",
+      "masterSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+      "packValidation": "art/npc/astro_bean/draft/runtime/pack-validation.json",
+      "rig": {
+        "src": "/cafe/npc/astro_bean/runtime/rig-9cd0741c45.json",
+        "sha256": "9cd0741c4558c25e02df761941718f4d6c054fd3bdc92246eddf1bc9863ef7f1",
+        "bytes": 1406
+      },
+      "atlas": {
+        "src": "/cafe/npc/astro_bean/runtime/atlas-d60c68108c.json",
+        "sha256": "d60c68108c931c17c2c675f8875bdc18b5b3a7d5061471368860ae82f81d191c",
+        "bytes": 2243
+      },
+      "texture": {
+        "src": "/cafe/npc/astro_bean/runtime/atlas-b0c142f898.webp",
+        "sha256": "b0c142f898178faf77fd5094f6afe19580b9183c188c752129eef8a518af0aca",
+        "bytes": 663728
+      },
+      "poster": {
+        "src": "/cafe/npc/astro_bean/runtime/master-bc67798310.webp",
+        "sha256": "bc67798310e9e11d3147174929296b2b7c8b090e3f2bc81be33fd7a7007b5728",
+        "bytes": 152288
+      },
+      "mouth": {
+        "src": "/cafe/npc/astro_bean/runtime/mouth-closed-64ef04af8c.webp",
+        "sha256": "64ef04af8c2c94a4e3de57d0d19f953c2811ed3b57cb66bd6df4ed2c6a0d4da2",
+        "bytes": 12868
+      }
+    },
+    {
+      "npcId": "bear_explorer",
+      "masterSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "packValidation": "art/npc/bear_explorer/draft/runtime/pack-validation.json",
+      "rig": {
+        "src": "/cafe/npc/bear_explorer/runtime/rig-8dd0ebf4fc.json",
+        "sha256": "8dd0ebf4fc472805cc02116185c3d438a1d3ccb6300aaa02088abb632f668964",
+        "bytes": 1426
+      },
+      "atlas": {
+        "src": "/cafe/npc/bear_explorer/runtime/atlas-d6714f0d62.json",
+        "sha256": "d6714f0d62183d2c45b00fa1aba6d18c1f7bdd98efa25385ff50cc406680b5cb",
+        "bytes": 2244
+      },
+      "texture": {
+        "src": "/cafe/npc/bear_explorer/runtime/atlas-14f776a17f.webp",
+        "sha256": "14f776a17f8f89c76b6b66a4bba080d47e2c52ab2e6552aba6c2fb129331c35f",
+        "bytes": 689616
+      },
+      "poster": {
+        "src": "/cafe/npc/bear_explorer/runtime/master-45cb25308b.webp",
+        "sha256": "45cb25308b001e7fe5b550f0569ed0e320676ba7155846b045c8cf1fa3547010",
+        "bytes": 166696
+      },
+      "mouth": {
+        "src": "/cafe/npc/bear_explorer/runtime/mouth-closed-f7a8e1239f.webp",
+        "sha256": "f7a8e1239fb46887168de2527d3d67a09d23581a78bf9753e8b9fe74bd2b16ff",
+        "bytes": 12342
+      }
+    },
+    {
+      "npcId": "gray_boo",
+      "masterSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "packValidation": "art/npc/gray_boo/draft/runtime/pack-validation.json",
+      "rig": {
+        "src": "/cafe/npc/gray_boo/runtime/rig-c601214c95.json",
+        "sha256": "c601214c95d29006c2a530889c676ff8fce3c5970f879f9febeee612dba4e052",
+        "bytes": 1394
+      },
+      "atlas": {
+        "src": "/cafe/npc/gray_boo/runtime/atlas-d8db71c458.json",
+        "sha256": "d8db71c458f350d4dde0618775af4a52bebbff63e7b27ccacaac8edf422fe247",
+        "bytes": 2237
+      },
+      "texture": {
+        "src": "/cafe/npc/gray_boo/runtime/atlas-5e0f18713b.webp",
+        "sha256": "5e0f18713b3ee3fa018bdd9fa1e51e2883f1cb5101c19039b6ace4e840bf4ae4",
+        "bytes": 825276
+      },
+      "poster": {
+        "src": "/cafe/npc/gray_boo/runtime/master-b6741c37f4.webp",
+        "sha256": "b6741c37f480ecca959855535c2896f9bece88cf3be13fe5786bcbd63b2b17f2",
+        "bytes": 172358
+      },
+      "mouth": {
+        "src": "/cafe/npc/gray_boo/runtime/mouth-closed-5b204bf6b0.webp",
+        "sha256": "5b204bf6b00dc5e9ae4c5dd2fbb4fbe78709ed5f6cdb883b5a076817f089817c",
+        "bytes": 9386
+      }
+    }
+  ],
+  "totalSceneBytes": 7066844
+}

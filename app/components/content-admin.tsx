@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { SelectCombobox } from "./select-combobox";
 import { Logo } from "./logo";
 import { Artwork } from "./artwork";
 import { baselineLesson } from "../content/baseline";
@@ -202,25 +203,26 @@ export function ContentAdmin() {
             </div>
           )}
           <label htmlFor="content-selection">Bài đang biên tập</label>
-          <select
+          <SelectCombobox
             id="content-selection"
+            label="Bài đang biên tập"
+            options={[
+              { value: "", label: "Bài mới" },
+              ...data.documents.map((doc) => ({
+                value: doc.id,
+                label: `${doc.draft.lesson.title} · r${doc.revision} · ${doc.status}`,
+              })),
+            ]}
             value={selected}
-            onChange={(e) => {
-              const doc = data.documents.find((d) => d.id === e.target.value);
-              setSelected(e.target.value);
+            onValueChange={(value) => {
+              const doc = data.documents.find((d) => d.id === value);
+              setSelected(value);
               if (doc) {
                 setJson(JSON.stringify(doc.draft, null, 2));
                 setAudio(JSON.stringify(doc.draft.audio, null, 2));
               }
             }}
-          >
-            <option value="">Bài mới</option>
-            {data.documents.map((doc) => (
-              <option key={doc.id} value={doc.id}>
-                {doc.draft.lesson.title} · r{doc.revision} · {doc.status}
-              </option>
-            ))}
-          </select>
+          />
           <div className="natural-admin-grid">
             <section>
               <label htmlFor="content-json">Nội dung và chứng cứ (JSON)</label>

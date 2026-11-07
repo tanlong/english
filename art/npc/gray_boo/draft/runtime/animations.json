@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "gray_boo",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "approved": false,
+  "sourceSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+  "rigSha256": "d1e0378ec06674b3ef26c220380a1c65d32e3112ceddda70ca7a1a3464d87a85",
+  "mode": "single-arm",
+  "clips": {
+    "idle": {
+      "duration": 9,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2.5,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": -1,
+    "restAngle": 0
+  }
+}

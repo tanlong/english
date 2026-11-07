@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "3.0",
+  "npcs": [
+    {
+      "npcId": "cloud_daisy",
+      "displayName": "Cloud Daisy",
+      "legacyAlias": "may",
+      "source": "MD/Cloud Daisy.png",
+      "approved": true,
+      "status": "APPROVED_MASTER",
+      "technicalPass": true,
+      "sha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+      "bytes": 1550599,
+      "width": 1087,
+      "height": 1447,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentPixels": 767599,
+      "semiTransparentPixels": 804427,
+      "bbox": {
+        "left": 32,
+        "top": 11,
+        "width": 957,
+        "height": 1416
+      },
+      "margins": {
+        "left": 32,
+        "top": 11,
+        "right": 98,
+        "bottom": 20
+      },
+      "errors": [],
+      "warnings": [
+        "PADDING_BELOW_6_PERCENT"
+      ],
+      "visualReview": [
+        "identity",
+        "no ground shadow",
+        "no text",
+        "full silhouette",
+        "halo on light/dark/cafe backgrounds"
+      ],
+      "assetStatus": "APPROVED_MASTER"
+    },
+    {
+      "npcId": "ollie_owl",
+      "displayName": "Ollie Owl",
+      "legacyAlias": null,
+      "source": "MD/Ollie Owl.png",
+      "approved": true,
+      "status": "APPROVED_MASTER",
+      "technicalPass": true,
+      "sha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+      "bytes": 2539506,
+      "width": 1205,
+      "height": 1305,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentPixels": 422938,
+      "semiTransparentPixels": 1149023,
+      "bbox": {
+        "left": 4,
+        "top": 0,
+        "width": 1196,
+        "height": 1305
+      },
+      "margins": {
+        "left": 4,
+        "top": 0,
+        "right": 5,
+        "bottom": 0
+      },
+      "errors": [],
+      "warnings": [
+        "PADDING_BELOW_6_PERCENT"
+      ],
+      "visualReview": [
+        "identity",
+        "no ground shadow",
+        "no text",
+        "full silhouette",
+        "halo on light/dark/cafe backgrounds"
+      ],
+      "assetStatus": "APPROVED_MASTER"
+    },
+    {
+      "npcId": "mimi_bunny",
+      "displayName": "Mimi Bunny",
+      "legacyAlias": null,
+      "source": "MD/Mimi Bunny.png",
+      "approved": true,
+      "status": "APPROVED_MASTER",
+      "technicalPass": true,
+      "sha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+      "bytes": 1654187,
+      "width": 1087,
+      "height": 1446,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentPixels": 747951,
+      "semiTransparentPixels": 823121,
+      "bbox": {
+        "left": 26,
+        "top": 6,
+        "width": 1009,
+        "height": 1434
+      },
+      "margins": {
+        "left": 26,
+        "top": 6,
+        "right": 52,
+        "bottom": 6
+      },
+      "errors": [],
+      "warnings": [
+        "PADDING_BELOW_6_PERCENT"
+      ],
+      "visualReview": [
+        "identity",
+        "no ground shadow",
+        "no text",
+        "full silhouette",
+        "halo on light/dark/cafe backgrounds"
+      ],
+      "assetStatus": "APPROVED_MASTER"
+    },
+    {
+      "npcId": "astro_bean",
+      "displayName": "Astro Bean",
+      "legacyAlias": null,
+      "source": "MD/Astro Bean.png",
+      "approved": true,
+      "status": "APPROVED_MASTER",
+      "technicalPass": true,
+      "sha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+      "bytes": 1772858,
+      "width": 1122,
+      "height": 1402,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentPixels": 791650,
+      "semiTransparentPixels": 780492,
+      "bbox": {
+        "left": 11,
+        "top": 7,
+        "width": 1090,
+        "height": 1393
+      },
+      "margins": {
+        "left": 11,
+        "top": 7,
+        "right": 21,
+        "bottom": 2
+      },
+      "errors": [],
+      "warnings": [
+        "PADDING_BELOW_6_PERCENT"
+      ],
+      "visualReview": [
+        "identity",
+        "no ground shadow",
+        "no text",
+        "full silhouette",
+        "halo on light/dark/cafe backgrounds"
+      ],
+      "assetStatus": "APPROVED_MASTER"
+    },
+    {
+      "npcId": "bear_explorer",
+      "displayName": "Bear Explorer",
+      "legacyAlias": "deo_explorer",
+      "source": "MD/Bear Explorer.png",
+      "approved": true,
+      "status": "APPROVED_MASTER",
+      "technicalPass": true,
+      "sha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "bytes": 1870095,
+      "width": 1122,
+      "height": 1402,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentPixels": 679607,
+      "semiTransparentPixels": 892571,
+      "bbox": {
+        "left": 39,
+        "top": 0,
+        "width": 989,
+        "height": 1369
+      },
+      "margins": {
+        "left": 39,
+        "top": 0,
+        "right": 94,
+        "bottom": 33
+      },
+      "errors": [],
+      "warnings": [
+        "PADDING_BELOW_6_PERCENT"
+      ],
+      "visualReview": [
+        "identity",
+        "no ground shadow",
+        "no text",
+        "full silhouette",
+        "halo on light/dark/cafe backgrounds"
+      ],
+      "assetStatus": "APPROVED_MASTER"
+    },
+    {
+      "npcId": "gray_boo",
+      "displayName": "Gray Boo",
+      "legacyAlias": null,
+      "source": "MD/Gray Boo.png",
+      "approved": true,
+      "status": "APPROVED_MASTER",
+      "technicalPass": true,
+      "sha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "bytes": 1828727,
+      "width": 1127,
+      "height": 1395,
+      "channels": 4,
+      "hasAlpha": true,
+      "transparentPixels": 643089,
+      "semiTransparentPixels": 928380,
+      "bbox": {
+        "left": 15,
+        "top": 11,
+        "width": 1089,
+        "height": 1374
+      },
+      "margins": {
+        "left": 15,
+        "top": 11,
+        "right": 23,
+        "bottom": 10
+      },
+      "errors": [],
+      "warnings": [
+        "PADDING_BELOW_6_PERCENT"
+      ],
+      "visualReview": [
+        "identity",
+        "no ground shadow",
+        "no text",
+        "full silhouette",
+        "halo on light/dark/cafe backgrounds"
+      ],
+      "assetStatus": "APPROVED_MASTER"
+    }
+  ],
+  "excludedFromSixNpcScope": [
+    "Sun King.png"
+  ],
+  "missingRuntimeReferences": [],
+  "paidApiCalls": 0
+}

@@ -1,0 +1,421 @@
+{
+  "version": "5.0",
+  "inspiration": "https://vinwonders.com/vi/wonderpedia/news/canh-dep-da-lat/",
+  "jobs": [
+    {
+      "jobId": "flower_garden_concept_v5",
+      "sceneId": "flower_garden",
+      "type": "concept",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Create a NEW landscape game environment, exact 16:9 composition, request native 2560x1440 pixels or higher, at least FULL HD 1920x1080 detail. Not a screenshot. Inspired by Van Thanh flower village in Da Lat Vietnam: a beautifully kept outdoor highland flower garden, rows of white daisies, vibrant blue and pink hydrangeas, red roses and yellow flowers, a small timber garden arbor to the back left, distant terraced greenhouses and pine-covered hills under a clear light blue sky. Premium cozy fantasy adventure game background that will host colorful upright chibi wizard/traveler sprites. Crisp clean contours and finely painted natural textures, richly detailed individual flower heads, leaves and stone grains, warm vivid clear colors with realistic perspective and gentle dimensional shading, NO blur, NO washed-out veil, NO depth-of-field blur, NO pixel art. Midmorning sunlight from UPPER RIGHT, cool mountain freshness.\nComposition: eye-level wide establishing view with a gently downward view of the ground, horizon at 39% height. A broad gently curved stone garden walkway comes toward the viewer, with THREE clearly usable small open standing areas connected to the path around x=27%,50%,76% y=83% (feet), no raised platforms or markers. Flower beds frame those areas and recede naturally, do not put seats or tables there. Viewpoint permits full-body standing figures about 22% of frame height to look grounded. Keep upper corners lightly framed by garden tree foliage, flowers low at far bottom corners only, preserve the middle lower path for figures. Environment only: NO characters, people, animals, silhouettes, UI, text, signs, lettering, arrows, logos, watermark. Not a café, not an indoor floor, not a stage, no chairs or foreground dining furniture. This is a living botanical garden setting, not a giant empty plaza. Match three-quarter storybook RPG sprite aesthetics with highly legible sharp detail across foreground and background.",
+      "referencePaths": [],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-b19efccd-48bc-4c4e-be59-e542fa54d0da.png",
+      "output": "art/dalat/flower_garden/source/concept-v5.png",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "sha256": "0d0321dd629884076d761a33c392041d0d1dd1936d88ec0dca64a3f5bb53f676",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "jobId": "tea_hills_concept_v5",
+      "sceneId": "tea_hills",
+      "type": "concept",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Create a NEW extremely crisp outdoor adventure game environment inspired by Cau Dat tea hills in Da Lat Vietnam. Exact wide 16:9 landscape composition, request native 2560x1440 or higher, FULL HD detail across the entire frame. Rolling bright green tea terraces sweep in rhythmic gently curved rows down a highland valley, individual tea leaves readable in the near bushes. Distant dark pine ridges, a few tiny glasshouses on far slopes, vivid clear blue sky with a few luminous white cloud puffs. A natural light tan compacted-earth and small-stone walking trail widens at the near hilltop in the lower third; two comfortable standing spots connected by the same trail at x=34%,68%, feet y=84%. Trail leads diagonally into the tea fields to the upper right. No unrealistic empty concrete plaza. Low tea bushes and subtle golden wildflowers at the left and right foreground edges, a pine branch framing ONLY the top left corner. A small rough stone trail marker with NO writing at far edge, no furniture or buildings in foreground. Camera at human eye height slightly looking down, horizon around 36% height; standing chibi adventurer sprites about 23% of frame height can stand naturally on the foreground path. Refined premium cozy storybook fantasy RPG environment, clear contours, richly painted granular soil, stone and foliage textures, elegant dimensional shading, vibrant natural colors, no pixel art. Midmorning upper-right sunlight, consistent light direction. NO people, characters, animals, vehicles, UI, text, lettering, logos, arrows, watermark. NO cafe, chairs, tables, blurry fog, blur or washed-out bloom. Detailed high definition landscape with sharply defined tea terraces.",
+      "referencePaths": [],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-9e13ad23-a380-401a-8952-348c2be0560d.png",
+      "output": "art/dalat/tea_hills/source/concept-v5.png",
+      "status": "selected",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "sha256": "bd618167fd94c49895fd63c5a971a6b7ed45ae465ba3c3f6f7c1237c90847112",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "jobId": "pine_lake_concept_v5",
+      "sceneId": "pine_lake",
+      "type": "concept",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Create a NEW exceptionally crisp highly detailed adventure game environment inspired by Tuyen Lam lake in Da Lat Vietnam. Exact 16:9 wide landscape composition. Request native 2560x1440 or higher, FULL HD detail. A serene blue-green mountain lake reflecting dense deep green pine forests and a layered mountain skyline, bright clear blue sky with fine small white clouds. A broad gently curved timber boardwalk and natural shore viewing area in the lower third, lightly worn honey-brown wood planks with distinct grain, a short low timber rail behind the usable walking surface, gravel and ferns at the left shore. The far end of the boardwalk gently curves into a pine trail at back left, distant tiny moored rowboat near the far bank only. One open standing spot on the near boardwalk centered x=60%, feet y=84% for a full-body chibi traveler about 25% of image height, visibly safely on solid ground, in FRONT of any rail and far from the water edge. A cluster of blue and violet hydrangeas and ferns confined to bottom left and bottom right corners; a few pine boughs at upper corners, not covering the lake view. No huge empty rectangular deck, organic shoreline composition. Eye-level camera with gentle downward ground view, horizon at 38% height. Premium cozy fantasy RPG/storybook game background with refined clean contours and richly painted natural textures, individual needles, detailed lake ripple reflections and realistic wood grain, very sharp edges without halos, warm midmorning sunlight from UPPER RIGHT. NO characters, humans, animals, silhouettes, UI, signs, writing, text, arrows, logos or watermark. NO cafe, foreground dining furniture, chairs, mist veil, depth-of-field blur, pixel art. A serene real-landscape-inspired magical woodland setting suitable for a standing violet-robed alien traveler.",
+      "referencePaths": [],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-84ac1406-6f2a-43eb-903b-9023e7cd4a8c.png",
+      "output": "art/dalat/pine_lake/source/concept-rejected-character-v5.png",
+      "status": "rejected_baked_character",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "sha256": "73b4c6e1ab5d2bcce1940378ba3ba6ff297ea6e3554b76079d02c0165d83f5e2",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "jobId": "pine_lake_concept_clean_v5",
+      "sceneId": "pine_lake",
+      "type": "concept_clean",
+      "prompt": "Use case: precise-object-edit. Edit target is this lake environment. REMOVE THE SINGLE ALIEN PERSON in the foreground center completely. Remove all parts of the person, ears, antennae, backpack, clothing and its cast shadow. Reconstruct continuous matching wooden planks, wood grain and sunlight on the floor underneath, and the low wooden railing and lake reflections behind. Output an entirely EMPTY landscape environment with ZERO PEOPLE OR CREATURES. Preserve the original exact composition, dimensions, camera, all pine trees, mountains, sky, lake water, shore, flowers and boardwalk. Do not add any replacement subject, characters, animals, signs, writing, lettering, UI, marks, logos or watermark. Very crisp fine detail, same natural midmorning light from upper right.",
+      "referencePaths": [
+        "art/dalat/pine_lake/source/concept-rejected-character-v5.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-22910cdd-fdf3-4499-9dbf-445b4dcd63da.png",
+      "output": "art/dalat/pine_lake/source/concept-v5.png",
+      "status": "selected",
+      "sha256": "23cbe4c9a2530498c49892cce3faf0762da8e55aa238fc6ddad79ced91dcb9f6",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "flower_garden_left_detail_v5",
+      "sceneId": "flower_garden",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. High-resolution detail restoration of the supplied SINGLE garden image tile. This is an edit target, NOT an inspiration for a new composition. Deliver a crisp high-resolution image at 1632x1620 pixels if possible, at least 1088x1080. Keep the exact same camera, field of view, crop boundaries, object positions, sizes, silhouettes, paths, terrain, branches, flowers and colors. Do NOT zoom, pan, add objects or remove objects. Only reconstruct finer high-frequency visual detail: individual hydrangea petals and daisy centers, rose folds, tiny leaf veins, fine wood grain and stone texture. Keep the original refined storybook RPG painting style, natural upper-right sunlight, no over-sharpened halos. Every large shape must stay precisely registered to this tile's coordinates for seamless assembly with an overlapping neighboring tile. No people, characters, faces, animals, writing, UI, symbols or watermark. Opaque full image, same near-square aspect ratio.",
+      "referencePaths": [
+        "art/dalat/flower_garden/tiles/left-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-9cd5628b-0c97-4696-a9ce-e2885ebf4d77.png",
+      "output": "art/dalat/flower_garden/tiles/left-detail.png",
+      "sha256": "d6cf8933cd764477ba22482b6c931dc65597bf62d797fb9cac0877c6a1486d1a",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "flower_garden_right_detail_v5",
+      "sceneId": "flower_garden",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. High-resolution detail restoration of the supplied SINGLE garden image tile. This is an edit target, NOT an inspiration for a new composition. Deliver a crisp high-resolution image at 1632x1620 pixels if possible, at least 1088x1080. Keep the exact same camera, field of view, crop boundaries, object positions, sizes, silhouettes, paths, terrain, branches, flowers and colors. Do NOT zoom, pan, add objects or remove objects. Only reconstruct finer high-frequency visual detail: individual hydrangea petals and daisy centers, rose folds, tiny leaf veins, fine wood grain and stone texture. Keep the original refined storybook RPG painting style, natural upper-right sunlight, no over-sharpened halos. Every large shape must stay precisely registered to this tile's coordinates for seamless assembly with an overlapping neighboring tile. No people, characters, faces, animals, writing, UI, symbols or watermark. Opaque full image, same near-square aspect ratio.",
+      "referencePaths": [
+        "art/dalat/flower_garden/tiles/right-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-f476edd3-6a81-4f8c-8940-1f64ce6c14f9.png",
+      "output": "art/dalat/flower_garden/tiles/right-detail.png",
+      "sha256": "dd6c0e213d946812afa88cb56cc3f370477c5d61e4c56246c4b1f71fa31b7faf",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "tea_hills_left_detail_v5",
+      "sceneId": "tea_hills",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. High-resolution detail restoration of this SINGLE supplied tea-hill image tile. The supplied tile is the exact edit target, not a new scene prompt. Output 1632x1620 pixels if supported, at least 1088x1080 pixels. LOCK original camera, field of view, crop edges, mountain skyline, curved tea-row positions, footpath geometry, all object scales and positions. Preserve overall colors and upper-right sun direction. Reconstruct only finer natural detail: tiny sharp tea leaves and veins, individual pine needles, bark texture, granular soil and little stones, subtle clean cloud detail. Same crisp refined storybook adventure game painting with natural dimensional shading, NO photographic filter, NO blur or halos. No zoom, no pan, no changing terrain or adding objects. Every large shape must remain precisely registered for overlapping tile assembly. NO humans, characters, creatures, animals, text, UI, writing, logos, watermark or symbols. Opaque image, same near-square aspect ratio.",
+      "referencePaths": [
+        "art/dalat/tea_hills/tiles/left-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-c9c01f7b-f0a8-44c5-891f-53d742e0eab1.png",
+      "output": "art/dalat/tea_hills/tiles/left-detail.png",
+      "sha256": "295f54dce2589873a7d935341493a2560094ce964af42b6facfb8c2dd5a0eb24",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "tea_hills_right_detail_v5",
+      "sceneId": "tea_hills",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. High-resolution detail restoration of this SINGLE supplied tea-hill image tile. The supplied tile is the exact edit target, not a new scene prompt. Output 1632x1620 pixels if supported, at least 1088x1080 pixels. LOCK original camera, field of view, crop edges, mountain skyline, curved tea-row positions, footpath geometry, all object scales and positions. Preserve overall colors and upper-right sun direction. Reconstruct only finer natural detail: tiny sharp tea leaves and veins, individual pine needles, bark texture, granular soil and little stones, subtle clean cloud detail. Same crisp refined storybook adventure game painting with natural dimensional shading, NO photographic filter, NO blur or halos. No zoom, no pan, no changing terrain or adding objects. Every large shape must remain precisely registered for overlapping tile assembly. NO humans, characters, creatures, animals, text, UI, writing, logos, watermark or symbols. Opaque image, same near-square aspect ratio.",
+      "referencePaths": [
+        "art/dalat/tea_hills/tiles/right-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-69822a8e-105b-42fd-8d3c-1a311c315c48.png",
+      "output": "art/dalat/tea_hills/tiles/right-detail.png",
+      "sha256": "cd08da90511042b1891ad5061a959b332910dc01a78e5ef1c9b5302ae6f488b1",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "pine_lake_left_detail_v5",
+      "sceneId": "pine_lake",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. High-resolution detail restoration of this SINGLE supplied EMPTY lake landscape tile. The tile is the exact edit target, do not compose a new scene. Output 1632x1620 if supported, at least 1088x1080. Lock the original camera, field of view, crop boundaries, mountain skyline, lake shoreline, reflection positions, boardwalk plank edges, railing geometry and pine branch silhouettes. Reconstruct finer details only: individual pine needles, clean bark/lichen texture, wood grain, fern leaves, hydrangea petals and detailed small water ripples. Keep all colors and upper-right sunlight and refined storybook adventure game painting style. Every large shape must remain precisely registered for seamless assembly with the neighboring overlapping tile. No zoom, pan, tilt, blur or halos. NO people, humanoids, characters, creatures, animals, text, UI, writing, logos, symbols or watermark. No new foreground subject of any kind. Opaque image, same near-square aspect ratio.",
+      "referencePaths": [
+        "art/dalat/pine_lake/tiles/left-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-65d64abc-3c4c-43d9-a638-a5d6ca6fd92b.png",
+      "output": "art/dalat/pine_lake/tiles/left-detail.png",
+      "sha256": "df4fd3d9c0a37f74e03ff3b1fa54383201d07b4ccc57556c08c268468cb98cc4",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "pine_lake_right_detail_v5",
+      "sceneId": "pine_lake",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. High-resolution detail restoration of this SINGLE supplied EMPTY lake landscape tile. The tile is the exact edit target, do not compose a new scene. Output 1632x1620 if supported, at least 1088x1080. Lock the original camera, field of view, crop boundaries, mountain skyline, lake shoreline, reflection positions, boardwalk plank edges, railing geometry and pine branch silhouettes. Reconstruct finer details only: individual pine needles, clean bark/lichen texture, wood grain, fern leaves, hydrangea petals and detailed small water ripples. Keep all colors and upper-right sunlight and refined storybook adventure game painting style. Every large shape must remain precisely registered for seamless assembly with the neighboring overlapping tile. No zoom, pan, tilt, blur or halos. NO people, humanoids, characters, creatures, animals, text, UI, writing, logos, symbols or watermark. No new foreground subject of any kind. Opaque image, same near-square aspect ratio.",
+      "referencePaths": [
+        "art/dalat/pine_lake/tiles/right-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-85671669-fa04-4987-bb32-9ca8d1728e84.png",
+      "output": "art/dalat/pine_lake/tiles/right-detail-rejected-aspect.png",
+      "sha256": "4e4f4cbcd3017b24a18ba4ea9e6af9a559b86108d384c30b0b364c7bc323662a",
+      "nativeSize": {
+        "width": 1583,
+        "height": 993
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "status": "rejected_wrong_aspect"
+    },
+    {
+      "jobId": "pine_lake_right_detail_retry_v5",
+      "sceneId": "pine_lake",
+      "type": "detail_tile",
+      "prompt": "Use case: precise-object-edit. REQUIRED OUTPUT: SQUARE image 1254 x 1254 pixels. The supplied image is an almost square cropped TILE. Return the SAME SQUARE CROP and exact same camera, NOT a wide panorama. Restore finer detail in this exact square crop: sharp wood grain on the lower boardwalk, tiny water reflections, forest needles and flower petals. Preserve all object positions, crop boundaries, proportions, mountain outlines, waterline, railing and plank edges exactly relative to this square canvas. Do not widen the image, zoom, pan, add scenery or change composition. Same crisp natural painted game environment and upper-right sunlight. No people, characters, animals, letters, logos, signs, UI or watermark. Opaque, square image only.",
+      "referencePaths": [
+        "art/dalat/pine_lake/tiles/right-reference.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-3daed037-78ef-4fb5-8ac5-f21013767adf.png",
+      "output": "art/dalat/pine_lake/tiles/right-detail.png",
+      "sha256": "20c7b5291f06df6eec07b13366e6ba62406f47c6cc518ac0a93e6069b38691ed",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "flower_garden_ground_v5",
+      "sceneId": "flower_garden",
+      "type": "ground",
+      "prompt": "Use case: background-extraction. Edit target is this exact 16:9 flower garden. Make one registered STATIC GROUND / MIDDLE-GROUND alpha plate for a layered game scene. Keep exactly the original stone walkway, fixed garden arbor, all middle-distance flower beds and stone borders, fixed tree trunks at the far edges. REMOVE the blue sky, distant hills, far greenhouses, valley and background landscape to TRUE TRANSPARENCY. Also REMOVE only the nearest big flower clusters in the bottom left and bottom right corners BELOW 78% height and the overhanging leaves/branches within the TOP 25% of the picture; reconstruct matching clean stone path/soil underneath removed bottom clusters so they can move as separate foreground sprites. Keep the middle ground gardens unchanged, reconstruct any hidden path pixels. Keep the original exact 16:9 canvas and positions, do not crop, center, zoom, move or redesign anything. The complete walkable stone path must remain opaque across the lower center; original perspective, upper-right sun shadows, colors and sharp detail. Real RGBA alpha only outside these retained objects. No checkerboard pattern, colored matte, text, people, creatures, objects or UI added. Return ONLY this same-position static ground plate on a transparent background.",
+      "referencePaths": [
+        "art/dalat/flower_garden/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-2e045502-be37-4155-a256-d03a5c6e836f.png",
+      "output": "art/dalat/flower_garden/layers/ground.png",
+      "sha256": "cd347493a1ab85df79c38f96c16e0a4cc005e501140c1b57b3bcb96fb72ac791",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "flower_garden_foliage_v5",
+      "sceneId": "flower_garden",
+      "type": "foliage",
+      "prompt": "Use case: background-extraction. From this exact flower-garden master, isolate ONLY (1) the overhanging leafy/pine boughs across the upper 25% of the frame, without the thick fixed trunks, and (2) the nearest hydrangea/rose/yellow-flower clusters in the bottom left and right corners, primarily below 78% height. Keep those exact objects at their original exact canvas coordinates, scale and perspective. Everything else must be TRUE transparent RGBA: remove sky, distant hills, greenhouses, garden arbor, middle flower beds, ALL stone path and ground, rocks and tree trunks. This is a registered foreground/canopy overlay, not a rearranged cutout sheet. Preserve 16:9 full-canvas framing and fine petals/needles/leaf edges, original upper-right light and colors. Do not add any objects, people, characters, lettering or UI. No ground shadows, no checkerboard pixels, no colored backdrop. Real transparency.",
+      "referencePaths": [
+        "art/dalat/flower_garden/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-58e5d8b3-821d-4a5d-a843-50f0bf1d02b1.png",
+      "output": "art/dalat/flower_garden/layers/foliage.png",
+      "sha256": "d42eb6f6fc50b907e2f37e47d647dd147d0cddf5469e464d6c1d9269363d323a",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "flower_garden_distant_v5",
+      "sceneId": "flower_garden",
+      "type": "distant",
+      "prompt": "Use case: precise-object-edit. Create the DISTANT BACKGROUND PLATE from this exact garden master. Preserve the same camera, original sky, clouds, distant pine-covered hills, valley greenhouses and distant flower fields at their exact positions in the upper/middle half. REMOVE ALL foreground objects: both framing trees and overhanging branches, the timber arbor, close and middle garden flower beds, rocks, borders and the complete stone walking path. Reconstruct and extend the far green valley/flower fields and pine-covered slopes continuously behind all those removed foreground objects, all the way down to the bottom edge. This empty distant landscape will be viewed through separate foreground alpha plates, so no close plants, trees, rocks, paving or structures may remain baked into it. Same crisp fine detail and original upper-right sun lighting/colors. Keep exact 16:9 canvas, NO crop, zoom or camera movement. Output fully OPAQUE landscape, no transparency. No people, animals, characters, text, UI or watermark.",
+      "referencePaths": [
+        "art/dalat/flower_garden/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-b2ce8da6-4f54-4a94-bb6b-e77db2d1cfce.png",
+      "output": "art/dalat/flower_garden/layers/distant.png",
+      "sha256": "4ccf4509a0d7fb7430c1e39ef5ba56bc9b5d9878489ba32d17a25f5fc66e7a13",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "tea_hills_ground_v5",
+      "sceneId": "tea_hills",
+      "type": "ground",
+      "prompt": "Use case: background-extraction. Extract a registered STATIC NEAR GROUND alpha plate from this exact tea-hill master. KEEP the entire tan walking path including the wide near standing area and the trail winding up the right hill, the path-edge stones and blank trail-marker rock, and the nearest tea bushes immediately alongside the path. Remove to TRUE TRANSPARENCY the sky, clouds, all distant mountain ridges, valley and far tea terraces (everything behind the nearest tea hedges). Remove the overhanging pine bough at the top left and the very nearest leafy/wildflower clusters in the two bottom corners; reconstruct matching path/soil beneath those removed bottom plants. Preserve original exact positions, shapes, perspective and 16:9 canvas; no crop, zoom or recentering. The lower standing path must remain opaque and open. Same fine sharp detail, upper-right sunlight and colors. No people, characters, animals, text, signs or UI. No solid matte or checkerboard; real RGBA transparency outside retained near terrain.",
+      "referencePaths": [
+        "art/dalat/tea_hills/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-76c6d194-25b9-4058-acd7-decd30b4bd75.png",
+      "output": "art/dalat/tea_hills/layers/ground.png",
+      "sha256": "5f8d8315ec0f8c046a52d0d13653605df31e3c627da06601b4da74493eb9e2ee",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "tea_hills_foliage_v5",
+      "sceneId": "tea_hills",
+      "type": "foliage",
+      "prompt": "Use case: background-extraction. Isolate ONLY the overhanging pine branch with needles/cones in the top-left 25% and the VERY NEAREST leafy tea/wildflower clusters at bottom-left and bottom-right corners, primarily below 78% height, from this exact tea-hill image. Retain these objects at their exact same coordinates on the original 16:9 canvas, colors, scale and lighting. Remove EVERYTHING ELSE to true RGBA transparency: no sky, hills, valley, tea terraces in the middle, path, stone marker, ground or rocks. No recentering, zooming, cropping, rearrangement or changes to plant shapes. Preserve very sharp individual needles, leaves, flowers and soft antialiased edges. The center of the entire image is empty transparent. No people, creatures, text, writing, matte colors, checkerboard pixels, UI or watermark. Registered foreground/canopy overlay only.",
+      "referencePaths": [
+        "art/dalat/tea_hills/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-9a5aaefc-a15e-48f9-8c5c-cada65e93181.png",
+      "output": "art/dalat/tea_hills/layers/foliage.png",
+      "sha256": "a5b3bf04902e42b1f043e6e6122a2719cda8ec6996e4c26142b14df9d23ef1fc",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "tea_hills_distant_v5",
+      "sceneId": "tea_hills",
+      "type": "distant",
+      "prompt": "Use case: precise-object-edit. Produce ONLY the DISTANT LANDSCAPE BACKPLATE from this exact tea-hill master. Preserve the original exact sky, clouds, mountain skyline, distant pine forest and far tea terraces at their existing coordinates. REMOVE the upper-left foreground pine branch and all near foreground bushes, flowers, marker rock and walking path. Fill behind every removed object with naturally continuous farther-away tea terraces/green valley slopes, extending to the bottom of the image. No close path or near bushes/branches/rocks may remain baked into this distant layer. Preserve exact 16:9 camera and field of view, no zoom/crop/reframing, same crisp painterly detail and original upper-right sunlight/colors. Full opaque image. No people, creatures, characters, text, lettering, UI, logos or watermark.",
+      "referencePaths": [
+        "art/dalat/tea_hills/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-25f12420-fe9b-4577-a160-b7966cfcbca4.png",
+      "output": "art/dalat/tea_hills/layers/distant.png",
+      "sha256": "1e363ed58f934fa15d88ab47e0a8f061d1719b35efaaf5eed799559e074b16d1",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "pine_lake_ground_v5",
+      "sceneId": "pine_lake",
+      "type": "ground",
+      "prompt": "Use case: background-extraction. Extract a registered STATIC BOARDWALK/GROUND alpha plate from this exact EMPTY lake master. KEEP the entire wooden boardwalk, every plank and its existing cast-light pattern, the complete low railing, fixed left shoreline gravel/rocks and fixed pine TRUNKS at the left edge. REMOVE to TRUE TRANSPARENCY all sky, mountains, far forest and the ENTIRE blue lake/water seen between/above/below railing gaps. Also remove the overhanging leafy pine BOUGHS at the top and the closest hydrangea/fern clusters in bottom corners; reconstruct appropriate matching timber/shore ground beneath removed closest plants. Keep all original object coordinates, exact 16:9 canvas, scale, perspective, sharp detail, wood grain, upper-right sunlight and colors. No crop, zoom, recentering or redesign. The lower boardwalk walking surface must stay fully opaque and empty. Preserve holes between railing bars as actual alpha. No people, animals, characters, letters, signs, UI or watermark. No checkerboard pixels or colored matte, real transparent RGBA.",
+      "referencePaths": [
+        "art/dalat/pine_lake/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-2b25e628-1aba-4a42-90cd-546c0b641715.png",
+      "output": "art/dalat/pine_lake/layers/ground.png",
+      "sha256": "b4934721b080dd99b0a47557b32c9347b0457bc7834ace6ee2d3128e4e258634",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "pine_lake_foliage_v5",
+      "sceneId": "pine_lake",
+      "type": "foliage",
+      "prompt": "Use case: background-extraction. From this exact EMPTY lake master isolate ONLY the thin overhanging pine boughs/needles along the upper left and upper right corners (roughly top 30%, no thick tree trunks) and the closest blue/violet hydrangea and fern plant clusters in the bottom left/right corners (mostly below 72% height). All retained objects MUST stay at their original exact same canvas positions, scale and shape on the full original 16:9 frame. Remove ALL sky, hills, far forest, water, thick trunks, wooden boardwalk, railing, rocks, ground and other scenery to true RGBA transparency. This is a registered canopy and foreground overlay, no cropped cutout sheet or rearrangement. Preserve fine pine needles, leaf edges and petals, original colors and upper-right light. No invented plants, people, creatures, text, UI, checkerboard pixels or colored matte. Transparent background only.",
+      "referencePaths": [
+        "art/dalat/pine_lake/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-01d2faa1-c39c-4bda-a2f4-2b4ad78d884e.png",
+      "output": "art/dalat/pine_lake/layers/foliage.png",
+      "sha256": "78006f794743d1e538df2afe7cabdde97e23c3394bee4d3df520d58e73997e98",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": true,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    },
+    {
+      "jobId": "pine_lake_distant_v5",
+      "sceneId": "pine_lake",
+      "type": "distant",
+      "prompt": "Use case: precise-object-edit. Make the DISTANT LAKE BACKGROUND PLATE from this exact empty master. Preserve original sky/clouds, distant mountain skyline, far pine forests and reflected lake, exactly the same camera and image positions. REMOVE all foreground objects: the boardwalk and entire railing, the large left trunks and shore rocks/gravel, the top overhanging pine boughs, and all close flower/fern clusters. Reconstruct continuous blue-green lake reflections behind the removed boardwalk, railing and shore foreground all the way to the bottom edge; reconstruct sky and distant forest behind the removed top branches/trunks. No boardwalk, rail, large close trees or nearest plants may remain baked into this layer. Preserve exact 16:9 framing without crop, zoom, pan or redesign of distant scenery. Same bright upper-right midmorning light/colors, very crisp detailed reflections and pine ridges. Fully opaque landscape, NO humans, creatures, characters, writing, signs, text, logos, UI or watermark.",
+      "referencePaths": [
+        "art/dalat/pine_lake/source/master-fullhd.png"
+      ],
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-466c00fd-5763-4a9e-bdc5-379e937c1db7.png",
+      "output": "art/dalat/pine_lake/layers/distant.png",
+      "sha256": "553ededdb7cd7409a099f0228fa366ec3d535fcf0b1271896769e7f128c4b2d6",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "hasAlpha": false,
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null
+    }
+  ]
+}

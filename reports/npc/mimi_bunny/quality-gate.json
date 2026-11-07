@@ -1,0 +1,135 @@
+{
+  "npcId": "mimi_bunny",
+  "productionReady": false,
+  "blockers": [
+    "PARTS_NOT_APPROVED",
+    "PILOT_NOT_APPROVED",
+    "PRODUCTION_NOT_APPROVED",
+    "RIG_NOT_APPROVED",
+    "RENDERED_LAYER_NOT_APPROVED:body",
+    "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+    "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+    "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+    "PILOT_APPROVAL_HASH_MISMATCH",
+    "PRODUCTION_APPROVAL_HASH_MISMATCH",
+    "RUNTIME_NOT_PACKAGED"
+  ],
+  "master": {
+    "status": "TECHNICAL_PASS_VISUAL_REVIEW_REQUIRED",
+    "technicalPass": true,
+    "sha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+    "bytes": 1654187,
+    "width": 1087,
+    "height": 1446,
+    "channels": 4,
+    "hasAlpha": true,
+    "transparentPixels": 747951,
+    "semiTransparentPixels": 823121,
+    "bbox": {
+      "left": 26,
+      "top": 6,
+      "width": 1009,
+      "height": 1434
+    },
+    "margins": {
+      "left": 26,
+      "top": 6,
+      "right": 52,
+      "bottom": 6
+    },
+    "errors": [],
+    "warnings": [
+      "PADDING_BELOW_6_PERCENT"
+    ],
+    "visualReview": [
+      "identity",
+      "no ground shadow",
+      "no text",
+      "full silhouette",
+      "halo on light/dark/cafe backgrounds"
+    ],
+    "approved": true,
+    "npcId": "mimi_bunny"
+  },
+  "partsReady": false,
+  "preview": {
+    "npcId": "mimi_bunny",
+    "mode": "draft",
+    "renderer": "Canvas2D deterministic seek + Playwright",
+    "encoder": "Sharp/libvips GIF (current draft encoder; FFmpeg available)",
+    "sourceHash": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+    "rigHash": "e913c32b545fa1fa6b77c2404be626c108184862e802c2b54bc2339455814f5e",
+    "rendererHash": "d08f38e5aaead7726ee99aca215f749e9b71b81ef8912286306e0878933d1d0d",
+    "renderedLayers": [
+      {
+        "file": "draft/registered/body.png",
+        "sha256": "8f6b2ee5f9ff9093af052236b2fa0ed23641110db24600e2d7141bd4d5aba53d"
+      },
+      {
+        "file": "draft/registered/arm_wave.png",
+        "sha256": "58af4d26f6df1cf0b986d5ca385ef9f51a3688c791714f975ac8ce366da40b98"
+      },
+      {
+        "file": "draft/registered/eye_l_closed.png",
+        "sha256": "e02acebbf150d6d15637d05e3aafc9802f0a32610a4b54a2253a90752ae549ab"
+      },
+      {
+        "file": "draft/registered/eye_r_closed.png",
+        "sha256": "3b766dcaaa224bee7beb3cec8c1b6e5bb3fea91ee6e66bbb99558e1b229f7f85"
+      }
+    ],
+    "clips": [
+      {
+        "state": "idle",
+        "path": "reports/npc/mimi_bunny/preview/mimi_bunny_idle.gif",
+        "sha256": "d619bfb2606c02644c4a0e3d38db730536b7a2cc149d8ceef956cb4459984940",
+        "frames": 84,
+        "width": 512,
+        "height": 640,
+        "durationMs": 7000,
+        "loop": 0,
+        "stableFeet": true,
+        "feetPixelRegion": {
+          "left": 0,
+          "top": 558,
+          "width": 512,
+          "height": 60
+        },
+        "feetPixelSha256": "79d29c3e2ba7fdea6693f994a949759b00caef6bac7776d51886fcff4f045997",
+        "pass": true
+      },
+      {
+        "state": "interaction",
+        "path": "reports/npc/mimi_bunny/preview/mimi_bunny_interaction.gif",
+        "sha256": "4776b1dea2ad21659ad919066c49824e30faf65bc800c7d2c65399e36b8693a8",
+        "frames": 48,
+        "width": 512,
+        "height": 640,
+        "durationMs": 2000,
+        "loop": 1,
+        "stableFeet": true,
+        "feetPixelRegion": {
+          "left": 0,
+          "top": 558,
+          "width": 512,
+          "height": 60
+        },
+        "feetPixelSha256": "79d29c3e2ba7fdea6693f994a949759b00caef6bac7776d51886fcff4f045997",
+        "pass": true
+      }
+    ],
+    "browserChecks": {
+      "reviewMatchesCurrentAssets": true,
+      "reducedMotionStartsPaused": true,
+      "idleLoopSamePose": true,
+      "repeatedClickOneForeground": true,
+      "interactionEndsListening": true,
+      "mobileNoHorizontalOverflow": true,
+      "pageErrors": []
+    },
+    "pass": true,
+    "productionApproved": false
+  },
+  "paidApiCalls": 0,
+  "humanReviewRequired": true
+}

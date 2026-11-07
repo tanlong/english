@@ -1,0 +1,40 @@
+{
+  "jobs": [
+    {
+      "jobId": "ollie_owl_body",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: Ollie Owl body layer for 2D puppet rig. Use attached approved master as only design source. ONE change: remove ONLY the raised arm/wing on VIEWER'S RIGHT that currently touches the spectacles, from the shoulder joint to all fingers/feathers, and reconstruct the matching burgundy/gold cloak and feathers behind this arm. Keep the round GOLD spectacles on the face intact; the wing will be a separate layer. Preserve exact owl face, amber eyes, cream eyebrows/beard, beak, hat/feather, plum/burgundy gold costume, open brown book with gold emblems held by the OTHER wing on viewer's left, boots, books and bag, pose, camera and proportions. Fixed full-body same framing, no zoom, high-resolution genuine transparent PNG; no other changes, no new objects, no lettering, no floor shadow. Owner approved this exact wizard owl outfit, do not redesign into older cafe prompts. Draft for reconstruction review.",
+      "input": "MD/Ollie Owl.png",
+      "output": "art/npc/ollie_owl/draft/parts/body.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-1044a598-380e-482b-bac8-24370c5e0076.png",
+      "approved": false
+    },
+    {
+      "jobId": "ollie_owl_arm_wave",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: ONE isolated Ollie Owl arm/wing for 2D puppet rig. Use the attached approved master. Extract and reproduce ONLY the VIEWER-RIGHT raised wing that is adjusting spectacles, complete from shoulder to feathered pointing fingertips. Keep exact light cream/tan feathers and dark brown layered flight feathers, source shape and curled wing fingers, original elbow bent so fingertips are at upper left and rounded shoulder is lower right. Include a full rounded overlapping shoulder end to attach at cape opening. No actual spectacles in this layer (they stay on the face); no face, beak, head, hat, body, book, bag, cloak or extra parts. Match exact detailed soft cel shading, outlines, warm palette, upper-right light, front three-quarter view. True transparent PNG, full detached wing uncropped, generous padding, maximum practical resolution, one component not sheet. Draft requiring human review.",
+      "input": "MD/Ollie Owl.png",
+      "output": "art/npc/ollie_owl/draft/parts/arm_wave.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-872719d5-32ac-4b3e-b455-1d97d25876c5.png",
+      "approved": false
+    },
+    {
+      "jobId": "ollie_owl_eyes_closed",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Edit target: attached APPROVED MASTER Ollie Owl. Perform ONE change only: gently close BOTH amber eyes into curved natural eyelids behind the gold round spectacles, for an aligned blink frame. Preserve gold spectacle rims/lenses/chain exactly, owl beak and smiling mouth, eyebrows, feathered beard, hat, original raised wing touching glasses, other wing holding open book, all outfit detail and emblems, boots, camera, lighting, exact original full-body pose and original canvas registration. Do not move head or glasses or alter costume. True transparent PNG, same framing and resolution (1205x1305 if supported). No new limbs, objects, text, floor shadow, backdrop, zoom or sheet. This is a full-canvas reference for extracting eye patches, not a new master; unchanged original arms intentionally remain in it.",
+      "input": "MD/Ollie Owl.png",
+      "output": "art/npc/ollie_owl/draft/parts/eyes_closed.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-37b7a98b-087d-4e99-b4b7-dae388bec820.png",
+      "approved": false
+    }
+  ]
+}
