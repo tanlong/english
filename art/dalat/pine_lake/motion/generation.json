@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-11-07",
+  "model": null,
+  "costUsd": null,
+  "reference": "boat-region-reference.png",
+  "referenceSource": "art/dalat/pine_lake/source/master-fullhd.png",
+  "referenceCrop": { "left": 360, "top": 360, "width": 480, "height": 240 },
+  "jobs": [
+    {
+      "id": "boat-region-repair",
+      "useCase": "precise-object-edit",
+      "output": "boat-region-repaired.png",
+      "generatedFile": "exec-84b82250-3b1f-4bfd-9d30-cf838244dd70.png",
+      "promptSummary": "Remove only the small cream/yellow wooden rowboat and its pale reflection. Reconstruct the green-blue lake and vertical pine-tree reflections. Keep the dock, forest, shoreline, colors, perspective and exact 2:1 framing unchanged. No new objects or text. Opaque repair crop.",
+      "integration": "Only the 105×62 source-pixel hull/reflection region is composited, with an eight-pixel feather; all other source pixels are retained."
+    },
+    {
+      "id": "rowboat-alpha",
+      "useCase": "background-extraction",
+      "output": "boat-cutout.png",
+      "generatedFile": "exec-15729369-f06e-4c01-975a-13f8cc667c62.png",
+      "promptSummary": "Extract only the same empty cream/ivory wooden rowboat with gold rim, reddish brown interior and cross seats, at the same wide side/three-quarter angle. Preserve orientation and cel-shaded daylight style. Genuine transparent background, no water, reflection, dock, people, oars, props, redesign or text.",
+      "integration": "Alpha-trimmed and resized to a 256-pixel texture, rendered at approximately the original boat size; reflection is a separate mirrored layer."
+    }
+  ],
+  "localIntegrationRequested": true,
+  "artReviewStatus": "pending owner visual review"
+}

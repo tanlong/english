@@ -66,7 +66,7 @@ export function useDailySpeaking() {
   const [error, setError] = useState("");
   const [audioError, setAudioError] = useState("");
   const [playing, setPlaying] = useState(false);
-  const [autoSpeak, setAutoSpeak] = useState(false);
+  const [autoSpeak, setAutoSpeak] = useState(true);
   const [hints, setHints] = useState(0);
   const requestRef = useRef<AbortController | null>(null);
   const audioRun = useRef(0);
@@ -154,7 +154,11 @@ export function useDailySpeaking() {
         e instanceof Error &&
         e.message !== "Đã dừng âm thanh."
       )
-        setAudioError(e.message);
+        setAudioError(
+          e.name === "NotAllowedError"
+            ? "Trình duyệt chưa cho phép tự phát. Bấm Nghe lại để nghe phản hồi."
+            : e.message,
+        );
     } finally {
       if (mounted.current && run === audioRun.current) setPlaying(false);
     }

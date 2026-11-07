@@ -1,0 +1,93 @@
+{
+  "provider": "built-in image_gen",
+  "model": null,
+  "usage": null,
+  "costUSD": null,
+  "billingNote": "No application API key used. Tool did not return model, usage or monetary cost.",
+  "jobs": [
+    {
+      "npcId": "gray_boo",
+      "jobId": "gray_boo_body",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-resolution body layer for the Gray Boo 2D puppet rig. Image 1 is the exact OWNER-APPROVED master and sole identity reference. Perform ONE change ONLY: remove the complete outstretched waving arm on the VIEWER'S LEFT, from the shoulder including its broad cream/purple/gold bell sleeve through the lavender hand with spread alien fingers. Reconstruct only the robe/cape surface newly revealed underneath that arm. Keep the OTHER arm and the held glowing blue guide tablet completely unchanged. Preserve exact lavender alien head and large purple eyes, smiling mouth, hood and glowing antenna orbs, gold-trim cream/purple robe with starry purple cape lining, planet headphones and brooch, belt, alien-symbol satchel, dark trousers and white/purple/cyan boots. Keep all colors, patterns, proportions, linework, shading, camera, light and original full-body framing. Source canvas is 1127x1395; match registration and scale. True transparent PNG, no floor shadow, scenery, extra objects, limbs or new lettering. One full-body component, NOT a sheet. Do not redesign as a hoodie alien. All generated artwork is DRAFT pending review.",
+      "input": "MD/Gray Boo.png",
+      "output": "art/npc/gray_boo/draft/parts/body.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b11c-4d4d-7073-97c0-c6f8bad285cc/exec-ef1ab9d5-4efe-49d8-91d5-1598ac856ac6.png",
+      "approved": false,
+      "status": "DRAFT_AWAITING_REVIEW",
+      "inputSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "outputSha256": "28004f049bd7b3973680bf71163869bd158940eeb298257b924cf48c28f668b5",
+      "metadata": {
+        "width": 1127,
+        "height": 1396,
+        "channels": 4,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 15,
+          "top": 8,
+          "width": 1092,
+          "height": 1378
+        }
+      }
+    },
+    {
+      "npcId": "gray_boo",
+      "jobId": "gray_boo_arm_wave",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: ONE isolated arm layer for Gray Boo 2D puppet rig. Image 1 is the exact OWNER-APPROVED master. Isolate ONLY the VIEWER-LEFT outstretched greeting arm, from its shoulder through the large cream bell sleeve with purple stripes, thick gold trim and dark purple interior to the spread lavender alien hand. Preserve the EXACT SOURCE ARM POSE: shoulder at right, broad sleeve extending diagonally down-left, cuff opening lower-left and hand reaching left/up with the original spread alien fingers. Preserve the sleeve folds, gold trim, original alien finger count and anatomy, lavender skin colors, bold outlines and crisp detailed soft cel shading. Complete only a rounded shoulder root hidden by the robe so the detached part overlaps cleanly in a rig. No head, hood, cape, body, bag, legs, tablet, other arm, extra jewelry, text or background. Whole detached arm including full large bell sleeve, high resolution and clear transparent padding. True transparent PNG, no floor shadow or scenery. One component, NOT a contact sheet; DRAFT pending review.",
+      "input": "MD/Gray Boo.png",
+      "output": "art/npc/gray_boo/draft/parts/arm_wave.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b11c-4d4d-7073-97c0-c6f8bad285cc/exec-ef9c3daa-3f36-4bb8-b550-bed3db7bbd25.png",
+      "approved": false,
+      "status": "DRAFT_AWAITING_REVIEW",
+      "inputSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "outputSha256": "e1385aaab09e6c9aa76a902182073d551bdc8f68b7bbad4f2459d2dd00f4d3f6",
+      "metadata": {
+        "width": 1358,
+        "height": 1158,
+        "channels": 4,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 38,
+          "top": 25,
+          "width": 1296,
+          "height": 1093
+        }
+      }
+    },
+    {
+      "npcId": "gray_boo",
+      "jobId": "gray_boo_eyes_closed",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: aligned full-canvas blink edit for Gray Boo puppet rig. The attached image is the exact OWNER-APPROVED master and sole identity reference. Change ONLY BOTH EYES: gently close the two large purple alien eyes into natural curved eyelids for one blink; keep purple lids consistent with the lavender alien face. Preserve face boundaries, head shape, cheek markings, antenna orbs, smiling mouth, hood, planet headphones and brooch, exact original VIEWER-LEFT outstretched waving hand and sleeve, viewer-right arm and glowing guide tablet, purple/gold/cream robes, starry cape, satchel and boots UNCHANGED. Preserve exact pose, pixel registration, framing, scale, lineweight, palette, shading, three-quarter front camera and light. Source canvas is 1127x1395: match full-body dimensions and registration if possible. Do not move or enlarge the face. True transparent PNG, no background, shadow, new text or objects. This is an aligned full-resolution expression source for extracting eyelid patches, NOT a new master or sprite sheet. DRAFT pending review.",
+      "input": "MD/Gray Boo.png",
+      "output": "art/npc/gray_boo/draft/parts/eyes_closed.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b11c-4d4d-7073-97c0-c6f8bad285cc/exec-85308300-22c2-4079-bf83-f0a6dae4ba7c.png",
+      "approved": false,
+      "status": "DRAFT_AWAITING_REVIEW",
+      "inputSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "outputSha256": "6afb8ec46b25d615abd541ff293a60c366266fcba1ba5705f46d87abe92be59d",
+      "metadata": {
+        "width": 1127,
+        "height": 1396,
+        "channels": 4,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 15,
+          "top": 8,
+          "width": 1093,
+          "height": 1378
+        }
+      }
+    }
+  ]
+}

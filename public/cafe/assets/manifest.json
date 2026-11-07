@@ -1,0 +1,118 @@
+{
+  "assetRevision": "cafe-vector-v1",
+  "updatedAt": "2026-11-04",
+  "owner": "Natural English project",
+  "license": "Original code-drawn artwork; project-owned",
+  "status": "draft-awaiting-art-review",
+  "logicalSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "assets": [
+    {
+      "scene": "inside_cafe",
+      "layer": "sky",
+      "src": "/cafe/assets/inside_cafe-sky-f84692fcff.svg",
+      "checksum": "f84692fcff7545724c3ac05406ff05097f1bfb6bba33b85e5eab86511c486f13",
+      "bytes": 623
+    },
+    {
+      "scene": "inside_cafe",
+      "layer": "mountains",
+      "src": "/cafe/assets/inside_cafe-mountains-653e142ae7.svg",
+      "checksum": "653e142ae723eee9763338a4614c74bdb732771087221067520727f5fa710321",
+      "bytes": 557
+    },
+    {
+      "scene": "inside_cafe",
+      "layer": "architecture",
+      "src": "/cafe/assets/inside_cafe-architecture-59c806febb.svg",
+      "checksum": "59c806febb700c04f1f672366631b00ccc58a9ef56b2fef278f1b2d5bcf469ee",
+      "bytes": 1760
+    },
+    {
+      "scene": "inside_cafe",
+      "layer": "foliage",
+      "src": "/cafe/assets/inside_cafe-foliage-508ecbb634.svg",
+      "checksum": "508ecbb634a4e1bf97ad716378d7ca4c7fecc47a78f84d150e365a4939bfd18c",
+      "bytes": 675
+    },
+    {
+      "scene": "inside_cafe",
+      "layer": "foreground",
+      "src": "/cafe/assets/inside_cafe-foreground-7ebb6ab055.svg",
+      "checksum": "7ebb6ab0550f55acf98841afdb5cc2e9625af5db2f69f36f02df604e7e07df62",
+      "bytes": 1819
+    },
+    {
+      "scene": "outdoor_terrace",
+      "layer": "sky",
+      "src": "/cafe/assets/outdoor_terrace-sky-f84692fcff.svg",
+      "checksum": "f84692fcff7545724c3ac05406ff05097f1bfb6bba33b85e5eab86511c486f13",
+      "bytes": 623
+    },
+    {
+      "scene": "outdoor_terrace",
+      "layer": "mountains",
+      "src": "/cafe/assets/outdoor_terrace-mountains-653e142ae7.svg",
+      "checksum": "653e142ae723eee9763338a4614c74bdb732771087221067520727f5fa710321",
+      "bytes": 557
+    },
+    {
+      "scene": "outdoor_terrace",
+      "layer": "architecture",
+      "src": "/cafe/assets/outdoor_terrace-architecture-3498073f1c.svg",
+      "checksum": "3498073f1c2bf1bbcf05e61bbe40fbdc7490c1edf728402f72684e49319308e1",
+      "bytes": 1019
+    },
+    {
+      "scene": "outdoor_terrace",
+      "layer": "foliage",
+      "src": "/cafe/assets/outdoor_terrace-foliage-5c253d8822.svg",
+      "checksum": "5c253d8822c5f55caa41f8876ed5ce479494b3be61e1349d8f3e07120c7fac93",
+      "bytes": 1241
+    },
+    {
+      "scene": "outdoor_terrace",
+      "layer": "foreground",
+      "src": "/cafe/assets/outdoor_terrace-foreground-33ba5010dd.svg",
+      "checksum": "33ba5010dd7497e506d58d39ea80c2cae2ecc23c45025c086c2ee84088437a7f",
+      "bytes": 2447
+    },
+    {
+      "scene": "mountain_view",
+      "layer": "sky",
+      "src": "/cafe/assets/mountain_view-sky-f84692fcff.svg",
+      "checksum": "f84692fcff7545724c3ac05406ff05097f1bfb6bba33b85e5eab86511c486f13",
+      "bytes": 623
+    },
+    {
+      "scene": "mountain_view",
+      "layer": "mountains",
+      "src": "/cafe/assets/mountain_view-mountains-653e142ae7.svg",
+      "checksum": "653e142ae723eee9763338a4614c74bdb732771087221067520727f5fa710321",
+      "bytes": 557
+    },
+    {
+      "scene": "mountain_view",
+      "layer": "architecture",
+      "src": "/cafe/assets/mountain_view-architecture-e75044e00d.svg",
+      "checksum": "e75044e00ddd304476aff7475a7adc2cc762c8040c30d77dc19b4f6719a08f04",
+      "bytes": 689
+    },
+    {
+      "scene": "mountain_view",
+      "layer": "foliage",
+      "src": "/cafe/assets/mountain_view-foliage-99c50c9ac1.svg",
+      "checksum": "99c50c9ac1192b64b81a0aedca4c90b23215d442bf7cd6fb1327bc3b74cd4e1d",
+      "bytes": 678
+    },
+    {
+      "scene": "mountain_view",
+      "layer": "foreground",
+      "src": "/cafe/assets/mountain_view-foreground-5c5d2ab5df.svg",
+      "checksum": "5c5d2ab5df94264c9be5cba823e312f2edf86b2a087b4c15672637773effd97a",
+      "bytes": 2053
+    }
+  ]
+}

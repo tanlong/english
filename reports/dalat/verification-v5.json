@@ -1,0 +1,137 @@
+{
+  "artRevision": "dalat-fullhd-v5",
+  "generatedAt": "2026-11-07T02:48:20.682Z",
+  "build": {
+    "command": "npm run build -- --webpack",
+    "pass": true,
+    "note": "Turbopack port binding is denied by this environment; Webpack build passed."
+  },
+  "nodeChecks": {
+    "passed": 15,
+    "command": "node --experimental-strip-types --test scripts/cafe-art.test.mjs scripts/cafe-motion.test.mjs scripts/npc-pipeline.test.mjs scripts/cafe.test.mjs scripts/cafe-connections.test.mjs"
+  },
+  "browserChecks": {
+    "report": "reports/dalat/playwright-v5.json",
+    "startTime": "2026-11-07T02:45:07.228Z",
+    "duration": 24303.193000000003,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "responsiveChecks": {
+    "baseURL": "http://localhost:3000",
+    "revision": "dalat-fullhd-v5",
+    "pass": true,
+    "captures": [
+      {
+        "settingId": "flower_garden",
+        "file": "reports/dalat/flower_garden/scene-fullhd.png",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "04af6623dd6485b76ac91b9851c87894fbefc2b9847b3f09b2f964eb9b3af972",
+        "npcs": [
+          "cloud_daisy",
+          "ollie_owl",
+          "mimi_bunny"
+        ]
+      },
+      {
+        "settingId": "tea_hills",
+        "file": "reports/dalat/tea_hills/scene-fullhd.png",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "e734208174a689dbff921bc6899e044e101260ebaa1c91592bead15921402bf9",
+        "npcs": [
+          "astro_bean",
+          "bear_explorer"
+        ]
+      },
+      {
+        "settingId": "pine_lake",
+        "file": "reports/dalat/pine_lake/scene-fullhd.png",
+        "width": 1920,
+        "height": 1080,
+        "sha256": "223febe12e785533915766cec27b3dcf3e40393022b8e38b86636b3c92fca0c0",
+        "npcs": [
+          "gray_boo"
+        ]
+      }
+    ],
+    "viewports": [
+      "2048x1440 capture to 1920x1080",
+      "768x1024",
+      "390x844"
+    ],
+    "failures": [],
+    "toolbarBelowScene": true,
+    "visibleLabelsClickable": true,
+    "sixPuppetsRender": true
+  },
+  "viewports": [
+    "1920x1080",
+    "768x1024",
+    "390x844"
+  ],
+  "sourceHashes": [
+    {
+      "file": "configs/scenes.json",
+      "sha256": "bd40386fd9cccb864cc816fbf4b6a7fbfd3ee359594e5eca81b1435e34651b5c"
+    },
+    {
+      "file": "app/cafe/npc-assets.json",
+      "sha256": "378dcf86607fcaa004260481b91f513480058606686fc0324680202a6d747548"
+    },
+    {
+      "file": "app/cafe/npc-rig.tsx",
+      "sha256": "e87ce913d2ab1a54b1b166b7db820c399c1ebeb77929453967ca4d31df3518cb"
+    },
+    {
+      "file": "app/cafe/npc-puppet.ts",
+      "sha256": "b3f08e47eb0ab639e3aaa6b1c089167c8fcb7517f10c22c96ddd901fd98ee7e7"
+    },
+    {
+      "file": "app/cafe/npc-motion.ts",
+      "sha256": "5203db4686a73360dfa41b31b46d1a7d6c973879ada4655861e561fb87d066b9"
+    },
+    {
+      "file": "app/cafe/workspace.tsx",
+      "sha256": "f0640c9127cce7e7126244f0c4e0ef5af717e44eb7a553a0c55a12faccf37cc7"
+    },
+    {
+      "file": "app/cafe/chat.tsx",
+      "sha256": "0f928011135e894ff418a49165b3cffdedb41f3d74afd71d4234fb6d661efa55"
+    },
+    {
+      "file": "app/cafe/content.ts",
+      "sha256": "90f9cede6783f943e168d66d68ba59146c6796ceb72ac1d67d706a766da43b36"
+    },
+    {
+      "file": "app/cafe/server.ts",
+      "sha256": "b2ca06aa065d96507df319c159244dd630de3fa3ec61a8a84f9b5d289bdd53f5"
+    },
+    {
+      "file": "app/styles/cafe.css",
+      "sha256": "273bf400b0f5a19b1f002ea5e1805b197bfb5a2a7c15b4d2cc6c41fc626a32e2"
+    }
+  ],
+  "captures": [
+    {
+      "scene": "flower_garden",
+      "screenshot": "reports/dalat/flower_garden/scene-fullhd.png",
+      "sha256": "04af6623dd6485b76ac91b9851c87894fbefc2b9847b3f09b2f964eb9b3af972"
+    },
+    {
+      "scene": "tea_hills",
+      "screenshot": "reports/dalat/tea_hills/scene-fullhd.png",
+      "sha256": "e734208174a689dbff921bc6899e044e101260ebaa1c91592bead15921402bf9"
+    },
+    {
+      "scene": "pine_lake",
+      "screenshot": "reports/dalat/pine_lake/scene-fullhd.png",
+      "sha256": "223febe12e785533915766cec27b3dcf3e40393022b8e38b86636b3c92fca0c0"
+    }
+  ],
+  "finalVisualOwnerReview": "pending",
+  "externalDeployment": false
+}

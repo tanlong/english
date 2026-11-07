@@ -1,0 +1,72 @@
+{
+  "npcId": "cloud_daisy",
+  "ready": false,
+  "jobs": [
+    {
+      "id": "body",
+      "kind": "parts",
+      "path": "parts/body.png",
+      "sha256": null,
+      "draftPath": "draft/parts/body.png",
+      "status": "AWAITING_PART_APPROVAL",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY body as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "arm_wave",
+      "kind": "parts",
+      "path": "parts/arm_wave.png",
+      "sha256": null,
+      "draftPath": "draft/parts/arm_wave.png",
+      "status": "AWAITING_PART_APPROVAL",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY arm wave as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "arm_hold",
+      "kind": "parts",
+      "path": "parts/arm_hold.png",
+      "sha256": null,
+      "draftPath": "draft/parts/arm_hold.png",
+      "status": "AWAITING_PART_APPROVAL",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY arm hold as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "eyes_closed",
+      "kind": "parts",
+      "path": "parts/eyes_closed.png",
+      "sha256": null,
+      "draftPath": "draft/parts/eyes_closed.png",
+      "status": "AWAITING_PART_APPROVAL",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY eyes closed as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "cup",
+      "kind": "props",
+      "path": "props/cup.png",
+      "sha256": null,
+      "draftPath": "draft/props/cup.png",
+      "status": "AWAITING_PART_APPROVAL",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY cup as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "cloth",
+      "kind": "props",
+      "path": "props/cloth.png",
+      "sha256": null,
+      "draftPath": "draft/props/cloth.png",
+      "status": "AWAITING_PART_APPROVAL",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Cloud Daisy master as the sole identity reference. Create ONLY cloth as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "frames": {
+    "ollie_owl/body.png": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 709,
+        "h": 768
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 709,
+        "h": 768
+      },
+      "sourceSize": {
+        "w": 709,
+        "h": 768
+      },
+      "originalPngSize": {
+        "width": 1205,
+        "height": 1306
+      },
+      "sourceFile": "draft/registered/body.png",
+      "sourcePngSha256": "51ebc08dca277736475567081aa31982c2a072f00546fab582b63d2aff2c43d0",
+      "resizedRgbaSha256": "b6bcb87e492ab05a9d347d8f59a2e9bc8b2762978a242a9d77186a70904bb261"
+    },
+    "ollie_owl/arm_wave.png": {
+      "frame": {
+        "x": 713,
+        "y": 2,
+        "w": 660,
+        "h": 768
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 660,
+        "h": 768
+      },
+      "sourceSize": {
+        "w": 660,
+        "h": 768
+      },
+      "originalPngSize": {
+        "width": 1013,
+        "height": 1179
+      },
+      "sourceFile": "draft/registered/arm_wave.png",
+      "sourcePngSha256": "c88f34a233e0d4c3de3b72982a6d5908cb3d9158a0dd0351d8909ad0131e506a",
+      "resizedRgbaSha256": "a57baf3c269b5a04a138559cf48e46100dc0341f966aa3b5ac9e870c9adf96cd"
+    },
+    "ollie_owl/eye_l_closed.png": {
+      "frame": {
+        "x": 2,
+        "y": 772,
+        "w": 213,
+        "h": 151
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 213,
+        "h": 151
+      },
+      "sourceSize": {
+        "w": 213,
+        "h": 151
+      },
+      "originalPngSize": {
+        "width": 213,
+        "height": 151
+      },
+      "sourceFile": "draft/registered/eye_l_closed.png",
+      "sourcePngSha256": "a429f355b671dcaf9daf080ca0241f55fb8e265447a736bf71a2b4c4a1ce33f4",
+      "resizedRgbaSha256": "5d232a46e5b6dab8f5e953b2ca46565035feb0892a34c5c18a2aa4f6cbb64936"
+    },
+    "ollie_owl/eye_r_closed.png": {
+      "frame": {
+        "x": 217,
+        "y": 772,
+        "w": 157,
+        "h": 145
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 157,
+        "h": 145
+      },
+      "sourceSize": {
+        "w": 157,
+        "h": 145
+      },
+      "originalPngSize": {
+        "width": 157,
+        "height": 145
+      },
+      "sourceFile": "draft/registered/eye_r_closed.png",
+      "sourcePngSha256": "7b67e627d4427af403041e40ab8f2c459370517e1ec7f05cc8751e1902ecf5d4",
+      "resizedRgbaSha256": "4775e7774b3d46d29c15e3e6f989022e07a382814a030d09726fbf766b2f8732"
+    }
+  },
+  "meta": {
+    "app": "npc/pack-draft.mjs",
+    "version": "3.0",
+    "image": "atlas.webp",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1536,
+      "h": 925
+    },
+    "scale": "1",
+    "status": "DRAFT_NOT_FOR_PRODUCTION",
+    "sourceSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+    "rigSha256": "3704b06758443bcafb5ec2033c1fe910516f4588c5ad2ab79903b64af371a13a",
+    "atlasSha256": "9bd82946bba468c80da5175d0d115af87c8f9e29ccc5560baca542dbdb63453d",
+    "maxTextureEdge": 768,
+    "padding": 2
+  }
+}

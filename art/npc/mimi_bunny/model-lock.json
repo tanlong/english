@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "mimi_bunny",
+  "displayName": "Mimi Bunny",
+  "aliases": [],
+  "approved": true,
+  "masterPath": "art/npc/mimi_bunny/source/master_rgba.png",
+  "masterSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+  "sourcePath": "MD/Mimi Bunny.png",
+  "angle": "three-quarter-front",
+  "light": "upper-right",
+  "camera": "fixed",
+  "designConstraints": {
+    "species": "rabbit",
+    "outfit": "exactly as supplied reference; do not infer from legacy prompts",
+    "preserve": [
+      "palette",
+      "silhouette",
+      "face",
+      "costume",
+      "markings"
+    ]
+  },
+  "approval": {
+    "accepted": true,
+    "sha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+    "normalizedSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+    "owner": "product owner",
+    "date": "2026-11-06",
+    "evidence": "Explicit user reply: Chọn cả 5 ảnh làm master",
+    "override": "Preserve exact supplied character design and anatomy over older bible descriptions"
+  },
+  "assetStatus": "APPROVED_MASTER"
+}

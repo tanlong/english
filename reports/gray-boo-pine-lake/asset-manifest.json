@@ -1,0 +1,155 @@
+{
+  "version": "1.1",
+  "source": "art/dalat/pine_lake/source/master-fullhd.png",
+  "sourceSha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd",
+  "provenance": "Reuses project image_gen Full HD artwork and registered alpha plates. Rowboat alpha and a local hull/reflection repair are generated with built-in image_gen; see motion generation log. Small cyan FX and shadow are procedural.",
+  "motionGeneration": "art/dalat/pine_lake/motion/generation.json",
+  "rowerGeneration": "art/dalat/pine_lake/motion/rowing-generation.json",
+  "waterRenderer": "Canvas2D strip displacement of real reflection pixels, clipped to lake polygon; 30 paints per second maximum.",
+  "sourceProvenance": "art/dalat/pine_lake/source/fullhd-provenance.json",
+  "reference": "MD/Gray_Boo_Pine_Lake_Guide_Package_v1.1/Gray_Boo_Pine_Lake_Reference.jpg",
+  "geometry": "Existing native 1920×1080 project master; reference JPG is not stretched or upscaled.",
+  "artReviewStatus": "pending owner visual review",
+  "productionApproved": false,
+  "animationConfig": "configs/mountain_view.animation.json",
+  "npcRig": "/cafe/npc/gray_boo/runtime/rig-c601214c95.json",
+  "samplerStates": [
+    "idle",
+    "notice",
+    "listening",
+    "thinking",
+    "talking",
+    "error"
+  ],
+  "idleBlinkMs": [
+    1150,
+    1380
+  ],
+  "preview": {
+    "fps": 8,
+    "durationMs": 3000,
+    "validation": "reports/gray-boo-pine-lake/preview-validation.json"
+  },
+  "assets": [
+    {
+      "src": "/cafe/assets/scenes/mountain_view/bg_clean.webp",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": false,
+      "bytes": 1272524,
+      "sha256": "c40c74a938db0a15a8d9adc8e5131eeb546d14ef09be456332deb971b10ac018"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/lake_base_boatless.webp",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": false,
+      "bytes": 1272620,
+      "sha256": "f6d4ead3673cd546cdfd08effca2d692bf7692c24cf3085c4412334fc19fc3b4"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/landscape_boatless.webp",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": false,
+      "bytes": 1002430,
+      "sha256": "0206630a80f1ee782552221791ea83328382b2433c08dc345408d6feef0dff6c"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/rowboat.webp",
+      "width": 256,
+      "height": 55,
+      "hasAlpha": true,
+      "bytes": 10372,
+      "sha256": "c97a346e6a1696d0eed2a8eaa596b8050ad0cb07622b04e90b4bca7288bc00e0"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/rower_redhair_strawhat.webp",
+      "width": 384,
+      "height": 524,
+      "hasAlpha": true,
+      "bytes": 64282,
+      "sha256": "51b544564b0de461ffe32b391fdf35695cd9c825d81d56bccf7e852030a136a1"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/rowing_oar.webp",
+      "width": 55,
+      "height": 512,
+      "hasAlpha": true,
+      "bytes": 10342,
+      "sha256": "4d497429a0e85b307286db96719053a82f71c7c5074c0c205a2996b1fe9422a5"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/pine_branch_left.webp",
+      "width": 850,
+      "height": 149,
+      "hasAlpha": true,
+      "bytes": 127670,
+      "sha256": "de147c75d5d29154c19cebad82811bc44c1949e6cec97c33207b4f88330b3d04"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/pine_branch_right.webp",
+      "width": 430,
+      "height": 197,
+      "hasAlpha": true,
+      "bytes": 85778,
+      "sha256": "22cf2984e6c482305304807fbaa0a495cf3334c5ba5b87e490377ecc0f4917a0"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/hydrangea_left.webp",
+      "width": 383,
+      "height": 424,
+      "hasAlpha": true,
+      "bytes": 111798,
+      "sha256": "7df45d4172fa122c34c229a7079a0bed8e5659ffc53a4999a185e1b6a6a4a8de"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/hydrangea_right.webp",
+      "width": 469,
+      "height": 386,
+      "hasAlpha": true,
+      "bytes": 107816,
+      "sha256": "f5c8923caf4124d9cb7e2c48e740b1e7770a8d38440e83c20109519624c34a31"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/lake_shore_mask.webp",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": true,
+      "bytes": 11898,
+      "sha256": "61a0a8292272cb3f11c93c866bbb5bc9f45d892c396ce4c53298396fb0e0dad4"
+    },
+    {
+      "src": "/cafe/assets/scenes/mountain_view/lake_shimmer_alpha.webp",
+      "width": 1920,
+      "height": 1080,
+      "hasAlpha": true,
+      "bytes": 129242,
+      "sha256": "b2bd03c432df8b2b339995ec854963cb1954e9308a963d164b124c73aa952dd3"
+    },
+    {
+      "src": "/cafe/assets/npc/gray_boo/hologram_glow.webp",
+      "width": 192,
+      "height": 128,
+      "hasAlpha": true,
+      "bytes": 2524,
+      "sha256": "2ec41f752011657d199068079f49f47cb44bb4a17ad2520ddaa8024bc7dbaa66"
+    },
+    {
+      "src": "/cafe/assets/npc/gray_boo/sparkle.webp",
+      "width": 32,
+      "height": 32,
+      "hasAlpha": true,
+      "bytes": 194,
+      "sha256": "5d94e9db5081d654849d6c07ef244c822f870712551d678d59a41d1a1d3cf5bc"
+    },
+    {
+      "src": "/cafe/assets/npc/gray_boo/shadow.webp",
+      "width": 128,
+      "height": 32,
+      "hasAlpha": true,
+      "bytes": 442,
+      "sha256": "120c36dc2cbc6da5f3eb8082265cd7405d0c8f414ab4b30f3d5bf691af3bcf45"
+    }
+  ]
+}

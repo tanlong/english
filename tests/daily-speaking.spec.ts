@@ -55,6 +55,12 @@ for (const [format, explanationVi] of [
     await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("i usslly get up 6AM");
     await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
     const explanation = page.getByRole("log").locator(".speaking-vietnamese");
+    await expect(explanation).toBeHidden();
+    await page
+      .getByRole("log")
+      .getByRole("button", { name: "Xem góp ý", exact: true })
+      .press("Enter");
+    await expect(explanation).toBeVisible();
     await expect(explanation.locator("p")).toHaveCount(2);
     await expect(explanation.locator("p").nth(0)).toContainText('Cần sửa: "i usslly get up 6AM"');
     await expect(explanation.locator("p").nth(1)).toContainText(
@@ -72,6 +78,17 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
   page,
 }) => {
   await page.setViewportSize({ width: 375, height: 900 });
+  await page.addInitScript(() => {
+    HTMLMediaElement.prototype.play = function () {
+      setTimeout(() => this.dispatchEvent(new Event("ended")), 10);
+      return Promise.resolve();
+    };
+  });
+  const spoken: string[] = [];
+  await page.route("**/api/daily-speaking/speech", (route) => {
+    spoken.push(route.request().postDataJSON().input);
+    return route.fulfill({ contentType: "audio/mpeg", body: Buffer.from([1, 2, 3]) });
+  });
   const calls: (Record<string, unknown> & { history: { role: string; content: string }[] })[] = [];
   const alternative =
     "Cách nói khác: I enjoy this book.\n\nCâu của bạn đã đúng. Enjoy là một cách khác để diễn tả sự yêu thích.";
@@ -89,6 +106,7 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
                 ? "You shared your opinion and tried another way to say it."
                 : "What do you like about it?",
         explanationVi: body.action === "conversation" ? alternative : "",
+        translationVi: body.action === "conversation" ? "Bạn thích điều gì ở đó?" : "",
         ...(body.action === "conversation"
           ? {
               speakingVersions: {
@@ -110,25 +128,58 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
   await answer.fill("I like this book.");
   await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
   const feedback = page.getByRole("log").locator(".speaking-vietnamese");
+  const latestTurn = page.locator(".speaking-turn.assistant").last();
+  const disclosure = latestTurn.getByRole("button", { name: "Xem góp ý và cách nói", exact: true });
+  await expect(disclosure).toBeVisible();
+  for (const width of [375, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    const speaker = await latestTurn
+      .getByRole("button", { name: "Nghe phản hồi của Alex" })
+      .boundingBox();
+    for (const name of ["Hiện nghĩa tiếng Việt", "Xem góp ý và cách nói", "Thử nói lại"]) {
+      const icon = latestTurn.getByRole("button", { name, exact: true });
+      const bounds = await icon.boundingBox();
+      expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(speaker!.x);
+      expect(bounds!.y).toBe(speaker!.y);
+    }
+  }
+  await page.setViewportSize({ width: 375, height: 900 });
+  await expect(feedback).toBeHidden();
+  await expect(page.getByRole("log").locator('section[aria-label="Bản ngắn gọn"]')).toBeHidden();
+  await disclosure.click();
+  await expect(feedback).toBeVisible();
+  await latestTurn.getByRole("button", { name: "Ẩn góp ý và cách nói" }).click();
+  await expect(feedback).toBeHidden();
+  await disclosure.click();
   await expect(feedback).toContainText("Câu của bạn đã đúng");
   await expect(feedback.locator("p strong")).toHaveText(["Cách nói khác:"]);
   await expect(feedback).not.toContainText(/Sai:|Cần sửa:|Gợi ý sửa:/);
-  const grammarTable = page
-    .getByRole("log")
-    .getByRole("table", { name: "Bản đúng ngữ pháp", exact: true });
-  await expect(grammarTable).toBeHidden();
+  const grammarVersion = page.getByRole("log").locator('section[aria-label="Bản đúng ngữ pháp"]');
+  await expect(grammarVersion).toBeHidden();
   await page.getByRole("log").getByText("Xem bản đúng ngữ pháp", { exact: true }).click();
-  await expect(grammarTable).toContainText("I like this book.");
+  await expect(grammarVersion).toContainText("I like this book.");
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: "artifacts/speaking-grammar-open-375.png", fullPage: true });
   await page.getByRole("log").getByText("Xem bản đúng ngữ pháp", { exact: true }).press("Enter");
-  await expect(grammarTable).toBeHidden();
-  await expect(
-    page.getByRole("log").getByRole("table", { name: "Bản ngắn gọn", exact: true }),
-  ).toContainText("I like it.");
-  await expect(
-    page.getByRole("log").getByRole("table", { name: "Bản đầy đủ", exact: true }),
-  ).toContainText("I enjoy this book.");
+  await expect(grammarVersion).toBeHidden();
+  const shortVersion = page.getByRole("log").getByRole("region", { name: "Bản ngắn gọn" });
+  const fullVersion = page.getByRole("log").getByRole("region", { name: "Bản đầy đủ" });
+  await expect(shortVersion).toContainText("I like it.");
+  await expect(fullVersion).toContainText("I enjoy this book.");
+  for (const width of [375, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const version of [shortVersion, fullVersion]) {
+      const english = await version.locator('[lang="en"]').boundingBox();
+      const vietnamese = await version.locator('[lang="vi"]').boundingBox();
+      const audio = await version.getByRole("button", { name: /Nghe bản/ }).boundingBox();
+      expect(vietnamese!.y).toBeGreaterThanOrEqual(english!.y + english!.height);
+      expect(audio!.y).toBeGreaterThan(vietnamese!.y + vietnamese!.height);
+    }
+  }
+  await shortVersion.screenshot({ path: "artifacts/spoken-version.png" });
+  await shortVersion.getByRole("button", { name: "Nghe bản ngắn gọn" }).click();
+  await expect.poll(() => spoken).toEqual(["I like it."]);
+  await page.setViewportSize({ width: 375, height: 900 });
   await page.getByRole("button", { name: "Thử nói lại", exact: true }).click();
   await expect(answer).toBeFocused();
   await answer.fill("I enjoy this book.");
@@ -140,7 +191,7 @@ test("correct sentences get optional alternatives, a retry and a separate recap"
   const recap = page.getByRole("region", { name: "Nhìn lại cuộc trò chuyện" });
   await expect(recap.getByLabel("Góp ý đã luyện")).toHaveCount(0);
   await expect(recap.getByLabel("Cách nói khác đã gặp")).toContainText("I enjoy this book.");
-  await expect(recap.getByRole("table")).toHaveCount(2);
+  await expect(recap.getByRole("region", { name: /Bản (ngắn gọn|đầy đủ)/ })).toHaveCount(2);
   const downloading = page.waitForEvent("download");
   await recap.getByRole("button", { name: "Tải hội thoại", exact: true }).click();
   const download = await downloading;
@@ -199,7 +250,7 @@ for (const width of [375, 1440]) {
     await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
     const first = page.locator(".speaking-turn.assistant").first();
     const meaning = first.locator(".speaking-translation p");
-    const eye = first.locator(".speaking-translation button");
+    const eye = first.getByRole("button", { name: /nghĩa tiếng Việt/ });
     await expect(meaning).toBeHidden();
     await expect(eye).toHaveAccessibleName("Hiện nghĩa tiếng Việt");
     await eye.focus();
@@ -310,9 +361,6 @@ test("roleplay provides roles, supports a real retry and exports the conversatio
     scenarioId: "coffee-order",
     topic: "Ordering at a cafe",
   });
-  await expect(page.locator('.speaking-pipeline [aria-current="step"]')).toContainText(
-    "Nói & thử lại",
-  );
   const answer = page.getByLabel("Câu trả lời của bạn", { exact: true });
   await answer.fill("I want coffee yesterday.");
   await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
@@ -344,9 +392,6 @@ test("roleplay provides roles, supports a real retry and exports the conversatio
   await page.getByRole("button", { name: "Kết thúc & ôn lại", exact: true }).click();
   const recap = page.getByRole("region", { name: "Nhìn lại cuộc trò chuyện" });
   await expect(recap.getByLabel("Góp ý đã luyện")).toContainText("I wanted coffee yesterday.");
-  await expect(page.locator('.speaking-pipeline [aria-current="step"]')).toContainText(
-    "Nhìn lại buổi nói",
-  );
   const downloading = page.waitForEvent("download");
   await recap.getByRole("button", { name: "Tải hội thoại", exact: true }).click();
   const download = await downloading;
@@ -427,6 +472,10 @@ test("conversation retries preserve the draft; hints and explanations do not bec
   );
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   await expect(page.getByRole("log")).toContainText("What did you do this morning?");
+  await expect(
+    page.getByRole("button", { name: "Giải thích tiếng Việt", exact: true }),
+  ).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Bỏ qua câu hỏi", exact: true })).toHaveCount(0);
   for (const name of ["Chế độ", "Chủ đề", "Bài học", "Thời lượng mục tiêu"]) {
     await expect(page.getByRole("combobox", { name, exact: true })).toBeDisabled();
     await expect(
@@ -445,21 +494,18 @@ test("conversation retries preserve the draft; hints and explanations do not bec
   await expect(page.getByTestId("speaking-counts")).toContainText("1 lượt nhập chữ");
   await page.getByRole("button", { name: "Gợi ý", exact: true }).click();
   await expect(page.getByRole("log")).toContainText("You can start with:");
-  await page.getByRole("button", { name: "Giải thích tiếng Việt", exact: true }).click();
+  await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("Vietnamese");
+  await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
+  await expect(page.getByLabel("Câu trả lời của bạn", { exact: true })).toHaveValue("");
   await expect(page.getByRole("log")).toContainText("Alex hỏi bạn đã ăn gì vào bữa sáng.");
+  expect(calls.at(-1)?.action).toBe("explain");
   expect(calls.at(-1)?.lastCoach).toBe("What did you have for breakfast?");
   await expect(page.locator(".speaking-turn.assistant")).toHaveCount(3);
   await expect(page.getByTestId("speaking-counts")).toContainText(
     "0 lượt qua mic · 1 lượt nhập chữ · 1 gợi ý",
   );
-  await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("Vietnamese");
+  await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("skip");
   await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
-  await expect(page.getByLabel("Câu trả lời của bạn", { exact: true })).toHaveValue("");
-  expect(calls.at(-1)?.action).toBe("explain");
-  await expect(page.getByTestId("speaking-counts")).toContainText(
-    "0 lượt qua mic · 1 lượt nhập chữ · 1 gợi ý",
-  );
-  await page.getByRole("button", { name: "Bỏ qua câu hỏi", exact: true }).click();
   await expect(page.getByRole("log")).toContainText("What do you like to drink?");
   await page.getByRole("button", { name: "Kết thúc & ôn lại", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Nhìn lại cuộc trò chuyện" })).toBeVisible();
@@ -626,9 +672,12 @@ test("mic keeps listening across browser disconnects until the learner stops", a
   await expect(answer).toHaveValue("One more thought.");
 });
 
-test("Alex autoplays English only and Explain sends no speech request", async ({ page }) => {
+test("Alex speaks after a reply by default and can be muted", async ({ page }) => {
   await page.addInitScript(() => {
     HTMLMediaElement.prototype.play = function () {
+      document.documentElement.dataset.alexPlays = String(
+        Number(document.documentElement.dataset.alexPlays ?? 0) + 1,
+      );
       setTimeout(() => this.dispatchEvent(new Event("ended")), 10);
       return Promise.resolve();
     };
@@ -643,18 +692,99 @@ test("Alex autoplays English only and Explain sends no speech request", async ({
       json:
         route.request().postDataJSON().action === "explain"
           ? { reply: "", explanationVi: "Alex hỏi về buổi sáng của bạn." }
-          : { reply: "What did you do this morning?", explanationVi: "Bạn đã làm gì sáng nay?" },
+          : route.request().postDataJSON().action === "start"
+            ? { reply: "What did you do this morning?", explanationVi: "Bạn đã làm gì sáng nay?" }
+            : { reply: "That sounds lovely. What happened next?", explanationVi: "Nghe thật vui." },
     }),
   );
   await page.goto("/daily-speaking");
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
-  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).check();
+  await expect(
+    page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }),
+  ).toBeChecked();
   await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
   await expect.poll(() => spoken.length).toBe(1);
   expect(spoken).toEqual(["What did you do this morning?"]);
-  await page.getByRole("button", { name: "Giải thích tiếng Việt", exact: true }).click();
+  await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("I had coffee.");
+  await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
+  await expect.poll(() => spoken.length).toBe(2);
+  expect(spoken[1]).toBe("That sounds lovely. What happened next?");
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.dataset.alexPlays))
+    .toBe("2");
+  await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("Vietnamese");
+  await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
   await expect(page.getByRole("log")).toContainText("Alex hỏi về buổi sáng của bạn.");
-  expect(spoken).toHaveLength(1);
+  expect(spoken).toHaveLength(2);
+  await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
+  await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("I went to work.");
+  await page.getByRole("button", { name: "Gửi câu trả lời", exact: true }).click();
+  await expect(page.getByText("I went to work.", { exact: true })).toBeVisible();
+  expect(spoken).toHaveLength(2);
+});
+
+test("when the browser blocks autoplay, the learner can see how to play Alex's reply", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    HTMLMediaElement.prototype.play = () =>
+      Promise.reject(new DOMException("blocked", "NotAllowedError"));
+  });
+  await page.route("**/api/daily-speaking", (route) =>
+    route.fulfill({
+      json: { reply: "What did you do this morning?", explanationVi: "" },
+    }),
+  );
+  await page.route("**/api/daily-speaking/speech", (route) =>
+    route.fulfill({ contentType: "audio/mpeg", body: Buffer.from([1, 2, 3]) }),
+  );
+  const learnerReady = page.waitForResponse(
+    (response) => response.url().endsWith("/api/learning") && response.request().method() === "GET",
+  );
+  await page.goto("/daily-speaking");
+  await learnerReady;
+  await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
+  await expect(page.locator(".speaking-controls").getByRole("alert")).toContainText("Bấm Nghe lại");
+  await expect(page.getByRole("button", { name: "Nghe lại", exact: true })).toBeEnabled();
+});
+
+test("the reply sidebar sits beside the conversation on desktop and below it on mobile", async ({
+  page,
+}) => {
+  await page.addInitScript(() => {
+    HTMLMediaElement.prototype.play = function () {
+      setTimeout(() => this.dispatchEvent(new Event("ended")), 10);
+      return Promise.resolve();
+    };
+  });
+  await page.route("**/api/daily-speaking", (route) =>
+    route.fulfill({
+      json: { reply: "What did you do this morning?", explanationVi: "" },
+    }),
+  );
+  await page.route("**/api/daily-speaking/speech", (route) =>
+    route.fulfill({ contentType: "audio/mpeg", body: Buffer.from([1, 2, 3]) }),
+  );
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/daily-speaking");
+    await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
+    await expect(page.getByRole("log")).toContainText("What did you do this morning?");
+    const conversation = await page
+      .getByRole("region", { name: "Một cuộc trò chuyện nhỏ, mỗi ngày" })
+      .boundingBox();
+    const sidebar = await page
+      .getByRole("complementary", { name: "Trả lời và hỗ trợ" })
+      .boundingBox();
+    expect(conversation).not.toBeNull();
+    expect(sidebar).not.toBeNull();
+    if (width > 1000) expect(sidebar!.x).toBeGreaterThan(conversation!.x + conversation!.width - 1);
+    else expect(sidebar!.y).toBeGreaterThan(conversation!.y + conversation!.height - 1);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+      true,
+    );
+    await page.screenshot({ path: `artifacts/speaking-sidebar-${width}.png`, fullPage: true });
+  }
 });
 
 test("mobile navigation and large text fit small portrait and landscape screens", async ({
@@ -667,11 +797,7 @@ test("mobile navigation and large text fit small portrait and landscape screens"
       json: { reply: "What did you do this morning?", explanationVi: "Bạn đã làm gì sáng nay?" },
     }),
   );
-  await page.goto("/");
-  await page
-    .getByRole("navigation", { name: "Điều hướng trên điện thoại" })
-    .getByRole("link", { name: "Nói chuyện", exact: true })
-    .click();
+  await page.goto("/daily-speaking");
   await page.getByRole("button", { name: "Mở thiết lập", exact: true }).click();
   await page.getByRole("checkbox", { name: "Tự phát giọng Alex", exact: true }).uncheck();
   expect((await page.locator(".speaking-settings").boundingBox())?.width).toBeLessThanOrEqual(400);

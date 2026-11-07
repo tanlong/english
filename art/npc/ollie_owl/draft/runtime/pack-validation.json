@@ -1,0 +1,49 @@
+{
+  "npcId": "ollie_owl",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "sourceSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+  "rigSha256": "3704b06758443bcafb5ec2033c1fe910516f4588c5ad2ab79903b64af371a13a",
+  "pass": true,
+  "hasAlpha": true,
+  "atlasSize": {
+    "width": 1536,
+    "height": 925
+  },
+  "fileHashes": {
+    "atlas.webp": "9bd82946bba468c80da5175d0d115af87c8f9e29ccc5560baca542dbdb63453d",
+    "atlas.json": "fff3954d0f7e14059067e8f4ee617cccf7a3cad6894cfada0535f837d3b8359a",
+    "rig.json": "dc62178d6aa373c43259eebc5301aba88facd812f964512518f6a903e6f996ab",
+    "animations.json": "4651ebf23ea787be196edf63aeef919c8f83f699ac190684346b7c89fdb81ced"
+  },
+  "frames": [
+    {
+      "id": "body",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "b6bcb87e492ab05a9d347d8f59a2e9bc8b2762978a242a9d77186a70904bb261",
+      "extractedRgbaSha256": "b6bcb87e492ab05a9d347d8f59a2e9bc8b2762978a242a9d77186a70904bb261"
+    },
+    {
+      "id": "arm_wave",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "a57baf3c269b5a04a138559cf48e46100dc0341f966aa3b5ac9e870c9adf96cd",
+      "extractedRgbaSha256": "a57baf3c269b5a04a138559cf48e46100dc0341f966aa3b5ac9e870c9adf96cd"
+    },
+    {
+      "id": "eye_l_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "5d232a46e5b6dab8f5e953b2ca46565035feb0892a34c5c18a2aa4f6cbb64936",
+      "extractedRgbaSha256": "5d232a46e5b6dab8f5e953b2ca46565035feb0892a34c5c18a2aa4f6cbb64936"
+    },
+    {
+      "id": "eye_r_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "4775e7774b3d46d29c15e3e6f989022e07a382814a030d09726fbf766b2f8732",
+      "extractedRgbaSha256": "4775e7774b3d46d29c15e3e6f989022e07a382814a030d09726fbf766b2f8732"
+    }
+  ],
+  "notes": "RGBA byte equality includes RGB under alpha=0; no enlargement; source logical rig placement retained."
+}

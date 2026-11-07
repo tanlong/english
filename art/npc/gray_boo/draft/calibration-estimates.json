@@ -1,0 +1,18 @@
+{
+  "npcId": "gray_boo",
+  "approved": false,
+  "coordinateSystem": { "width": 1127, "height": 1396 },
+  "sourceMasterSize": { "width": 1127, "height": 1395 },
+  "armTrim": { "left": 38, "top": 25, "width": 1296, "height": 1093 },
+  "armPlacement": { "x": 510, "y": 620, "width": 480, "height": 405, "pivotX": 0.90, "pivotY": 0.28 },
+  "eyePatches": [
+    { "id": "eye_l_closed", "left": 430, "top": 267, "width": 192, "height": 160 },
+    { "id": "eye_r_closed", "left": 668, "top": 315, "width": 120, "height": 135 }
+  ],
+  "notes": [
+    "Initial calibration measured against source and checked in neutral-registration-estimate.png; not approved final joint coordinates.",
+    "Generated body and eyes-closed source are both 1396px high, one pixel taller than the master. Use the same registration for both generated files.",
+    "Detached arm includes the purple shoulder star pad while body also retains it. Current overlay covers most of the body pad; maximum rotation may expose a duplicate shoulder stripe. Needs art review or shoulder-mask cleanup.",
+    "No changes to the held guide tablet or its arm were requested; tablet symbols are from the supplied approved design."
+  ]
+}

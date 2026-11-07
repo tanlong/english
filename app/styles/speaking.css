@@ -139,6 +139,44 @@
   justify-content: space-between;
   gap: 12px;
 }
+.speaking-conversation-shell {
+  min-width: 0;
+  container-type: inline-size;
+}
+.speaking-session {
+  display: grid;
+  align-items: start;
+  gap: 16px;
+}
+.speaking-controls-title {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.speaking-controls > .button-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.speaking-controls > .button-row button {
+  min-width: 0;
+  min-height: 44px;
+  height: auto;
+  justify-content: flex-start;
+  padding: 10px;
+  line-height: 1.35;
+  white-space: normal;
+  text-align: left;
+}
+.speaking-controls > .button-row svg {
+  flex-shrink: 0;
+}
+@container (min-width: 720px) {
+  .daily-speaking:not(.speaking-setup) .speaking-session {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+  }
+}
 .speaking-turn-heading strong {
   font-size: 12px;
   color: var(--muted-foreground);
@@ -149,8 +187,10 @@
   margin-top: -8px;
   margin-bottom: -8px;
 }
-.speaking-retry-button {
-  margin-top: 12px;
+.speaking-turn-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 .speaking-retry-note {
   display: flex;

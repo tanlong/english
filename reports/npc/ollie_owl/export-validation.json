@@ -1,0 +1,78 @@
+{
+  "npcId": "ollie_owl",
+  "mode": "draft",
+  "renderer": "Canvas2D deterministic seek + Playwright",
+  "encoder": "Sharp/libvips GIF (current draft encoder; FFmpeg available)",
+  "sourceHash": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+  "rigHash": "3704b06758443bcafb5ec2033c1fe910516f4588c5ad2ab79903b64af371a13a",
+  "rendererHash": "d08f38e5aaead7726ee99aca215f749e9b71b81ef8912286306e0878933d1d0d",
+  "renderedLayers": [
+    {
+      "file": "draft/registered/body.png",
+      "sha256": "51ebc08dca277736475567081aa31982c2a072f00546fab582b63d2aff2c43d0"
+    },
+    {
+      "file": "draft/registered/arm_wave.png",
+      "sha256": "c88f34a233e0d4c3de3b72982a6d5908cb3d9158a0dd0351d8909ad0131e506a"
+    },
+    {
+      "file": "draft/registered/eye_l_closed.png",
+      "sha256": "a429f355b671dcaf9daf080ca0241f55fb8e265447a736bf71a2b4c4a1ce33f4"
+    },
+    {
+      "file": "draft/registered/eye_r_closed.png",
+      "sha256": "7b67e627d4427af403041e40ab8f2c459370517e1ec7f05cc8751e1902ecf5d4"
+    }
+  ],
+  "clips": [
+    {
+      "state": "idle",
+      "path": "reports/npc/ollie_owl/preview/ollie_owl_idle.gif",
+      "sha256": "d42b0a4073d3e4321567834a03d74044e7aa707aa2b126a625a22430ea7df166",
+      "frames": 96,
+      "width": 512,
+      "height": 640,
+      "durationMs": 8000,
+      "loop": 0,
+      "stableFeet": true,
+      "feetPixelRegion": {
+        "left": 0,
+        "top": 520,
+        "width": 512,
+        "height": 51
+      },
+      "feetPixelSha256": "0584acf9b878d1447306eb831464228d137d979398d3c1e5052e17fa75bfc8e5",
+      "pass": true
+    },
+    {
+      "state": "interaction",
+      "path": "reports/npc/ollie_owl/preview/ollie_owl_interaction.gif",
+      "sha256": "487b0869461874335578989fb85cfbb33c636254bbf8fe1c21efbce6616ec86f",
+      "frames": 48,
+      "width": 512,
+      "height": 640,
+      "durationMs": 2000,
+      "loop": 1,
+      "stableFeet": true,
+      "feetPixelRegion": {
+        "left": 0,
+        "top": 520,
+        "width": 512,
+        "height": 51
+      },
+      "feetPixelSha256": "0584acf9b878d1447306eb831464228d137d979398d3c1e5052e17fa75bfc8e5",
+      "pass": true
+    }
+  ],
+  "browserChecks": {
+    "reviewMatchesCurrentAssets": true,
+    "reducedMotionStartsPaused": true,
+    "idleLoopSamePose": true,
+    "repeatedClickOneForeground": true,
+    "interactionEndsListening": true,
+    "mobileNoHorizontalOverflow": true,
+    "pageErrors": []
+  },
+  "pass": true,
+  "productionApproved": false
+}

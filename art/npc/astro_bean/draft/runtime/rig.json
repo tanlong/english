@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "astro_bean",
+  "approved": false,
+  "mode": "single-arm",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "renderer": "Canvas2D deterministic review; runtime integration requires art acceptance",
+  "sourceMaster": "source/master_rgba.png",
+  "sourceHash": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+  "coordinateSystem": {
+    "width": 1122,
+    "height": 1402,
+    "unit": "source-pixels"
+  },
+  "root": {
+    "anchor": {
+      "x": 556,
+      "y": 1399
+    },
+    "displayHeightPx": 220
+  },
+  "calibration": "Measured draft joints, requires neutral overlay/owner visual review; no inherited Cloud Daisy pivots",
+  "layers": [
+    {
+      "id": "body",
+      "sourceFile": "draft/parts/body.png",
+      "sourceHash": "7a1de2481e4f303b3edc71b061ebc6958a10606dda987b9f67d46e166ebaeea7",
+      "sourceSize": {
+        "width": 1122,
+        "height": 1402
+      },
+      "trim": {
+        "left": 0,
+        "top": 0,
+        "width": 1122,
+        "height": 1402
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/body.png",
+      "atlas": "atlas.json",
+      "texture": "astro_bean/body.png",
+      "texturePixelSize": {
+        "width": 615,
+        "height": 768
+      }
+    },
+    {
+      "id": "arm_wave",
+      "sourceFile": "draft/parts/arm_wave.png",
+      "sourceHash": "a45f58c8438908e0d91343f7f629a5bd26635d28dd7d65b340fd5bd830af2b68",
+      "sourceSize": {
+        "width": 1634,
+        "height": 963
+      },
+      "trim": {
+        "left": 78,
+        "top": 41,
+        "width": 1480,
+        "height": 869
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/arm_wave.png",
+      "atlas": "atlas.json",
+      "texture": "astro_bean/arm_wave.png",
+      "texturePixelSize": {
+        "width": 768,
+        "height": 451
+      }
+    },
+    {
+      "id": "eye_l_closed",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "bbad1a2d9f6e4756490c120c00810f95fba24851c1ae59798b2c95b909941891",
+      "trim": {
+        "left": 442,
+        "top": 353,
+        "width": 125,
+        "height": 145
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/eye_l_closed.png",
+      "atlas": "atlas.json",
+      "texture": "astro_bean/eye_l_closed.png",
+      "texturePixelSize": {
+        "width": 125,
+        "height": 145
+      }
+    },
+    {
+      "id": "eye_r_closed",
+      "sourceFile": "draft/parts/eyes_closed.png",
+      "sourceHash": "bbad1a2d9f6e4756490c120c00810f95fba24851c1ae59798b2c95b909941891",
+      "trim": {
+        "left": 610,
+        "top": 327,
+        "width": 100,
+        "height": 122
+      },
+      "approved": false,
+      "registeredSourceFile": "draft/registered/eye_r_closed.png",
+      "atlas": "atlas.json",
+      "texture": "astro_bean/eye_r_closed.png",
+      "texturePixelSize": {
+        "width": 100,
+        "height": 122
+      }
+    }
+  ],
+  "placement": {
+    "body": {
+      "x": 0,
+      "y": 0,
+      "width": 1122,
+      "height": 1402,
+      "order": 0
+    },
+    "arm_wave": {
+      "x": 405,
+      "y": 690,
+      "width": 430,
+      "height": 252,
+      "pivotX": 0.92,
+      "pivotY": 0.6,
+      "pawX": 0.22,
+      "pawY": 0.48,
+      "order": 20
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": -1,
+    "restAngle": 20
+  },
+  "clips": {
+    "idle": {
+      "duration": 8,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "limitations": [
+    "Orange bean astronaut anatomy preserved; no wings or beak",
+    "Scanner remains held in the stationary base; independent badge/scanner action awaits art"
+  ],
+  "sourceSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+  "rigSha256": "61e8f77ebce10fa7cdeed4215ee4fa4bf0085118839f1491e5878c4ce92606c5",
+  "atlas": "atlas.json"
+}

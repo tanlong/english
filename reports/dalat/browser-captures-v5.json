@@ -1,0 +1,49 @@
+{
+  "baseURL": "http://localhost:3000",
+  "revision": "dalat-fullhd-v5",
+  "pass": true,
+  "captures": [
+    {
+      "settingId": "flower_garden",
+      "file": "reports/dalat/flower_garden/scene-fullhd.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "04af6623dd6485b76ac91b9851c87894fbefc2b9847b3f09b2f964eb9b3af972",
+      "npcs": [
+        "cloud_daisy",
+        "ollie_owl",
+        "mimi_bunny"
+      ]
+    },
+    {
+      "settingId": "tea_hills",
+      "file": "reports/dalat/tea_hills/scene-fullhd.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "e734208174a689dbff921bc6899e044e101260ebaa1c91592bead15921402bf9",
+      "npcs": [
+        "astro_bean",
+        "bear_explorer"
+      ]
+    },
+    {
+      "settingId": "pine_lake",
+      "file": "reports/dalat/pine_lake/scene-fullhd.png",
+      "width": 1920,
+      "height": 1080,
+      "sha256": "223febe12e785533915766cec27b3dcf3e40393022b8e38b86636b3c92fca0c0",
+      "npcs": [
+        "gray_boo"
+      ]
+    }
+  ],
+  "viewports": [
+    "2048x1440 capture to 1920x1080",
+    "768x1024",
+    "390x844"
+  ],
+  "failures": [],
+  "toolbarBelowScene": true,
+  "visibleLabelsClickable": true,
+  "sixPuppetsRender": true
+}

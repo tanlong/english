@@ -1,0 +1,89 @@
+{
+  "pass": true,
+  "clips": [
+    {
+      "npcId": "cloud_daisy",
+      "state": "idle",
+      "frames": 96,
+      "durationMs": 8000,
+      "pass": true
+    },
+    {
+      "npcId": "cloud_daisy",
+      "state": "interaction",
+      "frames": 48,
+      "durationMs": 2000,
+      "pass": true
+    },
+    {
+      "npcId": "ollie_owl",
+      "state": "idle",
+      "frames": 96,
+      "durationMs": 8000,
+      "pass": true
+    },
+    {
+      "npcId": "ollie_owl",
+      "state": "interaction",
+      "frames": 48,
+      "durationMs": 2000,
+      "pass": true
+    },
+    {
+      "npcId": "mimi_bunny",
+      "state": "idle",
+      "frames": 84,
+      "durationMs": 7000,
+      "pass": true
+    },
+    {
+      "npcId": "mimi_bunny",
+      "state": "interaction",
+      "frames": 48,
+      "durationMs": 2000,
+      "pass": true
+    },
+    {
+      "npcId": "astro_bean",
+      "state": "idle",
+      "frames": 96,
+      "durationMs": 8000,
+      "pass": true
+    },
+    {
+      "npcId": "astro_bean",
+      "state": "interaction",
+      "frames": 48,
+      "durationMs": 2000,
+      "pass": true
+    },
+    {
+      "npcId": "bear_explorer",
+      "state": "idle",
+      "frames": 108,
+      "durationMs": 9000,
+      "pass": true
+    },
+    {
+      "npcId": "bear_explorer",
+      "state": "interaction",
+      "frames": 60,
+      "durationMs": 2500,
+      "pass": true
+    },
+    {
+      "npcId": "gray_boo",
+      "state": "idle",
+      "frames": 108,
+      "durationMs": 9000,
+      "pass": true
+    },
+    {
+      "npcId": "gray_boo",
+      "state": "interaction",
+      "frames": 60,
+      "durationMs": 2500,
+      "pass": true
+    }
+  ]
+}

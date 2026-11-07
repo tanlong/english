@@ -1,0 +1,29 @@
+{
+  "scene": "flower_garden",
+  "outputSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "method": "two overlapping image_gen regional detail edits; native tile detail downsampled and feathered over 256 pixels",
+  "conceptIsLayoutReferenceOnly": true,
+  "overlap": 256,
+  "tiles": [
+    {
+      "file": "art/dalat/flower_garden/tiles/left-detail.png",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sha256": "d6cf8933cd764477ba22482b6c931dc65597bf62d797fb9cac0877c6a1486d1a"
+    },
+    {
+      "file": "art/dalat/flower_garden/tiles/right-detail.png",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sha256": "dd6c0e213d946812afa88cb56cc3f370477c5d61e4c56246c4b1f71fa31b7faf"
+    }
+  ],
+  "sha256": "d349affb0adf12304929c00f97c4dc4dca6cb1547dc420be46159d96fdb0d2b2"
+}

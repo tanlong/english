@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "cloud_daisy",
+  "displayName": "Cloud Daisy",
+  "aliases": [
+    "may"
+  ],
+  "approved": true,
+  "masterPath": "art/npc/cloud_daisy/source/master_rgba.png",
+  "masterSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+  "sourcePath": "MD/Cloud Daisy.png",
+  "angle": "three-quarter-front",
+  "light": "upper-right",
+  "camera": "fixed",
+  "designConstraints": {
+    "species": "white cat with cat paws (owner override 2026-11-05)",
+    "outfit": "exactly as supplied reference; do not infer from legacy prompts",
+    "preserve": [
+      "palette",
+      "silhouette",
+      "face",
+      "costume",
+      "markings"
+    ]
+  },
+  "approval": {
+    "accepted": true,
+    "sha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+    "normalizedSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+    "owner": "product owner",
+    "date": "2026-11-05",
+    "evidence": "Explicit user reply: Dùng ảnh hiện tại, giữ tay mèo",
+    "override": "Keep cat paws; supersedes human-arm requirement for Cloud Daisy only"
+  },
+  "assetStatus": "APPROVED_MASTER"
+}

@@ -1,0 +1,127 @@
+{
+  "npcId": "mimi_bunny",
+  "ready": false,
+  "jobs": [
+    {
+      "id": "torso",
+      "kind": "parts",
+      "path": "parts/torso.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY torso as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "head",
+      "kind": "parts",
+      "path": "parts/head.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "ear_l",
+      "kind": "parts",
+      "path": "parts/ear_l.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY ear l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "ear_r",
+      "kind": "parts",
+      "path": "parts/ear_r.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY ear r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "arm_l",
+      "kind": "parts",
+      "path": "parts/arm_l.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY arm l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "arm_r",
+      "kind": "parts",
+      "path": "parts/arm_r.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY arm r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "blink",
+      "kind": "parts",
+      "path": "parts/blink.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY blink as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "smiling_mouth",
+      "kind": "parts",
+      "path": "parts/smiling_mouth.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY smiling mouth as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "book_closed",
+      "kind": "props",
+      "path": "props/book_closed.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY book closed as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "book_open",
+      "kind": "props",
+      "path": "props/book_open.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY book open as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "page_turn",
+      "kind": "props",
+      "path": "props/page_turn.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Mimi Bunny master as the sole identity reference. Create ONLY page turn as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    }
+  ]
+}

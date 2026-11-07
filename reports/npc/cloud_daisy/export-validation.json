@@ -1,0 +1,90 @@
+{
+  "npcId": "cloud_daisy",
+  "mode": "draft",
+  "renderer": "Canvas2D deterministic seek + Playwright",
+  "encoder": "Sharp/libvips GIF (current draft encoder; FFmpeg available)",
+  "sourceHash": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+  "rigHash": "72f52580f11224ae56002bf2fa6a48a43b636cbc6b161e835116c72cec0b0355",
+  "rendererHash": "d08f38e5aaead7726ee99aca215f749e9b71b81ef8912286306e0878933d1d0d",
+  "renderedLayers": [
+    {
+      "file": "draft/registered/body.png",
+      "sha256": "b510c34e247b3d89a9a3fb48644c4619f961d4d252e2cd4844b2f2b397f24e5d"
+    },
+    {
+      "file": "draft/registered/arm_wave.png",
+      "sha256": "83e92751f19e569bae544957e81abbe108ad802d4a6d6f53c9d457523e6592f6"
+    },
+    {
+      "file": "draft/registered/arm_hold.png",
+      "sha256": "7e26413a9a3a14b63297840367ee61907c9b405d4a2bf4d31b036dc8f9229188"
+    },
+    {
+      "file": "draft/registered/cup.png",
+      "sha256": "3ad72d665f588b224bb22bce60c41427a848b335e426120e3e86b484dee926ca"
+    },
+    {
+      "file": "draft/registered/cloth.png",
+      "sha256": "3f5b36a52014cb674b1a84b8d5f8a9f93f045394e9f75776316210393582c493"
+    },
+    {
+      "file": "draft/registered/eye_l_closed.png",
+      "sha256": "80bee336d9e50bd8b7e35c9bb043bf3562388e975dfc412d42a3683b0b9368c5"
+    },
+    {
+      "file": "draft/registered/eye_r_closed.png",
+      "sha256": "8af7701faa038cdb5fec89e7fbeefea12a50deb8664c54d231a94193965eeb96"
+    }
+  ],
+  "clips": [
+    {
+      "state": "idle",
+      "path": "reports/npc/cloud_daisy/preview/cloud_daisy_idle.gif",
+      "sha256": "60f2f666cb30c542f5129646f1a8cf4ba80b1acacca9961198682df5f150487e",
+      "frames": 96,
+      "width": 512,
+      "height": 640,
+      "durationMs": 8000,
+      "loop": 0,
+      "stableFeet": true,
+      "feetPixelRegion": {
+        "left": 0,
+        "top": 554,
+        "width": 512,
+        "height": 59
+      },
+      "feetPixelSha256": "f8a2f1fce2d0ff6640ba9146ad2912a737e2527a6e393f48cde1793197e7ec52",
+      "pass": true
+    },
+    {
+      "state": "interaction",
+      "path": "reports/npc/cloud_daisy/preview/cloud_daisy_interaction.gif",
+      "sha256": "8ee1ef52ab6b46915088b6a2255d93f13e5c2333e1a6d7e3d935e34282336953",
+      "frames": 48,
+      "width": 512,
+      "height": 640,
+      "durationMs": 2000,
+      "loop": 1,
+      "stableFeet": true,
+      "feetPixelRegion": {
+        "left": 0,
+        "top": 554,
+        "width": 512,
+        "height": 59
+      },
+      "feetPixelSha256": "f8a2f1fce2d0ff6640ba9146ad2912a737e2527a6e393f48cde1793197e7ec52",
+      "pass": true
+    }
+  ],
+  "browserChecks": {
+    "reviewMatchesCurrentAssets": true,
+    "reducedMotionStartsPaused": true,
+    "idleLoopSamePose": true,
+    "repeatedClickOneForeground": true,
+    "interactionEndsListening": true,
+    "mobileNoHorizontalOverflow": true,
+    "pageErrors": []
+  },
+  "pass": true,
+  "productionApproved": false
+}

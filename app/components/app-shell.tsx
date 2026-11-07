@@ -1,9 +1,20 @@
 "use client";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { ArrowLeft, ChevronRight, Clock3, Settings } from "lucide-react";
-import { curriculum, roles } from "@/app/content/curriculum";
+import {
+  ArrowLeft,
+  ChartNoAxesColumn,
+  ChevronRight,
+  Clock3,
+  Settings,
+  Sparkles,
+  Menu,
+  PanelLeftClose,
+  PanelLeftOpen,
+  X,
+} from "lucide-react";
+import { curriculum } from "@/app/content/curriculum";
 import { useLearningStore } from "@/app/learning/provider";
 import { dateKey } from "@/app/learning/progress";
 import { stopAudio } from "@/app/audio/client";
@@ -19,7 +30,10 @@ export function AppShell({ children }: { children: ReactNode }) {
     pathname.startsWith(prefix),
   );
   const main = useRef<HTMLElement>(null);
+  const mobileMenu = useRef<HTMLDialogElement>(null);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   useEffect(() => {
+    mobileMenu.current?.close();
     stopAudio();
     main.current?.focus({ preventScroll: true });
     return () => stopAudio();
@@ -34,7 +48,16 @@ export function AppShell({ children }: { children: ReactNode }) {
         view === "session" && id
           ? `/session/${encodeURIComponent(id)}`
           : navigation.some((item) => item.href === `/${view}`) ||
-              ["settings", "ipa", "debate", "path", "progress"].includes(view)
+              [
+                "roadmap",
+                "daily-speaking",
+                "review",
+                "settings",
+                "ipa",
+                "debate",
+                "path",
+                "progress",
+              ].includes(view)
             ? `/${view}`
             : "/";
       router.replace(path);
@@ -52,12 +75,15 @@ export function AppShell({ children }: { children: ReactNode }) {
     );
   if (!store.state.profile) return <Onboarding store={store} onComplete={() => router.push("/")} />;
   const profile = store.state.profile;
-  const role = roles.find((item) => item.id === profile.role)!;
   const activeSeconds = store.state.dailySeconds[dateKey(store.now ?? new Date())] ?? 0;
   const title = pathname.startsWith("/session/")
     ? "Buổi học"
     : (navigation.find((item) => item.href === pathname)?.label ??
       {
+        "/": "Hôm nay",
+        "/roadmap": "Bài học",
+        "/daily-speaking": "Nói chuyện",
+        "/review": "Ôn tập",
         "/progress": "Tiến độ",
         "/path": "Lộ trình",
         "/ipa": "Luyện IPA",
@@ -69,6 +95,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div
       className={cn(
         "app-shell min-h-dvh",
+        !inSession && sidebarCollapsed && "sidebar-collapsed",
         inSession && "session-focus",
         profile.largeText && "large-text",
       )}
@@ -77,32 +104,60 @@ export function AppShell({ children }: { children: ReactNode }) {
         Đến nội dung chính
       </a>
       {!inSession && (
-        <aside className="sidebar">
+        <aside id="app-sidebar" className="sidebar">
           <Link href="/" className="brand-link" aria-label="Natural English · Trang hôm nay">
             <Logo />
           </Link>
-          <span className="nav-label">KHÔNG GIAN HỌC</span>
           <AppNavigation />
           <div className="sidebar-bottom">
-            <Link className="nav-item" href="/progress">
-              Tiến độ của bạn
+            <Link
+              className="nav-item"
+              href="/progress"
+              aria-label="Tiến độ của bạn"
+              title="Tiến độ của bạn"
+            >
+              <ChartNoAxesColumn aria-hidden="true" size={18} />
+              <span>Tiến độ của bạn</span>
             </Link>
             <Link
               className={cn("nav-item", pathname === "/settings" && "active")}
               href="/settings"
+              aria-label="Cài đặt"
+              title="Cài đặt"
               aria-current={pathname === "/settings" ? "page" : undefined}
             >
               <Settings aria-hidden="true" size={18} />
               <span>Cài đặt</span>
             </Link>
-            <Link className="profile-nav" href="/settings">
-              <span className="avatar">{profile.name.slice(0, 1).toUpperCase()}</span>
-              <span>
-                <strong>{profile.name}</strong>
-                <small>{role.short} · Học theo nhịp của bạn</small>
-              </span>
-              <ChevronRight aria-hidden="true" size={16} />
+            <Link
+              className={cn(
+                "nav-item upgrade-nav",
+                pathname === "/settings/upgrade/connections" && "active",
+              )}
+              href="/settings/upgrade/connections"
+              aria-label="Nâng cấp / Upgrade"
+              title="Nâng cấp / Upgrade"
+              aria-current={pathname === "/settings/upgrade/connections" ? "page" : undefined}
+            >
+              <Sparkles aria-hidden="true" size={18} />
+              <span>Nâng cấp / Upgrade</span>
             </Link>
+            <button
+              type="button"
+              className="nav-item sidebar-toggle"
+              aria-label={sidebarCollapsed ? "Mở rộng thanh bên" : "Thu gọn thanh bên"}
+              title={sidebarCollapsed ? "Mở rộng thanh bên" : "Thu gọn thanh bên"}
+              aria-expanded={!sidebarCollapsed}
+              aria-controls="app-sidebar"
+              onClick={() => setSidebarCollapsed((collapsed) => !collapsed)}
+            >
+              {sidebarCollapsed ? (
+                <PanelLeftOpen aria-hidden="true" size={20} />
+              ) : (
+                <PanelLeftClose aria-hidden="true" size={20} />
+              )}
+              <span>Thu gọn thanh bên</span>
+            </button>
           </div>
         </aside>
       )}
@@ -151,14 +206,14 @@ export function AppShell({ children }: { children: ReactNode }) {
               </span>
             </span>
             {!inSession && (
-              <Link
+              <button
                 className="topbar-settings"
-                href="/settings"
-                aria-label="Mở cài đặt"
-                title="Cài đặt"
+                aria-label="Mở menu"
+                title="Menu"
+                onClick={() => mobileMenu.current?.showModal()}
               >
-                <Settings aria-hidden="true" size={20} />
-              </Link>
+                <Menu aria-hidden="true" size={20} />
+              </button>
             )}
             {!inSession && (
               <Link className="avatar small-avatar" href="/settings" aria-label="Mở hồ sơ cá nhân">
@@ -191,13 +246,46 @@ export function AppShell({ children }: { children: ReactNode }) {
           )}
           {children}
         </main>
-        {!inSession && (
-          <footer className="app-footer">
-            <span>Natural English · Tiếng Anh cho cuộc sống của bạn.</span>
-          </footer>
-        )}
       </div>
       {!inSession && <AppNavigation mobile />}
+      {!inSession && (
+        <dialog className="mobile-menu-dialog" ref={mobileMenu} aria-labelledby="mobile-menu-title">
+          <header>
+            <h2 id="mobile-menu-title">Không gian học</h2>
+            <button
+              className="cafe-icon-button"
+              onClick={() => mobileMenu.current?.close()}
+              aria-label="Đóng menu"
+            >
+              <X size={22} />
+            </button>
+          </header>
+          <nav aria-label="Menu điện thoại">
+            {navigation.map(({ href, label, icon: Icon }) => (
+              <Link
+                href={href}
+                key={href}
+                className="nav-item"
+                aria-current={pathname === href ? "page" : undefined}
+                onClick={() => mobileMenu.current?.close()}
+              >
+                <Icon size={20} aria-hidden="true" />
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <div className="mobile-menu-bottom">
+            <Link className="nav-item upgrade-nav" href="/settings/upgrade/connections">
+              <Sparkles size={18} aria-hidden="true" />
+              Nâng cấp / Upgrade
+            </Link>
+            <Link className="nav-item" href="/settings">
+              <Settings size={18} aria-hidden="true" />
+              Cài đặt & Hồ sơ
+            </Link>
+          </div>
+        </dialog>
+      )}
       <span className="sr-only">Tuần hiện tại: {curriculum[store.state.activeWeek - 1].title}</span>
     </div>
   );

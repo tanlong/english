@@ -1,0 +1,24 @@
+{
+  "file": "reports/gray-boo-pine-lake/scene-motion.mp4",
+  "detail": "reports/gray-boo-pine-lake/rower-across-lake.mp4",
+  "detailDescription": "Magnified crop following the boat across the same real-time recording; playback speed is unchanged and the runtime camera stays fixed.",
+  "boatPhaseAtClipStart": 2.8972540000384726,
+  "baseURL": "http://127.0.0.1:3000",
+  "source": "Actual Cafe Pine Lake runtime; normal 1× playback",
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "format": {
+      "duration": "64.000000",
+      "size": "44411330"
+    }
+  },
+  "errors": []
+}

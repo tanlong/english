@@ -1,0 +1,74 @@
+{
+  "cloud_daisy": {
+    "src": "/cafe/npc/cloud_daisy/runtime/master-d7643382d2.webp",
+    "width": 577,
+    "height": 768,
+    "checksum": "d7643382d2cb69f7d66bdd1359765d7c9daa11147fc50b338c0b30b2a9dac196",
+    "masterSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+    "source": "art/npc/cloud_daisy/source/master_rgba.png",
+    "rig": "/cafe/npc/cloud_daisy/runtime/rig-b828d3b666.json",
+    "canonicalId": "cloud_daisy"
+  },
+  "ollie_owl": {
+    "src": "/cafe/npc/ollie_owl/runtime/master-91fd415fec.webp",
+    "width": 709,
+    "height": 768,
+    "checksum": "91fd415fecca59b5051a05f3b5244238e2ed1d465b177c8538625050677354a3",
+    "masterSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+    "source": "art/npc/ollie_owl/source/master_rgba.png",
+    "rig": "/cafe/npc/ollie_owl/runtime/rig-35d7c26a31.json",
+    "canonicalId": "ollie_owl"
+  },
+  "mimi_bunny": {
+    "src": "/cafe/npc/mimi_bunny/runtime/master-698db483d7.webp",
+    "width": 577,
+    "height": 768,
+    "checksum": "698db483d766b256b2875dab3330e7415ca26de01d90e05d49dd0bc3edc1ad9d",
+    "masterSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+    "source": "art/npc/mimi_bunny/source/master_rgba.png",
+    "rig": "/cafe/npc/mimi_bunny/runtime/rig-4e4e0fd8b2.json",
+    "canonicalId": "mimi_bunny"
+  },
+  "astro_bean": {
+    "src": "/cafe/npc/astro_bean/runtime/master-bc67798310.webp",
+    "width": 615,
+    "height": 768,
+    "checksum": "bc67798310e9e11d3147174929296b2b7c8b090e3f2bc81be33fd7a7007b5728",
+    "masterSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+    "source": "art/npc/astro_bean/source/master_rgba.png",
+    "rig": "/cafe/npc/astro_bean/runtime/rig-9cd0741c45.json",
+    "canonicalId": "astro_bean"
+  },
+  "bear_explorer": {
+    "src": "/cafe/npc/bear_explorer/runtime/master-45cb25308b.webp",
+    "width": 615,
+    "height": 768,
+    "checksum": "45cb25308b001e7fe5b550f0569ed0e320676ba7155846b045c8cf1fa3547010",
+    "masterSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+    "source": "art/npc/bear_explorer/source/master_rgba.png",
+    "rig": "/cafe/npc/bear_explorer/runtime/rig-8dd0ebf4fc.json",
+    "canonicalId": "bear_explorer"
+  },
+  "gray_boo": {
+    "src": "/cafe/npc/gray_boo/runtime/master-b6741c37f4.webp",
+    "width": 620,
+    "height": 768,
+    "checksum": "b6741c37f480ecca959855535c2896f9bece88cf3be13fe5786bcbd63b2b17f2",
+    "masterSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+    "source": "art/npc/gray_boo/source/master_rgba.png",
+    "rig": "/cafe/npc/gray_boo/runtime/rig-c601214c95.json",
+    "canonicalId": "gray_boo"
+  },
+  "mr_pink": {
+    "src": "/cafe/npc/mr-pink-f72dd76e33.png",
+    "width": 1087,
+    "height": 1446,
+    "source": "MD/Mr.Pink-pose.png",
+    "checksum": "f72dd76e33da649212e95978f97a25f3e0b9677bb23d75035e869ec36bafa292",
+    "seated": {
+      "src": "/cafe/panoramic/mr_pink-a1e3c81baf.webp",
+      "width": 1254,
+      "height": 1254
+    }
+  }
+}

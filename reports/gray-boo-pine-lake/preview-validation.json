@@ -1,0 +1,41 @@
+{
+  "renderer": "Project PixiJS puppet, deterministic snapshots",
+  "fps": 8,
+  "durationMs": 3000,
+  "width": 384,
+  "height": 480,
+  "clips": [
+    {
+      "file": "public/cafe/assets/npc/gray_boo/gray_boo_idle.webp",
+      "frames": 24,
+      "durationMs": 3000,
+      "bytes": 915538,
+      "sha256": "4a8d57d85e004a758a417188c11310007cc642cb0e5488cd5459e6869a16494d",
+      "stableFeet": true,
+      "hasAlpha": true
+    },
+    {
+      "file": "public/cafe/assets/npc/gray_boo/gray_boo_idle.gif",
+      "frames": 24,
+      "durationMs": 3000,
+      "bytes": 1695394,
+      "sha256": "c4ffda28b0c7e673f3973fa56381c03d6f229f35a789ddebde8f72f3efcae07b",
+      "stableFeet": true,
+      "hasAlpha": true
+    },
+    {
+      "file": "public/cafe/assets/npc/gray_boo/gray_boo_notice.webp",
+      "frames": 24,
+      "durationMs": 3000,
+      "bytes": 615428,
+      "sha256": "8b2ecbe12d8151078c3bbf977d17a120a7b8ccd633e946763a756e7efdf5a91d",
+      "stableFeet": true,
+      "hasAlpha": true
+    }
+  ],
+  "pageErrors": [],
+  "rig": "/cafe/npc/gray_boo/runtime/rig-c601214c95.json",
+  "productionApproved": false,
+  "seamlessIdle": true,
+  "pass": true
+}

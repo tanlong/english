@@ -1,0 +1,109 @@
+{
+  "status": "DRAFT_REVIEW_REQUIRED",
+  "productionReady": false,
+  "npcs": [
+    {
+      "npcId": "cloud_daisy",
+      "productionReady": false,
+      "blockers": [
+        "PARTS_NOT_APPROVED",
+        "PRODUCTION_NOT_APPROVED",
+        "RIG_NOT_APPROVED",
+        "RENDERED_LAYER_NOT_APPROVED:body",
+        "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+        "RENDERED_LAYER_NOT_APPROVED:arm_hold",
+        "RENDERED_LAYER_NOT_APPROVED:cup",
+        "RENDERED_LAYER_NOT_APPROVED:cloth",
+        "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+        "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+        "PRODUCTION_APPROVAL_HASH_MISMATCH",
+        "RUNTIME_NOT_PACKAGED"
+      ]
+    },
+    {
+      "npcId": "ollie_owl",
+      "productionReady": false,
+      "blockers": [
+        "PARTS_NOT_APPROVED",
+        "PILOT_NOT_APPROVED",
+        "PRODUCTION_NOT_APPROVED",
+        "RIG_NOT_APPROVED",
+        "RENDERED_LAYER_NOT_APPROVED:body",
+        "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+        "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+        "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+        "PILOT_APPROVAL_HASH_MISMATCH",
+        "PRODUCTION_APPROVAL_HASH_MISMATCH",
+        "RUNTIME_NOT_PACKAGED"
+      ]
+    },
+    {
+      "npcId": "mimi_bunny",
+      "productionReady": false,
+      "blockers": [
+        "PARTS_NOT_APPROVED",
+        "PILOT_NOT_APPROVED",
+        "PRODUCTION_NOT_APPROVED",
+        "RIG_NOT_APPROVED",
+        "RENDERED_LAYER_NOT_APPROVED:body",
+        "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+        "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+        "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+        "PILOT_APPROVAL_HASH_MISMATCH",
+        "PRODUCTION_APPROVAL_HASH_MISMATCH",
+        "RUNTIME_NOT_PACKAGED"
+      ]
+    },
+    {
+      "npcId": "astro_bean",
+      "productionReady": false,
+      "blockers": [
+        "PARTS_NOT_APPROVED",
+        "PILOT_NOT_APPROVED",
+        "PRODUCTION_NOT_APPROVED",
+        "RIG_NOT_APPROVED",
+        "RENDERED_LAYER_NOT_APPROVED:body",
+        "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+        "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+        "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+        "PILOT_APPROVAL_HASH_MISMATCH",
+        "PRODUCTION_APPROVAL_HASH_MISMATCH",
+        "RUNTIME_NOT_PACKAGED"
+      ]
+    },
+    {
+      "npcId": "bear_explorer",
+      "productionReady": false,
+      "blockers": [
+        "PARTS_NOT_APPROVED",
+        "PILOT_NOT_APPROVED",
+        "PRODUCTION_NOT_APPROVED",
+        "RIG_NOT_APPROVED",
+        "RENDERED_LAYER_NOT_APPROVED:body",
+        "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+        "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+        "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+        "PILOT_APPROVAL_HASH_MISMATCH",
+        "PRODUCTION_APPROVAL_HASH_MISMATCH",
+        "RUNTIME_NOT_PACKAGED"
+      ]
+    },
+    {
+      "npcId": "gray_boo",
+      "productionReady": false,
+      "blockers": [
+        "PARTS_NOT_APPROVED",
+        "PILOT_NOT_APPROVED",
+        "PRODUCTION_NOT_APPROVED",
+        "RIG_NOT_APPROVED",
+        "RENDERED_LAYER_NOT_APPROVED:body",
+        "RENDERED_LAYER_NOT_APPROVED:arm_wave",
+        "RENDERED_LAYER_NOT_APPROVED:eye_l_closed",
+        "RENDERED_LAYER_NOT_APPROVED:eye_r_closed",
+        "PILOT_APPROVAL_HASH_MISMATCH",
+        "PRODUCTION_APPROVAL_HASH_MISMATCH",
+        "RUNTIME_NOT_PACKAGED"
+      ]
+    }
+  ]
+}

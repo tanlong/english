@@ -1,0 +1,29 @@
+{
+  "scene": "pine_lake",
+  "outputSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "method": "two overlapping image_gen regional detail edits; native tile detail downsampled and feathered over 256 pixels",
+  "conceptIsLayoutReferenceOnly": true,
+  "overlap": 256,
+  "tiles": [
+    {
+      "file": "art/dalat/pine_lake/tiles/left-detail.png",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sha256": "df4fd3d9c0a37f74e03ff3b1fa54383201d07b4ccc57556c08c268468cb98cc4"
+    },
+    {
+      "file": "art/dalat/pine_lake/tiles/right-detail.png",
+      "nativeSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "sha256": "20c7b5291f06df6eec07b13366e6ba62406f47c6cc518ac0a93e6069b38691ed"
+    }
+  ],
+  "sha256": "8c6c56d8756af103a7ba1c544541afcefd9bd63756f01509809efc285bf143cd"
+}

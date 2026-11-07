@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-06T14:18:07.887Z",
+  "command": "npm run npc:doctor",
+  "nodeVersion": "v25.3.0",
+  "networkCalls": 0,
+  "apiCalls": 0,
+  "packages": [
+    {
+      "name": "pixi.js",
+      "installed": true,
+      "version": "8.22.0",
+      "resolved": "/Volumes/Data/ENGLISH/node_modules/pixi.js/lib/index.mjs"
+    },
+    {
+      "name": "gsap",
+      "installed": true,
+      "version": "3.15.1",
+      "resolved": "/Volumes/Data/ENGLISH/node_modules/gsap/index.js"
+    },
+    {
+      "name": "sharp",
+      "installed": true,
+      "version": "0.35.5",
+      "resolved": "/Volumes/Data/ENGLISH/node_modules/sharp/dist/index.mjs"
+    },
+    {
+      "name": "@playwright/test",
+      "installed": true,
+      "version": "1.64.1",
+      "resolved": "/Volumes/Data/ENGLISH/node_modules/@playwright/test/index.mjs"
+    }
+  ],
+  "binaries": [
+    {
+      "name": "ffmpeg",
+      "installed": true,
+      "version": "9.0.2",
+      "command": [
+        "ffmpeg",
+        "-version"
+      ],
+      "firstLine": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    {
+      "name": "ffprobe",
+      "installed": true,
+      "version": "9.0.2",
+      "command": [
+        "ffprobe",
+        "-version"
+      ],
+      "firstLine": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  ],
+  "chromium": {
+    "name": "chromium",
+    "installed": true,
+    "executable": "/Users/duongtanlong/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "check": "executable exists and is executable; browser not launched"
+  },
+  "pass": true
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "ollie_owl",
+  "displayName": "Ollie Owl",
+  "aliases": [],
+  "approved": true,
+  "masterPath": "art/npc/ollie_owl/source/master_rgba.png",
+  "masterSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+  "sourcePath": "MD/Ollie Owl.png",
+  "angle": "three-quarter-front",
+  "light": "upper-right",
+  "camera": "fixed",
+  "designConstraints": {
+    "species": "owl",
+    "outfit": "exactly as supplied reference; do not infer from legacy prompts",
+    "preserve": [
+      "palette",
+      "silhouette",
+      "face",
+      "costume",
+      "markings"
+    ]
+  },
+  "approval": {
+    "accepted": true,
+    "sha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+    "normalizedSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+    "owner": "product owner",
+    "date": "2026-11-06",
+    "evidence": "Explicit user reply: Chọn cả 5 ảnh làm master",
+    "override": "Preserve exact supplied character design and anatomy over older bible descriptions"
+  },
+  "assetStatus": "APPROVED_MASTER"
+}

@@ -1,0 +1,105 @@
+{
+  "npcId": "ollie_owl",
+  "ready": false,
+  "jobs": [
+    {
+      "id": "torso",
+      "kind": "parts",
+      "path": "parts/torso.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY torso as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "head",
+      "kind": "parts",
+      "path": "parts/head.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY head as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "wing_l",
+      "kind": "parts",
+      "path": "parts/wing_l.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY wing l as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "wing_r",
+      "kind": "parts",
+      "path": "parts/wing_r.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY wing r as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "glasses",
+      "kind": "parts",
+      "path": "parts/glasses.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY glasses as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "eyelid",
+      "kind": "parts",
+      "path": "parts/eyelid.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY eyelid as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "beak_open",
+      "kind": "parts",
+      "path": "parts/beak_open.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "ISOLATE_OR_RECONSTRUCT_PART",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY beak open as one isolated rig layer. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "laptop",
+      "kind": "props",
+      "path": "props/laptop.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY laptop as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    },
+    {
+      "id": "coffee_cup",
+      "kind": "props",
+      "path": "props/coffee_cup.png",
+      "sha256": null,
+      "draftPath": null,
+      "status": "MISSING_ART",
+      "approved": false,
+      "action": "GENERATE_PROP",
+      "prompt": "Use the approved Ollie Owl master as the sole identity reference. Create ONLY coffee cup as one isolated prop. Preserve exact species, paws/limbs, palette, outfit, line weight, soft cel shading and three-quarter front view. Reconstruct hidden joint pixels only where necessary. True transparent PNG, full part visible with padding. No labels, floor shadow, background or extra objects. Do not redesign the character. Human review is required."
+    }
+  ]
+}

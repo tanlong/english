@@ -68,8 +68,10 @@ test("content studio edits a draft, displays gates and restricts workflow action
     .fill("E2E-ONLY-EDITOR-KEY-DO-NOT-USE-IN-PRODUCTION");
   await page.getByRole("button", { name: "Kết nối", exact: true }).click();
   await page.getByRole("button", { name: "Nhập bản nháp từ đặc tả", exact: true }).click();
-  await expect(page.getByLabel("Bài đang biên tập")).toContainText("My Daily Routine");
-  await page.getByLabel("Bài đang biên tập").selectOption("my-daily-routine");
+  const lessonPicker = page.getByRole("combobox", { name: "Bài đang biên tập", exact: true });
+  await expect(lessonPicker).toHaveValue(/My Daily Routine/);
+  await lessonPicker.click();
+  await page.getByRole("option", { name: /My Daily Routine/ }).click();
   await expect(
     page.getByRole("heading", { name: "Cổng kiểm duyệt · bản đã lưu", exact: true }),
   ).toBeVisible();
@@ -83,15 +85,16 @@ test("content studio edits a draft, displays gates and restricts workflow action
   draft.lesson.description = "Test draft description.";
   await editor.fill(JSON.stringify(draft));
   await page.getByRole("button", { name: "Lưu revision mới", exact: true }).click();
-  await expect(page.getByLabel("Bài đang biên tập")).toContainText(`r${nextRevision}`);
+  await expect(lessonPicker).toHaveValue(new RegExp(`r${nextRevision}`));
   await page.getByRole("button", { name: "Gửi duyệt bản đã lưu", exact: true }).click();
-  await expect(page.getByLabel("Bài đang biên tập")).toContainText("review");
+  await expect(lessonPicker).toHaveValue(/review/);
   await page.getByRole("button", { name: "Đăng xuất", exact: true }).click();
   await page
     .getByLabel("Khóa truy cập theo vai trò")
     .fill("E2E-ONLY-REVIEWER-KEY-DO-NOT-USE-IN-PRODUCTION");
   await page.getByRole("button", { name: "Kết nối", exact: true }).click();
-  await page.getByLabel("Bài đang biên tập").selectOption("my-daily-routine");
+  await lessonPicker.click();
+  await page.getByRole("option", { name: /My Daily Routine/ }).click();
   await page.getByRole("button", { name: "Duyệt ngôn ngữ và ngoại lệ", exact: true }).click();
   await expect(page.locator(".field-error")).toContainText("1.500");
   await expect(page.getByRole("button", { name: "Xuất bản", exact: true })).toHaveCount(0);

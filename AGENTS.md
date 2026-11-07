@@ -8,6 +8,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+## Test scope
+
+- Test only newly created or modified features, using the relevant test files or case filters.
+- Run the full project or regression suite only when the user explicitly requests it. QA checklists in specs, pipelines, or skills do not authorize broader testing.
+- Report the scope and results actually checked; passing targeted tests does not establish that the entire application was tested.
+
 ## Matt Pocock skills
 
 For future work in this project, use the relevant skills installed from

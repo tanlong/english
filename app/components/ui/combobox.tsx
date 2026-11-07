@@ -40,12 +40,21 @@ export function ComboboxInput({
   );
 }
 
-export function ComboboxContent({ className, ...props }: ComboboxPrimitive.Popup.Props) {
+export function ComboboxContent({
+  className,
+  container,
+  positionMethod,
+  ...props
+}: ComboboxPrimitive.Popup.Props & {
+  container?: ComboboxPrimitive.Portal.Props["container"];
+  positionMethod?: ComboboxPrimitive.Positioner.Props["positionMethod"];
+}) {
   return (
-    <ComboboxPrimitive.Portal>
+    <ComboboxPrimitive.Portal container={container}>
       <ComboboxPrimitive.Positioner
         sideOffset={4}
         align="start"
+        positionMethod={positionMethod}
         className="isolate z-100 w-(--anchor-width) max-w-(--available-width)"
       >
         <ComboboxPrimitive.Popup

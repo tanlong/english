@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "astro_bean",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "approved": false,
+  "sourceSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+  "rigSha256": "61e8f77ebce10fa7cdeed4215ee4fa4bf0085118839f1491e5878c4ce92606c5",
+  "mode": "single-arm",
+  "clips": {
+    "idle": {
+      "duration": 8,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": -1,
+    "restAngle": 20
+  }
+}

@@ -8,6 +8,8 @@
 @import "./styles/speaking.css" layer(components);
 @import "./styles/debate.css" layer(components);
 @import "./styles/natural.css" layer(components);
+@import "./styles/cafe.css" layer(components);
+@import "./styles/pine-lake.css" layer(components);
 
 @source "./components";
 @source "./(learning)";

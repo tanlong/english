@@ -1,0 +1,361 @@
+{
+  "version": 1,
+  "status": "restored-runtime-with-approved-master-fallbacks",
+  "recoveredAt": "2026-11-06",
+  "note": "19 original runtime assets recovered exactly; 6 unrecoverable fallback PNGs replaced by already-approved masters under new checksummed URLs. Draft rigs are not published.",
+  "assets": [
+    {
+      "runtime": "/cafe/panoramic/plant-542e1a3fb8.webp",
+      "source": "art/cafe/recovered/panoramic/plant-542e1a3fb8.png",
+      "sourceSha256": "df601cf5cb7a10094d36cb9d6e54f7191c00b47fe94d1545e907c51927482264",
+      "sha256": "542e1a3fb815c630215d6a52591aff314328141f4bb9be05213acaff9a55890e",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-07abec34-a390-4d04-8236-6353769002ab.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/may-b9e6f34a36.webp",
+      "source": "art/cafe/recovered/panoramic/may-b9e6f34a36.png",
+      "sourceSha256": "f40ca9ff5de066fddd8e1fe5329cd4f73473694649a4bc1abe5d2b1718d1dac6",
+      "sha256": "b9e6f34a36e2efbf166c6a71704a997453a4eda9ecb16c60da89dcbbe1146456",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-18854988-2e4c-491a-94f0-0cd2722efb24.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/mountain-0da1fe7ed6.webp",
+      "source": "art/cafe/recovered/panoramic/mountain-0da1fe7ed6.png",
+      "sourceSha256": "8590d76965483611a2d91deccb1148c775a4f1099ad52eb55a12aa8d0d6828fd",
+      "sha256": "0da1fe7ed6ce8ee87ad76b13ed2cf9fb70ea244504e8f1383b6ce34f64ffb3f2",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-34737995-859c-42c1-825a-a2de7b9a96f2.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/astro_bean-01f7c66b71.webp",
+      "source": "art/cafe/recovered/panoramic/astro_bean-01f7c66b71.png",
+      "sourceSha256": "f1542d930214a0c16813a8a97646a057dfabbaa928e46d63cd1ddf7e836eefaa",
+      "sha256": "01f7c66b716f37558ff43fbcfed63c3bb2c07f221f0f3f909816e07e18b6727a",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-3fcdce00-c879-487f-9b28-095d82aae4df.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/gray_boo-92d79a4660.webp",
+      "source": "art/cafe/recovered/panoramic/gray_boo-92d79a4660.png",
+      "sourceSha256": "5d937827db437ed3da248ca7ce15f39081e49c4aa51b667f90c418eecef47e7d",
+      "sha256": "92d79a4660ebfdf4f31ee214233cb9a198577e2d8adfca8304e3aeae5461ec5b",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-7260d747-73b0-4ae5-9331-24729595e80b.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/mr_pink-a1e3c81baf.webp",
+      "source": "art/cafe/recovered/panoramic/mr_pink-a1e3c81baf.png",
+      "sourceSha256": "902bf68e520e5e0e0457e2df95ac275efb280337c2819759fdbfd34693aa50e0",
+      "sha256": "a1e3c81baf649ea0ed265ffb1cc72886b079f486f60110b6a32f71965aa0bed7",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-756a7866-a094-4dad-baaf-11763f42ae91.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/mimi_bunny-7f3fa23960.webp",
+      "source": "art/cafe/recovered/panoramic/mimi_bunny-7f3fa23960.png",
+      "sourceSha256": "6bdba2e5b928145c96c045ffe7ec1885a1091347f123d886278272a3e2508e73",
+      "sha256": "7f3fa23960ecdb1f7ff73cb0da963b5e6300045036d399d257337c7a2cbc292e",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-7ca2f1ce-7ce3-414b-b55b-af39a26ed12c.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/deo_explorer-1c52bddcbd.webp",
+      "source": "art/cafe/recovered/panoramic/deo_explorer-1c52bddcbd.png",
+      "sourceSha256": "3f33371f394ccce09b21d4dae75e161e715ae716ae5f3cd29a22f8fbfc79812c",
+      "sha256": "1c52bddcbd121af2dd0db27ed317b7dd4286f98b163c9de08988b3d1a7f82429",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-8ff65bc6-696f-470b-b146-5886afebd1bf.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/terrace-0a42fe7214.webp",
+      "source": "art/cafe/recovered/panoramic/terrace-0a42fe7214.png",
+      "sourceSha256": "bdb11f964fd910f058d9c67f1b66e43f5c446d1bc8552e58e698170e7242d419",
+      "sha256": "0a42fe72145eddb26d2ef7636e393d1b4ac03c7fd151703eaf209fbdfb81bc55",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-9557da37-9281-4fbe-a631-06c9e9fe199a.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/ollie_owl-56938ed115.webp",
+      "source": "art/cafe/recovered/panoramic/ollie_owl-56938ed115.png",
+      "sourceSha256": "52cf72eba0a40b5fd8fcc196fd79d529b34fff2afc74e5ec10e9d427db656a79",
+      "sha256": "56938ed1150f7c2ebcf5c77ea90e776b17811c7309f361afdbce56eafee7f217",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-ac29a12d-4b0f-44d2-ae9e-0f4308333719.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/ivy-1a25a1b91d.webp",
+      "source": "art/cafe/recovered/panoramic/ivy-1a25a1b91d.png",
+      "sourceSha256": "4e5ac7634f4c5f27439c25a4b4f9da1d6ff65b05d9b3d95e58686973127704a1",
+      "sha256": "1a25a1b91d8d195ca55ff129760a91e0a7f4eb5edcb93a44e3b1166d57bfc58a",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-b6ac6d27-795e-4935-bd2a-3b4c0a4ebac5.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/panoramic/inside-6ec8cf6a0b.webp",
+      "source": "art/cafe/recovered/panoramic/inside-6ec8cf6a0b.png",
+      "sourceSha256": "074d7a1781ccdd45ce9cf4f5f6e78d72f71db37fe549df1e04a743507422666d",
+      "sha256": "6ec8cf6a0b75440582d9414730d60d131846be3b2a6c527c0adac55b8ef36d2b",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 90,
+          "alphaQuality": 100
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a722-100e-7ca2-89ff-6c24bc991c36/exec-e7009d95-5ce4-4857-935e-52d3c595d88c.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/storybook/ollie_owl-atlases-5e7d5ad640.webp",
+      "source": "art/cafe/recovered/storybook/ollie_owl-atlases-5e7d5ad640.png",
+      "sourceSha256": "40a588943c2bc5ad99a44c52849db6ffe206efc24674cb8d9ff19061688c3788",
+      "sha256": "5e7d5ad640d0a1d1df12710e9f330d75aaf1e7acd472ec1d1de9f9d3b3c26829",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 95,
+          "alphaQuality": 100,
+          "effort": 6
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a69f-0104-7b10-bfc8-f212eee56953/exec-2a59f710-f92e-4c75-867c-a53abb03b66e.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/storybook/gray_boo-atlases-f627778d6c.webp",
+      "source": "art/cafe/recovered/storybook/gray_boo-atlases-f627778d6c.png",
+      "sourceSha256": "b2520cb89bd6313c27d8f3986aabda252c91f33b151c7c4584a8cfdd4c697b57",
+      "sha256": "f627778d6c5e4d60b0934daa1383eb2af1fab835ea995d9a443395fbc7cc448c",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 95,
+          "alphaQuality": 100,
+          "effort": 6
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a69f-0104-7b10-bfc8-f212eee56953/exec-3d1d5494-46fd-470c-94ca-10fcebfb7916.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/storybook/may-atlases-03bda6bb18.webp",
+      "source": "art/cafe/recovered/storybook/may-atlases-03bda6bb18.png",
+      "sourceSha256": "af704de8e40c1258a76cfd67806c2d7d28942c5e6f9c5ea02751c9d9c96165d0",
+      "sha256": "03bda6bb18dd63d6d643cf26b8d8ee55c51988b07cdbc70b864a10af724975dd",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 95,
+          "alphaQuality": 100,
+          "effort": 6
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a69f-0104-7b10-bfc8-f212eee56953/exec-56571ffa-dd08-49c4-8b2e-233e73f11007.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/storybook/astro_bean-atlases-69d15e7628.webp",
+      "source": "art/cafe/recovered/storybook/astro_bean-atlases-69d15e7628.png",
+      "sourceSha256": "93d379a512eef39ed01126312fd90915508ce5458cd0bd129e26a6e4671c8f73",
+      "sha256": "69d15e7628c0e1fb0d5fdbd1a8268d50dafc3057a8c11875b404c5b061332b11",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 95,
+          "alphaQuality": 100,
+          "effort": 6
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a69f-0104-7b10-bfc8-f212eee56953/exec-98543cc4-b127-46fb-877b-d778cd431750.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/storybook/mimi_bunny-atlases-3af42bf9ee.webp",
+      "source": "art/cafe/recovered/storybook/mimi_bunny-atlases-3af42bf9ee.png",
+      "sourceSha256": "5aee06791a7691dbdf0af0a9e2a48d74e985c36221c15217381aa96ea607f796",
+      "sha256": "3af42bf9ee880a8f845cd610d2fefa94b6fea2dfa0cd15d479462f1abaa06d82",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 95,
+          "alphaQuality": 100,
+          "effort": 6
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a69f-0104-7b10-bfc8-f212eee56953/exec-9a8dc0ac-e2ec-4a16-9f43-e9e2ce6a71c6.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/storybook/deo_explorer-atlases-822d7eb323.webp",
+      "source": "art/cafe/recovered/storybook/deo_explorer-atlases-822d7eb323.png",
+      "sourceSha256": "9205084b2372c167d28eae22a9d1c9585f5b60d9c40ba338c4c8878c5439c945",
+      "sha256": "822d7eb3234f3b1ada93f3923d0db8295d4a00e53edb8522a3591545ef77df9d",
+      "encoding": {
+        "format": "webp",
+        "options": {
+          "quality": 95,
+          "alphaQuality": 100,
+          "effort": 6
+        }
+      },
+      "originalSourcePath": "/Users/duongtanlong/.codex/generated_images/01a1a69f-0104-7b10-bfc8-f212eee56953/exec-d41a18c6-c05d-4941-908f-ea1a4fa2a1f3.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/npc/mr-pink-f72dd76e33.png",
+      "source": "art/cafe/recovered/npc/mr-pink-f72dd76e33.png",
+      "sourceSha256": "f72dd76e33da649212e95978f97a25f3e0b9677bb23d75035e869ec36bafa292",
+      "sha256": "f72dd76e33da649212e95978f97a25f3e0b9677bb23d75035e869ec36bafa292",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "git HEAD:MD/Mr.Pink-pose.png",
+      "recoveryKind": "existing-runtime-exact"
+    },
+    {
+      "runtime": "/cafe/npc/cloud-daisy-86ed0c25c7.png",
+      "source": "art/cafe/recovered/npc/cloud_daisy.png",
+      "sourceSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+      "sha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "art/npc/cloud_daisy/source/master_rgba.png",
+      "recoveryKind": "approved-master-fallback"
+    },
+    {
+      "runtime": "/cafe/npc/ollie-owl-36e1ea8468.png",
+      "source": "art/cafe/recovered/npc/ollie_owl.png",
+      "sourceSha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+      "sha256": "36e1ea846871571c4c76b87ca7117e472064298eff6b44584df1f02da730831f",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "art/npc/ollie_owl/source/master_rgba.png",
+      "recoveryKind": "approved-master-fallback"
+    },
+    {
+      "runtime": "/cafe/npc/mimi-bunny-e524594c0c.png",
+      "source": "art/cafe/recovered/npc/mimi_bunny.png",
+      "sourceSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+      "sha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "art/npc/mimi_bunny/source/master_rgba.png",
+      "recoveryKind": "approved-master-fallback"
+    },
+    {
+      "runtime": "/cafe/npc/astro-bean-77801315ce.png",
+      "source": "art/cafe/recovered/npc/astro_bean.png",
+      "sourceSha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+      "sha256": "77801315ce5c320e0d764627c4df7174e1ede5cc9188a4b9065b5979dbf8171f",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "art/npc/astro_bean/source/master_rgba.png",
+      "recoveryKind": "approved-master-fallback"
+    },
+    {
+      "runtime": "/cafe/npc/bear-explorer-0727f569d4.png",
+      "source": "art/cafe/recovered/npc/bear_explorer.png",
+      "sourceSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "sha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "art/npc/bear_explorer/source/master_rgba.png",
+      "recoveryKind": "approved-master-fallback"
+    },
+    {
+      "runtime": "/cafe/npc/gray-boo-5eca38f57a.png",
+      "source": "art/cafe/recovered/npc/gray_boo.png",
+      "sourceSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "sha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+      "encoding": {
+        "format": "png"
+      },
+      "originalSourcePath": "art/npc/gray_boo/source/master_rgba.png",
+      "recoveryKind": "approved-master-fallback"
+    }
+  ]
+}

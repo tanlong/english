@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "3.0",
+  "npcId": "mimi_bunny",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "approved": false,
+  "sourceSha256": "e524594c0c12a9f75e4b963577dae7b6c8753a5e889b07a4a7d6372aca6eb029",
+  "rigSha256": "e913c32b545fa1fa6b77c2404be626c108184862e802c2b54bc2339455814f5e",
+  "mode": "single-arm",
+  "clips": {
+    "idle": {
+      "duration": 7,
+      "fps": 12,
+      "loop": true,
+      "endState": "idle"
+    },
+    "interaction": {
+      "duration": 2,
+      "fps": 24,
+      "loop": false,
+      "endState": "listening"
+    }
+  },
+  "motion": {
+    "idleAmplitude": 2.5,
+    "waveAmplitude": 22,
+    "direction": -1,
+    "restAngle": 0
+  }
+}

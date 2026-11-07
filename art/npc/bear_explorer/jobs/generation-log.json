@@ -1,0 +1,93 @@
+{
+  "provider": "built-in image_gen",
+  "model": null,
+  "usage": null,
+  "costUSD": null,
+  "billingNote": "No application API key used. Tool did not return model, usage or monetary cost.",
+  "jobs": [
+    {
+      "npcId": "bear_explorer",
+      "jobId": "bear_explorer_body",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: ONE full-resolution body layer for the Bear Explorer 2D puppet rig. Image 1 is the exact OWNER-APPROVED master and sole identity reference. Perform ONE change ONLY: remove the complete arm on the VIEWER'S LEFT that is raised to tip the cowboy hat, from its shirt-covered shoulder through the orange-fur forearm to the dark-brown glove touching the hat brim. Reconstruct only the clothing/backpack/hat pixels newly revealed behind that removed arm. Keep the OTHER arm and the held map completely unchanged. Preserve exact orange-brown bear head, brown eyes, cream muzzle, smiling mouth, brown cowboy hat with feathers and gold star, red patterned bandana, cream shirt, brown vest, backpack with bedroll and lantern, belts, trousers, compass and brown boots. No red panda features or striped tail. Keep the exact source full-body framing, size, proportions, three-quarter front camera, outline, palette and crisp detailed soft cel shading. Keep the hat and all accessories in place. Source canvas is 1122x1402; match registration and scale. True transparent PNG, no floor shadow, scenery, text, extra limbs or new props. One isolated full-body component, NOT a sheet. All generated artwork is DRAFT pending review.",
+      "input": "MD/Bear Explorer.png",
+      "output": "art/npc/bear_explorer/draft/parts/body.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b11c-4d4d-7073-97c0-c6f8bad285cc/exec-5a77619b-e02d-44c8-8017-7ec5a448c894.png",
+      "approved": false,
+      "status": "DRAFT_AWAITING_REVIEW",
+      "inputSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "outputSha256": "171644ee2077da44b82fdd29bbed6e6cb0da42624fdf7ce600d43ca87ec661bb",
+      "metadata": {
+        "width": 1122,
+        "height": 1402,
+        "channels": 4,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 39,
+          "top": 1,
+          "width": 987,
+          "height": 1369
+        }
+      }
+    },
+    {
+      "npcId": "bear_explorer",
+      "jobId": "bear_explorer_arm_wave",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: ONE isolated arm layer for Bear Explorer 2D puppet rig. Image 1 is the exact OWNER-APPROVED master. Isolate ONLY the VIEWER-LEFT raised hat-tipping arm, from the cream shirt-covered shoulder and bent upper sleeve through the rolled cream cuff and orange-fur forearm to the dark brown leather gloved hand that touches the hat brim. Preserve the EXACT SOURCE ARM POSE: shoulder at lower-right of component, elbow to lower-left, forearm rising near vertically, glove curled at top to tip a hat. Include the full cream shirt sleeve with its fold lines, rolled cuff, orange fur, stitched brown glove cuff with gold cross detail, and glove. Complete only the rounded shoulder cap hidden under the vest for clean rig overlap. No actual hat or hat fragments, head, scarf, vest, backpack, map, body or other arm. Keep original palette, proportions, bold dark warm outlines, detailed soft cel shading, upper-right light and three-quarter front view. Full detached arm only, filling canvas with clear margin, true transparent PNG, no shadow, background or text. One full-resolution component, NOT a sheet; DRAFT pending review.",
+      "input": "MD/Bear Explorer.png",
+      "output": "art/npc/bear_explorer/draft/parts/arm_wave.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b11c-4d4d-7073-97c0-c6f8bad285cc/exec-2e5a12a1-163c-4a08-9628-c0837bcf8ae5.png",
+      "approved": false,
+      "status": "DRAFT_AWAITING_REVIEW",
+      "inputSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "outputSha256": "b386d8ae55d45c5cfe57a87b180b7853935fbcf72f6e2d7ab128352783e9cdec",
+      "metadata": {
+        "width": 1122,
+        "height": 1402,
+        "channels": 4,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 191,
+          "top": 36,
+          "width": 720,
+          "height": 1342
+        }
+      }
+    },
+    {
+      "npcId": "bear_explorer",
+      "jobId": "bear_explorer_eyes_closed",
+      "tool": "built-in image_gen",
+      "model": null,
+      "usage": null,
+      "costUSD": null,
+      "prompt": "Use case: identity-preserve. Asset type: aligned full-canvas blink edit for Bear Explorer puppet rig. The attached image is the exact OWNER-APPROVED master and sole identity reference. Change ONLY BOTH EYES: close both brown eyes gently into friendly natural curved bear eyelids for one blink. Preserve original eyebrows and all face boundaries, orange-brown fur, cream muzzle, mouth/smile, head, brown feathered cowboy hat with gold star, exact raised hat-tipping glove and arm, red bandana, explorer outfit, backpack, held map, compass, trousers and boots UNCHANGED. Preserve exact pose, pixel registration, framing, scale, lineweight, shading, palette, three-quarter front camera and upper-right lighting. Source canvas is 1122x1402: match identical full-body dimensions and registration if possible. Do not shift or enlarge the face. True transparent PNG, no background, shadow, text or extra props. This is a full-resolution aligned expression source for extracting eyelid patches, NOT a new master or sprite sheet. DRAFT pending review.",
+      "input": "MD/Bear Explorer.png",
+      "output": "art/npc/bear_explorer/draft/parts/eyes_closed.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1b11c-4d4d-7073-97c0-c6f8bad285cc/exec-15ddc2b9-ee7a-4e00-9197-fe236adcc8b9.png",
+      "approved": false,
+      "status": "DRAFT_AWAITING_REVIEW",
+      "inputSha256": "0727f569d460ed4c51f127f2b7e6c52af9c3845464581b130bb1507303ac89cd",
+      "outputSha256": "f9b3748118b26dad5b886622b46a5f633e9d7d160fdbefa03acea4c4785db8f3",
+      "metadata": {
+        "width": 1122,
+        "height": 1402,
+        "channels": 4,
+        "hasAlpha": true,
+        "bbox": {
+          "left": 38,
+          "top": 0,
+          "width": 989,
+          "height": 1370
+        }
+      }
+    }
+  ]
+}

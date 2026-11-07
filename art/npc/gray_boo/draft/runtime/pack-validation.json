@@ -1,0 +1,49 @@
+{
+  "npcId": "gray_boo",
+  "status": "DRAFT_NOT_FOR_PRODUCTION",
+  "sourceSha256": "5eca38f57afe944b5ad789f3db1089611ae4ab90bc215b3398088faebc80434a",
+  "rigSha256": "d1e0378ec06674b3ef26c220380a1c65d32e3112ceddda70ca7a1a3464d87a85",
+  "pass": true,
+  "hasAlpha": true,
+  "atlasSize": {
+    "width": 1536,
+    "height": 934
+  },
+  "fileHashes": {
+    "atlas.webp": "5e0f18713b3ee3fa018bdd9fa1e51e2883f1cb5101c19039b6ace4e840bf4ae4",
+    "atlas.json": "a9bbc5b9d88432f6484fd9338f5f66a5277e8f86a411d11ac9ee3814813ad8e0",
+    "rig.json": "eaec0ac80487a1c385c12dcd52b005103ae2eb4415b05047f2093fd57aab2505",
+    "animations.json": "d7ddcab8c194ebfc6030b1d52fe0f17168dfe5c2db21117faf3791866a6f562f"
+  },
+  "frames": [
+    {
+      "id": "body",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "216967924ae6a218cf95f8d478eccc0235e3d81761578ad531d891521f9ab6da",
+      "extractedRgbaSha256": "216967924ae6a218cf95f8d478eccc0235e3d81761578ad531d891521f9ab6da"
+    },
+    {
+      "id": "arm_wave",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "2531f1406f7e71ebc48d239ce48f5de45814fe9f3bb5e75eeccada4378a5eb23",
+      "extractedRgbaSha256": "2531f1406f7e71ebc48d239ce48f5de45814fe9f3bb5e75eeccada4378a5eb23"
+    },
+    {
+      "id": "eye_l_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "21a48503d45568e98f9977d38ff8c3567b110e7c5a12173c5627906996956981",
+      "extractedRgbaSha256": "21a48503d45568e98f9977d38ff8c3567b110e7c5a12173c5627906996956981"
+    },
+    {
+      "id": "eye_r_closed",
+      "inBounds": true,
+      "exactPixels": true,
+      "resizedRgbaSha256": "935cd7c3389a743640587ce610709cd409109966e0a423aa0a8a3f67b16cf9e2",
+      "extractedRgbaSha256": "935cd7c3389a743640587ce610709cd409109966e0a423aa0a8a3f67b16cf9e2"
+    }
+  ],
+  "notes": "RGBA byte equality includes RGB under alpha=0; no enlargement; source logical rig placement retained."
+}

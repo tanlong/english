@@ -1,0 +1,97 @@
+{
+  "provider": "built-in image_gen",
+  "billingNote": "No application API key used. Tool did not report usage or monetary cost; do not infer cost.",
+  "failedAttempts": [
+    {
+      "jobId": "cloud_daisy_cup",
+      "error": "network error: error sending request",
+      "retriedOnce": true
+    }
+  ],
+  "jobs": [
+    {
+      "jobId": "cloud_daisy_body",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: identity-preserve. Asset type: production-draft body layer for Cloud Daisy 2D puppet rig. The attached approved master is the sole canonical reference. Owner explicitly approved CAT PAWS, do NOT replace with human hands. Perform ONE change: remove BOTH arms and paws, reconstructing the matching fur and blue cloud-pattern cloak/body surface underneath them. Keep the exact existing white cat head/face, open blue eyes, smiling mouth, daisy-and-green ribbon, yellow striped scarf, blue/cloud cape with gold trim, brown cross-body daisy bag, fluffy torso, short legs and brown winter boots unchanged. Preserve identity, proportions, pose, camera three-quarter front, line weight, colors and soft cel shading. Keep all outfit accessories and the scarf. Full body at same framing and scale as the reference with 8% transparent padding. Both arms must be completely absent so separate arm layers can attach at shoulders later. No new limbs, no floor shadow, no scenery, no lettering or grid. Return ONE clean high-resolution PNG with genuinely transparent background; not a contact sheet. This is a draft for human joint/identity review, not automatically approved artwork.",
+      "input": "MD/Cloud Daisy.png",
+      "output": "art/npc/cloud_daisy/draft/parts/body.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-498d659a-424c-4229-8211-3de336882202.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    },
+    {
+      "jobId": "cloud_daisy_arm_wave",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: identity-preserve. Asset type: ONE isolated arm layer for Cloud Daisy 2D puppet rig. Use the attached APPROVED MASTER as sole identity. Extract and faithfully reproduce ONLY the raised waving arm on the VIEWER'S LEFT, from its rounded white-fur shoulder cap all the way through the brown leather wrist cuff with golden rivets to the raised white CAT PAW with pink pads. Keep the exact source arm pose and shape, chubby white fur tufts, pink pads, cuff color and soft cel shaded outline; owner chose cat paws, not human hands. Fill in only the shoulder fur hidden by the body so the full detached arm has a rounded overlapping shoulder end. Render arm alone on true transparent PNG. No head, cape, body, boots, bag, flower, cup, text or ground shadow. Full isolated arm fills most of the canvas without clipping, 10% transparent margin, front three-quarter angle, upper-right light. This is one high resolution component, NOT a sheet. Draft pending human review.",
+      "input": "MD/Cloud Daisy.png",
+      "output": "art/npc/cloud_daisy/draft/parts/arm_wave.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-cbe728c4-9607-48b0-83e0-fb76875374d2.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    },
+    {
+      "jobId": "cloud_daisy_arm_hold",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: identity-preserve. Asset type: ONE isolated cup-holding arm layer for Cloud Daisy 2D puppet rig. The attached master is the sole approved identity reference; preserve its white fur, lavender fur shadows, brown leather wrist cuff with gold rivets, line weight and soft cel shading. Owner specifically approved CAT PAWS. Render ONLY the VIEWER-RIGHT arm, bent at elbow toward the center of the character as though holding a small coffee cup at chest/upper-belly height. Shoulder end at upper right, elbow lower right, forearm reaches diagonally left/up, paw on the left gently curled for a cup handle. Keep the paw unmistakably feline, rounded white furry digits with small pink pads, not a human hand. No actual cup: it is a separate rig layer. Complete rounded fur shoulder cap for clean overlap, whole arm from shoulder to paw, upper-right lighting, three-quarter front. True transparent PNG with margin. No head, torso, cape, bag, boots, scenery, text, other limbs or props. One full-resolution isolated component, NOT a contact sheet. Draft pending human review.",
+      "input": "MD/Cloud Daisy.png",
+      "output": "art/npc/cloud_daisy/draft/parts/arm_hold-v1.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-6c1699b6-e1f9-47fa-ac4e-c3899a428fb0.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    },
+    {
+      "jobId": "cloud_daisy_arm_hold_cleanup",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: background-extraction. Edit target is the attached isolated bent furry white cat arm. Change ONLY background/alpha: remove absolutely all of the grey/violet atmospheric glow, smoke, halo and drop shadow around the arm. Keep the exact arm, white fur tufts, lavender internal shading, brown cuff, gold studs and curled feline paw unchanged. Clean crisp antialiased silhouette on a genuinely TRANSPARENT background, with no nonzero-alpha pixels outside the arm except the 1-pixel antialias edge. No background color, black or white matte, haze, glow, checkerboard, shadow, new objects or text. Preserve the full arm and original dimensions.",
+      "input": "art/npc/cloud_daisy/draft/parts/arm_hold-v1-halo.png",
+      "output": "art/npc/cloud_daisy/draft/parts/arm_hold-v2.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-bc54c5f0-a189-4211-bbf7-9f7bc2316943.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    },
+    {
+      "jobId": "cloud_daisy_cup",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: stylized-concept. Asset type: ONE isolated ceramic coffee cup prop for Cloud Daisy 2D puppet rig, matched to attached approved white-cat master. Match its crisp dark warm outline, soft detailed cel shading, saturated gold-yellow accents, cream whites, storybook chibi proportions, upper-right lighting and front three-quarter camera. A small ivory ceramic cafe mug with one handle on viewer's right, simple golden yellow rim and a single small daisy emblem without lettering. Coffee visible inside. No steam (will be animated separately). The mug should feel natural in this cat character's rounded paw. No paw or other character parts, saucer, table, floor shadow, background, glow, text or labels. One whole mug on genuinely transparent PNG, generous clear margins, full-resolution source component, not a sheet. Draft pending owner approval.",
+      "input": "MD/Cloud Daisy.png",
+      "output": "art/npc/cloud_daisy/draft/props/cup.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-1611ae3c-7a98-44b3-9635-deca54255d52.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    },
+    {
+      "jobId": "cloud_daisy_cloth",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: stylized-concept. Asset type: ONE isolated polishing cloth prop for Cloud Daisy 2D puppet rig. Match the attached approved master's crisp warm dark outlines, soft cel shaded storybook chibi illustration, cream-white materials, golden yellow accents and upper-right light. A small soft ivory cafe barista cloth, folded loosely over an invisible rounded paw, draping downward with 3 natural folds and a narrow golden yellow stitched border. Front three-quarter view, compact shape, not a broad napkin on a surface. No hand, cup, character, towel rack, table, background, text, lettering, glow or floor shadow. True transparent PNG with empty margin, one full-resolution prop, NOT a contact sheet. Draft pending owner approval.",
+      "input": "MD/Cloud Daisy.png",
+      "output": "art/npc/cloud_daisy/draft/props/cloth.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-c606fde1-b667-4bcd-85cd-68387ae1d53f.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    },
+    {
+      "jobId": "cloud_daisy_eyes_closed",
+      "tool": "built-in image_gen",
+      "model": "not reported by tool",
+      "prompt": "Use case: identity-preserve. Edit target: attached APPROVED MASTER Cloud Daisy, white cat with approved cat paws. Perform ONE tiny change ONLY: close both blue eyes into relaxed natural curved eyelids for a single blink. Preserve all head fur, face boundaries, cheek whiskers, smile/open mouth, daisy ribbon, paws, brown cuffs, yellow scarf, blue cloud cape, brown bag, boots, proportions, exact camera, colors, outlines, shadows and image registration unchanged. Do not move the character or its face at all. Return full original canvas framing, 1087 by 1447 if supported, full-body true transparent PNG with identical pose. No new expression other than eyes gently closed, no new props, no text, floor shadow, scenery, zoom or perspective change. This aligned full-canvas edit is for extracting just the eyelid patches into a puppet rig; not a new master.",
+      "input": "MD/Cloud Daisy.png",
+      "output": "art/npc/cloud_daisy/draft/parts/eyes_closed.png",
+      "generatedFile": "/Users/duongtanlong/.codex/generated_images/01a1abde-27c6-74a2-a9d8-7730c3bcfd7f/exec-aa6bf6b6-7507-4aaa-8558-8aea292735ea.png",
+      "usage": null,
+      "costUSD": null,
+      "approved": false
+    }
+  ]
+}

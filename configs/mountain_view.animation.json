@@ -1,0 +1,289 @@
+{
+  "version": "1.1",
+  "sceneId": "mountain_view",
+  "logicalSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "background": {
+    "src": "/cafe/assets/scenes/mountain_view/bg_clean.webp",
+    "width": 1920,
+    "height": 1080,
+    "hasAlpha": false,
+    "bytes": 1272524,
+    "sha256": "c40c74a938db0a15a8d9adc8e5131eeb546d14ef09be456332deb971b10ac018"
+  },
+  "foliage": [
+    {
+      "id": "pine_branch_left",
+      "src": "/cafe/assets/scenes/mountain_view/pine_branch_left.webp",
+      "width": 850,
+      "height": 149,
+      "hasAlpha": true,
+      "bytes": 127670,
+      "sha256": "de147c75d5d29154c19cebad82811bc44c1949e6cec97c33207b4f88330b3d04",
+      "source": "art/dalat/pine_lake/layers/foliage-mid-fullhd.png",
+      "x": 0,
+      "y": 0,
+      "pivot": [
+        85,
+        20
+      ],
+      "zIndex": 20,
+      "group": "pine",
+      "angle": 1.05,
+      "phase": 0
+    },
+    {
+      "id": "pine_branch_right",
+      "src": "/cafe/assets/scenes/mountain_view/pine_branch_right.webp",
+      "width": 430,
+      "height": 197,
+      "hasAlpha": true,
+      "bytes": 85778,
+      "sha256": "22cf2984e6c482305304807fbaa0a495cf3334c5ba5b87e490377ecc0f4917a0",
+      "source": "art/dalat/pine_lake/layers/foliage-mid-fullhd.png",
+      "x": 1490,
+      "y": 0,
+      "pivot": [
+        1900,
+        24
+      ],
+      "zIndex": 20,
+      "group": "pine",
+      "angle": 0.9,
+      "phase": 1.4
+    },
+    {
+      "id": "hydrangea_left",
+      "src": "/cafe/assets/scenes/mountain_view/hydrangea_left.webp",
+      "width": 383,
+      "height": 424,
+      "hasAlpha": true,
+      "bytes": 111798,
+      "sha256": "7df45d4172fa122c34c229a7079a0bed8e5659ffc53a4999a185e1b6a6a4a8de",
+      "source": "art/dalat/pine_lake/layers/foreground-fullhd.png",
+      "x": 0,
+      "y": 656,
+      "pivot": [
+        100,
+        1070
+      ],
+      "zIndex": 40,
+      "group": "flowers",
+      "angle": 0.45,
+      "phase": 0.8
+    },
+    {
+      "id": "hydrangea_right",
+      "src": "/cafe/assets/scenes/mountain_view/hydrangea_right.webp",
+      "width": 469,
+      "height": 386,
+      "hasAlpha": true,
+      "bytes": 107816,
+      "sha256": "f5c8923caf4124d9cb7e2c48e740b1e7770a8d38440e83c20109519624c34a31",
+      "source": "art/dalat/pine_lake/layers/foreground-fullhd.png",
+      "x": 1451,
+      "y": 694,
+      "pivot": [
+        1820,
+        1070
+      ],
+      "zIndex": 40,
+      "group": "flowers",
+      "angle": 0.45,
+      "phase": 2.3
+    }
+  ],
+  "shimmer": {
+    "src": "/cafe/assets/scenes/mountain_view/lake_shimmer_alpha.webp",
+    "width": 1920,
+    "height": 1080,
+    "hasAlpha": true,
+    "bytes": 129242,
+    "sha256": "b2bd03c432df8b2b339995ec854963cb1954e9308a963d164b124c73aa952dd3"
+  },
+  "waterBase": {
+    "src": "/cafe/assets/scenes/mountain_view/lake_base_boatless.webp",
+    "width": 1920,
+    "height": 1080,
+    "hasAlpha": false,
+    "bytes": 1272620,
+    "sha256": "f6d4ead3673cd546cdfd08effca2d692bf7692c24cf3085c4412334fc19fc3b4"
+  },
+  "waterMask": {
+    "src": "/cafe/assets/scenes/mountain_view/lake_shore_mask.webp",
+    "width": 1920,
+    "height": 1080,
+    "hasAlpha": true,
+    "bytes": 11898,
+    "sha256": "61a0a8292272cb3f11c93c866bbb5bc9f45d892c396ce4c53298396fb0e0dad4"
+  },
+  "landscape": {
+    "src": "/cafe/assets/scenes/mountain_view/landscape_boatless.webp",
+    "width": 1920,
+    "height": 1080,
+    "hasAlpha": false,
+    "bytes": 1002430,
+    "sha256": "0206630a80f1ee782552221791ea83328382b2433c08dc345408d6feef0dff6c"
+  },
+  "boat": {
+    "src": "/cafe/assets/scenes/mountain_view/rowboat.webp",
+    "width": 256,
+    "height": 55,
+    "hasAlpha": true,
+    "bytes": 10372,
+    "sha256": "c97a346e6a1696d0eed2a8eaa596b8050ad0cb07622b04e90b4bca7288bc00e0",
+    "x": 530,
+    "y": 510,
+    "displayWidth": 104,
+    "displayHeight": 22.34375,
+    "destination": {
+      "x": 1750,
+      "y": 600
+    },
+    "legMs": 30000,
+    "turnMs": 2000,
+    "periodMs": 64000
+  },
+  "rower": {
+    "body": {
+      "src": "/cafe/assets/scenes/mountain_view/rower_redhair_strawhat.webp",
+      "width": 384,
+      "height": 524,
+      "hasAlpha": true,
+      "bytes": 64282,
+      "sha256": "51b544564b0de461ffe32b391fdf35695cd9c825d81d56bccf7e852030a136a1"
+    },
+    "oar": {
+      "src": "/cafe/assets/scenes/mountain_view/rowing_oar.webp",
+      "width": 55,
+      "height": 512,
+      "hasAlpha": true,
+      "bytes": 10342,
+      "sha256": "4d497429a0e85b307286db96719053a82f71c7c5074c0c205a2996b1fe9422a5"
+    },
+    "x": 30,
+    "y": -38,
+    "displayWidth": 42,
+    "displayHeight": 57.3125,
+    "grip": {
+      "x": 0.55,
+      "y": 0.6
+    },
+    "oarHeight": 72,
+    "oarGrip": 0.12,
+    "strokeMs": 2000
+  },
+  "lakePolygon": [
+    [
+      735,
+      456
+    ],
+    [
+      1120,
+      450
+    ],
+    [
+      1960,
+      452
+    ],
+    [
+      1960,
+      930
+    ],
+    [
+      1700,
+      900
+    ],
+    [
+      1450,
+      870
+    ],
+    [
+      1210,
+      830
+    ],
+    [
+      1020,
+      795
+    ],
+    [
+      840,
+      765
+    ],
+    [
+      680,
+      718
+    ],
+    [
+      540,
+      675
+    ],
+    [
+      410,
+      620
+    ],
+    [
+      300,
+      565
+    ],
+    [
+      310,
+      540
+    ],
+    [
+      400,
+      510
+    ],
+    [
+      520,
+      487
+    ],
+    [
+      610,
+      474
+    ]
+  ],
+  "hologram": {
+    "src": "/cafe/assets/npc/gray_boo/hologram_glow.webp",
+    "width": 192,
+    "height": 128,
+    "hasAlpha": true,
+    "bytes": 2524,
+    "sha256": "2ec41f752011657d199068079f49f47cb44bb4a17ad2520ddaa8024bc7dbaa66"
+  },
+  "sparkle": {
+    "src": "/cafe/assets/npc/gray_boo/sparkle.webp",
+    "width": 32,
+    "height": 32,
+    "hasAlpha": true,
+    "bytes": 194,
+    "sha256": "5d94e9db5081d654849d6c07ef244c822f870712551d678d59a41d1a1d3cf5bc"
+  },
+  "shadow": {
+    "src": "/cafe/assets/npc/gray_boo/shadow.webp",
+    "width": 128,
+    "height": 32,
+    "hasAlpha": true,
+    "bytes": 442,
+    "sha256": "120c36dc2cbc6da5f3eb8082265cd7405d0c8f414ab4b30f3d5bf691af3bcf45"
+  },
+  "hologramBox": {
+    "left": 0.618,
+    "top": 0.413,
+    "width": 0.324,
+    "height": 0.16
+  },
+  "hoverBoost": {
+    "easeInMs": 450,
+    "easeOutMs": 800,
+    "water": 1.8,
+    "pine": 1.5,
+    "flowers": 1.5,
+    "particles": 2,
+    "hologram": 1.3,
+    "boat": 1,
+    "rowing": 1
+  }
+}
