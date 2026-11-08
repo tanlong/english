@@ -32,6 +32,14 @@
   },
   "assets": [
     {
+      "src": "/cafe/assets/scenes/shared/cloud_drift.webp",
+      "width": 768,
+      "height": 205,
+      "hasAlpha": true,
+      "bytes": 54126,
+      "sha256": "e1368025f8dd39309600a53f0179b0ac5c8ac8d5f9312550576eec266ffbc8e3"
+    },
+    {
       "src": "/cafe/assets/scenes/mountain_view/bg_clean.webp",
       "width": 1920,
       "height": 1080,

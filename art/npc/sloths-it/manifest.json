@@ -1,0 +1,12 @@
+{
+  "npcId": "dex_robot",
+  "displayName": "Developer Sloth",
+  "kind": "sloth",
+  "provenance": "Owner-provided MD/Sloths IT.png; copied unchanged, converted to runtime WebP without generating new artwork.",
+  "source": "art/npc/sloths-it/master.png",
+  "src": "/cafe/npc/topics/developer-sloth.webp",
+  "originalWidth": 1122,
+  "originalHeight": 1402,
+  "width": 615,
+  "height": 768
+}

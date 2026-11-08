@@ -1,0 +1,130 @@
+{
+  "assets": [
+    {
+      "id": "map",
+      "source": "art/dalat/nam-bo-1995-2005/source/map.png",
+      "sourceSha256": "343f0805ded50bed659151416e5441ec14bd13f42f6cbaba9433d42cf13210bd",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/map.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "village_homes",
+      "source": "art/dalat/nam-bo-1995-2005/source/village_homes.png",
+      "sourceSha256": "a839775f5444bd4bb6fa4993bdfc114d8c3a72bac80c96c992564c487a6acb00",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/village_homes.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "river_bridge",
+      "source": "art/dalat/nam-bo-1995-2005/source/river_bridge.png",
+      "sourceSha256": "614b7ff9927bfe07a3acfb3e9a58b929551d3580785c760fe0019f3fa8b42176",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/river_bridge.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "forest_path",
+      "source": "art/dalat/nam-bo-1995-2005/source/forest_path.png",
+      "sourceSha256": "6435fabfc08858d12af430af79f1f9d68cebfa1d1745f6edda6ec2dcfe10f9da",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/forest_path.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "lakeside",
+      "source": "art/dalat/nam-bo-1995-2005/source/lakeside.png",
+      "sourceSha256": "814e2dc1256671adc8397d4d990e1b78b2d8a1d1ec60220ad4e8191ff570892c",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/lakeside.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "work_lounge",
+      "source": "art/dalat/nam-bo-1995-2005/source/work_lounge.png",
+      "sourceSha256": "fcd374279606d78e972bacfde19bcde6a3366e4ff0157e108910a04fcd6f7a2b",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/work_lounge.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "project_room",
+      "source": "art/dalat/nam-bo-1995-2005/source/project_room.png",
+      "sourceSha256": "ca8ff422b1b6b249f493aa768acc1343cf5bf1030ec1cd51482f4772dc516c0d",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/project_room.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "design_studio",
+      "source": "art/dalat/nam-bo-1995-2005/source/design_studio.png",
+      "sourceSha256": "2174252e5d9af3cd6cb19fef65cdea24ab67ff5aa105c8ac05708f0a7a20a41e",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/design_studio.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "field_land",
+      "source": "art/dalat/nam-bo-1995-2005/source/field_land.png",
+      "sourceSha256": "52d2f5a4a8480d17d3c1775737bf94ca2358269a69d030c8724ee9bed6a1f294",
+      "nativeSize": {
+        "width": 1670,
+        "height": 942
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/field_land.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "editTarget": "art/dalat/nam-bo-1995-2005/source/map-before-flag-removal.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the provided Southern Vietnam village aerial map. Remove ONLY the small red flag and its entire flagpole beside the red-tile-roof building in the upper left part of the image, around x26.3%, y9.5% (approximately pixel440,90 on a1672x941 canvas; pole extends down beside the yard). Seamlessly restore the foliage, ground and yard behind the flag and pole using matching neighboring details. Keep the building, all other houses, their roofs, waterways, bridge, paths, crops, trees, composition, exact camera framing, color and lighting unchanged. Do not redesign or add objects. Preserve the original1672x941 full-bleed landscape aspect ratio. No flag, no pole, no labels, no UI, no watermark.",
+  "generatedPath": "/Users/duongtanlong/.codex/generated_images/01a1b8f6-dbf4-7c51-9d86-2f09d63328f5/exec-80cb4c80-1448-4987-86bb-bd0eba5acbd2.png",
+  "selectedSource": "art/dalat/nam-bo-1995-2005/source/map-no-flag.png",
+  "activeSource": "art/dalat/nam-bo-1995-2005/source/map.png",
+  "runtime": "public/cafe/maps/nam-bo-1995-2005/map.webp"
+}

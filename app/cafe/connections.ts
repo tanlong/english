@@ -146,7 +146,7 @@ export async function handleAdvanced(request: Request): Promise<Response> {
       let status: string;
       try {
         await callProvider(connection, {
-          npc: "Cloud Daisy",
+          npc: "Barista Cat",
           topic: "ordering",
           level: "A1",
           message: "Hello!",

@@ -1,7 +1,5 @@
 import { expect, test } from "@playwright/test";
-test("sidebar starts collapsed, can expand, and keeps only café in the main navigation", async ({
-  page,
-}) => {
+test("sidebar starts collapsed and exposes café and conversation management", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Bắt đầu nhanh, thiết lập sau" }).click();
   await page.goto("/settings");
@@ -37,15 +35,19 @@ test("sidebar starts collapsed, can expand, and keeps only café in the main nav
   await page.reload();
   await expect(expand).toHaveAttribute("aria-expanded", "false");
   await expect(page.locator(".topbar .avatar")).toHaveText("L");
+  await page.addStyleTag({ content: "nextjs-portal { display: none !important; }" });
   for (const width of [1440, 900, 375]) {
     await page.setViewportSize({ width, height: 900 });
     const nav = page.getByRole("navigation", {
       name: width < 768 ? "Điều hướng trên điện thoại" : "Điều hướng chính",
       exact: true,
     });
-    await expect(nav.getByRole("link")).toHaveCount(1);
-    await expect(nav.getByRole("link")).toHaveAccessibleName(
+    await expect(nav.getByRole("link")).toHaveCount(2);
+    await expect(nav.getByRole("link").first()).toHaveAccessibleName(
       width < 768 ? "Cà phê" : "Cà phê vỉa hè",
+    );
+    await expect(nav.getByRole("link").nth(1)).toHaveAccessibleName(
+      width < 768 ? "Hội thoại" : "Quản lý hội thoại",
     );
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
       width,
@@ -54,7 +56,7 @@ test("sidebar starts collapsed, can expand, and keeps only café in the main nav
   await page.screenshot({ path: "artifacts/sidebar-mobile.png" });
   await page.getByRole("button", { name: "Mở menu", exact: true }).click();
   const menu = page.getByRole("navigation", { name: "Menu điện thoại", exact: true });
-  await expect(menu.getByRole("link")).toHaveCount(1);
+  await expect(menu.getByRole("link")).toHaveCount(2);
   await menu.getByRole("link", { name: "Cà phê vỉa hè", exact: true }).click();
   await expect(page.getByRole("dialog", { name: "Không gian học", exact: true })).not.toBeVisible();
   await page.goto("/#review");

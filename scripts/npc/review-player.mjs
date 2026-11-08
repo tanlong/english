@@ -54,8 +54,13 @@ export async function createReviewPlayer(canvas, rig, sources) {
       hold = 0,
       cloth = true;
     let blink = (t >= 5.2 && t < 5.37) || (t >= 7.15 && t < 7.31);
-    if (rig.mode === "single-arm") {
-      const m = rig.motion;
+    const m =
+      rig.mode === "single-arm"
+        ? rig.motion
+        : rig.npcId === "cloud_daisy"
+          ? { restAngle: 0, idleAmplitude: 2, waveAmplitude: 18, direction: -1 }
+          : null;
+    if (m) {
       const direction = m.direction ?? 1;
       wave = (m.restAngle ?? 0) + m.idleAmplitude * Math.sin((t / duration) * Math.PI * 2);
       if (state === "interaction") {

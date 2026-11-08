@@ -1,0 +1,42 @@
+{
+  "map": "public/cafe/maps/area-map-hq-v2.webp",
+  "width": 1672,
+  "height": 941,
+  "regions": [
+    {
+      "id": "forest_path",
+      "left": 620,
+      "top": 0,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "id": "village_homes",
+      "left": 570,
+      "top": 480,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "id": "river_bridge",
+      "left": 519,
+      "top": 255,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "id": "lakeside",
+      "left": 84,
+      "top": 123,
+      "width": 700,
+      "height": 394
+    },
+    {
+      "id": "farm_fields",
+      "left": 972,
+      "top": 132,
+      "width": 700,
+      "height": 394
+    }
+  ]
+}

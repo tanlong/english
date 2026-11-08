@@ -1,0 +1,13 @@
+{
+  "id": "basil_tortoise",
+  "kind": "npc",
+  "generator": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: ONE single full-body game NPC portrait with genuine transparent alpha background. Basil Tortoise, a friendly anthropomorphic tortoise English teacher. Character details: green bow tie, cream apron, menu notebook. Warm hand-painted storybook chibi animal illustration, large expressive kind eyes, detailed soft shading, refined outlines, cohesive cozy game style. Front three-quarter view facing the viewer, standing upright in a friendly welcoming pose. Entire body from head to feet and any tail visible, centered with eight percent transparent padding. No other characters, no ground or scenery, no text, labels, logos, borders or watermark. Real transparent background, no opaque backdrop.",
+  "source": "art/dalat/role-expansion-v1/basil_tortoise.png",
+  "src": "/cafe/npc/roles/basil_tortoise.webp",
+  "width": 564,
+  "height": 768,
+  "hasAlpha": true,
+  "originalWidth": 1199,
+  "originalHeight": 1312
+}

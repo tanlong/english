@@ -59,7 +59,10 @@ export function useActivityClock(
               index: visit?.index ?? 0,
               answers: visit?.answers ?? {},
               ...visit,
-              updatedAt: visit?.updatedAt ?? at.toISOString(),
+              cancelledAt: undefined,
+              updatedAt: visit?.cancelledAt
+                ? at.toISOString()
+                : (visit?.updatedAt ?? at.toISOString()),
               activitySeconds: {
                 ...visit?.activitySeconds,
                 [skill]: (visit?.activitySeconds?.[skill] ?? 0) + delta,

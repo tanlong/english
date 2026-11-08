@@ -97,12 +97,12 @@ export function PineLake({
       host.querySelector(".pine-lake-oar")!,
       "rowing",
       [
-        { offset: 0, transform: "rotate(32deg) scaleY(.7)", opacity: 1 },
-        { offset: 0.13, transform: "rotate(32deg) scaleY(1)", opacity: 0.9 },
-        { offset: 0.56, transform: "rotate(-32deg) scaleY(1)", opacity: 0.9 },
-        { offset: 0.7, transform: "rotate(-32deg) scaleY(.65)", opacity: 1 },
-        { offset: 0.95, transform: "rotate(32deg) scaleY(.65)", opacity: 1 },
-        { offset: 1, transform: "rotate(32deg) scaleY(.7)", opacity: 1 },
+        { offset: 0, transform: "rotate(32deg) scaleY(.38)" },
+        { offset: 0.13, transform: "rotate(32deg) scaleY(1)" },
+        { offset: 0.56, transform: "rotate(-32deg) scaleY(1)" },
+        { offset: 0.72, transform: "rotate(-32deg) scaleY(.38)" },
+        { offset: 0.95, transform: "rotate(32deg) scaleY(.38)" },
+        { offset: 1, transform: "rotate(32deg) scaleY(.38)" },
       ],
       config.rower.strokeMs,
     );
@@ -285,18 +285,21 @@ export function PineLake({
           {image(rower.body, "pine-lake-rower-image")}
         </div>
         {image(config.boat, "pine-lake-boat-front")}
-        <div className="pine-lake-oar-pose pine-lake-rowing-pose" style={rowerStyle}>
-          <div
-            className="pine-lake-oar"
-            style={{
-              left: `${(rower.grip.x - oarWidth / rower.displayWidth / 2) * 100}%`,
-              top: `${(rower.grip.y - (rower.oarHeight / rower.displayHeight) * rower.oarGrip) * 100}%`,
-              width: `${(oarWidth / rower.displayWidth) * 100}%`,
-              height: `${(rower.oarHeight / rower.displayHeight) * 100}%`,
-              transformOrigin: `50% ${rower.oarGrip * 100}%`,
-            }}
-          >
-            {image(rower.oar)}
+        {/* Clip in the boat's water plane, outside the rotating shoulder pose. */}
+        <div className="pine-lake-oar-waterline">
+          <div className="pine-lake-oar-pose pine-lake-rowing-pose" style={rowerStyle}>
+            <div
+              className="pine-lake-oar"
+              style={{
+                left: `${(rower.grip.x - oarWidth / rower.displayWidth / 2) * 100}%`,
+                top: `${(rower.grip.y - (rower.oarHeight / rower.displayHeight) * rower.oarGrip) * 100}%`,
+                width: `${(oarWidth / rower.displayWidth) * 100}%`,
+                height: `${(rower.oarHeight / rower.displayHeight) * 100}%`,
+                transformOrigin: `50% ${rower.oarGrip * 100}%`,
+              }}
+            >
+              {image(rower.oar)}
+            </div>
           </div>
         </div>
         {image(config.boat, "pine-lake-boat-reflection")}

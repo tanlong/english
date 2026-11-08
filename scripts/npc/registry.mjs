@@ -1,7 +1,7 @@
 export const npcs = [
   {
     id: "cloud_daisy",
-    name: "Cloud Daisy",
+    name: "Cloud Cat",
     alias: "may",
     species: "white cat with cat paws (owner override 2026-11-05)",
     idle: 8,

@@ -156,14 +156,80 @@ for (const [index, npc] of npcs.entries()) {
   const pack = `${base}/draft/runtime`;
   const checked = JSON.parse(await readFile(`${pack}/pack-validation.json`, "utf8"));
   assert.equal(checked.pass, true, `${npc.id} atlas must pass pixel validation`);
-  const atlasBytes = await readFile(`${pack}/atlas.webp`);
+  let atlasBytes = await readFile(`${pack}/atlas.webp`);
   assert.equal(hash(atlasBytes), checked.fileHashes["atlas.webp"]);
   const folder = `npc/${npc.id}/runtime`;
-  const texture = await publish(folder, "atlas", atlasBytes);
   const atlas = JSON.parse(await readFile(`${pack}/atlas.json`, "utf8"));
+  const sourceRig = JSON.parse(await readFile(`${pack}/rig.json`, "utf8"));
+  let posterSource = master;
+  let bodyEdit;
+  if (npc.id === "cloud_daisy") {
+    bodyEdit = `${base}/runtime-v6/body-right-arm-fixed.png`;
+    const body = await readFile(bodyEdit);
+    const frame = atlas.frames["cloud_daisy/body.png"].frame;
+    const replacement = await sharp(body)
+      .resize(frame.w, frame.h, { fit: "fill" })
+      .ensureAlpha()
+      .raw()
+      .toBuffer();
+    const pixels = await sharp(atlasBytes)
+      .ensureAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true });
+    for (let row = 0; row < frame.h; row++)
+      replacement.copy(
+        pixels.data,
+        ((frame.y + row) * pixels.info.width + frame.x) * 4,
+        row * frame.w * 4,
+        (row + 1) * frame.w * 4,
+      );
+    atlasBytes = await sharp(pixels.data, { raw: pixels.info })
+      .webp({ lossless: true, exact: true, alphaQuality: 100 })
+      .toBuffer();
+    // The resting arm is painted into the body; its old puppet and props are unused.
+    const removed = ["arm_hold", "cup", "cloth"];
+    sourceRig.layers = sourceRig.layers.filter((layer) => !removed.includes(layer.id));
+    for (const id of removed) {
+      delete sourceRig.placement[id];
+      delete atlas.frames[`cloud_daisy/${id}.png`];
+    }
+    const bodyFrame = atlas.frames["cloud_daisy/body.png"];
+    bodyFrame.sourceFile = bodyEdit;
+    bodyFrame.sourcePngSha256 = hash(body);
+    bodyFrame.originalPngSize = await sharp(body)
+      .metadata()
+      .then(({ width, height }) => ({ width, height }));
+    bodyFrame.resizedRgbaSha256 = hash(replacement);
+    for (const layer of sourceRig.layers) {
+      const entry = atlas.frames[layer.texture];
+      const f = entry.frame;
+      const packed = await sharp(atlasBytes)
+        .extract({ left: f.x, top: f.y, width: f.w, height: f.h })
+        .ensureAlpha()
+        .raw()
+        .toBuffer();
+      assert.equal(hash(packed), entry.resizedRgbaSha256, `${npc.id}/${layer.id} pixels changed`);
+    }
+    atlas.meta.atlasSha256 = hash(atlasBytes);
+    const wave = sourceRig.placement.arm_wave;
+    posterSource = await sharp(body)
+      .resize(sourceRig.coordinateSystem.width, sourceRig.coordinateSystem.height, { fit: "fill" })
+      .composite([
+        {
+          input: await sharp(`${base}/draft/registered/arm_wave.png`)
+            .resize(wave.width, wave.height)
+            .png()
+            .toBuffer(),
+          left: Math.round(wave.x - wave.pivotX * wave.width),
+          top: Math.round(wave.y - wave.pivotY * wave.height),
+        },
+      ])
+      .png()
+      .toBuffer();
+  }
+  const texture = await publish(folder, "atlas", atlasBytes);
   atlas.meta.image = path.basename(texture.src);
   const atlasFile = await publish(folder, "atlas", Buffer.from(JSON.stringify(atlas)), "json");
-  const sourceRig = JSON.parse(await readFile(`${pack}/rig.json`, "utf8"));
   const rig = {
     version: "4.0",
     npcId: npc.id,
@@ -191,7 +257,7 @@ for (const [index, npc] of npcs.entries()) {
   );
   rig.mouth = { src: mouth.src, trim: mouthMeta.trim };
   const rigFile = await publish(folder, "rig", Buffer.from(JSON.stringify(rig)), "json");
-  const posterBytes = await sharp(master)
+  const posterBytes = await sharp(posterSource)
     .resize({ height: 768, withoutEnlargement: true })
     .webp({ quality: 95, alphaQuality: 100 })
     .toBuffer();
@@ -203,7 +269,7 @@ for (const [index, npc] of npcs.entries()) {
     height: meta.height,
     checksum: poster.sha256,
     masterSha256: hash(master),
-    source: `${base}/source/master_rgba.png`,
+    source: bodyEdit ?? `${base}/source/master_rgba.png`,
     rig: rigFile.src,
     canonicalId: npc.id,
   };
@@ -211,6 +277,7 @@ for (const [index, npc] of npcs.entries()) {
     npcId: npc.id,
     masterSha256: hash(master),
     packValidation: `${pack}/pack-validation.json`,
+    ...(bodyEdit ? { bodyEdit, bodyEditSha256: hash(await readFile(bodyEdit)) } : {}),
     rig: rigFile,
     atlas: atlasFile,
     texture,
@@ -248,3 +315,4 @@ console.log(
   `Published 3 scenes / ${records.length} real alpha plates and ${npcRecords.length} canonical NPC puppet packs.`,
 );
 await import("./build-gray-boo-lake.mjs");
+await import("./build-sun-king.mjs");

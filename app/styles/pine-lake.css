@@ -59,6 +59,12 @@
 .pine-lake-oar-pose {
   z-index: 4;
 }
+.pine-lake-oar-waterline {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  clip-path: inset(-800% -800% 0 -800%);
+}
 .pine-lake-rowing-pose {
   transform-origin: 35% 75%;
 }

@@ -1,0 +1,13 @@
+{
+  "id": "coffee_house",
+  "kind": "scene",
+  "generator": "built-in image_gen",
+  "prompt": "Warm Vietnamese village coffee house circa 2000, painterly 16:9, empty foreground for three NPCs, no text or characters.",
+  "source": "art/dalat/role-expansion-v1/coffee_house.png",
+  "src": "/cafe/topics/coffee_house.webp",
+  "width": 1672,
+  "height": 941,
+  "hasAlpha": false,
+  "originalWidth": 1672,
+  "originalHeight": 941
+}

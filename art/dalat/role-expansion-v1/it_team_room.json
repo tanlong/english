@@ -1,0 +1,13 @@
+{
+  "id": "it_team_room",
+  "kind": "scene",
+  "generator": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: ONE 16:9 landscape background for a cozy English-learning point-and-click game. A small Vietnamese village IT team room with wooden desks along the back wall, beige CRT computers, a cork board with blank colored notes and simple geometric diagrams, ceiling fan, palm trees beyond open shutters. Style: detailed hand-painted semi-realistic storybook environment, warm cream plaster walls and terracotta tiled floor, Vietnamese countryside circa 2000, soft afternoon sunlight, earthy greens and warm browns. Eye-level straight-on panoramic composition, furnishings along the back and sides, EMPTY foreground floor across bottom 35 percent for three separately composited NPCs. No people, no animals, no lettering, no logos, no watermark. Single complete full-frame background, no panels or collage.",
+  "source": "art/dalat/role-expansion-v1/it_team_room.png",
+  "src": "/cafe/topics/it_team_room.webp",
+  "width": 1672,
+  "height": 941,
+  "hasAlpha": false,
+  "originalWidth": 1672,
+  "originalHeight": 941
+}

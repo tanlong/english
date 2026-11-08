@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { ArrowRight, MessagesSquare, Mic, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowRight, MessagesSquare, Mic, Square, Volume2, X } from "lucide-react";
 import { Npc } from "./npc";
+import { npcs } from "./content";
+import { useNpcSpeech } from "./voice";
+import { Button } from "../components/ui/button";
 
 const corners = [
   {
@@ -20,7 +23,10 @@ const corners = [
 ] as const;
 
 export function CafeGuide({ onClose }: { onClose: () => void }) {
+  const guide = npcs.find((npc) => npc.id === "mr_pink")!;
   const dialog = useRef<HTMLDialogElement>(null);
+  const [talking, setTalking] = useState(false);
+  const speech = useNpcSpeech("mr_pink", "A1", setTalking);
   useEffect(() => {
     const element = dialog.current;
     element?.showModal();
@@ -40,11 +46,11 @@ export function CafeGuide({ onClose }: { onClose: () => void }) {
     >
       <header className="cafe-dialog-header">
         <div className="cafe-dialog-avatar">
-          <Npc id="mr_pink" state="notice" />
+          <Npc id="mr_pink" state={talking ? "talking" : "notice"} />
         </div>
         <div>
           <span className="cafe-kicker">LEARNING GUIDE</span>
-          <h2 id="cafe-guide-title">Mr. Pink</h2>
+          <h2 id="cafe-guide-title">{guide.name}</h2>
           <p>Chọn một góc luyện tập</p>
         </div>
         <button
@@ -57,9 +63,31 @@ export function CafeGuide({ onClose }: { onClose: () => void }) {
         </button>
       </header>
       <div className="cafe-dialog-content">
-        <p className="cafe-guide-intro">
-          Có những góc học đang được giấu khỏi menu. Mr. Pink đưa bạn tới đó.
+        <p className="cafe-mode" role="status">
+          {speech.notice || "Giọng nói AI · Gemini · Anh-Mỹ"}
         </p>
+        <p className="cafe-guide-intro">
+          Có những góc học đang được giấu khỏi menu. {guide.name} đưa bạn tới đó.
+        </p>
+        <Button
+          variant="outline"
+          onClick={() => {
+            if (talking) speech.stop();
+            else void speech.speak(guide.greeting);
+          }}
+        >
+          {talking ? (
+            <Square size={16} aria-hidden="true" />
+          ) : (
+            <Volume2 size={16} aria-hidden="true" />
+          )}
+          {talking ? "Dừng giọng" : `Nghe ${guide.name}`}
+        </Button>
+        {speech.error && (
+          <p className="field-error" role="alert">
+            {speech.error}
+          </p>
+        )}
         <div className="cafe-guide-corners">
           {corners.map(({ href, icon: Icon, title, description }) => (
             <Link key={href} href={href} className="cafe-guide-card" onClick={onClose}>

@@ -41,9 +41,16 @@ export function sampleNpcPose(rig: MotionRig, seconds: number, state: MotionStat
     hold = 0,
     cloth = state === "idle" || state === "ambient_01";
   let blink = grayIdle ? t >= 1.15 && t < 1.38 : (t >= 5.2 && t < 5.37) || (t >= 7.15 && t < 7.31);
-  if (rig.mode === "single-arm" && rig.motion) {
+  // Daisy's source arm is already raised, with the palm facing the viewer.
+  // The old 88–108° rest turned that upright artwork across her chest.
+  const motion =
+    rig.mode === "single-arm"
+      ? rig.motion
+      : rig.npcId === "cloud_daisy"
+        ? { restAngle: 0, idleAmplitude: 2, waveAmplitude: 18, direction: -1 }
+        : null;
+  if (motion) {
     cloth = false;
-    const motion = rig.motion;
     const rest = motion.restAngle ?? 0;
     wave = rest + motion.idleAmplitude * Math.sin((t / duration) * Math.PI * 2);
     if (greeting) {

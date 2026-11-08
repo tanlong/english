@@ -1,0 +1,13 @@
+{
+  "tool": "built-in image_gen",
+  "useCase": "precise-object-edit",
+  "request": "Tạo lại tay bên phải của Cloud Cat",
+  "inputImages": ["art/npc/cloud_daisy/runtime-v5/body-resting-arm.png"],
+  "output": "art/npc/cloud_daisy/runtime-v6/body-right-arm-fixed.png",
+  "transparentBackground": true,
+  "prompt": "Use case: precise-object-edit / identity-preserve. Edit target: the supplied transparent full-body Cloud Cat BODY LAYER. Fix and redraw ONLY the resting arm on the VIEWER'S RIGHT (the cat's left arm), around the right side of the waist. The current upper arm/elbow/wrist and dangling mitten-like paw look malformed. Replace this with ONE clean, anatomically coherent feline arm: shoulder attached naturally under the blue cape on the viewer-right side of the chest; a softly tapered white furry upper arm pointing down close to the torso; a single gently bent elbow BELOW the shoulder; a continuous forearm descending to a narrow wrist; the same brown wrist cuff with small gold studs; and ONE compact relaxed rounded CAT PAW beside the right hip, pointing downward, with short rounded furry toes, two or three subtle toe-separation lines and no long human fingers. The back of the paw is visible, not a human palm. The arm must hang naturally and comfortably, follow the character's three-quarter body orientation, and have the correct joint directions. No detached hand, no dislocated elbow, no twisted wrist, no extra joint, no double arm, no floating sleeve, no backwards bent arm. Keep the cat's fluffy white fur, soft lavender shadows, crisp dark linework and original polished colorful 2D game illustration style. IMPORTANT BODY-LAYER INVARIANT: the VIEWER-LEFT arm must remain entirely ABSENT as in the supplied body layer: the application adds that waving arm separately. Do not add a second visible arm on that side. Keep face, head position, eye and mouth placement, ears, flower, ribbons, hair, yellow scarf with white stripes, blue cloud-pattern cape and gold trim, bag and its charms, fluffy body, legs and boots IDENTICAL in their current positions and proportions. Keep the exact full-body composition and original canvas registration, approximately 1088x1446 portrait pixels, no recentering, no cropping, no pose shift, no scaling of the character, no text or labels, no objects in the paw. Preserve true transparent alpha everywhere outside the character, with no shadow plane or checkerboard.",
+  "integration": "Replace body texture and regenerated fallback poster; preserve the separate animated waving arm.",
+  "sha256": "6259b805bd8bafce85f1c0abbb7855d3221215375ee1c71d77436848594877f8",
+  "width": 1088,
+  "height": 1445
+}

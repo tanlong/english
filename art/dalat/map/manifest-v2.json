@@ -1,0 +1,17 @@
+{
+  "tool": "built-in image_gen",
+  "intent": "Enhance map detail while preserving the 5 navigation landmarks",
+  "input": "public/cafe/maps/area-map.webp",
+  "referencePreparation": "Working reference resized to 3840x2160; tool returned native 1672x941. Final asset preserves native pixels without upscaling.",
+  "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-17bb630b-857a-441a-9f4f-6a6a9f35b3cd.png",
+  "source": "art/dalat/map/source/area-map-v2.png",
+  "runtime": "public/cafe/maps/area-map-hq-v2.webp",
+  "width": 1672,
+  "height": 941,
+  "encoding": {
+    "format": "webp",
+    "quality": 96,
+    "effort": 6
+  },
+  "prompt": "Use case: precise-object-edit. Asset type: high-resolution full-screen aerial exploration map for a web game. Input image 1 is the existing map and is the EDIT TARGET. Re-create and enhance this exact map as a substantially sharper, highly detailed high-quality landscape image, requested output 3840x2160 (16:9), crisp edge-to-edge focus. Preserve the original aerial camera angle, identical framing, geographic layout, road network, waterways, bridge position, house locations, fields and wooded areas. Specifically retain: central diagonal concrete bridge at about x52%,y48%; red-roof house at x55%,y72%; lakeshore at x26%,y34%; dense trees at x58%,y12%; crop fields at x84%,y35%. These positions anchor clickable UI pins, so their placement must stay stable. Improve actual fine detail: distinct individual tree crowns and pine needles, readable roof tiles and windows, orderly crop rows, stone banks, subtle water ripples and reflections, clean road surfaces and bridge railings. Natural bright daytime lighting, lush green Vietnamese highland village, sophisticated realistic environment art, balanced colors and believable textures. Keep the entire map visible, no crop or zoom. Avoid blurry or smeared foliage, plastic surfaces, oversharpening halos, exaggerated saturation, tilt-shift blur, fog, new landmarks, text, labels, pins, UI, people, watermarks or borders.\nResolution pass: the provided edit target is now a 3840x2160 working canvas. Keep that exact full-canvas resolution and framing. Reconstruct fine natural detail at this resolution rather than preserving soft enlarged pixels. Preserve all geographic landmarks. Render clear individual leaves and roof tiles, separated tree canopies, sharp masonry and crisp cultivated rows with natural non-haloed edges."
+}

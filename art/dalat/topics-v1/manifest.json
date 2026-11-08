@@ -1,0 +1,202 @@
+{
+  "tool": "built-in image_gen",
+  "scope": "12 new transparent NPC poses and 4 shared interiors for the 18 selected topics. Six existing characters are reused. New NPC art uses a single pose; existing rig animation is preserved.",
+  "assets": [
+    {
+      "id": "nina_cat",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Nina Cat, a friendly peach-orange female cat for Greetings & Small Talk. Mint cardigan, coral neck scarf, cream casual skirt, small brown shoes, warm open smile and one paw raised in a gentle welcoming wave. Distinct from the white daisy-themed cat reference.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-194aab76-9453-4340-a9c7-717ee25dbec7.png",
+      "source": "art/npc/topic-pack/nina_cat.png",
+      "runtime": "public/cafe/npc/topics/nina_cat.webp"
+    },
+    {
+      "id": "ben_bear",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Ben Bear, a sociable honey-brown bear for Introducing Yourself. Navy cardigan over cream shirt, tan trousers and comfortable brown shoes, blank small name badge, confident relaxed smile, one paw gesturing to his chest while introducing himself. No explorer hat or adventurer gear.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-74ab84b2-03d8-49fe-b5c7-58c8a006dd1c.png",
+      "source": "art/npc/topic-pack/ben_bear.png",
+      "runtime": "public/cafe/npc/topics/ben_bear.webp"
+    },
+    {
+      "id": "luna_deer",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Luna Deer, a gentle tan female deer with white spots and soft long ears for Family & Friends. Lavender wrap cardigan over pale sage dress, simple shoes, holding a small framed family picture with tiny unlettered animal silhouettes. Calm caring smile, elegant rounded chibi shape.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-9b531bd3-d6a6-4add-a112-8ed0cc47539e.png",
+      "source": "art/npc/topic-pack/luna_deer.png",
+      "runtime": "public/cafe/npc/topics/luna_deer.webp"
+    },
+    {
+      "id": "penny_panda",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Penny Panda, a cheerful black-and-white female panda shopkeeper for Shopping & Payments. Sage green apron over warm cream blouse, ochre trousers, holding a small orange coin purse in one paw and compact unbranded payment terminal in the other. Friendly patient expression.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-98d0a649-870a-4bf1-9ebf-f13908780595.png",
+      "source": "art/npc/topic-pack/penny_panda.png",
+      "runtime": "public/cafe/npc/topics/penny_panda.webp"
+    },
+    {
+      "id": "rio_fox",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Rio Fox, an adventurous orange fox with cream muzzle and fluffy white-tipped tail for Transportation & Directions. Teal travel vest, mustard scarf, small crossbody bag, tan trousers and shoes, holding a folded route map with simple colored lines and pointing gently sideways with free paw.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-f5bccc3b-d2fb-45e3-8f0a-120202e1cb31.png",
+      "source": "art/npc/topic-pack/rio_fox.png",
+      "runtime": "public/cafe/npc/topics/rio_fox.webp"
+    },
+    {
+      "id": "toby_corgi",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Toby Corgi, a friendly golden-and-white corgi office worker for At Work. Light blue buttoned shirt, navy trousers, rust necktie, blank ID badge, small brown work satchel at hip and a simple closed notebook in one paw. Big upright ears, short rounded corgi legs and cheerful professional expression.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-f3b08d01-3022-4e2d-8470-e541bf8c10ea.png",
+      "source": "art/npc/topic-pack/toby_corgi.png",
+      "runtime": "public/cafe/npc/topics/toby_corgi.webp"
+    },
+    {
+      "id": "alex_otter",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Alex Otter, a clever brown otter IT colleague for IT Workplace Communication. Teal zip hoodie over cream shirt, charcoal trousers, rounded glasses, closed laptop held against side, free paw open in a conversational gesture. Otter rounded ears, cream muzzle, visible thick tapering tail, welcoming expression.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-8b58f121-2017-4946-9942-a764ac808f35.png",
+      "source": "art/npc/topic-pack/alex_otter.png",
+      "runtime": "public/cafe/npc/topics/alex_otter.webp"
+    },
+    {
+      "id": "morgan_wolf",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Morgan Wolf, a calm gray wolf project manager for Project Management & Meetings. Navy blazer, white shirt, muted burgundy scarf, gray trousers and loafers, holding a blank clipboard with colored sticky tabs, free paw in a modest explaining gesture. Approachable professional adult demeanor, no fangs or aggression.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-31268d72-93cd-4fba-9317-35b27cfe2976.png",
+      "source": "art/npc/topic-pack/morgan_wolf.png",
+      "runtime": "public/cafe/npc/topics/morgan_wolf.webp"
+    },
+    {
+      "id": "bailey_beaver",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Bailey Beaver, a thoughtful chestnut beaver business analyst for Business Analysis & Banking Operations. Forest-green vest over cream shirt, amber tie, dark trousers, small round glasses, broad flat textured beaver tail, holding a folder containing simple flowchart shapes and a pencil. Subtle two front teeth, friendly analytical expression.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-dc5e4eaa-0859-4d5d-bee7-2fb131bcff93.png",
+      "source": "art/npc/topic-pack/bailey_beaver.png",
+      "runtime": "public/cafe/npc/topics/bailey_beaver.webp"
+    },
+    {
+      "id": "ivy_cat",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Ivy Cat, a creative slate-gray female cat designer for UI/UX Design & User Experience. Lilac overalls over cream top, pale pink glasses on head, small pastel tool pouch, holding a stylus and tablet showing only simple unlettered layout blocks. Curled tail, relaxed confident smile. Clearly distinct from Nina and the white reference cat.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-4b037027-344d-4506-914b-243952513689.png",
+      "source": "art/npc/topic-pack/ivy_cat.png",
+      "runtime": "public/cafe/npc/topics/ivy_cat.webp"
+    },
+    {
+      "id": "dex_robot",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Dex Robot, a friendly compact developer robot for Software Development & System Integration. Rounded ivory metal body, teal joint accents, dark rounded screen face with two expressive cyan eyes and a small simple smile, orange utility pouch, holding a small closed laptop and a neatly coiled blue connection cable. Chibi humanlike proportions, sturdy feet, approachable, no weaponry, no written code.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-d4e09606-5a90-49b4-818e-dcdde75ad190.png",
+      "source": "art/npc/topic-pack/dex_robot.png",
+      "runtime": "public/cafe/npc/topics/dex_robot.webp"
+    },
+    {
+      "id": "tess_turtle",
+      "kind": "npc",
+      "prompt": "Asset type: ONE full-body transparent PNG game NPC cutout. Match the supplied existing cat and explorer bear references' polished chibi mascot illustration quality, soft dimensional cel shading, dark clean outlines, large expressive eyes, friendly proportions and detailed clothing. Create a DISTINCT new character, not a copy or recolor of the references. Full silhouette including ears, tail, shoes and held props must fit comfortably with margin; front three-quarter standing pose, both feet on the same baseline, camera straight at character. Warm daylight from upper left. Real transparent background, no ground plane or drop-shadow rectangle. No lettering, logos, signs, text, labels, speech bubbles, border, background or second character. Tess Turtle, a careful cheerful green female turtle QA/DevOps colleague for Testing, Deployment & Production Support. Olive shell, pale sage skin, coral hoodie, navy trousers, small protective headset with boom mic, holding an unlettered checklist with three simple green check icons and a compact tablet. Calm reassuring smile, rounded glasses, full feet and shell visible.",
+      "refs": [
+        "/Volumes/Data/ENGLISH/art/npc/cloud_daisy/source/master_rgba.png",
+        "/Volumes/Data/ENGLISH/art/npc/bear_explorer/source/master_rgba.png"
+      ],
+      "transparent": true,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-70375e8c-4cce-42c3-81f9-f7308f4e2a88.png",
+      "source": "art/npc/topic-pack/tess_turtle.png",
+      "runtime": "public/cafe/npc/topics/tess_turtle.webp"
+    },
+    {
+      "id": "village_market",
+      "kind": "scene",
+      "prompt": "Use case: photorealistic-natural environment reconstruction. Asset: ONE clean full-screen 16:9 eye-level environment background, no characters. Setting: inside existing modest white plaster village buildings in Binh Nguyen, matching the supplied village aerial reference's realistic daylight, restrained natural palette, practical small-scale architecture and vegetation outside. Camera at eye level approximately 1.6m, wide 28mm view, straight verticals. Keep generous clear unobstructed floor across the bottom third for separately composited NPCs. Plain unlettered equipment screens and blank signs only. No people, animals, NPCs, readable text, logos, pins, labels or UI, no fantasy mansion or dramatic mountain panorama. A small welcoming village general store for shopping and payments: simple wood checkout counter at rear left, baskets of produce, shelves of plain groceries and household goods along back wall, compact payment terminal at checkout. White plaster walls, muted green wood trim, worn terracotta floor, open doorway at right shows the existing village garden and dirt lane, broad clear foreground floor.",
+      "refs": ["/Volumes/Data/ENGLISH/public/cafe/maps/area-map-hq-v2.webp"],
+      "transparent": false,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-c48bda7e-9991-43dd-b5e4-03911972574b.png",
+      "source": "art/dalat/rooms/village_market.png",
+      "runtime": "public/cafe/maps/rooms/village_market.webp"
+    },
+    {
+      "id": "work_lounge",
+      "kind": "scene",
+      "prompt": "Use case: photorealistic-natural environment reconstruction. Asset: ONE clean full-screen 16:9 eye-level environment background, no characters. Setting: inside existing modest white plaster village buildings in Binh Nguyen, matching the supplied village aerial reference's realistic daylight, restrained natural palette, practical small-scale architecture and vegetation outside. Camera at eye level approximately 1.6m, wide 28mm view, straight verticals. Keep generous clear unobstructed floor across the bottom third for separately composited NPCs. Plain unlettered equipment screens and blank signs only. No people, animals, NPCs, readable text, logos, pins, labels or UI, no fantasy mansion or dramatic mountain panorama. A modest shared village coworking lounge for office and IT workplace conversations: white plaster walls, warm wood desks along rear wall, two laptops with plain screens, practical blue-green chairs, a small coffee shelf, corkboard with blank notes. Windows show green fields and village trees. Bright natural daylight, broad clear foreground, no city skyline.",
+      "refs": ["/Volumes/Data/ENGLISH/public/cafe/maps/area-map-hq-v2.webp"],
+      "transparent": false,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-b7009fe5-ec30-473f-9588-ee3bde2884db.png",
+      "source": "art/dalat/rooms/work_lounge.png",
+      "runtime": "public/cafe/maps/rooms/work_lounge.webp"
+    },
+    {
+      "id": "project_room",
+      "kind": "scene",
+      "prompt": "Use case: photorealistic-natural environment reconstruction. Asset: ONE clean full-screen 16:9 eye-level environment background, no characters. Setting: inside existing modest white plaster village buildings in Binh Nguyen, matching the supplied village aerial reference's realistic daylight, restrained natural palette, practical small-scale architecture and vegetation outside. Camera at eye level approximately 1.6m, wide 28mm view, straight verticals. Keep generous clear unobstructed floor across the bottom third for separately composited NPCs. Plain unlettered equipment screens and blank signs only. No people, animals, NPCs, readable text, logos, pins, labels or UI, no fantasy mansion or dramatic mountain panorama. A small practical meeting and business analysis room inside the same village coworking building: rectangular wooden conference table positioned rear-center, compact chairs, one blank whiteboard with only a few simple unlabeled flowchart shapes, closed document folders, small potted plant. White plaster walls, pale wood floor, broad clear foreground floor, window to banana trees and low tiled village rooftops.",
+      "refs": ["/Volumes/Data/ENGLISH/public/cafe/maps/area-map-hq-v2.webp"],
+      "transparent": false,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-8e04e987-42ad-4202-93bb-a3e578935b55.png",
+      "source": "art/dalat/rooms/project_room.png",
+      "runtime": "public/cafe/maps/rooms/project_room.webp"
+    },
+    {
+      "id": "design_studio",
+      "kind": "scene",
+      "prompt": "Use case: photorealistic-natural environment reconstruction. Asset: ONE clean full-screen 16:9 eye-level environment background, no characters. Setting: inside existing modest white plaster village buildings in Binh Nguyen, matching the supplied village aerial reference's realistic daylight, restrained natural palette, practical small-scale architecture and vegetation outside. Camera at eye level approximately 1.6m, wide 28mm view, straight verticals. Keep generous clear unobstructed floor across the bottom third for separately composited NPCs. Plain unlettered equipment screens and blank signs only. No people, animals, NPCs, readable text, logos, pins, labels or UI, no fantasy mansion or dramatic mountain panorama. A shared design, development and QA studio in the same modest village coworking building: work desks at rear and along sides, tablets and monitors showing simple unlabeled colored wireframe blocks, compact equipment rack with a few discreet indicator lights, blank task notes on a side board. Muted teal chairs, white walls, warm wood accents and light floor, daylight through window onto village greenery, broad clear central foreground floor.",
+      "refs": ["/Volumes/Data/ENGLISH/public/cafe/maps/area-map-hq-v2.webp"],
+      "transparent": false,
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-48b385d6-3aa2-4e96-94e6-afcb8a6aca4e.png",
+      "source": "art/dalat/rooms/design_studio.png",
+      "runtime": "public/cafe/maps/rooms/design_studio.webp"
+    }
+  ]
+}

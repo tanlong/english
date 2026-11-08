@@ -29,6 +29,17 @@ async function publish(folder, name, input) {
   assets.push(entry);
   return entry;
 }
+const sharedSceneFolder = "public/cafe/assets/scenes/shared";
+await mkdir(sharedSceneFolder, { recursive: true });
+const clouds = await publish(
+  sharedSceneFolder,
+  "cloud_drift",
+  await sharp("art/dalat/shared/cloud-drift.png")
+    .trim({ threshold: 8 })
+    .resize({ width: 768 })
+    .png()
+    .toBuffer(),
+);
 const background = await publish(sceneFolder, "bg_clean", sourceBytes);
 const repaired = await sharp(`${motionFolder}/boat-region-repaired.png`)
   .resize(480, 240)
@@ -278,6 +289,7 @@ const config = {
   sceneId: "mountain_view",
   logicalSize: { width, height },
   background,
+  clouds,
   foliage,
   shimmer,
   waterBase,

@@ -388,25 +388,27 @@
       "npcId": "cloud_daisy",
       "masterSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
       "packValidation": "art/npc/cloud_daisy/draft/runtime/pack-validation.json",
+      "bodyEdit": "art/npc/cloud_daisy/runtime-v6/body-right-arm-fixed.png",
+      "bodyEditSha256": "6259b805bd8bafce85f1c0abbb7855d3221215375ee1c71d77436848594877f8",
       "rig": {
-        "src": "/cafe/npc/cloud_daisy/runtime/rig-b828d3b666.json",
-        "sha256": "b828d3b66644ca0af6c3614d6ddbffbe6a4926f23f3d399cc779997ad932ad66",
-        "bytes": 1925
+        "src": "/cafe/npc/cloud_daisy/runtime/rig-df8896b604.json",
+        "sha256": "df8896b6042df7177749628c0c5a8cce13195a39c79c799988e0c8cd38399549",
+        "bytes": 1348
       },
       "atlas": {
-        "src": "/cafe/npc/cloud_daisy/runtime/atlas-442c4ec47a.json",
-        "sha256": "442c4ec47a9da387e844bd1dfacc060b7e6f25fe09d592b23e7151eb3ec90348",
-        "bytes": 3569
+        "src": "/cafe/npc/cloud_daisy/runtime/atlas-10d49f1936.json",
+        "sha256": "10d49f1936e6848b1c3582d2bcc1f7cd2baccc5038f3123b226af3f28c93a2c1",
+        "bytes": 2283
       },
       "texture": {
-        "src": "/cafe/npc/cloud_daisy/runtime/atlas-a7d2bede68.webp",
-        "sha256": "a7d2bede6849a142919bcffe497c0cc2a6a9d69ab7c965891b42d071ebf30b94",
-        "bytes": 1587918
+        "src": "/cafe/npc/cloud_daisy/runtime/atlas-05707449fa.webp",
+        "sha256": "05707449fa872ba104ac70e9ecf86fd395b49f1455b1917fcab2c76ad1b245dd",
+        "bytes": 1628488
       },
       "poster": {
-        "src": "/cafe/npc/cloud_daisy/runtime/master-d7643382d2.webp",
-        "sha256": "d7643382d2cb69f7d66bdd1359765d7c9daa11147fc50b338c0b30b2a9dac196",
-        "bytes": 139148
+        "src": "/cafe/npc/cloud_daisy/runtime/master-8f4f543c3e.webp",
+        "sha256": "8f4f543c3e4e4f18bba237b81d183ba22401dc81a761648e1ae447e8144fb0b1",
+        "bytes": 139798
       },
       "mouth": {
         "src": "/cafe/npc/cloud_daisy/runtime/mouth-closed-1028227369.webp",

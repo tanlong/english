@@ -7,6 +7,7 @@ import { SelectCombobox } from "../components/select-combobox";
 import { Npc } from "./npc";
 import {
   npcs,
+  npcRoleLabels,
   topics,
   type CafeReply,
   type CafeSession,
@@ -16,6 +17,10 @@ import {
   type NpcState,
 } from "./content";
 import { cafeRequest, CafeRequestError } from "./client";
+import { useNpcSpeech } from "./voice";
+import { useLearningStore } from "../learning/provider";
+import { cafeVocabulary } from "./vocabulary";
+import { CafeVocabulary } from "./vocabulary-practice";
 
 export function CafeChat({
   npcId,
@@ -36,11 +41,15 @@ export function CafeChat({
   onState: (state: NpcState) => void;
   onResume: (id: string) => void;
 }) {
+  const store = useLearningStore();
   const npc = npcs.find((n) => n.id === npcId)!;
   const [topic, setTopic] = useState<string>(
     initialSession?.topicId ?? npc.topics[0] ?? "ordering",
   );
   const [level, setLevel] = useState<Level>(initialSession?.level ?? "A1");
+  const vocabularyReady = (cafeVocabulary[topic] ?? []).every(
+    (word) => !!store.state.cardReviews?.[word.id],
+  );
   const [useAi, setUseAi] = useState(false);
   const [session, setSession] = useState<CafeSession | undefined>(initialSession);
   const [summary, setSummary] = useState<CafeSummary | null>(initialSession?.summary ?? null);
@@ -66,12 +75,17 @@ export function CafeChat({
     setNpcState(state);
     onState(state);
   }
+  const speech = useNpcSpeech(
+    npcId,
+    level,
+    (speaking) => reactTo(speaking ? "talking" : summary ? "idle" : "listening"),
+    session?.id,
+  );
   const hasTurns = (session?.turns.length ?? 0) > 0;
   useEffect(() => {
     dialog.current?.showModal();
     return () => {
       clearTimeout(reactionTimer.current);
-      window.speechSynthesis?.cancel();
     };
     // The dialog is remounted when its persona or restored session changes.
   }, []);
@@ -111,6 +125,7 @@ export function CafeChat({
     }
   }
   function start() {
+    if (!vocabularyReady) return;
     void perform(async () => {
       const next = await cafeRequest<CafeSession>("/api/cafe/conversations", {
         npcId,
@@ -172,27 +187,18 @@ export function CafeChat({
       onSaved();
     });
   }
-  function speak(text: string) {
-    if (!("speechSynthesis" in window)) {
-      setError("Thiết bị chưa hỗ trợ đọc câu. Bạn vẫn có thể luyện bằng chữ.");
-      return;
-    }
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "en-US";
-    utterance.rate = level === "A1" ? 0.85 : 1;
-    const voice = window.speechSynthesis.getVoices().find((v) => v.lang === "en-US");
-    if (voice) utterance.voice = voice;
-    clearTimeout(reactionTimer.current);
-    reactTo("talking");
-    utterance.onend = () => reactTo(summary ? "idle" : "listening");
-    utterance.onerror = () => {
-      reactTo("listening");
-      setError("Chưa phát được giọng đọc trên thiết bị.");
-    };
-    reactionTimer.current = setTimeout(() => reactTo("listening"), 15_000);
-    window.speechSynthesis.speak(utterance);
+  function cancelActive() {
+    if (!activeId) return;
+    void perform(async () => {
+      await cafeRequest(`/api/cafe/conversations/${activeId}/end`, {
+        requestId: crypto.randomUUID(),
+      });
+      setActiveId("");
+      reactTo("notice");
+      onSaved();
+    });
   }
+  const speak = (text: string) => void speech.speak(text);
   return (
     <dialog
       ref={dialog}
@@ -212,7 +218,7 @@ export function CafeChat({
           <span className="cafe-kicker">ENGLISH COFFEE CORNER</span>
           <h2 id="cafe-chat-title">{summary ? "Một chút mang về" : npc.name}</h2>
           <p>
-            {topics[topic].label} · {level}
+            {npcRoleLabels[npc.role]} · {topics[topic].label} · {level}
           </p>
         </div>
         <button
@@ -226,15 +232,29 @@ export function CafeChat({
         </button>
       </header>
       <div className="cafe-dialog-content">
-        {error && (
+        <p className="cafe-mode" role="status">
+          {speech.notice || "Giọng nói AI · Gemini · Anh-Mỹ"}
+        </p>
+        {!activeId && (error || speech.error) && (
           <p className="field-error" role="alert">
-            {error}
-            {activeId && (
-              <Button variant="outline" onClick={() => onResume(activeId)}>
+            {error || speech.error}
+          </p>
+        )}
+        {activeId && (
+          <section className="cafe-active-session" aria-labelledby="cafe-active-session-title">
+            <h3 id="cafe-active-session-title">Cuộc trò chuyện đang mở</h3>
+            <p role="alert">
+              {error || "Bạn đang có một cuộc trò chuyện. Hãy tiếp tục hoặc kết thúc trước."}
+            </p>
+            <div className="cafe-active-session-actions">
+              <Button type="button" disabled={pending} onClick={() => onResume(activeId)}>
                 Tiếp tục buổi đang mở
               </Button>
-            )}
-          </p>
+              <Button type="button" variant="outline" disabled={pending} onClick={cancelActive}>
+                {pending ? "Đang huỷ…" : "Huỷ"}
+              </Button>
+            </div>
+          </section>
         )}
         {confirmClose ? (
           <section className="cafe-close-confirm">
@@ -306,6 +326,12 @@ export function CafeChat({
         ) : !session ? (
           <section className="cafe-chat-setup">
             <p>{npc.description}</p>
+            {npcId === "sun_king" && (
+              <Button type="button" variant="outline" onClick={() => speak("Ki, ki, ki!")}>
+                <Volume2 size={16} aria-hidden="true" />
+                Nghe {npc.name} cười
+              </Button>
+            )}
             <label>
               Chủ đề
               <SelectCombobox
@@ -357,8 +383,18 @@ export function CafeChat({
                 ? "AI có giới hạn · tự về bài mẫu khi cần"
                 : "Bài luyện theo kịch bản · không cần API key"}
             </p>
-            <Button disabled={pending} onClick={start}>
-              {pending ? "Đang chuẩn bị…" : "Bắt đầu trò chuyện"}
+            <CafeVocabulary key={topic} topic={topic} npcName={npc.name} speak={speak} />
+            {!vocabularyReady && (
+              <p className="cafe-mode">Học các từ ở trên trước khi bắt đầu trò chuyện nhé.</p>
+            )}
+            <Button disabled={pending || !vocabularyReady} onClick={start}>
+              {pending
+                ? "Đang chuẩn bị…"
+                : npc.role === "guide"
+                  ? "Bắt đầu học"
+                  : npc.role === "hybrid"
+                    ? "Bắt đầu luyện có hướng dẫn"
+                    : "Bắt đầu trò chuyện"}
               <ArrowRight size={18} />
             </Button>
           </section>

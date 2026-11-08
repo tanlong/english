@@ -1,0 +1,56 @@
+{
+  "npcId": "sun_king",
+  "coordinateSystem": {
+    "width": 1108,
+    "height": 1420
+  },
+  "headPivot": {
+    "x": 0.34,
+    "y": 0.4
+  },
+  "rendering": "Blue-gray wet dusk materials, original identity/costume/pose retained",
+  "alignment": "Character parts use their own normalized canvas; ground is integrated into the full scene terrain",
+  "animation": "Three subtle head chuckles; body, hands, feet and ground remain fixed",
+  "signature": "Ki ki ki!",
+  "layers": [
+    {
+      "name": "body",
+      "source": "art/npc/sun_king/field-v2/body.png",
+      "sourceSha256": "ad6312c08aed9f39ba1f9854ef00c9a18e0becb6c9cec3d5d7a58335f46b6c3a",
+      "originalSize": {
+        "width": 1108,
+        "height": 1420
+      },
+      "src": "/cafe/npc/sun_king/field-v2/body-74913bc288.webp",
+      "checksum": "74913bc28839021723fcd39f37a4670523fbf4efe89b814360c28a9447231c25"
+    },
+    {
+      "name": "head",
+      "source": "art/npc/sun_king/field-v2/head.png",
+      "sourceSha256": "04f9d7737f4a36552d369ed731bd14ebf4db566e13a15723099d82c3b0c988d1",
+      "originalSize": {
+        "width": 1065,
+        "height": 1477
+      },
+      "src": "/cafe/npc/sun_king/field-v2/head-3d2a299027.webp",
+      "checksum": "3d2a29902704e6cb858b4d77fdacc68f86d608b0c9bdcd8b087721d6bfe4d7bf"
+    }
+  ],
+  "terrain": {
+    "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/field_land.png",
+    "coordinateSystem": {
+      "width": 1672,
+      "height": 941
+    },
+    "src": "/cafe/fields/storm/terrain-sun-king-78d7199a85.webp",
+    "checksum": "78d7199a854b80fe5e380ca69f8af67b4eb054b389940c58458a8939ccb77f6c"
+  },
+  "scene": {
+    "src": "/cafe/fields/storm/scene-sun-king-c5767d33d7.webp",
+    "checksum": "c5767d33d7852d765bb4c25ceedf8cdc5e7c50cc3cbd495587e6af825b80ef9d"
+  },
+  "poster": {
+    "src": "/cafe/npc/sun_king/field-v2/poster-52a61e8e3b.webp",
+    "checksum": "52a61e8e3b10650f423fbbf90792afbac151be3b32888c7cc527e18ee003210b"
+  }
+}

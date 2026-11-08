@@ -70,3 +70,15 @@ Hai kiểm tra hồi quy mới tái hiện lỗi trước khi sửa: sai lệch 
 Thay sprite khách du lịch bằng `rower-redhair-strawhat.png`, lấy cảm hứng từ Shanks: tóc đỏ, mũ rơm băng đỏ, áo trắng và áo choàng tối. Sprite tạo bằng `image_gen` tích hợp với ảnh người chèo cũ làm tham chiếu tư thế; giữ alpha thật và hình ngồi nhìn sang phải. Mái chèo vẫn là lớp chuyển động riêng. Điểm cầm chèo được căn theo sprite mới, texture runtime có tên mới để không dùng lại ảnh cũ trong cache.
 
 Chỉ chạy lại **2/2 kiểm tra Playwright liên quan người chèo và thuyền** cho lần đổi ngoại hình này: tư thế ngồi/mái chèo có chuyển động, đi hết hồ rồi quay về và dừng cùng cảnh. Kiểm tra alpha và độ đọc màu tóc đỏ ở kích thước sprite, ESLint và Prettier đều qua. Video toàn cảnh và cận cảnh được ghi lại với nhân vật mới. Prompt đầy đủ và nguồn ảnh lưu trong `art/dalat/pine_lake/motion/rowing-generation.json`.
+
+## Mái chèo, mây, tay chào và vị trí desktop
+
+- Mái chèo được che tại mặt phẳng nước cố định theo thuyền, bên ngoài nhóm xoay vai. Phần chìm không còn hiện nguyên lưỡi chèo dưới hồ; nhịp đưa chèo lên được rút ngắn theo phối cảnh để lưỡi chèo hiện lại trên mặt nước. Áp dụng cho cả lượt đi và về.
+- Bổ sung lớp mây alpha trôi phía trên nền, phía sau cây và tiền cảnh cho cả ba cảnh. Hai cụm mây dùng sprite mới từ `image_gen` tích hợp: [ảnh nguồn](../../art/dalat/shared/cloud-drift.png), [prompt đầy đủ](../../art/dalat/shared/cloud-generation.json). CSS dừng mây khi cảnh pause, mở chat, tab ẩn hoặc giảm chuyển động; poster fallback không hiện lớp mây.
+- Trên desktop từ 1024px, bỏ tự cuộn qua thanh đầu trang để mép cảnh mặc định ở y=80px. Giữ cách mở gọn trên mobile.
+- Cloud Daisy dùng góc nghỉ 0° của ảnh tay vốn đã giơ lên. Góc cũ 88–108° xoay lòng bàn tay vào giữa ngực. Tay giờ vẫy nhẹ ra phía ngoài vai; renderer app và renderer review dùng cùng hiệu chỉnh.
+- Cả bảy NPC có lời chào ngắn riêng khi hover hoặc focus bàn phím. Escape, rời NPC, mở chat và chuyển cảnh dọn bong bóng; touch không giả hover. Mr. Pink có lời chào ở nút hướng dẫn riêng. Hover không tạo lượt chat hoặc gọi AI.
+
+[Ảnh desktop: mép trên 80px và lời chào](cafe-desktop-greeting.png) · [Cloud Daisy sau khi sửa tay](cloud-daisy-hand.png) · [Video mái chèo trong runtime](rower-across-lake.mp4).
+
+Phạm vi kiểm chứng lần này: 13 ca Playwright riêng cho hồ thông, 7 ca giao diện Café liên quan tới mây/tay/lời chào/desktop/mobile/Mr. Pink và 3 kiểm tra logic idle/chào/talking của Cloud Daisy. Chỉ chạy các file và bộ lọc liên quan, không chạy toàn bộ regression suite. TypeScript, ESLint và Prettier trên các file sửa được kiểm tra riêng.

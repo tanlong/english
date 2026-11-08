@@ -100,6 +100,7 @@ function LessonSegmentWorkspace({
         ...old.lessonVisits,
         [key]: {
           ...old.lessonVisits?.[key],
+          cancelledAt: undefined,
           revision: lesson.revision,
           index,
           updatedAt: new Date().toISOString(),
