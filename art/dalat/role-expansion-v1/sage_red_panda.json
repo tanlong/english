@@ -1,0 +1,13 @@
+{
+  "id": "sage_red_panda",
+  "kind": "npc",
+  "generator": "built-in image_gen",
+  "prompt": "Sage Red Panda, kind English teacher, green cardigan, spectacles, blue notebook; full body, actual transparent background, storybook chibi.",
+  "source": "art/dalat/role-expansion-v1/sage_red_panda.png",
+  "src": "/cafe/npc/roles/sage_red_panda.webp",
+  "width": 672,
+  "height": 768,
+  "hasAlpha": true,
+  "originalWidth": 1216,
+  "originalHeight": 1293
+}

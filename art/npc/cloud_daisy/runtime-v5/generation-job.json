@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "useCase": "precise-object-edit",
+  "request": "Bỏ ly cà phê và thiết kế lại cánh tay đúng chiều cơ thể",
+  "inputImages": [
+    "art/npc/cloud_daisy/draft/registered/body.png",
+    "art/npc/cloud_daisy/source/master_rgba.png"
+  ],
+  "output": "art/npc/cloud_daisy/runtime-v5/body-resting-arm.png",
+  "sha256": "bda14d7518611177d9b7eefcb9dd723219365499e67e8c3ab2ddc77daa131e6c",
+  "width": 1088,
+  "height": 1446,
+  "transparentBackground": true,
+  "prompt": "Use case: precise-object-edit. Asset type: transparent full-body 2D game character body layer. EDIT IMAGE 1, using image 2 only as an anatomical and costume reference. Image 1 is the exact character identity and composition to preserve. Add ONLY the missing arm on the VIEWER'S RIGHT (the cat's left arm). It must grow naturally from the shoulder under the cape near the right side of the chest, upper arm descending down along the side of the torso, elbow below the shoulder, forearm angled gently down and inward, a relaxed furry cat paw near the right hip/waist. The arm direction and wrist must follow normal anatomy and the direction of the body, similar to the resting arm in image 2. Brown wrist cuff with small gold studs, white fluffy fur and soft lavender shadows matching existing art. Paw relaxed, fingers pointing downward; back of paw visible rather than an upturned palm. No coffee cup, no mug, no saucer, no cloth, no object held, no upward U-shaped bent arm, no extra shoulder tuft floating separately. Keep the missing VIEWER-LEFT arm completely absent, because a separate animated waving-arm layer will be placed there by the game. Keep face, eyes, mouth, hair, ears, yellow scarf, flower, cape, bag, legs, boots and their positions absolutely unchanged from image 1. Same canvas framing, same proportions, crisp original linework, no crop, no extra character, no text. The entire area outside the character must remain truly transparent.",
+  "integration": "Replace body texture, remove arm_hold/cup/cloth layers, keep the existing animated waving arm; compose the same arm into the fallback poster."
+}

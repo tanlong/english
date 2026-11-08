@@ -1,0 +1,130 @@
+{
+  "assets": [
+    {
+      "id": "forest_path",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/forest_path.png",
+      "sourceSha256": "34a460c910171f62207bde3b1770e6a19f8562fc0983594022802d8d27c7b40f",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/forest_path.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "village_homes",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/village_homes.png",
+      "sourceSha256": "7ce9df3cdc915d7f5c5c2b65528891a51c1cd71202a5a702878a164fbd4d418a",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/village_homes.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "river_bridge",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/river_bridge.png",
+      "sourceSha256": "6798eedabbc7f3bf6dea734b94880ef9d075d6475e851cafa576f9daba042d65",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/river_bridge.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "lakeside",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/lakeside.png",
+      "sourceSha256": "c7c319db676cea6db9fac92fe0d9d0e1c04ebd7a0d8f348ceee485c9328a24c1",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/lakeside.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "village_market",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/village_market.png",
+      "sourceSha256": "c42aff3f9bd842368782789e74e17689a553d3f379dc91b02a209540fad532d4",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/village_market.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "work_lounge",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/work_lounge.png",
+      "sourceSha256": "66b05cb5bfecace31a4dded9acd2eb3b4c40d01738e39190faf320bac2c462bc",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/work_lounge.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "project_room",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/project_room.png",
+      "sourceSha256": "8090437b9593b70c17368035b08f25b4ff19b51f7f872b04847b9668d4f33bbd",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/project_room.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "design_studio",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/design_studio.png",
+      "sourceSha256": "5076a9d66330f1d5adf8ad6a161da8e58f5d0cdc90241fd3b988c04f0ca71fd6",
+      "nativeSize": {
+        "width": 1672,
+        "height": 941
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/design_studio.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    },
+    {
+      "id": "field_land",
+      "source": "art/dalat/nam-bo-1995-2005/aligned-v2/source/field_land.png",
+      "sourceSha256": "00656dea2d273e7da57f59525007cd1dd71a2ee97b847940ed4a051edfb1a5a2",
+      "nativeSize": {
+        "width": 1670,
+        "height": 942
+      },
+      "output": "public/cafe/maps/nam-bo-1995-2005/aligned-v2/field_land.webp",
+      "runtimeSize": {
+        "width": 1672,
+        "height": 941
+      }
+    }
+  ]
+}

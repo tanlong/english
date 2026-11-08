@@ -1,12 +1,12 @@
 {
   "cloud_daisy": {
-    "src": "/cafe/npc/cloud_daisy/runtime/master-d7643382d2.webp",
+    "src": "/cafe/npc/cloud_daisy/runtime/master-8f4f543c3e.webp",
     "width": 577,
     "height": 768,
-    "checksum": "d7643382d2cb69f7d66bdd1359765d7c9daa11147fc50b338c0b30b2a9dac196",
+    "checksum": "8f4f543c3e4e4f18bba237b81d183ba22401dc81a761648e1ae447e8144fb0b1",
     "masterSha256": "86ed0c25c732b7a04191b7aa16d80b6aba0bcdd2cc1c813ae88d99272a43d378",
-    "source": "art/npc/cloud_daisy/source/master_rgba.png",
-    "rig": "/cafe/npc/cloud_daisy/runtime/rig-b828d3b666.json",
+    "source": "art/npc/cloud_daisy/runtime-v6/body-right-arm-fixed.png",
+    "rig": "/cafe/npc/cloud_daisy/runtime/rig-df8896b604.json",
     "canonicalId": "cloud_daisy"
   },
   "ollie_owl": {

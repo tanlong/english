@@ -21,7 +21,7 @@ test("legacy NPC links and conversation requests resolve to the new canonical ch
   try {
     const daisy = await (await GET(request("npcs/may"))).json();
     assert.equal(daisy.id, "cloud_daisy");
-    assert.equal(daisy.name, "Cloud Daisy");
+    assert.equal(daisy.name, "Barista Cat");
     const bear = await (await GET(request("npcs/deo_explorer"))).json();
     assert.equal(bear.id, "bear_explorer");
     const cookie = await learner();

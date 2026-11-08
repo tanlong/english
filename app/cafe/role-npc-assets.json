@@ -1,0 +1,212 @@
+{
+  "sage_red_panda": {
+    "src": "/cafe/npc/roles/sage_red_panda.webp",
+    "width": 672,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/sage_red_panda.png"
+  },
+  "pip_penguin": {
+    "src": "/cafe/npc/roles/pip_penguin.webp",
+    "width": 586,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/pip_penguin.png"
+  },
+  "hazel_hedgehog": {
+    "src": "/cafe/npc/roles/hazel_hedgehog.webp",
+    "width": 461,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/hazel_hedgehog.png"
+  },
+  "coco_cockatoo": {
+    "src": "/cafe/npc/roles/coco_cockatoo.webp",
+    "width": 537,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/coco_cockatoo.png"
+  },
+  "hugo_badger": {
+    "src": "/cafe/npc/roles/hugo_badger.webp",
+    "width": 574,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/hugo_badger.png"
+  },
+  "sunny_sparrow": {
+    "src": "/cafe/npc/roles/sunny_sparrow.webp",
+    "width": 698,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/sunny_sparrow.png"
+  },
+  "willow_elephant": {
+    "src": "/cafe/npc/roles/willow_elephant.webp",
+    "width": 574,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/willow_elephant.png"
+  },
+  "maple_raccoon": {
+    "src": "/cafe/npc/roles/maple_raccoon.webp",
+    "width": 593,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/maple_raccoon.png"
+  },
+  "basil_tortoise": {
+    "src": "/cafe/npc/roles/basil_tortoise.webp",
+    "width": 564,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/basil_tortoise.png"
+  },
+  "pepper_mouse": {
+    "src": "/cafe/npc/roles/pepper_mouse.webp",
+    "width": 446,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/pepper_mouse.png"
+  },
+  "olive_koala": {
+    "src": "/cafe/npc/roles/olive_koala.webp",
+    "width": 506,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/olive_koala.png"
+  },
+  "ruby_squirrel": {
+    "src": "/cafe/npc/roles/ruby_squirrel.webp",
+    "width": 619,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/ruby_squirrel.png"
+  },
+  "atlas_crane": {
+    "src": "/cafe/npc/roles/atlas_crane.webp",
+    "width": 512,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/atlas_crane.png"
+  },
+  "dash_husky": {
+    "src": "/cafe/npc/roles/dash_husky.webp",
+    "width": 450,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/dash_husky.png"
+  },
+  "cedar_bison": {
+    "src": "/cafe/npc/roles/cedar_bison.webp",
+    "width": 536,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/cedar_bison.png"
+  },
+  "mila_meerkat": {
+    "src": "/cafe/npc/roles/mila_meerkat.webp",
+    "width": 383,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/mila_meerkat.png"
+  },
+  "fern_sloth": {
+    "src": "/cafe/npc/roles/fern_sloth.webp",
+    "width": 596,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/fern_sloth.png"
+  },
+  "poppy_chipmunk": {
+    "src": "/cafe/npc/roles/poppy_chipmunk.webp",
+    "width": 475,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/poppy_chipmunk.png"
+  },
+  "orion_alpaca": {
+    "src": "/cafe/npc/roles/orion_alpaca.webp",
+    "width": 408,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/orion_alpaca.png"
+  },
+  "skye_puffin": {
+    "src": "/cafe/npc/roles/skye_puffin.webp",
+    "width": 667,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/skye_puffin.png"
+  },
+  "iris_dove": {
+    "src": "/cafe/npc/roles/iris_dove.webp",
+    "width": 631,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/iris_dove.png"
+  },
+  "peach_seal": {
+    "src": "/cafe/npc/roles/peach_seal.webp",
+    "width": 639,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/peach_seal.png"
+  },
+  "nova_owl": {
+    "src": "/cafe/npc/roles/nova_owl.webp",
+    "width": 522,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/nova_owl.png"
+  },
+  "quinn_lemur": {
+    "src": "/cafe/npc/roles/quinn_lemur.webp",
+    "width": 568,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/quinn_lemur.png"
+  },
+  "byte_gecko": {
+    "src": "/cafe/npc/roles/byte_gecko.webp",
+    "width": 511,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/byte_gecko.png"
+  },
+  "rowan_stag": {
+    "src": "/cafe/npc/roles/rowan_stag.webp",
+    "width": 395,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/rowan_stag.png"
+  },
+  "finch_robin": {
+    "src": "/cafe/npc/roles/finch_robin.webp",
+    "width": 691,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/finch_robin.png"
+  },
+  "opal_heron": {
+    "src": "/cafe/npc/roles/opal_heron.webp",
+    "width": 425,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/opal_heron.png"
+  },
+  "brook_capybara": {
+    "src": "/cafe/npc/roles/brook_capybara.webp",
+    "width": 548,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/brook_capybara.png"
+  },
+  "luma_swan": {
+    "src": "/cafe/npc/roles/luma_swan.webp",
+    "width": 522,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/luma_swan.png"
+  },
+  "pixel_chameleon": {
+    "src": "/cafe/npc/roles/pixel_chameleon.webp",
+    "width": 627,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/pixel_chameleon.png"
+  },
+  "logan_lynx": {
+    "src": "/cafe/npc/roles/logan_lynx.webp",
+    "width": 440,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/logan_lynx.png"
+  },
+  "circuit_ferret": {
+    "src": "/cafe/npc/roles/circuit_ferret.webp",
+    "width": 623,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/circuit_ferret.png"
+  },
+  "vera_pelican": {
+    "src": "/cafe/npc/roles/vera_pelican.webp",
+    "width": 568,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/vera_pelican.png"
+  },
+  "patch_armadillo": {
+    "src": "/cafe/npc/roles/patch_armadillo.webp",
+    "width": 525,
+    "height": 768,
+    "source": "art/dalat/role-expansion-v1/patch_armadillo.png"
+  }
+}

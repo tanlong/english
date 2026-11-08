@@ -14,6 +14,7 @@ export type LessonVisit = {
   index: number;
   updatedAt: string;
   completedAt?: string;
+  cancelledAt?: string;
   answers: Record<string, string>;
   drafts?: Record<string, string>;
   activitySeconds?: Partial<Record<"listening" | "speaking" | "reading" | "writing", number>>;
@@ -85,7 +86,8 @@ export function parseVisits(value: unknown): Record<string, LessonVisit> {
         visit.index < 0 ||
         visit.index > 1000 ||
         !Number.isFinite(Date.parse(visit.updatedAt)) ||
-        (visit.completedAt !== undefined && !Number.isFinite(Date.parse(visit.completedAt)))
+        (visit.completedAt !== undefined && !Number.isFinite(Date.parse(visit.completedAt))) ||
+        (visit.cancelledAt !== undefined && !Number.isFinite(Date.parse(visit.cancelledAt)))
       )
         return [];
       const validEntries = (items: unknown) =>
@@ -105,6 +107,7 @@ export function parseVisits(value: unknown): Record<string, LessonVisit> {
             index: visit.index,
             updatedAt: visit.updatedAt,
             ...(visit.completedAt ? { completedAt: visit.completedAt } : {}),
+            ...(visit.cancelledAt ? { cancelledAt: visit.cancelledAt } : {}),
             answers: validEntries(visit.answers),
             drafts: validEntries(visit.drafts),
             ...(visit.activitySeconds && typeof visit.activitySeconds === "object"

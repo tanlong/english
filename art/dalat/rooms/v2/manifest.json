@@ -1,0 +1,50 @@
+{
+  "mode": "built-in imagegen",
+  "description": "Four corrected interior plates with smaller furniture, low character eye-level camera and clear NPC standing lanes. Runtime characters are scaled uniformly by 1.5; original NPC source art, aspect ratios, poses and animation rigs are preserved.",
+  "assets": [
+    {
+      "id": "village_market",
+      "prompt": "Use case: precise-object-edit / environment reframing. Edit target: reference village shop interior. Rebuild the SAME small Bình Nguyên village shop at a believable scale for separately overlaid adult chibi game NPCs, preserving white plaster, green wood door/window frames, red clay floor, wooden tiled roof, produce baskets, checkout counter LEFT, grocery shelves rear, open doorway RIGHT revealing the same village. Critical SCALE/CAMERA correction: the current background has giant foreground furniture and a high camera and makes the overlaid adult NPC look tiny. Change to LOW CHARACTER EYE LEVEL camera, height about 1.0m, subtle upward architectural lens shift, horizon/vanishing point around 65% canvas height. Pull all shelves, the checkout desk and produce fixtures into the back half of the room, REDUCE their projected dimensions about 35% vs reference, leaving a usable walking area from y72% to the bottom. A composited adult character will stand x55% feet y89% and be about 30% of frame HEIGHT: countertop should be near waist height for that character, not above its head, door height ~35-40% of frame, chairs if any ~16% of frame. Practical modest room, no enormous hangar. Keep an intimate scene with fewer distant objects, clear medium-sized details, not an ultra-wide giant room. Perspective should visually suit an adult at those positions. Preserve village geography visible outside. Photorealistic natural daylight, crisp wide 16:9, straight verticals, no blurry upscaling. No characters, people, animals, silhouettes, NPCs, text, labels, signs or UI. No drawn scale guides or rulers.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-f094f399-3cdd-4876-9e14-7a8e0c160206.png",
+      "reference": "art/dalat/rooms/village_market.png",
+      "source": "art/dalat/rooms/v2/village_market.png",
+      "runtime": "public/cafe/maps/rooms/v2/village_market.webp",
+      "width": 1672,
+      "height": 941,
+      "sha256": "fba1708b110e760284729a20e894d5a61885a3151f1f183148e52765252a6e00"
+    },
+    {
+      "id": "work_lounge",
+      "prompt": "Use case: precise-object-edit / environment reframing. Edit target: supplied room photograph. Rebuild the SAME Bình Nguyên village interior with corrected scale for separately composited adult chibi game NPCs. Preserve the existing modest white plaster architecture, wood tiled ceiling, window/door locations, greenery and village views outside, warm daylight and photorealistic material style. CAMERA: low eye level about 1.1m, slight upward architectural lens shift and straight verticals, vanishing point near 63-65% canvas height. Scale correction: REMOVE huge foreground furniture; move furniture into the back half of the room and REDUCE its projected sizes about 30-35% versus reference. Keep a clear usable foreground floor y72%-100% across the character standing lanes. NPCs will be composited at y90% feet, height about 40% of image; a table top/desk should reach around their waist and a chair back should be only ~18% image height, never dwarf them. Keep the room modest and intimate, not a hangar. Preserve distinctive existing props. Crisp highly detailed 16:9 landscape photo, no people, no characters, no animals, no silhouettes, no text, no logos, no labels or UI, no scale-guide drawings. Shared coworking lounge: retain rear-wall wooden desk with two laptops and teal chairs, coffee shelf/cabinet left, corkboard and bookcase right. Simplify the left sofa area to a small bench and REMOVE the large foreground coffee table. Keep only one compact round side table at far right behind the foreground walking lane. Clear floor at x34% and x70% foreground.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-a6f05761-ff25-4d22-8351-78f8f32f8e75.png",
+      "reference": "art/dalat/rooms/work_lounge.png",
+      "source": "art/dalat/rooms/v2/work_lounge.png",
+      "runtime": "public/cafe/maps/rooms/v2/work_lounge.webp",
+      "width": 1672,
+      "height": 941,
+      "sha256": "aa29a40e25cf1b5db1fa411ffead795baa9f1e380fe96ed4755958348d6fcc73"
+    },
+    {
+      "id": "project_room",
+      "prompt": "Use case: precise-object-edit / environment reframing. Edit target: supplied room photograph. Rebuild the SAME Bình Nguyên village interior with corrected scale for separately composited adult chibi game NPCs. Preserve the existing modest white plaster architecture, wood tiled ceiling, window/door locations, greenery and village views outside, warm daylight and photorealistic material style. CAMERA: low eye level about 1.1m, slight upward architectural lens shift and straight verticals, vanishing point near 63-65% canvas height. Scale correction: REMOVE huge foreground furniture; move furniture into the back half of the room and REDUCE its projected sizes about 30-35% versus reference. Keep a clear usable foreground floor y72%-100% across the character standing lanes. NPCs will be composited at y90% feet, height about 40% of image; a table top/desk should reach around their waist and a chair back should be only ~18% image height, never dwarf them. Keep the room modest and intimate, not a hangar. Preserve distinctive existing props. Crisp highly detailed 16:9 landscape photo, no people, no characters, no animals, no silhouettes, no text, no logos, no labels or UI, no scale-guide drawings. Meeting/business-analysis room: retain a compact conference table and chairs positioned REAR CENTER, blank flowchart whiteboard at right, small rear bookcase and plain television toward left, low windows showing banana trees and white village homes. Conference table and chairs must look reasonably smaller than a nearby adult foreground character. Clear foreground floor at x33% and x72%.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-d118e054-d3d3-405e-86b9-aef307986fa1.png",
+      "reference": "art/dalat/rooms/project_room.png",
+      "source": "art/dalat/rooms/v2/project_room.png",
+      "runtime": "public/cafe/maps/rooms/v2/project_room.webp",
+      "width": 1672,
+      "height": 941,
+      "sha256": "bc191c14cb4551f22f0d35ad5d32ed486d753db44c368a41da68bbafa1b7c02e"
+    },
+    {
+      "id": "design_studio",
+      "prompt": "Use case: precise-object-edit / environment reframing. Edit target: supplied room photograph. Rebuild the SAME Bình Nguyên village interior with corrected scale for separately composited adult chibi game NPCs. Preserve the existing modest white plaster architecture, wood tiled ceiling, window/door locations, greenery and village views outside, warm daylight and photorealistic material style. CAMERA: low eye level about 1.1m, slight upward architectural lens shift and straight verticals, vanishing point near 63-65% canvas height. Scale correction: REMOVE huge foreground furniture; move furniture into the back half of the room and REDUCE its projected sizes about 30-35% versus reference. Keep a clear usable foreground floor y72%-100% across the character standing lanes. NPCs will be composited at y90% feet, height about 40% of image; a table top/desk should reach around their waist and a chair back should be only ~18% image height, never dwarf them. Keep the room modest and intimate, not a hangar. Preserve distinctive existing props. Crisp highly detailed 16:9 landscape photo, no people, no characters, no animals, no silhouettes, no text, no logos, no labels or UI, no scale-guide drawings. Design/development/QA studio: retain the three rear computer workstations, teal chairs, small equipment rack on left and a plain whiteboard/corkboard at right. REMOVE the giant desks and huge chairs projecting into the immediate left and right foreground; keep all workstations at the back or mid-distance sides. Screens show simple unlettered wireframe color blocks. Clear unobstructed front floor at x23%,50%,77%.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-5c786266-2975-4952-910c-db50b0b63903.png",
+      "reference": "art/dalat/rooms/design_studio.png",
+      "source": "art/dalat/rooms/v2/design_studio.png",
+      "runtime": "public/cafe/maps/rooms/v2/design_studio.webp",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e0c543fc3842e22ef6c6595d07f729a1c34e6a5aaecff4d3d3d53a894ecf0f24"
+    }
+  ]
+}

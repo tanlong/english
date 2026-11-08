@@ -5,6 +5,31 @@ import { findNpc, topics, scriptedReply, type CafeReply, type CafeSummary } from
 import { bodyOf, errorResponse, fail, json, tenantId, textField } from "./http.ts";
 import { callProvider, markProviderFailure, reserveUsage } from "./providers.ts";
 import { sceneConfig } from "./scenes.ts";
+import { getGeminiSpeech } from "../audio/server.ts";
+import { providerQuota } from "../api/quota.ts";
+import { cafeVocabulary } from "./vocabulary.ts";
+import { npcSpeechProfiles, npcSpeechStyle } from "./speech-profiles.ts";
+
+async function speechResponse(request: Request, npcId: string, text: string, owner?: string) {
+  const npc = findNpc(npcId);
+  if (!npc) fail(404, "NOT_FOUND", "Không tìm thấy người bạn này.");
+  const quotaError = providerQuota(request, "cafe-npc-speech", 120);
+  if (quotaError) return quotaError;
+  const audio = await getGeminiSpeech(
+    text,
+    npcSpeechProfiles[npc.id].voice,
+    npcSpeechStyle(npc.id),
+    owner,
+  );
+  if (!audio) fail(503, "VOICE_UNAVAILABLE", "Giọng AI chưa sẵn sàng. Hãy thử lại sau.");
+  return new Response(audio, {
+    headers: {
+      "Content-Type": "audio/wav",
+      "Cache-Control": "no-store",
+      "X-Request-Id": crypto.randomUUID(),
+    },
+  });
+}
 
 export async function handleCafe(request: Request): Promise<Response> {
   try {
@@ -26,6 +51,33 @@ export async function handleCafe(request: Request): Promise<Response> {
     if (!user || !(await db.learner.findUnique({ where: { id: user }, select: { id: true } })))
       fail(401, "UNAUTHENTICATED", "Hãy tải lại trang để kết nối hồ sơ trên thiết bị.");
     const scope = { learnerId: user, tenantId: tenantId() };
+    if (
+      request.method === "POST" &&
+      resource === "npcs" &&
+      action === "speech" &&
+      path.length === 3
+    ) {
+      const npc = findNpc(id);
+      if (!npc) fail(404, "NOT_FOUND", "Không tìm thấy người bạn này.");
+      const body = await bodyOf(request);
+      if (!textField(body.text, 1500))
+        fail(400, "INVALID_INPUT", "Câu cần đọc phải từ 1 đến 1.500 ký tự.");
+      const text = (body.text as string).trim();
+      const allowed = new Set([
+        npc.greeting,
+        ...npc.topics.flatMap((topic) => [
+          topics[topic].greeting,
+          ...(cafeVocabulary[topic] ?? []).flatMap((word) => [
+            word.english,
+            word.example,
+            `${word.english}. ${word.example}`,
+          ]),
+        ]),
+        ...(npc.id === "sun_king" ? ["Ki, ki, ki!"] : []),
+      ]);
+      if (!allowed.has(text)) fail(400, "INVALID_INPUT", "Chỉ đọc câu mẫu của nhân vật này.");
+      return await speechResponse(request, npc.id, text);
+    }
     if (resource !== "conversations" || path.length > 3)
       fail(404, "NOT_FOUND", "Không tìm thấy thao tác.");
     if (request.method === "GET" && !id) {
@@ -123,6 +175,23 @@ export async function handleCafe(request: Request): Promise<Response> {
     }
     if (request.method !== "POST") fail(404, "NOT_FOUND", "Không tìm thấy thao tác.");
     const body = await bodyOf(request);
+    if (action === "speech") {
+      if (!textField(body.text, 1500))
+        fail(400, "INVALID_INPUT", "Câu cần đọc phải từ 1 đến 1.500 ký tự.");
+      const text = (body.text as string).trim();
+      const summary = session.summaryJson ? (JSON.parse(session.summaryJson) as CafeSummary) : null;
+      const allowed = new Set([
+        topics[session.topicId].greeting,
+        findNpc(session.npcId)?.greeting ?? "",
+        ...session.turns.flatMap((turn) =>
+          turn.replyJson ? [(JSON.parse(turn.replyJson) as CafeReply).replyEn] : [],
+        ),
+        ...(summary?.phrases.map((phrase) => phrase.english) ?? []),
+      ]);
+      if (!allowed.has(text))
+        fail(400, "INVALID_INPUT", "Chỉ đọc câu của nhân vật đã lưu trong buổi này.");
+      return await speechResponse(request, session.npcId, text, user);
+    }
     if (action === "hint")
       return json({
         hints: topics[session.topicId].hints,
@@ -201,7 +270,13 @@ export async function handleCafe(request: Request): Promise<Response> {
       const count = await tx.cafeTurn.count({ where: { conversationId: id } });
       if (count >= 60 && !previous)
         fail(429, "SESSION_LIMIT", "Hãy kết thúc và bắt đầu buổi mới sau 60 lượt.");
-      const reply = scriptedReply(session.topicId, session.level, count, text);
+      const reply = scriptedReply(
+        session.topicId,
+        session.level,
+        count,
+        text,
+        findNpc(session.npcId)?.role,
+      );
       if (previous) {
         // A crashed request is recovered without re-calling or re-charging the provider.
         reply.fallbackReason = "Lượt trước bị gián đoạn; tiếp tục bằng bài mẫu.";
@@ -294,11 +369,12 @@ function sessionView(session: {
   return {
     id: session.id,
     npcId: findNpc(session.npcId)?.id ?? session.npcId,
+    role: findNpc(session.npcId)?.role ?? "conversation",
     topicId: session.topicId,
     level: session.level,
     status: session.status,
     mode: session.useAi ? "ai" : "scripted",
-    greeting: topics[session.topicId].greeting,
+    greeting: findNpc(session.npcId)?.greeting ?? topics[session.topicId].greeting,
     summary: session.summaryJson ? JSON.parse(session.summaryJson) : null,
   };
 }

@@ -1,0 +1,668 @@
+{
+  "greetings": [
+    [
+      "greet",
+      "chào hỏi",
+      "I greet my neighbors every morning.",
+      "Dùng greet + người để nói chào ai.",
+      "Tôi chào hàng xóm mỗi sáng."
+    ],
+    [
+      "neighbor",
+      "người hàng xóm",
+      "My neighbor is very friendly.",
+      "Dùng my/our + neighbor khi nói về người sống gần mình.",
+      "Hàng xóm của tôi rất thân thiện."
+    ],
+    [
+      "lovely",
+      "dễ mến; thật vui",
+      "It's lovely to meet you.",
+      "It's lovely to + động từ diễn tả niềm vui khi làm việc gì.",
+      "Rất vui được gặp bạn."
+    ],
+    [
+      "visit",
+      "ghé thăm",
+      "Is this your first visit?",
+      "First visit nghĩa là lần ghé thăm đầu tiên.",
+      "Đây có phải lần đầu bạn ghé thăm không?"
+    ],
+    [
+      "chat",
+      "trò chuyện thân mật",
+      "Let's have a chat over coffee.",
+      "Have a chat là trò chuyện nhẹ nhàng, thân mật.",
+      "Cùng uống cà phê và trò chuyện nhé."
+    ]
+  ],
+  "introductions": [
+    [
+      "introduce",
+      "giới thiệu",
+      "Let me introduce myself.",
+      "Introduce myself dùng khi tự giới thiệu bản thân.",
+      "Để tôi tự giới thiệu."
+    ],
+    [
+      "hometown",
+      "quê nhà",
+      "My hometown is Da Nang.",
+      "Dùng my hometown is + địa danh để nói quê quán.",
+      "Quê tôi ở Đà Nẵng."
+    ],
+    [
+      "occupation",
+      "nghề nghiệp",
+      "What is your occupation?",
+      "Occupation chỉ công việc; khi trò chuyện thường hỏi What do you do?",
+      "Bạn làm nghề gì?"
+    ],
+    [
+      "based in",
+      "sống hoặc làm việc tại",
+      "I'm based in Ho Chi Minh City.",
+      "Dùng be based in + thành phố hoặc quốc gia.",
+      "Tôi sống và làm việc tại Thành phố Hồ Chí Minh."
+    ],
+    [
+      "interest",
+      "mối quan tâm; sở thích",
+      "One of my interests is music.",
+      "One of my interests is + danh từ hoặc động từ thêm -ing.",
+      "Một trong những sở thích của tôi là âm nhạc."
+    ]
+  ],
+  "daily_life": [
+    [
+      "routine",
+      "thói quen hằng ngày",
+      "My morning routine starts at seven.",
+      "Dùng morning/daily routine để nói những việc thường làm.",
+      "Các hoạt động thường lệ buổi sáng của tôi bắt đầu lúc bảy giờ."
+    ],
+    [
+      "usually",
+      "thường xuyên",
+      "I usually have breakfast at home.",
+      "Usually đứng trước động từ thường và sau động từ be.",
+      "Tôi thường ăn sáng ở nhà."
+    ],
+    [
+      "commute",
+      "đi lại giữa nhà và nơi làm việc",
+      "I commute to work by bus.",
+      "Dùng commute to work + by phương tiện.",
+      "Tôi đi làm bằng xe buýt."
+    ],
+    [
+      "breakfast",
+      "bữa sáng",
+      "I have breakfast before work.",
+      "Have breakfast nghĩa là ăn sáng, thường không dùng a.",
+      "Tôi ăn sáng trước khi đi làm."
+    ],
+    [
+      "unwind",
+      "thư giãn",
+      "I read a book to unwind.",
+      "Dùng to unwind để nói mục đích thư giãn sau lúc bận rộn.",
+      "Tôi đọc sách để thư giãn."
+    ]
+  ],
+  "family_friends": [
+    [
+      "relative",
+      "người họ hàng",
+      "Some of my relatives live nearby.",
+      "Dùng relatives ở số nhiều khi nói về họ hàng nói chung.",
+      "Một số người họ hàng của tôi sống gần đây."
+    ],
+    [
+      "sibling",
+      "anh chị em ruột",
+      "I have two siblings.",
+      "Sibling dùng chung cho anh, chị hoặc em ruột.",
+      "Tôi có hai anh chị em ruột."
+    ],
+    [
+      "close",
+      "thân thiết",
+      "I'm close to my sister.",
+      "Dùng be close to + người để nói quan hệ thân thiết.",
+      "Tôi thân thiết với chị gái mình."
+    ],
+    [
+      "keep in touch",
+      "giữ liên lạc",
+      "We keep in touch by phone.",
+      "Dùng keep in touch with + người.",
+      "Chúng tôi giữ liên lạc qua điện thoại."
+    ],
+    [
+      "catch up",
+      "trò chuyện để cập nhật tin tức",
+      "Let's catch up over coffee.",
+      "Dùng catch up with + người khi gặp lại và hỏi thăm.",
+      "Cùng uống cà phê và hỏi thăm nhau nhé."
+    ]
+  ],
+  "ordering": [
+    [
+      "order",
+      "gọi món",
+      "I'd like to order a coffee, please.",
+      "Dùng I'd like to order + món để gọi lịch sự.",
+      "Cho tôi gọi một ly cà phê nhé."
+    ],
+    [
+      "iced",
+      "có đá; dùng lạnh",
+      "Could I get an iced coffee?",
+      "Iced đứng trước tên đồ uống; dùng an trước iced coffee.",
+      "Cho tôi một ly cà phê đá được không?"
+    ],
+    [
+      "menu",
+      "thực đơn",
+      "Could I see the menu, please?",
+      "Dùng Could I see + đồ vật để xin xem một cách lịch sự.",
+      "Cho tôi xem thực đơn được không?"
+    ],
+    [
+      "bill",
+      "hóa đơn thanh toán",
+      "Could we have the bill, please?",
+      "Ask for the bill dùng khi muốn thanh toán sau bữa ăn.",
+      "Cho chúng tôi xin hóa đơn được không?"
+    ],
+    [
+      "to go",
+      "mang đi",
+      "I'd like a coffee to go.",
+      "Đặt to go sau tên món để nói muốn mang đi.",
+      "Tôi muốn một ly cà phê mang đi."
+    ]
+  ],
+  "shopping": [
+    [
+      "price",
+      "giá tiền",
+      "What is the price of this bag?",
+      "Dùng the price of + sản phẩm khi hỏi giá.",
+      "Chiếc túi này giá bao nhiêu?"
+    ],
+    [
+      "size",
+      "kích cỡ",
+      "Do you have this in a smaller size?",
+      "Dùng in a smaller/larger size khi hỏi cỡ khác.",
+      "Bạn có mẫu này với kích cỡ nhỏ hơn không?"
+    ],
+    [
+      "discount",
+      "giảm giá",
+      "Is there a discount on this shirt?",
+      "Dùng a discount on + sản phẩm.",
+      "Chiếc áo này có được giảm giá không?"
+    ],
+    [
+      "receipt",
+      "biên lai",
+      "Could I have a receipt, please?",
+      "Xin receipt sau khi thanh toán để có chứng từ mua hàng.",
+      "Cho tôi xin biên lai được không?"
+    ],
+    [
+      "pay by card",
+      "thanh toán bằng thẻ",
+      "Can I pay by card?",
+      "Dùng pay by card và pay in cash cho hai cách thanh toán.",
+      "Tôi có thể thanh toán bằng thẻ không?"
+    ]
+  ],
+  "directions": [
+    [
+      "intersection",
+      "ngã giao",
+      "Turn left at the next intersection.",
+      "Dùng at the intersection để chỉ nơi các đường giao nhau.",
+      "Rẽ trái ở ngã giao tiếp theo."
+    ],
+    [
+      "straight ahead",
+      "thẳng về phía trước",
+      "Go straight ahead for two blocks.",
+      "Dùng go straight ahead khi chỉ đường đi thẳng.",
+      "Đi thẳng thêm hai dãy nhà."
+    ],
+    [
+      "opposite",
+      "đối diện",
+      "The bank is opposite the station.",
+      "Opposite + địa điểm cho biết vị trí ở phía đối diện.",
+      "Ngân hàng nằm đối diện nhà ga."
+    ],
+    [
+      "fare",
+      "giá vé đi lại",
+      "How much is the bus fare?",
+      "Dùng bus/train/taxi fare để hỏi chi phí chuyến đi.",
+      "Vé xe buýt giá bao nhiêu?"
+    ],
+    [
+      "get off",
+      "xuống xe",
+      "Get off at the next stop.",
+      "Dùng get off a bus/train và get out of a car.",
+      "Xuống xe ở trạm tiếp theo."
+    ]
+  ],
+  "work": [
+    [
+      "colleague",
+      "đồng nghiệp",
+      "My colleague helps me with this task.",
+      "Dùng colleague để nói người làm việc cùng mình.",
+      "Đồng nghiệp giúp tôi làm nhiệm vụ này."
+    ],
+    [
+      "task",
+      "nhiệm vụ",
+      "I have three tasks to finish today.",
+      "Dùng finish/complete a task để nói hoàn thành nhiệm vụ.",
+      "Hôm nay tôi có ba nhiệm vụ cần hoàn thành."
+    ],
+    [
+      "deadline",
+      "hạn chót",
+      "The deadline is Friday.",
+      "Meet a deadline nghĩa là hoàn thành đúng hạn.",
+      "Hạn chót là thứ Sáu."
+    ],
+    [
+      "schedule",
+      "lịch làm việc",
+      "Let me check my schedule.",
+      "Dùng check my schedule trước khi nhận một lịch hẹn.",
+      "Để tôi kiểm tra lịch của mình."
+    ],
+    [
+      "available",
+      "có thời gian; sẵn sàng",
+      "Are you available this afternoon?",
+      "Dùng be available + thời gian để hỏi khi nào có thể gặp.",
+      "Chiều nay bạn có rảnh không?"
+    ]
+  ],
+  "hobbies": [
+    [
+      "hobby",
+      "sở thích",
+      "Photography is my favorite hobby.",
+      "Dùng my favorite hobby is + danh từ hoặc động từ thêm -ing.",
+      "Nhiếp ảnh là sở thích tôi yêu thích nhất."
+    ],
+    [
+      "free time",
+      "thời gian rảnh",
+      "I read in my free time.",
+      "Dùng in my free time để nói lúc rảnh rỗi.",
+      "Tôi đọc sách khi rảnh."
+    ],
+    [
+      "be into",
+      "rất thích",
+      "I'm really into music.",
+      "Dùng be into + danh từ hoặc động từ thêm -ing.",
+      "Tôi rất thích âm nhạc."
+    ],
+    [
+      "practice",
+      "luyện tập",
+      "I practice playing the guitar every day.",
+      "Dùng practice + động từ thêm -ing khi nói luyện một kỹ năng.",
+      "Tôi luyện chơi đàn ghi-ta mỗi ngày."
+    ],
+    [
+      "relaxing",
+      "giúp thư giãn",
+      "I find gardening relaxing.",
+      "Dùng relaxing để mô tả hoạt động; relaxed để nói cảm giác của người.",
+      "Tôi thấy làm vườn giúp thư giãn."
+    ]
+  ],
+  "travel": [
+    [
+      "reservation",
+      "việc đặt chỗ",
+      "I have a reservation under the name Linh.",
+      "Dùng under the name + tên khi xác nhận đặt phòng.",
+      "Tôi đã đặt chỗ dưới tên Linh."
+    ],
+    [
+      "check in",
+      "làm thủ tục nhận phòng",
+      "What time can I check in?",
+      "Check in là nhận phòng; check out là trả phòng.",
+      "Mấy giờ tôi có thể nhận phòng?"
+    ],
+    [
+      "luggage",
+      "hành lý",
+      "Can I leave my luggage here?",
+      "Luggage là danh từ không đếm được, không thêm -s.",
+      "Tôi có thể để hành lý ở đây không?"
+    ],
+    [
+      "destination",
+      "điểm đến",
+      "Da Lat is our next destination.",
+      "Dùng next/final destination khi nói điểm đến tiếp theo hoặc cuối cùng.",
+      "Đà Lạt là điểm đến tiếp theo của chúng tôi."
+    ],
+    [
+      "itinerary",
+      "lịch trình chuyến đi",
+      "Our itinerary includes a visit to the lake.",
+      "Dùng itinerary cho kế hoạch các điểm và thời gian trong chuyến đi.",
+      "Lịch trình của chúng tôi có chuyến ghé thăm hồ."
+    ]
+  ],
+  "health_feelings": [
+    [
+      "tired",
+      "mệt mỏi",
+      "I feel tired after a long day.",
+      "Dùng feel tired để nói cảm giác mệt của bản thân.",
+      "Tôi cảm thấy mệt sau một ngày dài."
+    ],
+    [
+      "headache",
+      "đau đầu",
+      "I have a headache.",
+      "Dùng have a headache để nói mình bị đau đầu.",
+      "Tôi bị đau đầu."
+    ],
+    [
+      "worried",
+      "lo lắng",
+      "I'm worried about tomorrow's meeting.",
+      "Dùng be worried about + điều khiến mình lo.",
+      "Tôi lo lắng về cuộc họp ngày mai."
+    ],
+    [
+      "rest",
+      "nghỉ ngơi",
+      "I need to get some rest.",
+      "Get some rest nghĩa là dành thời gian nghỉ ngơi.",
+      "Tôi cần nghỉ ngơi một chút."
+    ],
+    [
+      "feel better",
+      "cảm thấy khá hơn",
+      "I hope you feel better soon.",
+      "Dùng câu này để bày tỏ mong người kia sớm khỏe hơn.",
+      "Tôi mong bạn sớm cảm thấy khá hơn."
+    ]
+  ],
+  "plans": [
+    [
+      "plan",
+      "kế hoạch",
+      "Let's make a plan for tomorrow.",
+      "Make a plan là lập kế hoạch; plan to + động từ nói dự định.",
+      "Cùng lập kế hoạch cho ngày mai nhé."
+    ],
+    [
+      "suggest",
+      "gợi ý",
+      "I suggest taking the bus.",
+      "Dùng suggest + động từ thêm -ing; không dùng suggest to do.",
+      "Tôi gợi ý đi xe buýt."
+    ],
+    [
+      "alternative",
+      "phương án khác",
+      "Do we have an alternative?",
+      "Dùng an alternative khi cần một lựa chọn thay thế.",
+      "Chúng ta có phương án nào khác không?"
+    ],
+    [
+      "reschedule",
+      "đổi lịch",
+      "Could we reschedule our meeting?",
+      "Dùng reschedule + cuộc hẹn hoặc cuộc họp.",
+      "Chúng ta có thể đổi lịch cuộc họp không?"
+    ],
+    [
+      "solve",
+      "giải quyết",
+      "Let's solve this problem together.",
+      "Dùng solve a problem khi tìm cách giải quyết vấn đề.",
+      "Cùng nhau giải quyết vấn đề này nhé."
+    ]
+  ],
+  "it_workplace": [
+    [
+      "update",
+      "bản cập nhật; cập nhật",
+      "Could you give me a quick update?",
+      "Give someone an update nghĩa là báo tình hình mới nhất.",
+      "Bạn có thể cập nhật nhanh tình hình cho tôi không?"
+    ],
+    [
+      "issue",
+      "vấn đề cần xử lý",
+      "I found an issue with the login page.",
+      "Dùng an issue with + phần đang gặp vấn đề.",
+      "Tôi phát hiện một vấn đề ở trang đăng nhập."
+    ],
+    [
+      "access",
+      "quyền truy cập",
+      "I need access to the test environment.",
+      "Dùng access to + hệ thống; không dùng access for trong cách nói này.",
+      "Tôi cần quyền truy cập vào môi trường kiểm thử."
+    ],
+    [
+      "clarify",
+      "làm rõ",
+      "Could you clarify this requirement?",
+      "Dùng Could you clarify + nội dung để nhờ giải thích rõ hơn.",
+      "Bạn có thể làm rõ yêu cầu này không?"
+    ],
+    [
+      "follow up",
+      "tiếp tục theo dõi hoặc trao đổi",
+      "I'll follow up on this issue tomorrow.",
+      "Dùng follow up on + vấn đề đang cần theo dõi.",
+      "Ngày mai tôi sẽ tiếp tục theo dõi vấn đề này."
+    ]
+  ],
+  "project_management": [
+    [
+      "milestone",
+      "cột mốc dự án",
+      "Our next milestone is the demo.",
+      "Dùng milestone cho một kết quả hoặc mốc quan trọng của dự án.",
+      "Cột mốc tiếp theo của chúng ta là buổi trình diễn sản phẩm."
+    ],
+    [
+      "scope",
+      "phạm vi công việc",
+      "This feature is outside the project scope.",
+      "Dùng in/out of scope để nói việc có thuộc phạm vi hay không.",
+      "Tính năng này nằm ngoài phạm vi dự án."
+    ],
+    [
+      "blocker",
+      "trở ngại khiến công việc chưa thể tiếp tục",
+      "We have a blocker with the test environment.",
+      "Dùng blocker khi vấn đề đang ngăn tiến độ, không chỉ là việc khó.",
+      "Chúng ta đang gặp trở ngại ở môi trường kiểm thử khiến công việc chưa thể tiếp tục."
+    ],
+    [
+      "action item",
+      "việc cần làm sau cuộc họp",
+      "Let's assign an owner to each action item.",
+      "Mỗi action item nên có người phụ trách và thời hạn.",
+      "Hãy phân công người phụ trách cho từng việc cần làm."
+    ],
+    [
+      "on track",
+      "đúng tiến độ",
+      "The project is on track for Friday.",
+      "Dùng be on track để báo công việc đang đi đúng kế hoạch.",
+      "Dự án đang đúng tiến độ để kịp thứ Sáu."
+    ]
+  ],
+  "business_analysis": [
+    [
+      "requirement",
+      "yêu cầu nghiệp vụ hoặc hệ thống",
+      "We need to confirm this requirement.",
+      "Dùng confirm a requirement trước khi thống nhất cách triển khai.",
+      "Chúng ta cần xác nhận yêu cầu này."
+    ],
+    [
+      "stakeholder",
+      "bên liên quan",
+      "We should ask the stakeholders for feedback.",
+      "Stakeholder là người hoặc nhóm chịu ảnh hưởng hay có lợi ích trong dự án.",
+      "Chúng ta nên xin ý kiến phản hồi từ các bên liên quan."
+    ],
+    [
+      "workflow",
+      "luồng công việc",
+      "This diagram shows the payment workflow.",
+      "Dùng workflow để mô tả chuỗi bước của một quy trình.",
+      "Sơ đồ này thể hiện luồng thanh toán."
+    ],
+    [
+      "approval",
+      "sự phê duyệt",
+      "The transfer needs manager approval.",
+      "Dùng need approval hoặc approval from + người phê duyệt.",
+      "Giao dịch chuyển tiền này cần được người quản lý phê duyệt."
+    ],
+    [
+      "reconciliation",
+      "đối soát",
+      "We run reconciliation at the end of the day.",
+      "Dùng reconciliation khi so sánh các bản ghi để tìm và xử lý chênh lệch.",
+      "Chúng tôi thực hiện đối soát vào cuối ngày."
+    ]
+  ],
+  "ux_design": [
+    [
+      "prototype",
+      "bản mẫu tương tác",
+      "Let's test the prototype with users.",
+      "Dùng prototype cho bản mẫu giúp thử một luồng sử dụng trước khi hoàn thiện.",
+      "Cùng thử nghiệm bản mẫu với người dùng nhé."
+    ],
+    [
+      "usability",
+      "mức độ dễ sử dụng",
+      "We want to improve the form's usability.",
+      "Dùng improve usability khi làm thao tác dễ hiểu và dễ thực hiện hơn.",
+      "Chúng tôi muốn cải thiện mức độ dễ sử dụng của biểu mẫu."
+    ],
+    [
+      "feedback",
+      "ý kiến phản hồi",
+      "We collected feedback from five users.",
+      "Feedback không đếm được; dùng some feedback thay vì a feedback.",
+      "Chúng tôi đã thu thập phản hồi từ năm người dùng."
+    ],
+    [
+      "layout",
+      "bố cục",
+      "The new layout makes the page easier to scan.",
+      "Dùng layout để nói cách sắp xếp nội dung trên màn hình.",
+      "Bố cục mới giúp người dùng dễ đọc lướt trang hơn."
+    ],
+    [
+      "user flow",
+      "luồng thao tác của người dùng",
+      "This user flow starts at the sign-in page.",
+      "Dùng user flow cho các bước người dùng đi qua để đạt một mục tiêu.",
+      "Luồng thao tác này bắt đầu từ trang đăng nhập."
+    ]
+  ],
+  "software_development": [
+    [
+      "endpoint",
+      "điểm truy cập API",
+      "This endpoint returns the order status.",
+      "Dùng endpoint khi nói một địa chỉ API thực hiện chức năng cụ thể.",
+      "Điểm truy cập API này trả về trạng thái đơn hàng."
+    ],
+    [
+      "payload",
+      "dữ liệu gửi trong yêu cầu",
+      "The request payload includes the customer ID.",
+      "Dùng request payload khi mô tả dữ liệu gửi tới hệ thống.",
+      "Dữ liệu gửi trong yêu cầu bao gồm mã khách hàng."
+    ],
+    [
+      "dependency",
+      "thành phần hoặc công việc phụ thuộc",
+      "We need to update this dependency.",
+      "Dùng dependency để nói thành phần mà phần khác cần để hoạt động.",
+      "Chúng ta cần cập nhật thành phần phụ thuộc này."
+    ],
+    [
+      "integration",
+      "sự tích hợp",
+      "The payment integration is ready for testing.",
+      "Dùng integration with + hệ thống khi nói kết nối giữa các hệ thống.",
+      "Phần tích hợp thanh toán đã sẵn sàng để kiểm thử."
+    ],
+    [
+      "pull request",
+      "đề xuất gộp thay đổi mã nguồn",
+      "Could you review my pull request?",
+      "Dùng review a pull request khi nhờ kiểm tra thay đổi trước khi gộp.",
+      "Bạn có thể xem xét đề xuất gộp thay đổi mã nguồn của tôi không?"
+    ]
+  ],
+  "testing_support": [
+    [
+      "test case",
+      "trường hợp kiểm thử",
+      "This test case checks an invalid password.",
+      "Dùng test case cho điều kiện, thao tác và kết quả cần kiểm tra.",
+      "Trường hợp kiểm thử này kiểm tra tình huống mật khẩu không hợp lệ."
+    ],
+    [
+      "reproduce",
+      "tái hiện lỗi",
+      "Can you reproduce the issue?",
+      "Dùng reproduce an issue để hỏi có lặp lại được lỗi hay không.",
+      "Bạn có thể tái hiện vấn đề này không?"
+    ],
+    [
+      "deployment",
+      "lần triển khai",
+      "The deployment is scheduled for tonight.",
+      "Dùng deployment to production khi nói triển khai lên môi trường thật.",
+      "Lần triển khai được lên lịch vào tối nay."
+    ],
+    [
+      "incident",
+      "sự cố vận hành",
+      "We are investigating the incident.",
+      "Dùng incident cho sự cố ảnh hưởng đến hoạt động của hệ thống.",
+      "Chúng tôi đang điều tra sự cố."
+    ],
+    [
+      "rollback",
+      "việc quay về phiên bản trước",
+      "We need a rollback after the failed deployment.",
+      "Rollback là danh từ; roll back là động từ chỉ thao tác quay lại.",
+      "Chúng ta cần quay về phiên bản trước sau lần triển khai thất bại."
+    ]
+  ]
+}

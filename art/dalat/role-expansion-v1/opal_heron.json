@@ -1,0 +1,13 @@
+{
+  "id": "opal_heron",
+  "kind": "npc",
+  "generator": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: ONE single full-body game NPC portrait with genuine transparent alpha background. Opal Heron, a friendly anthropomorphic heron English teacher. Character details: cream blazer, teal scarf, process diagram notebook without words. Warm hand-painted storybook chibi animal illustration, large expressive kind eyes, detailed soft shading, refined outlines, cohesive cozy game style. Front three-quarter view facing the viewer, standing upright in a friendly welcoming pose. Entire body from head to feet and any tail visible, centered with eight percent transparent padding. No other characters, no ground or scenery, no text, labels, logos, borders or watermark. Real transparent background, no opaque backdrop.",
+  "source": "art/dalat/role-expansion-v1/opal_heron.png",
+  "src": "/cafe/npc/roles/opal_heron.webp",
+  "width": 425,
+  "height": 768,
+  "hasAlpha": true,
+  "originalWidth": 1024,
+  "originalHeight": 1536
+}

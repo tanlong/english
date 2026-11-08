@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "mode": "built-in image_gen",
+  "reference": "art/dalat/map-points/v2/farm_fields.png",
+  "assets": [
+    {
+      "name": "dusk",
+      "prompt": "Use case: lighting-weather. Edit target: provided Cánh đồng photograph, keep the EXACT same 16:9 camera, horizon, road on right, utility poles, vegetable rows, banana trees, white house on left, river and distant houses at identical positions. Create a photorealistic evening storm CLEAN BACKGROUND PLATE for a layered web scene. Time: late dusk, blue-gray charcoal cumulonimbus filling the sky, subtle remaining pale peach glow just above horizon, much darker overcast than daylight but retain readable detailed crops. Ground and road are soaked, small puddles and wet reflections, distant rain haze, warm subtle lights from existing house windows. REMOVE ONLY the close overhanging tree branches/leaves in the upper left and upper right corners, fill those removed regions with matching storm sky; retain the standing roadside tree trunks and all middle-distance trees. No foreground rain streaks or lightning baked in; these will be animated separately. No people, no NPC, no text, no UI, no sun, no new houses or roads, no changes to geography. Wide landscape 16:9 high detail crisp natural photo, full canvas opaque.",
+      "source": "art/dalat/field-storm/v1/dusk.png",
+      "runtime": "public/cafe/fields/storm/dusk.webp",
+      "sha256": "b82991eb192e63991638163ea14935372a9ac906bfe65b84f7c2e898e813ba21"
+    },
+    {
+      "name": "land",
+      "prompt": "Use case: background-extraction. Edit target: supplied dusk field photograph. Produce the EXACT landscape/terrain foreground plate for compositing over this SAME photograph. Remove ONLY THE SKY to true alpha transparency, carefully following the exact silhouettes of the distant tree line, leaves, the roadside utility pole, wires, and street lights. Keep EVERY non-sky pixel at its exact original canvas coordinates: crops, water, road, houses, trees, lights and pole. Preserve their exact evening colors, light, texture, scale and framing. No new objects. No reframing. Full original wide 16:9 canvas, same camera, transparent empty sky above. No white/gray/checkerboard fill, actual alpha transparency. Precise clean foliage edges without a pale halo. Do not redraw or relocate the road, crop rows, houses, branches, pole or horizon.",
+      "source": "art/dalat/field-storm/v1/land.png",
+      "runtime": "public/cafe/fields/storm/land.webp",
+      "sha256": "9a6569a4b776c1a89b1dbeac187398a65b36a906db9fa69be32b41077a98f30d"
+    },
+    {
+      "name": "canopy",
+      "prompt": "Use case: background-extraction. Image 1 is EDIT TARGET (daylight Cánh đồng source); Image 2 supports matching dusk lighting ONLY. Extract ONLY the CLOSE OVERHANGING leafy branches at upper LEFT corner and upper RIGHT corner from image 1. Preserve their original positions, scale, contours, original full wide 16:9 canvas coordinates and the wide empty gap between corners. Everything else must be genuine alpha transparency: remove sky, all landscape, water, ground, distant trees, utility pole and wires, houses and road. Keep the left corner canopy down to about left-edge 34% canvas height, and the right canopy across the top right edge. Transform the extracted leaves/branches lighting to cool dark blue-green evening, wet leaf texture matching image 2. No added objects, no branch re-composition, no cropping or centering the objects, no text, no baked rain or lightning, no checkerboard or solid background. This is a full-canvas alignment-critical transparent overlay.",
+      "source": "art/dalat/field-storm/v1/canopy.png",
+      "runtime": "public/cafe/fields/storm/canopy.webp",
+      "sha256": "db21717518ae90ccae26dbea740a7a383b061172322781ed840b2a28a8c45162"
+    },
+    {
+      "name": "sky",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied dusk Cánh đồng scene. Create a SKY-ONLY clean plate for animation behind a transparent terrain layer. Keep the exact photographic blue-gray charcoal storm cloud texture and dusk illumination in the upper sky, and continue these clouds naturally over the ENTIRE full 16:9 canvas. Remove EVERY ground object, horizon, tree, water, land, pole, wires, street lamp, buildings, road and warm lights. ONLY ominous densely layered realistic rainstorm clouds edge to edge, with subtle variation: darkest at top and slightly lighter muted blue-gray lower down. No bright sunset band, no sun, no stars, no objects, no text, no baked rain or lightning. Full opaque wide 16:9 sky texture, seamless photographic natural cloud forms, preserve the reference atmosphere.",
+      "source": "art/dalat/field-storm/v1/sky.png",
+      "runtime": "public/cafe/fields/storm/sky.webp",
+      "sha256": "8b7d4858bf435d5ce7b2784a567ef5f3d0c2a3bc898a4aaaec4b7e8152b2a335"
+    }
+  ],
+  "layers": [
+    "static dusk poster",
+    "drifting storm sky",
+    "transparent fixed terrain",
+    "swaying left canopy",
+    "swaying right canopy",
+    "animated rain/mist/ground impacts",
+    "Sun King",
+    "lightning flash/bolts"
+  ]
+}

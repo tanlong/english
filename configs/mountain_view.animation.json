@@ -13,6 +13,14 @@
     "bytes": 1272524,
     "sha256": "c40c74a938db0a15a8d9adc8e5131eeb546d14ef09be456332deb971b10ac018"
   },
+  "clouds": {
+    "src": "/cafe/assets/scenes/shared/cloud_drift.webp",
+    "width": 768,
+    "height": 205,
+    "hasAlpha": true,
+    "bytes": 54126,
+    "sha256": "e1368025f8dd39309600a53f0179b0ac5c8ac8d5f9312550576eec266ffbc8e3"
+  },
   "foliage": [
     {
       "id": "pine_branch_left",

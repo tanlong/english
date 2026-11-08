@@ -37,18 +37,13 @@
   padding-block: 10px;
 }
 .natural-welcome {
-  margin: 12px 0 32px;
+  margin: 8px 0 28px;
 }
 .natural-welcome h1 {
-  font-size: clamp(30px, 3.4vw, 42px);
+  font-size: var(--page-title-size);
   line-height: 1.25;
-  letter-spacing: -1.1px;
-  margin-top: 16px;
-  font-weight: 650;
-}
-.natural-welcome h1 span {
-  color: var(--muted-foreground);
-  font-weight: 450;
+  margin-top: 12px;
+  font-weight: 600;
 }
 .natural-welcome p,
 .natural-hero-copy > p {
@@ -57,15 +52,15 @@
 }
 .natural-hero {
   display: grid;
-  grid-template-columns: 1.06fr 1fr;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   border: 1px solid var(--border);
   background: var(--card);
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
 }
 .natural-hero-image {
   position: relative;
-  min-height: 340px;
+  min-height: 280px;
   background: var(--teal-soft);
 }
 .natural-hero-image .artwork {
@@ -77,6 +72,7 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+  max-width: calc(100% - 40px);
   color: var(--foreground);
   background: var(--card);
   padding: 9px 13px;
@@ -86,13 +82,13 @@
   font-weight: 650;
 }
 .natural-hero-copy {
-  padding: 40px 32px;
+  min-width: 0;
+  padding: 28px;
   align-self: center;
 }
 .natural-hero-copy h2 {
-  font-size: clamp(25px, 2.6vw, 32px);
-  letter-spacing: -0.6px;
-  margin-top: 15px;
+  font-size: clamp(22px, 2.4vw, 26px);
+  margin-top: 12px;
 }
 .natural-meta {
   display: grid;
@@ -127,44 +123,117 @@
   font-size: 12px;
   margin: 12px 0 0;
 }
-.natural-review-link {
-  margin-top: 24px;
+.today-lesson-actions {
   display: flex;
-  gap: 18px;
   align-items: center;
+  gap: 12px;
+}
+.today-lesson-actions .natural-primary {
+  min-width: 0;
+}
+.today-lesson-actions .today-cancel-lesson {
+  min-height: 48px;
+  border-radius: 12px;
+  padding-inline: 14px;
+}
+.today-features {
+  margin-top: 32px;
+}
+.today-section-heading {
+  margin-bottom: 20px;
+}
+.today-section-heading h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.today-section-heading p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+.today-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.today-feature-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
   padding: 24px;
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 20px;
   color: var(--foreground);
   background: var(--card);
+  box-shadow: var(--shadow);
+  transition:
+    border-color 0.16s,
+    background 0.16s;
 }
-.natural-review-link:hover {
+.today-feature-card:hover,
+.today-feature-card:focus-visible {
   border-color: var(--primary);
+}
+.today-feature-card:active {
+  background: var(--muted);
+}
+.today-feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 .natural-feature-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   flex-shrink: 0;
+  color: var(--blue-strong);
+  background: var(--accent);
+}
+.today-feature-card[data-tone="teal"] .natural-feature-icon {
   color: var(--teal);
   background: var(--teal-soft);
 }
-.natural-review-link > span:nth-child(2) {
-  flex: 1;
+.today-feature-card[data-tone="violet"] .natural-feature-icon {
+  color: var(--violet);
+  background: var(--violet-soft);
 }
-.natural-review-link strong {
-  display: block;
-  font-size: 16px;
+.today-feature-status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: var(--teal);
+  background: var(--teal-soft);
+  font-size: 12px;
+  font-weight: 600;
 }
-.natural-review-link small {
-  display: block;
-  font-size: 13px;
+.today-feature-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.today-feature-card p {
+  font-size: 14px;
+  line-height: 1.7;
   color: var(--muted-foreground);
-  margin-top: 5px;
-  font-style: normal;
+  margin-bottom: 20px;
+}
+.today-feature-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--blue-strong);
+  font-size: 14px;
+  font-weight: 600;
 }
 .natural-today-foot {
   display: flex;
@@ -770,9 +839,6 @@
     margin-top: 6px;
     margin-bottom: 24px;
   }
-  .natural-welcome h1 {
-    letter-spacing: -0.7px;
-  }
   .natural-welcome > p {
     font-size: 15px;
   }
@@ -782,7 +848,7 @@
   }
   .natural-hero-image {
     min-height: 0;
-    aspect-ratio: 16/10;
+    aspect-ratio: 21/9;
   }
   .natural-hero-copy {
     padding: 26px 24px;
@@ -790,23 +856,14 @@
   .natural-hero-copy .natural-primary {
     width: 100%;
   }
+  .natural-hero-copy .today-lesson-actions .natural-primary {
+    width: auto;
+    flex: 1;
+    padding-inline: 16px;
+    gap: 10px;
+  }
   .natural-hero-copy h2 {
-    font-size: 28px;
-  }
-  .natural-review-link {
-    padding: 20px 16px;
-    gap: 12px;
-  }
-  .natural-review-link strong {
-    font-size: 15px;
-  }
-  .natural-review-link small {
-    font-size: 12px;
-  }
-  .natural-feature-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    font-size: 24px;
   }
   .natural-lesson-grid {
     grid-template-columns: 1fr;
@@ -864,6 +921,15 @@
   }
   .natural-admin table {
     font-size: 11px;
+  }
+}
+@media (max-width: 639px) {
+  .today-feature-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .today-feature-card {
+    padding: 20px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

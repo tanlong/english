@@ -1,0 +1,13 @@
+{
+  "id": "qa_operations",
+  "kind": "scene",
+  "generator": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: ONE 16:9 landscape background for a cozy English-learning point-and-click game. A small quality assurance and operations room, wooden desks and beige CRT monitors at back, a chalkboard with simple check marks and geometric flow diagrams without words, small server rack, warm open windows looking over a Vietnamese village. Style: detailed hand-painted semi-realistic storybook environment, warm cream plaster walls and terracotta tiled floor, Vietnamese countryside circa 2000, soft afternoon sunlight, earthy greens and warm browns. Eye-level straight-on panoramic composition, furnishings along the back and sides, EMPTY foreground floor across bottom 35 percent for three separately composited NPCs. No people, no animals, no lettering, no logos, no watermark. Single complete full-frame background, no panels or collage.",
+  "source": "art/dalat/role-expansion-v1/qa_operations.png",
+  "src": "/cafe/topics/qa_operations.webp",
+  "width": 1672,
+  "height": 941,
+  "hasAlpha": false,
+  "originalWidth": 1672,
+  "originalHeight": 941
+}

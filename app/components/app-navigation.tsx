@@ -1,10 +1,16 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Coffee } from "lucide-react";
+import { Coffee, History } from "lucide-react";
 import { cn } from "@/lib/utils";
 export const navigation = [
   { href: "/english/cafe", label: "Cà phê vỉa hè", shortLabel: "Cà phê", icon: Coffee },
+  {
+    href: "/english/cafe/history",
+    label: "Quản lý hội thoại",
+    shortLabel: "Hội thoại",
+    icon: History,
+  },
 ] as const;
 export function AppNavigation({ mobile = false }: { mobile?: boolean }) {
   const pathname = usePathname();

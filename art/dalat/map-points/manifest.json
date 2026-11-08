@@ -1,0 +1,50 @@
+{
+  "tool": "built-in image_gen",
+  "references": [
+    {
+      "path": "art/dalat/pine_lake/source/master-fullhd.png",
+      "role": "art style and eye-level perspective"
+    },
+    {
+      "path": "MD/Bản đồ.png",
+      "role": "village geography, not camera perspective"
+    }
+  ],
+  "assets": [
+    {
+      "id": "forest_path",
+      "prompt": "Use case: stylized-concept. Asset type: finished 16:9 full-screen environment art for a Vietnamese highland exploration game. Create ONE new ground-level scene, landscape 1920x1080. Match the supplied pine-lake reference's richly detailed hand-painted game background, vibrant natural greens, warm sunlight, clear blue sky, convincing perspective and crisp organic textures. The aerial map reference establishes the village geography only; DO NOT reproduce its aerial viewpoint. Eye-level camera at 1.5m, modest wide-angle view, horizontal horizon, generous walkable foreground. No people, animals, characters, interface, markers, text, logos, borders or watermark. A peaceful path INSIDE a dense pine forest. Tall textured pine trunks frame both sides, fern-lined earthen footpath curves into sun-dappled woodland, distant bright clearing. Intimate forest interior, not a lake view.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-f253951a-16e0-47f1-9a0c-871b8957695e.png",
+      "source": "art/dalat/map-points/forest_path.png",
+      "runtime": "public/cafe/maps/locations/forest_path.webp"
+    },
+    {
+      "id": "village_homes",
+      "prompt": "Use case: stylized-concept. Asset type: finished 16:9 full-screen environment art for a Vietnamese highland exploration game. Create ONE new ground-level scene, landscape 1920x1080. Match the supplied pine-lake reference's richly detailed hand-painted game background, vibrant natural greens, warm sunlight, clear blue sky, convincing perspective and crisp organic textures. The aerial map reference establishes the village geography only; DO NOT reproduce its aerial viewpoint. Eye-level camera at 1.5m, modest wide-angle view, horizontal horizon, generous walkable foreground. No people, animals, characters, interface, markers, text, logos, borders or watermark. A quiet residential lane among small Vietnamese highland homes, white plaster houses with warm terracotta and slate tiled roofs, low garden fences, hydrangeas, roadside trees. Stand on the lane looking into the village, houses at human scale, inviting open foreground.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-0fff70f1-6310-4a1a-b993-30debdace5ed.png",
+      "source": "art/dalat/map-points/village_homes.png",
+      "runtime": "public/cafe/maps/locations/village_homes.webp"
+    },
+    {
+      "id": "river_bridge",
+      "prompt": "Use case: stylized-concept. Asset type: finished 16:9 full-screen environment art for a Vietnamese highland exploration game. Create ONE new ground-level scene, landscape 1920x1080. Match the supplied pine-lake reference's richly detailed hand-painted game background, vibrant natural greens, warm sunlight, clear blue sky, convincing perspective and crisp organic textures. The aerial map reference establishes the village geography only; DO NOT reproduce its aerial viewpoint. Eye-level camera at 1.5m, modest wide-angle view, horizontal horizon, generous walkable foreground. No people, animals, characters, interface, markers, text, logos, borders or watermark. Stand at the pedestrian edge of a low concrete bridge over the village's winding blue-green river. Low pale concrete railings recede in perspective; calm river visible on the right, green banks and scattered white tile-roof homes across the water. Ground-level view on the bridge, not aerial.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-eed17f7e-885d-4317-b1cd-f13f0c293e15.png",
+      "source": "art/dalat/map-points/river_bridge.png",
+      "runtime": "public/cafe/maps/locations/river_bridge.webp"
+    },
+    {
+      "id": "lakeside",
+      "prompt": "Use case: stylized-concept. Asset type: finished 16:9 full-screen environment art for a Vietnamese highland exploration game. Create ONE new ground-level scene, landscape 1920x1080. Match the supplied pine-lake reference's richly detailed hand-painted game background, vibrant natural greens, warm sunlight, clear blue sky, convincing perspective and crisp organic textures. The aerial map reference establishes the village geography only; DO NOT reproduce its aerial viewpoint. Eye-level camera at 1.5m, modest wide-angle view, horizontal horizon, generous walkable foreground. No people, animals, characters, interface, markers, text, logos, borders or watermark. Stand on a gently curving grassy lakeshore footpath beside the village's quiet lake. Blue-green water opens to the left, soft reeds and wildflowers along the bank, a few white tiled-roof homes and wooded hills on the far shore. Distinct from the pine-lake boardwalk: earthen path and meadow foreground, no wooden deck.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-6c6f242f-45f2-496a-8841-40e5e162e039.png",
+      "source": "art/dalat/map-points/lakeside.png",
+      "runtime": "public/cafe/maps/locations/lakeside.webp"
+    },
+    {
+      "id": "farm_fields",
+      "prompt": "Use case: stylized-concept. Asset type: finished 16:9 full-screen environment art for a Vietnamese highland exploration game. Create ONE new ground-level scene, landscape 1920x1080. Match the supplied pine-lake reference's richly detailed hand-painted game background, vibrant natural greens, warm sunlight, clear blue sky, convincing perspective and crisp organic textures. The aerial map reference establishes the village geography only; DO NOT reproduce its aerial viewpoint. Eye-level camera at 1.5m, modest wide-angle view, horizontal horizon, generous walkable foreground. No people, animals, characters, interface, markers, text, logos, borders or watermark. Stand on an earthen path between vibrant rows of vegetable fields and a few tea bushes in a Vietnamese highland farming valley. Crop rows lead toward scattered white tiled-roof farmhouses and wooded hills. Wide bright sky, lush patchwork fields, foreground path inviting exploration.",
+      "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-15e8e4a9-f12e-44b0-ad7e-106a64cd20cb.png",
+      "source": "art/dalat/map-points/farm_fields.png",
+      "runtime": "public/cafe/maps/locations/farm_fields.webp"
+    }
+  ]
+}

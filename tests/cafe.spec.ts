@@ -1,8 +1,12 @@
 import { expect, test, type Page } from "@playwright/test";
+import { startCafeConversation, learnCafeVocabulary } from "./cafe-vocabulary-fixture";
 import sharp from "sharp";
 async function sameFrame(first: Buffer, second: Buffer) {
-  const a = await sharp(first).raw().toBuffer();
-  const b = await sharp(second).raw().toBuffer();
+  const { width, height } = await sharp(first).metadata();
+  // Fractional CSS canvas edges include a one-pixel fringe of the scenery.
+  const interior = { left: 1, top: 1, width: width! - 2, height: height! - 2 };
+  const a = await sharp(first).extract(interior).raw().toBuffer();
+  const b = await sharp(second).extract(interior).raw().toBuffer();
   // GPU compositing may round individual color channels by one value between captures.
   return a.length === b.length && a.every((value, index) => Math.abs(value - b[index]) <= 1);
 }
@@ -70,6 +74,147 @@ test.beforeEach(async ({ page }) => {
   );
 });
 
+test("clouds visibly drift above the scenery and freeze with the scene", async ({ page }) => {
+  await page.setViewportSize({ width: 1996, height: 1400 });
+  await page.goto("/english/cafe");
+  await sceneReady(page);
+  const clouds = page.locator(".cafe-sky-clouds");
+  await expect(clouds).toBeVisible();
+  const before = await clouds.evaluate((element) => getComputedStyle(element).transform);
+  await page.waitForTimeout(1000);
+  expect(await clouds.evaluate((element) => getComputedStyle(element).transform)).not.toBe(before);
+  const scene = page.locator(".cafe-scene-frame");
+  const a = await scene.screenshot();
+  await page.waitForTimeout(1000);
+  const b = await scene.screenshot();
+  const crop = { left: 900, top: 60, width: 400, height: 110 };
+  expect(
+    (await sharp(a).extract(crop).raw().toBuffer()).equals(
+      await sharp(b).extract(crop).raw().toBuffer(),
+    ),
+    "Visible sky pixels must move as well as the animation clock",
+  ).toBe(false);
+  await page.getByRole("button", { name: "Tạm dừng chuyển động", exact: true }).click();
+  await expect(scene).toHaveAttribute("data-paused", "true");
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve) =>
+        requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+      ),
+  );
+  const frozen = await clouds.evaluate((element) => getComputedStyle(element).transform);
+  await page.waitForTimeout(200);
+  expect(await clouds.evaluate((element) => getComputedStyle(element).transform)).toBe(frozen);
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  expect(await clouds.evaluate((element) => getComputedStyle(element).animationName)).toBe("none");
+});
+
+test("Cloud Cat keeps the waving paw outside her shoulder instead of folding across her chest", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1996, height: 1400 });
+  await page.goto("/english/cafe");
+  await sceneReady(page);
+  const npc = page.locator('.cafe-scene-person [data-npc-id="cloud_daisy"]');
+  await expect(npc.locator(".cafe-npc-runtime")).toHaveAttribute("data-motion-state", "listening");
+  await page.getByRole("button", { name: "Tạm dừng chuyển động", exact: true }).click();
+  await npc.evaluate((element) => {
+    const style = (element as HTMLElement).style;
+    style.width = "512px";
+    style.height = "640px";
+  });
+  const canvas = npc.locator("canvas");
+  await canvas.evaluate((element) => {
+    element.style.background = "#111";
+  });
+  const png = await canvas.screenshot({ path: test.info().outputPath("daisy-paw.png") });
+  await test.info().attach("daisy-paw", { body: png, contentType: "image/png" });
+  const { data, info } = await sharp(png).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  let sumX = 0,
+    pinkPixels = 0;
+  for (let y = 195; y < 295; y++)
+    for (let x = 115; x < 340; x++) {
+      const i = (y * info.width + x) * 3;
+      const [r, g, b] = data.subarray(i, i + 3);
+      if (r > 180 && g > 80 && b > g * 1.08 && r > g * 1.23) {
+        sumX += x;
+        pinkPixels++;
+      }
+    }
+  expect(pinkPixels, "The palm pads must remain visible").toBeGreaterThan(30);
+  expect(
+    sumX / pinkPixels,
+    "The greeting palm belongs on the outside of the left shoulder at x=212",
+  ).toBeLessThan(212);
+});
+
+for (const width of [1440, 390]) {
+  test(`Cafe scrolls past the breadcrumb on load and refresh at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/english/cafe");
+    await expect(page.locator(".cafe-hotspot").first()).toBeEnabled();
+    const frame = page.locator(".cafe-scene-frame");
+    await expect.poll(async () => Math.round((await frame.boundingBox())!.y)).toBe(0);
+    expect(await page.evaluate(() => window.scrollY)).toBeGreaterThan(80);
+    const bottom = await page.evaluate(() => document.documentElement.scrollHeight - innerHeight);
+    for (const top of [0, bottom]) {
+      await page.evaluate((y) => window.scrollTo({ top: y, behavior: "instant" }), top);
+      await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(top);
+      await page.reload();
+      await expect(page.locator(".cafe-hotspot").first()).toBeEnabled();
+      await expect.poll(async () => Math.round((await frame.boundingBox())!.y)).toBe(0);
+    }
+  });
+}
+
+test("NPC hover and keyboard focus show personal greetings without opening chat", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1100 });
+  await page.goto("/english/cafe");
+  await sceneReady(page);
+  await expect(page.getByRole("tooltip")).toHaveCount(0);
+  const greetings = [
+    ["Cloud Cat", "Hi! Coffee and a chat?"],
+    ["Ollie Owl", "Hello! How was your day?"],
+    ["Mimi Bunny", "Hi! What do you love doing?"],
+  ];
+  for (const [name, text] of greetings) {
+    await page.getByRole("button", { name: `Trò chuyện với ${name}`, exact: true }).hover();
+    await expect(page.getByRole("tooltip")).toHaveText(text);
+    await expect(page.getByRole("dialog")).toHaveCount(0);
+    if (name === "Cloud Cat")
+      await page.screenshot({ path: test.info().outputPath("desktop-greeting.png") });
+  }
+  await page.mouse.move(0, 0);
+  await expect(page.getByRole("tooltip")).toHaveCount(0);
+  const daisy = page.getByRole("button", { name: "Trò chuyện với Cloud Cat", exact: true });
+  await page.keyboard.press("Tab");
+  await daisy.focus();
+  await expect(page.getByRole("tooltip")).toHaveText(greetings[0][1]);
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("tooltip")).toHaveCount(0);
+  await page.getByRole("button", { name: "Đến đồi chè", exact: true }).click();
+  for (const [name, text] of [
+    ["Astro Bean", "Hello, space explorer!"],
+    ["Bear Explorer", "Hi! Ready for an adventure?"],
+    ["Mr. Pink", "Hi! Let's find your next lesson!"],
+  ]) {
+    await page
+      .getByRole("button", {
+        name: name === "Mr. Pink" ? "Học cùng Mr. Pink" : `Trò chuyện với ${name}`,
+        exact: true,
+      })
+      .hover();
+    await expect(page.getByRole("tooltip")).toHaveText(text);
+  }
+  await page.getByRole("button", { name: "Đến hồ thông", exact: true }).click();
+  await page.getByRole("button", { name: "Trò chuyện với Gray Boo", exact: true }).hover();
+  await expect(page.getByRole("tooltip")).toHaveText("Hello, Earth friend!");
+});
+
 test("new puppet NPCs stay anchored and motion controls freeze rendered frames", async ({
   page,
 }) => {
@@ -87,7 +232,7 @@ test("new puppet NPCs stay anchored and motion controls freeze rendered frames",
     element.style.backgroundColor = "#edece1";
   });
   const first = await canvas.screenshot();
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).hover();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat" }).hover();
   await expect.poll(async () => (await canvas.screenshot()).equals(first)).toBe(false);
   const ground = page.locator(".layer-ground");
   const anchors = [await ground.boundingBox(), await person.boundingBox()];
@@ -129,9 +274,48 @@ test("new puppet NPCs stay anchored and motion controls freeze rendered frames",
   });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator(".cafe-scene-frame")).toHaveAttribute("data-paused", "true");
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).click();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat" }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
 });
+for (const width of [390, 1440]) {
+  test(`café modal can cancel the open conversation beside resume at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/english/cafe");
+    await page.getByRole("button", { name: "Trò chuyện với Cloud Cat", exact: true }).click();
+    await startCafeConversation(page);
+    await expect(page.getByRole("log")).toBeVisible();
+    await page.getByRole("button", { name: "Đóng trò chuyện", exact: true }).click();
+    await page.getByRole("button", { name: "Trò chuyện với Ollie Owl", exact: true }).click();
+    await startCafeConversation(page);
+    const dialog = page.getByRole("dialog", { name: "Ollie Owl", exact: true });
+    const notice = dialog.getByRole("region", { name: "Cuộc trò chuyện đang mở", exact: true });
+    await expect(notice).toBeVisible();
+    await expect(notice.getByRole("alert")).toHaveText(
+      "Bạn đang có một cuộc trò chuyện. Hãy tiếp tục hoặc kết thúc trước.",
+    );
+    const resume = notice.getByRole("button", { name: "Tiếp tục buổi đang mở", exact: true });
+    const cancel = notice.getByRole("button", { name: "Huỷ", exact: true });
+    await expect(resume).toBeVisible();
+    await expect(cancel).toBeVisible();
+    const resumeBox = (await resume.boundingBox())!;
+    const cancelBox = (await cancel.boundingBox())!;
+    expect(Math.abs(resumeBox.y - cancelBox.y)).toBeLessThan(2);
+    expect(cancelBox.x).toBeGreaterThanOrEqual(resumeBox.x + resumeBox.width + 8);
+    await dialog.screenshot({ path: test.info().outputPath("cafe-cancel.png") });
+    await cancel.click();
+    await expect(notice).toHaveCount(0);
+    await expect(resume).toHaveCount(0);
+    await expect(dialog.getByRole("alert")).toHaveCount(0);
+    await expect(dialog).toBeVisible();
+    await startCafeConversation(page);
+    await expect(
+      dialog.getByRole("log", { name: "Hội thoại với Ollie Owl", exact: true }),
+    ).toBeVisible();
+  });
+}
+
 test("café visits three linked scenes and completes a scripted practice with saved flashcards", async ({
   page,
 }) => {
@@ -150,8 +334,8 @@ test("café visits three linked scenes and completes a scripted practice with sa
   await page.screenshot({ path: "artifacts/cafe/mountain-runtime.png", fullPage: true });
   await page.getByRole("button", { name: "Về đồi chè" }).click();
   await page.getByRole("button", { name: "Về vườn hoa" }).click();
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).click();
-  await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat" }).click();
+  await startCafeConversation(page);
   await expect(page.getByRole("log")).toContainText("What would you like to drink?");
   await page.getByLabel("Câu trả lời của bạn", { exact: true }).fill("I'd like a coffee, please.");
   await page.getByRole("button", { name: "Gửi câu trả lời" }).click();
@@ -177,6 +361,8 @@ test("mobile contains the scene, respects reduced motion and exposes read-only c
   await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/english/cafe");
+  // Keep the development toolbar outside the learner interface under test.
+  await page.addStyleTag({ content: "nextjs-portal { display: none !important; }" });
   const frame = page.locator(".cafe-scene-frame");
   await expect(frame).toBeVisible();
   await sceneReady(page);
@@ -191,11 +377,11 @@ test("mobile contains the scene, respects reduced motion and exposes read-only c
   await page.screenshot({ path: "artifacts/cafe/tablet-runtime.png", fullPage: true });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).focus();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat" }).focus();
   await page.keyboard.press("Enter");
   await expect(page.getByRole("dialog")).toBeVisible();
   await page.keyboard.press("Escape");
-  await expect(page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" })).toBeFocused();
+  await expect(page.getByRole("button", { name: "Trò chuyện với Cloud Cat" })).toBeFocused();
   await page.getByRole("button", { name: "Mở menu", exact: true }).click();
   await page
     .getByRole("dialog", { name: "Không gian học" })
@@ -216,7 +402,7 @@ test("all six personas have usable topics and the scene query cannot skip the na
   await page.goto("/english/cafe?scene=mountain_view");
   await expect(page.locator(".cafe-scene-frame")).toHaveAttribute("data-scene", "inside_cafe");
   for (const [names, next] of [
-    [["Cloud Daisy", "Ollie Owl", "Mimi Bunny"], "Đến đồi chè"],
+    [["Cloud Cat", "Ollie Owl", "Mimi Bunny"], "Đến đồi chè"],
     [["Astro Bean", "Bear Explorer"], "Đến hồ thông"],
     [["Gray Boo"], null],
   ] as const) {
@@ -224,7 +410,7 @@ test("all six personas have usable topics and the scene query cannot skip the na
       await page.getByRole("button", { name: `Trò chuyện với ${name}` }).click();
       await expect(page.getByRole("dialog")).toContainText(name);
       await page.locator(".cafe-levels button").filter({ hasText: "A2" }).click();
-      await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
+      await startCafeConversation(page);
       await expect(page.getByRole("log")).toBeVisible();
       await page.getByRole("button", { name: "Kết thúc & xem tổng kết", exact: true }).click();
       await page.getByRole("button", { name: "Đóng trò chuyện" }).click();
@@ -241,8 +427,9 @@ test("a failed puppet texture keeps the approved poster and conversation usable"
   const cloud = page.locator('.cafe-scene-person [data-npc-id="cloud_daisy"]');
   await expect(cloud).toHaveAttribute("data-renderer", "poster");
   await expect(cloud.locator(".cafe-npc-image")).toBeVisible();
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).click();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat", exact: true }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
+  await learnCafeVocabulary(page);
   await expect(page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true })).toBeEnabled();
 });
 
@@ -251,8 +438,8 @@ test("a delayed reply keeps thinking active and a failed reply leaves an error p
 }) => {
   await page.goto("/english/cafe");
   await sceneReady(page);
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).click();
-  await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat" }).click();
+  await startCafeConversation(page);
   const answer = page.getByLabel("Câu trả lời của bạn", { exact: true });
   await answer.fill("I'd like a coffee, please.");
   await page.getByRole("button", { name: "Gửi câu trả lời" }).click();
@@ -365,8 +552,8 @@ test("café chat records the learner locally without sending audio", async ({ pa
     return route.abort("failed");
   });
   await page.goto("/english/cafe");
-  await page.getByRole("button", { name: "Trò chuyện với Cloud Daisy" }).click();
-  await page.getByRole("button", { name: "Bắt đầu trò chuyện", exact: true }).click();
+  await page.getByRole("button", { name: "Trò chuyện với Cloud Cat" }).click();
+  await startCafeConversation(page);
   const record = page.getByRole("button", { name: /Thu âm & nghe lại/ });
   await expect(record).toBeVisible();
   await record.click();

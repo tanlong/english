@@ -2,8 +2,11 @@
 import Image from "next/image";
 import { useState, type CSSProperties } from "react";
 import assets from "./npc-assets.json";
+import topicAssets from "./topic-npc-assets.json";
+import roleAssets from "./role-npc-assets.json";
 import type { NpcId, NpcState } from "./content";
 import { NpcRig } from "./npc-rig";
+import { SunKing, type SunKingAsset } from "./sun-king";
 
 type NpcAsset = {
   src: string;
@@ -14,7 +17,9 @@ type NpcAsset = {
   atlasHeight?: number;
   rig?: string;
   seated?: { src: string; width: number; height: number };
+  layers?: SunKingAsset["layers"];
 };
+const npcAssets: Record<string, NpcAsset> = { ...assets, ...topicAssets, ...roleAssets };
 
 export function Npc({
   id,
@@ -27,9 +32,18 @@ export function Npc({
   seated?: boolean;
   paused?: boolean;
 }) {
-  const asset = assets[id] as NpcAsset;
+  const asset = npcAssets[id];
   const [fallback, setFallback] = useState(false);
-  const index = Object.keys(assets).indexOf(id);
+  const index = Object.keys(npcAssets).indexOf(id);
+  if (id === "sun_king" && asset.layers)
+    return (
+      <SunKing
+        key={asset.src}
+        asset={{ ...asset, layers: asset.layers }}
+        state={state}
+        paused={paused}
+      />
+    );
   if (asset.rig)
     return (
       <NpcRig

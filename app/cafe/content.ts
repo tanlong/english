@@ -1,3 +1,7 @@
+import { curriculum } from "./curriculum.ts";
+import { roleNpcs, type NpcRole } from "./role-npcs.ts";
+export { npcRoleLabels } from "./role-npcs.ts";
+export { curriculum } from "./curriculum.ts";
 export type Level = "A1" | "A2" | "B1";
 export type NpcState =
   "idle" | "notice" | "ambient_01" | "listening" | "thinking" | "talking" | "error";
@@ -17,10 +21,11 @@ export type CafeReply = {
 };
 
 // Draft role-play material: never presented as editorially published lessons or IPA.
-export const npcs = [
+const legacyNpcs = [
   {
     id: "cloud_daisy",
-    name: "Cloud Daisy",
+    name: "Barista Cat",
+    greeting: "Hi! Coffee and a chat?",
     sceneId: "inside_cafe",
     color: "#c47657",
     kind: "cat",
@@ -29,7 +34,8 @@ export const npcs = [
   },
   {
     id: "ollie_owl",
-    name: "Ollie Owl",
+    name: "Routine Owl",
+    greeting: "Hello! How was your day?",
     sceneId: "inside_cafe",
     color: "#ab8159",
     kind: "owl",
@@ -38,7 +44,8 @@ export const npcs = [
   },
   {
     id: "mimi_bunny",
-    name: "Mimi Bunny",
+    name: "Hobby Bunny",
+    greeting: "Hi! What do you love doing?",
     sceneId: "inside_cafe",
     color: "#cf8e9d",
     kind: "bunny",
@@ -47,7 +54,8 @@ export const npcs = [
   },
   {
     id: "astro_bean",
-    name: "Astro Bean",
+    name: "Planner Astronaut",
+    greeting: "Hello, space explorer!",
     sceneId: "outdoor_terrace",
     color: "#8b93bf",
     kind: "astronaut",
@@ -56,7 +64,8 @@ export const npcs = [
   },
   {
     id: "bear_explorer",
-    name: "Bear Explorer",
+    name: "Travel Bear",
+    greeting: "Hi! Ready for an adventure?",
     sceneId: "outdoor_terrace",
     color: "#83966b",
     kind: "bear",
@@ -65,7 +74,8 @@ export const npcs = [
   },
   {
     id: "gray_boo",
-    name: "Gray Boo",
+    name: "Wellness Alien",
+    greeting: "Hello, Earth friend!",
     sceneId: "mountain_view",
     color: "#8cabac",
     kind: "alien",
@@ -74,7 +84,8 @@ export const npcs = [
   },
   {
     id: "mr_pink",
-    name: "Mr. Pink",
+    name: "Learning Bird",
+    greeting: "Hi, I'm Learning Bird! Let's find your next lesson!",
     sceneId: "outdoor_terrace",
     color: "#d9568a",
     kind: "bird",
@@ -82,6 +93,52 @@ export const npcs = [
     topics: [],
   },
 ] as const;
+const mainNpcs = [
+  ...legacyNpcs.map((npc) => {
+    const entry = curriculum.find((entry) => entry.npcId === npc.id);
+    return entry
+      ? {
+          ...npc,
+          sceneId: entry.sceneId,
+          name: entry.name,
+          greeting: entry.greeting,
+          description: entry.description,
+          topics: [entry.topicId],
+        }
+      : { ...npc, topics: [...npc.topics] };
+  }),
+  ...curriculum
+    .filter((entry) => entry.isNew)
+    .map((entry) => ({
+      id: entry.npcId,
+      name: entry.name,
+      sceneId: entry.sceneId,
+      kind: entry.kind,
+      color: entry.color,
+      greeting: entry.greeting,
+      description: entry.description,
+      topics: [entry.topicId],
+    })),
+];
+export const npcs = [
+  ...mainNpcs.map((npc) => ({
+    ...npc,
+    role: (npc.id === "mr_pink" ? "guide" : "conversation") as NpcRole,
+  })),
+  ...roleNpcs,
+  {
+    id: "sun_king",
+    name: "Planner Monkey",
+    sceneId: "farm_fields",
+    kind: "monkey",
+    role: "hybrid" as NpcRole,
+    color: "#c9973d",
+    greeting: "Ki ki ki! Even in a storm, we can make a bright plan!",
+    description:
+      "Planner Monkey luôn cười ki ki ki, cùng bạn lên kế hoạch và tìm phương án khi thời tiết thay đổi.",
+    topics: ["plans"],
+  } as const,
+];
 export type NpcId = (typeof npcs)[number]["id"];
 export function findNpc(id: unknown) {
   const canonical = id === "may" ? "cloud_daisy" : id === "deo_explorer" ? "bear_explorer" : id;
@@ -93,12 +150,13 @@ export function isGuideNpc(id: NpcId) {
 }
 export type Topic = {
   label: string;
+  shortLabel?: string;
   greeting: string;
   questions: [string, string, string];
   hints: CafeReply["hints"];
   explanationVi: string;
 };
-export const topics: Record<string, Topic> = {
+const legacyTopics: Record<string, Topic> = {
   ordering: {
     label: "Gọi cà phê",
     greeting: "Hi! Welcome to our café. What would you like to drink?",
@@ -117,7 +175,7 @@ export const topics: Record<string, Topic> = {
   },
   greetings: {
     label: "Làm quen",
-    greeting: "Hi, I'm Cloud Daisy. How's your day going?",
+    greeting: "Hi, I'm Barista Cat. How's your day going?",
     questions: [
       "What's your name?",
       "Is this your first time here?",
@@ -220,7 +278,7 @@ export const topics: Record<string, Topic> = {
       natural: "You've got to try the coffee here!",
     },
     explanationVi:
-      "Gray Boo là nhân vật giả tưởng. You've got to try… là cách thân mật để gợi ý nên thử gì.",
+      "Wellness Alien là nhân vật giả tưởng. You've got to try… là cách thân mật để gợi ý nên thử gì.",
   },
   nature: {
     label: "Thiên nhiên",
@@ -239,11 +297,29 @@ export const topics: Record<string, Topic> = {
   },
 };
 
+export const topics: Record<string, Topic> = {
+  ...legacyTopics,
+  ...Object.fromEntries(
+    curriculum.map((entry) => [
+      entry.topicId,
+      {
+        label: entry.title,
+        shortLabel: entry.shortLabel,
+        greeting: entry.greeting,
+        questions: [...entry.questions],
+        hints: entry.hints,
+        explanationVi: entry.explanationVi,
+      },
+    ]),
+  ),
+};
+
 export function scriptedReply(
   topicId: string,
   level: string,
   index: number,
   text: string,
+  role: NpcRole = "conversation",
 ): CafeReply {
   const topic = topics[topicId];
   const question = topic.questions[index % topic.questions.length];
@@ -253,7 +329,11 @@ export function scriptedReply(
   return {
     replyEn: offTopic
       ? `You can try: "${level === "A1" ? topic.hints.basic : topic.hints.better}"`
-      : followUp,
+      : role === "guide"
+        ? `Try this pattern: "${level === "A1" ? topic.hints.basic : topic.hints.better}" Now make it about you.`
+        : role === "hybrid"
+          ? `${followUp} If you need a starting point, try: "${topic.hints.basic}"`
+          : followUp,
     explanationVi: topic.explanationVi,
     hints: topic.hints,
     correction: null,
@@ -277,6 +357,7 @@ export type CafeSummary = {
 export type CafeSession = {
   id: string;
   npcId: NpcId;
+  role: NpcRole;
   topicId: string;
   level: Level;
   status: string;

@@ -1,0 +1,23 @@
+{
+  "tool": "built-in image_gen",
+  "status": "candidate; not applied to UI because requested higher native resolution was not achieved",
+  "requestedResolution": {
+    "width": 3840,
+    "height": 2160
+  },
+  "actualResolution": {
+    "width": 1672,
+    "height": 941
+  },
+  "generatedSource": "/Users/duongtanlong/.codex/generated_images/01a1b597-fce6-7c43-a540-b5d5f4262d95/exec-a9abbbca-ff55-4e2e-976f-90ef0d53b759.png",
+  "source": "art/dalat/map/source/area-map-v3-candidate.png",
+  "promptFile": "art/dalat/map/prompt-v3-4k.txt",
+  "apiProposal": {
+    "model": "gpt-image-2",
+    "size": "3840x2160",
+    "quality": "high",
+    "input": "art/dalat/map/source/area-map-v2.png",
+    "output": "output/imagegen/binh-nguyen-map-v3-4k.png",
+    "status": "requires user confirmation before API call"
+  }
+}

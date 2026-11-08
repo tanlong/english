@@ -222,6 +222,73 @@ test("a seated passenger rows across the whole lake, turns and rows back", async
   expect(Math.abs((await boat.boundingBox())!.x - start.x)).toBeLessThan(1);
 });
 
+test("the paddle is hidden below the waterline during a stroke in either direction", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1996, height: 1400 });
+  await openLake(page);
+  await page
+    .locator(".cafe-scene-frame img")
+    .evaluateAll((images) =>
+      Promise.all(images.map((image) => (image as HTMLImageElement).decode())),
+    );
+  await page.getByRole("button", { name: "Tạm dừng chuyển động", exact: true }).click();
+  await page.evaluate(() =>
+    Promise.all(
+      document
+        .getAnimations()
+        .filter((a) => a.id.startsWith("pine-lake-"))
+        .map((a) => a.ready.then(() => undefined)),
+    ),
+  );
+  const scene = page.locator(".cafe-scene-frame");
+  const frame = (await scene.boundingBox())!;
+  for (const boatPhase of [0, 0.75]) {
+    await page.evaluate((boatPhase) => {
+      for (const a of document.getAnimations()) {
+        if (a.id.startsWith("pine-lake-boat:"))
+          a.currentTime = Number(a.effect!.getTiming().duration) * boatPhase;
+        if (a.id.startsWith("pine-lake-rowing:")) a.currentTime = 700;
+      }
+    }, boatPhase);
+    const box = (await page.locator(".pine-lake-boat").boundingBox())!;
+    const visible = await scene.screenshot();
+    await page.locator(".pine-lake-oar img").evaluate((image) => {
+      (image as HTMLElement).style.visibility = "hidden";
+    });
+    const hidden = await scene.screenshot();
+    await page.locator(".pine-lake-oar img").evaluate((image) => {
+      (image as HTMLElement).style.visibility = "";
+    });
+    const a = await sharp(visible).removeAlpha().raw().toBuffer();
+    const b = await sharp(hidden).removeAlpha().raw().toBuffer();
+    const changed = (top: number, bottom: number) => {
+      let pixels = 0;
+      for (let y = Math.ceil(top - frame.y); y < bottom - frame.y; y++)
+        for (let x = Math.floor(box.x - frame.x - 60); x < box.x - frame.x + box.width + 60; x++) {
+          const i = (y * 1920 + x) * 3;
+          if (
+            Math.abs(a[i] - b[i]) + Math.abs(a[i + 1] - b[i + 1]) + Math.abs(a[i + 2] - b[i + 2]) >
+            9
+          )
+            pixels++;
+        }
+      return pixels;
+    };
+    await test
+      .info()
+      .attach(`paddle-direction-${boatPhase}`, { body: visible, contentType: "image/png" });
+    expect(
+      changed(box.y - 18, box.y + box.height - 2),
+      "The dry shaft must remain visible",
+    ).toBeGreaterThan(8);
+    expect(
+      changed(box.y + box.height + 2, box.y + box.height + 40),
+      "Submerged paddle pixels must be covered by water",
+    ).toBeLessThan(3);
+  }
+});
+
 test("lake reflections bend and travel with real ripples while the deck stays fixed", async ({
   page,
 }) => {

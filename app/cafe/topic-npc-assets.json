@@ -1,0 +1,98 @@
+{
+  "nina_cat": {
+    "src": "/cafe/npc/topics/nina_cat.webp",
+    "width": 577,
+    "height": 768,
+    "source": "art/npc/topic-pack/nina_cat.png",
+    "checksum": "65aaa64f09b8cc5cef5ac88b094142a110dd58a17f053c9e1e842fb67a9a5eae"
+  },
+  "ben_bear": {
+    "src": "/cafe/npc/topics/ben_bear.webp",
+    "width": 576,
+    "height": 768,
+    "source": "art/npc/topic-pack/ben_bear.png",
+    "checksum": "e3531f904be124db3513727cc9b1a6b03f9f1ba21a7ccc419593fcfa93a408b0"
+  },
+  "luna_deer": {
+    "src": "/cafe/npc/topics/luna_deer.webp",
+    "width": 577,
+    "height": 768,
+    "source": "art/npc/topic-pack/luna_deer.png",
+    "checksum": "1a364ff309ca47e5f47dcdd6ab0d673baa5b854591cfc5650e6890431f26e9ca"
+  },
+  "penny_panda": {
+    "src": "/cafe/npc/topics/penny_panda.webp",
+    "width": 577,
+    "height": 768,
+    "source": "art/npc/topic-pack/penny_panda.png",
+    "checksum": "b0f7fc6d129064da6992060da9b7633c66cf261b84c921a33cd9a40b3d4d613d"
+  },
+  "rio_fox": {
+    "src": "/cafe/npc/topics/rio_fox.webp",
+    "width": 615,
+    "height": 768,
+    "source": "art/npc/topic-pack/rio_fox.png",
+    "checksum": "a3addfcb4ee00fbe86c162488ef62c2e2c404928b2d17a2187239b03ca26963a"
+  },
+  "toby_corgi": {
+    "src": "/cafe/npc/topics/toby_corgi.webp",
+    "width": 596,
+    "height": 768,
+    "source": "art/npc/topic-pack/toby_corgi.png",
+    "checksum": "2f1ec1bc5573738077d2a9a085c5e04ba7eda9554969504d71816aa03de60fe9"
+  },
+  "alex_otter": {
+    "src": "/cafe/npc/topics/alex_otter.webp",
+    "width": 609,
+    "height": 768,
+    "source": "art/npc/topic-pack/alex_otter.png",
+    "checksum": "fc3e1cba7f566b0fb54b5a2db9ba9c19a71150934a875c92aed4ca0823755deb"
+  },
+  "morgan_wolf": {
+    "src": "/cafe/npc/topics/morgan_wolf.webp",
+    "width": 577,
+    "height": 768,
+    "source": "art/npc/topic-pack/morgan_wolf.png",
+    "checksum": "b51e52fc7cc5f66875ebd9e1d6891fbba280013014fa87135a4a71ec55a711e4"
+  },
+  "bailey_beaver": {
+    "src": "/cafe/npc/topics/bailey_beaver.webp",
+    "width": 596,
+    "height": 768,
+    "source": "art/npc/topic-pack/bailey_beaver.png",
+    "checksum": "7c7b4b275ca85bee2166c804ad0a7e34ab70192736ead4fb61f2fb7730f146fd"
+  },
+  "ivy_cat": {
+    "src": "/cafe/npc/topics/ivy_cat.webp",
+    "width": 577,
+    "height": 768,
+    "source": "art/npc/topic-pack/ivy_cat.png",
+    "checksum": "719f909c3b2f7a0e2667615b2c7aafb49ce82c005efd808b71b381bba4991e50"
+  },
+  "dex_robot": {
+    "src": "/cafe/npc/topics/developer-sloth.webp",
+    "width": 615,
+    "height": 768,
+    "source": "art/npc/sloths-it/master.png"
+  },
+  "tess_turtle": {
+    "src": "/cafe/npc/topics/tess_turtle.webp",
+    "width": 615,
+    "height": 768,
+    "source": "art/npc/topic-pack/tess_turtle.png",
+    "checksum": "95a6709b6ebe312ed44b9e9b767c244ac46582cd27e4f977d4e88aeccd82766d"
+  },
+  "sun_king": {
+    "src": "/cafe/npc/sun_king/field-v2/poster-52a61e8e3b.webp",
+    "checksum": "52a61e8e3b10650f423fbbf90792afbac151be3b32888c7cc527e18ee003210b",
+    "width": 780,
+    "height": 1000,
+    "source": "art/npc/sun_king/field-v2/master.png",
+    "layers": {
+      "body": "/cafe/npc/sun_king/field-v2/body-74913bc288.webp",
+      "head": "/cafe/npc/sun_king/field-v2/head-3d2a299027.webp"
+    },
+    "terrain": "/cafe/fields/storm/terrain-sun-king-78d7199a85.webp",
+    "scene": "/cafe/fields/storm/scene-sun-king-c5767d33d7.webp"
+  }
+}

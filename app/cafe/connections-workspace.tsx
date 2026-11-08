@@ -365,7 +365,10 @@ export function ConnectionsWorkspace() {
             <AudioLines size={16} />
             Nghe thử trên thiết bị
           </Button>
-          <small>TTS provider nâng cao chưa được bật. Không gọi dịch vụ TTS trả phí.</small>
+          <small>
+            NPC dùng Gemini-TTS khi máy chủ đã cấu hình. Giọng AI tạo khi bấm nghe và lưu để dùng
+            lại; nút trên chỉ thử giọng thiết bị dự phòng.
+          </small>
         </article>
         <article className="cafe-connector-card">
           <div className="cafe-connector-icon">

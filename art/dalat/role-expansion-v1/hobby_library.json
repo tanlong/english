@@ -1,0 +1,13 @@
+{
+  "id": "hobby_library",
+  "kind": "scene",
+  "generator": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: ONE 16:9 landscape background for a cozy English-learning point-and-click game. A cozy village reading and hobby library with wood bookshelves at the back, a reading chair at left, acoustic guitar and watercolor supplies at right, shaded garden beyond a wide window. Style: detailed hand-painted semi-realistic storybook environment, warm cream plaster walls and terracotta tiled floor, Vietnamese countryside circa 2000, soft afternoon sunlight, earthy greens and warm browns. Eye-level straight-on panoramic composition, furnishings along the back and sides, EMPTY foreground floor across bottom 35 percent for three separately composited NPCs. No people, no animals, no lettering, no logos, no watermark. Single complete full-frame background, no panels or collage.",
+  "source": "art/dalat/role-expansion-v1/hobby_library.png",
+  "src": "/cafe/topics/hobby_library.webp",
+  "width": 1672,
+  "height": 941,
+  "hasAlpha": false,
+  "originalWidth": 1672,
+  "originalHeight": 941
+}
