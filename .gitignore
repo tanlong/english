@@ -15,3 +15,28 @@ playwright-report/
 artifacts/
 reports/npc/**/frames/
 docs/
+
+# Images live outside Git; restore from the external asset archive.
+# Case-insensitive patterns also cover imported uppercase extensions.
+/.asset-migration/
+*.[aA][pP][nN][gG]
+*.[aA][vV][iI][fF]
+*.[bB][mM][pP]
+*.[dD][dD][sS]
+*.[eE][xX][rR]
+*.[gG][iI][fF]
+*.[hH][eE][iI][cC]
+*.[hH][eE][iI][fF]
+*.[iI][cC][oO]
+*.[jJ][fF][iI][fF]
+*.[jJ][pP][eE]
+*.[jJ][pP][eE][gG]
+*.[jJ][pP][gG]
+*.[jJ][xX][lL]
+*.[pP][nN][gG]
+*.[pP][sS][dD]
+*.[sS][vV][gG]
+*.[tT][gG][aA]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[wW][eE][bB][pP]
