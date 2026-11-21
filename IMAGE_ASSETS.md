@@ -4,7 +4,7 @@
 
 ## Khôi phục khi clone mới
 
-Bộ sao lưu hiện tại là `english-images-2026-11-21.tar`, gồm 2.378 ảnh, giữ nguyên đường dẫn tương đối trong dự án. File `SHA256SUMS` dùng để kiểm tra archive; `image-manifest.json` ghi kích thước và SHA-256 của từng ảnh.
+Bộ sao lưu hiện tại là `english-images-2026-11-21.tar`, gồm 2.419 ảnh, giữ nguyên đường dẫn tương đối trong dự án: 2.378 ảnh đang có trên máy và 41 ảnh chỉ còn trong commit cũ. Các ảnh bổ sung giúp khôi phục tài nguyên cho mã nguồn đã commit trước khi làm sạch. File `SHA256SUMS` dùng để kiểm tra archive; `image-manifest.json` ghi kích thước và SHA-256 của từng ảnh.
 
 Thư mục Drive được chỉ định: [English assets](https://drive.google.com/drive/folders/1yemxF3I6ObpaUDzmbGffUF9zi05fOxQ5).
 
